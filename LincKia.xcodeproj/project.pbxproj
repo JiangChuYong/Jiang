@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		CD1D57231C71BDB700BB30AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57221C71BDB700BB30AC /* main.m */; };
 		CD1D57261C71BDB700BB30AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57251C71BDB700BB30AC /* AppDelegate.m */; };
-		CD1D57291C71BDB700BB30AC /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57281C71BDB700BB30AC /* FirstViewController.m */; };
-		CD1D572C1C71BDB700BB30AC /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D572B1C71BDB700BB30AC /* SecondViewController.m */; };
+		CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57281C71BDB700BB30AC /* HomePageViewController.m */; };
+		CD1D572C1C71BDB700BB30AC /* MemberPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D572B1C71BDB700BB30AC /* MemberPageViewController.m */; };
 		CD1D572F1C71BDB700BB30AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1D572D1C71BDB700BB30AC /* Main.storyboard */; };
 		CD1D57311C71BDB700BB30AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1D57301C71BDB700BB30AC /* Assets.xcassets */; };
 		CD1D57341C71BDB700BB30AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1D57321C71BDB700BB30AC /* LaunchScreen.storyboard */; };
 		CD1D573F1C71BDB800BB30AC /* LincKiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D573E1C71BDB800BB30AC /* LincKiaTests.m */; };
 		CD1D574A1C71BDB800BB30AC /* LincKiaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57491C71BDB800BB30AC /* LincKiaUITests.m */; };
+		CD65AB3B1C71C37D00AED0F8 /* MinePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65AB3A1C71C37D00AED0F8 /* MinePageViewController.m */; };
+		CD7360BE1C71C9A800E3971C /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7360B81C71C9A800E3971C /* CommonUtil.m */; };
+		CD7360BF1C71C9A800E3971C /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7360BA1C71C9A800E3971C /* CustomTextField.m */; };
+		CD7360C01C71C9A800E3971C /* UITextField+PlaceHolderSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7360BD1C71C9A800E3971C /* UITextField+PlaceHolderSetting.m */; };
+		DF6E82A5586B81344BCBA4C6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A87F89A1AD34DBE85390708 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A87F89A1AD34DBE85390708 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5209D7976CD92A98E2D1845C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		CD1D571E1C71BDB700BB30AC /* LincKia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LincKia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1D57221C71BDB700BB30AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD1D57241C71BDB700BB30AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CD1D57251C71BDB700BB30AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CD1D57271C71BDB700BB30AC /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		CD1D57281C71BDB700BB30AC /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		CD1D572A1C71BDB700BB30AC /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		CD1D572B1C71BDB700BB30AC /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		CD1D57271C71BDB700BB30AC /* HomePageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		CD1D57281C71BDB700BB30AC /* HomePageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
+		CD1D572A1C71BDB700BB30AC /* MemberPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MemberPageViewController.h; sourceTree = "<group>"; };
+		CD1D572B1C71BDB700BB30AC /* MemberPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemberPageViewController.m; sourceTree = "<group>"; };
 		CD1D572E1C71BDB700BB30AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD1D57301C71BDB700BB30AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD1D57331C71BDB700BB30AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +61,19 @@
 		CD1D57451C71BDB800BB30AC /* LincKiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LincKiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1D57491C71BDB800BB30AC /* LincKiaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LincKiaUITests.m; sourceTree = "<group>"; };
 		CD1D574B1C71BDB800BB30AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD65AB391C71C37D00AED0F8 /* MinePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinePageViewController.h; sourceTree = "<group>"; };
+		CD65AB3A1C71C37D00AED0F8 /* MinePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinePageViewController.m; sourceTree = "<group>"; };
+		CD7360B41C71C91B00E3971C /* LincKia-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LincKia-Prefix.pch"; sourceTree = "<group>"; };
+		CD7360B61C71C9A800E3971C /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
+		CD7360B71C71C9A800E3971C /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
+		CD7360B81C71C9A800E3971C /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
+		CD7360B91C71C9A800E3971C /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
+		CD7360BA1C71C9A800E3971C /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
+		CD7360BB1C71C9A800E3971C /* GlobalConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConfig.h; sourceTree = "<group>"; };
+		CD7360BC1C71C9A800E3971C /* UITextField+PlaceHolderSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PlaceHolderSetting.h"; sourceTree = "<group>"; };
+		CD7360BD1C71C9A800E3971C /* UITextField+PlaceHolderSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PlaceHolderSetting.m"; sourceTree = "<group>"; };
+		CD7360C21C71CA5200E3971C /* PBSingleTon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSingleTon.h; sourceTree = "<group>"; };
+		D7EBCBAFE4522676A54C0904 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF6E82A5586B81344BCBA4C6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,13 +102,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8BC53963206283428D6956E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5209D7976CD92A98E2D1845C /* Pods.debug.xcconfig */,
+				D7EBCBAFE4522676A54C0904 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CD1D57151C71BDB700BB30AC = {
 			isa = PBXGroup;
 			children = (
+				CD7360B51C71C9A800E3971C /* Config */,
 				CD1D57201C71BDB700BB30AC /* LincKia */,
 				CD1D573D1C71BDB800BB30AC /* LincKiaTests */,
 				CD1D57481C71BDB800BB30AC /* LincKiaUITests */,
 				CD1D571F1C71BDB700BB30AC /* Products */,
+				8BC53963206283428D6956E3 /* Pods */,
+				F81859BCEED719930C5348E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,10 +139,12 @@
 			children = (
 				CD1D57241C71BDB700BB30AC /* AppDelegate.h */,
 				CD1D57251C71BDB700BB30AC /* AppDelegate.m */,
-				CD1D57271C71BDB700BB30AC /* FirstViewController.h */,
-				CD1D57281C71BDB700BB30AC /* FirstViewController.m */,
-				CD1D572A1C71BDB700BB30AC /* SecondViewController.h */,
-				CD1D572B1C71BDB700BB30AC /* SecondViewController.m */,
+				CD1D57271C71BDB700BB30AC /* HomePageViewController.h */,
+				CD1D57281C71BDB700BB30AC /* HomePageViewController.m */,
+				CD1D572A1C71BDB700BB30AC /* MemberPageViewController.h */,
+				CD1D572B1C71BDB700BB30AC /* MemberPageViewController.m */,
+				CD65AB391C71C37D00AED0F8 /* MinePageViewController.h */,
+				CD65AB3A1C71C37D00AED0F8 /* MinePageViewController.m */,
 				CD1D572D1C71BDB700BB30AC /* Main.storyboard */,
 				CD1D57301C71BDB700BB30AC /* Assets.xcassets */,
 				CD1D57321C71BDB700BB30AC /* LaunchScreen.storyboard */,
@@ -123,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				CD1D57221C71BDB700BB30AC /* main.m */,
+				CD7360B41C71C91B00E3971C /* LincKia-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -145,6 +181,30 @@
 			path = LincKiaUITests;
 			sourceTree = "<group>";
 		};
+		CD7360B51C71C9A800E3971C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				CD7360B71C71C9A800E3971C /* CommonUtil.h */,
+				CD7360B81C71C9A800E3971C /* CommonUtil.m */,
+				CD7360B91C71C9A800E3971C /* CustomTextField.h */,
+				CD7360BA1C71C9A800E3971C /* CustomTextField.m */,
+				CD7360BC1C71C9A800E3971C /* UITextField+PlaceHolderSetting.h */,
+				CD7360BD1C71C9A800E3971C /* UITextField+PlaceHolderSetting.m */,
+				CD7360B61C71C9A800E3971C /* CommonDefine.h */,
+				CD7360BB1C71C9A800E3971C /* GlobalConfig.h */,
+				CD7360C21C71CA5200E3971C /* PBSingleTon.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F81859BCEED719930C5348E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A87F89A1AD34DBE85390708 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD1D574E1C71BDB800BB30AC /* Build configuration list for PBXNativeTarget "LincKia" */;
 			buildPhases = (
+				A691341805B1AA1970983343 /* Check Pods Manifest.lock */,
 				CD1D571A1C71BDB700BB30AC /* Sources */,
 				CD1D571B1C71BDB700BB30AC /* Frameworks */,
 				CD1D571C1C71BDB700BB30AC /* Resources */,
+				0D2907BDF5BA4A42F8147451 /* Embed Pods Frameworks */,
+				AE32F2539BFDCB27DADCEF15 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,14 +333,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0D2907BDF5BA4A42F8147451 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A691341805B1AA1970983343 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE32F2539BFDCB27DADCEF15 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD1D571A1C71BDB700BB30AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD1D572C1C71BDB700BB30AC /* SecondViewController.m in Sources */,
+				CD65AB3B1C71C37D00AED0F8 /* MinePageViewController.m in Sources */,
+				CD1D572C1C71BDB700BB30AC /* MemberPageViewController.m in Sources */,
 				CD1D57261C71BDB700BB30AC /* AppDelegate.m in Sources */,
-				CD1D57291C71BDB700BB30AC /* FirstViewController.m in Sources */,
+				CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */,
+				CD7360C01C71C9A800E3971C /* UITextField+PlaceHolderSetting.m in Sources */,
+				CD7360BF1C71C9A800E3971C /* CustomTextField.m in Sources */,
+				CD7360BE1C71C9A800E3971C /* CommonUtil.m in Sources */,
 				CD1D57231C71BDB700BB30AC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +474,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/Phoebe/Desktop/LincKia/LincKia/LincKia-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -369,7 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -400,13 +517,15 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/Phoebe/Desktop/LincKia/LincKia/LincKia-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -415,9 +534,11 @@
 		};
 		CD1D574F1C71BDB800BB30AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5209D7976CD92A98E2D1845C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LincKia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sage.LincKia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,9 +547,11 @@
 		};
 		CD1D57501C71BDB800BB30AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7EBCBAFE4522676A54C0904 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LincKia/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Sage.LincKia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -502,6 +625,7 @@
 				CD1D57501C71BDB800BB30AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD1D57511C71BDB800BB30AC /* Build configuration list for PBXNativeTarget "LincKiaTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +634,7 @@
 				CD1D57531C71BDB800BB30AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD1D57541C71BDB800BB30AC /* Build configuration list for PBXNativeTarget "LincKiaUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +643,7 @@
 				CD1D57561C71BDB800BB30AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

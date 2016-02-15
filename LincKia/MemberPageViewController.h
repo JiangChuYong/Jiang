@@ -1,5 +1,4 @@
 //
-//  SecondViewController.h
 //  LincKia
 //
 //  Created by Phoebe on 16/2/15.

@@ -5,6 +5,10 @@
 //  Created by Phoebe on 16/2/15.
 //  Copyright © 2016年 Phoebe. All rights reserved.
 //
+#import "PBSingleTon.h"
+#import "GlobalConfig.h"
+#import "CommonDefine.h"
+#import <AFNetworking.h>
 
 #ifndef LincKia_Prefix_pch
 #define LincKia_Prefix_pch

@@ -1,5 +1,4 @@
 //
-//  SecondViewController.m
 //  LincKia
 //
 //  Created by Phoebe on 16/2/15.
@@ -23,5 +22,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
 @end
