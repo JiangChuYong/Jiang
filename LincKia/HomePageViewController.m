@@ -6,13 +6,13 @@
 //  Copyright © 2016年 Phoebe. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "HomePageViewController.h"
 
-@interface FirstViewController ()
+@interface HomePageViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation HomePageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

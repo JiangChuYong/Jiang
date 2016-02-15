@@ -6,13 +6,13 @@
 //  Copyright © 2016年 Phoebe. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "MemberPageViewController.h"
 
-@interface SecondViewController ()
+@interface MemberPageViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation MemberPageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
