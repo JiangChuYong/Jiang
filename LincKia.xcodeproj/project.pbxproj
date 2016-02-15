@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD1D57231C71BDB700BB30AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57221C71BDB700BB30AC /* main.m */; };
+		CD1D57261C71BDB700BB30AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57251C71BDB700BB30AC /* AppDelegate.m */; };
+		CD1D57291C71BDB700BB30AC /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57281C71BDB700BB30AC /* FirstViewController.m */; };
+		CD1D572C1C71BDB700BB30AC /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D572B1C71BDB700BB30AC /* SecondViewController.m */; };
+		CD1D572F1C71BDB700BB30AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1D572D1C71BDB700BB30AC /* Main.storyboard */; };
+		CD1D57311C71BDB700BB30AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1D57301C71BDB700BB30AC /* Assets.xcassets */; };
+		CD1D57341C71BDB700BB30AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1D57321C71BDB700BB30AC /* LaunchScreen.storyboard */; };
+		CD1D573F1C71BDB800BB30AC /* LincKiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D573E1C71BDB800BB30AC /* LincKiaTests.m */; };
+		CD1D574A1C71BDB800BB30AC /* LincKiaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57491C71BDB800BB30AC /* LincKiaUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD1D573B1C71BDB800BB30AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD1D57161C71BDB700BB30AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD1D571D1C71BDB700BB30AC;
+			remoteInfo = LincKia;
+		};
+		CD1D57461C71BDB800BB30AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD1D57161C71BDB700BB30AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD1D571D1C71BDB700BB30AC;
+			remoteInfo = LincKia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD1D571E1C71BDB700BB30AC /* LincKia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LincKia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD1D57221C71BDB700BB30AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CD1D57241C71BDB700BB30AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CD1D57251C71BDB700BB30AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CD1D57271C71BDB700BB30AC /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		CD1D57281C71BDB700BB30AC /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		CD1D572A1C71BDB700BB30AC /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		CD1D572B1C71BDB700BB30AC /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		CD1D572E1C71BDB700BB30AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD1D57301C71BDB700BB30AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD1D57331C71BDB700BB30AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD1D57351C71BDB700BB30AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD1D573A1C71BDB800BB30AC /* LincKiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LincKiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD1D573E1C71BDB800BB30AC /* LincKiaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LincKiaTests.m; sourceTree = "<group>"; };
+		CD1D57401C71BDB800BB30AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD1D57451C71BDB800BB30AC /* LincKiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LincKiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD1D57491C71BDB800BB30AC /* LincKiaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LincKiaUITests.m; sourceTree = "<group>"; };
+		CD1D574B1C71BDB800BB30AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD1D571B1C71BDB700BB30AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1D57371C71BDB800BB30AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1D57421C71BDB800BB30AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD1D57151C71BDB700BB30AC = {
+			isa = PBXGroup;
+			children = (
+				CD1D57201C71BDB700BB30AC /* LincKia */,
+				CD1D573D1C71BDB800BB30AC /* LincKiaTests */,
+				CD1D57481C71BDB800BB30AC /* LincKiaUITests */,
+				CD1D571F1C71BDB700BB30AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD1D571F1C71BDB700BB30AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD1D571E1C71BDB700BB30AC /* LincKia.app */,
+				CD1D573A1C71BDB800BB30AC /* LincKiaTests.xctest */,
+				CD1D57451C71BDB800BB30AC /* LincKiaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD1D57201C71BDB700BB30AC /* LincKia */ = {
+			isa = PBXGroup;
+			children = (
+				CD1D57241C71BDB700BB30AC /* AppDelegate.h */,
+				CD1D57251C71BDB700BB30AC /* AppDelegate.m */,
+				CD1D57271C71BDB700BB30AC /* FirstViewController.h */,
+				CD1D57281C71BDB700BB30AC /* FirstViewController.m */,
+				CD1D572A1C71BDB700BB30AC /* SecondViewController.h */,
+				CD1D572B1C71BDB700BB30AC /* SecondViewController.m */,
+				CD1D572D1C71BDB700BB30AC /* Main.storyboard */,
+				CD1D57301C71BDB700BB30AC /* Assets.xcassets */,
+				CD1D57321C71BDB700BB30AC /* LaunchScreen.storyboard */,
+				CD1D57351C71BDB700BB30AC /* Info.plist */,
+				CD1D57211C71BDB700BB30AC /* Supporting Files */,
+			);
+			path = LincKia;
+			sourceTree = "<group>";
+		};
+		CD1D57211C71BDB700BB30AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD1D57221C71BDB700BB30AC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD1D573D1C71BDB800BB30AC /* LincKiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD1D573E1C71BDB800BB30AC /* LincKiaTests.m */,
+				CD1D57401C71BDB800BB30AC /* Info.plist */,
+			);
+			path = LincKiaTests;
+			sourceTree = "<group>";
+		};
+		CD1D57481C71BDB800BB30AC /* LincKiaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD1D57491C71BDB800BB30AC /* LincKiaUITests.m */,
+				CD1D574B1C71BDB800BB30AC /* Info.plist */,
+			);
+			path = LincKiaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD1D571D1C71BDB700BB30AC /* LincKia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD1D574E1C71BDB800BB30AC /* Build configuration list for PBXNativeTarget "LincKia" */;
+			buildPhases = (
+				CD1D571A1C71BDB700BB30AC /* Sources */,
+				CD1D571B1C71BDB700BB30AC /* Frameworks */,
+				CD1D571C1C71BDB700BB30AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LincKia;
+			productName = LincKia;
+			productReference = CD1D571E1C71BDB700BB30AC /* LincKia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD1D57391C71BDB800BB30AC /* LincKiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD1D57511C71BDB800BB30AC /* Build configuration list for PBXNativeTarget "LincKiaTests" */;
+			buildPhases = (
+				CD1D57361C71BDB800BB30AC /* Sources */,
+				CD1D57371C71BDB800BB30AC /* Frameworks */,
+				CD1D57381C71BDB800BB30AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD1D573C1C71BDB800BB30AC /* PBXTargetDependency */,
+			);
+			name = LincKiaTests;
+			productName = LincKiaTests;
+			productReference = CD1D573A1C71BDB800BB30AC /* LincKiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD1D57441C71BDB800BB30AC /* LincKiaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD1D57541C71BDB800BB30AC /* Build configuration list for PBXNativeTarget "LincKiaUITests" */;
+			buildPhases = (
+				CD1D57411C71BDB800BB30AC /* Sources */,
+				CD1D57421C71BDB800BB30AC /* Frameworks */,
+				CD1D57431C71BDB800BB30AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD1D57471C71BDB800BB30AC /* PBXTargetDependency */,
+			);
+			name = LincKiaUITests;
+			productName = LincKiaUITests;
+			productReference = CD1D57451C71BDB800BB30AC /* LincKiaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD1D57161C71BDB700BB30AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Phoebe;
+				TargetAttributes = {
+					CD1D571D1C71BDB700BB30AC = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					CD1D57391C71BDB800BB30AC = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = CD1D571D1C71BDB700BB30AC;
+					};
+					CD1D57441C71BDB800BB30AC = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = CD1D571D1C71BDB700BB30AC;
+					};
+				};
+			};
+			buildConfigurationList = CD1D57191C71BDB700BB30AC /* Build configuration list for PBXProject "LincKia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD1D57151C71BDB700BB30AC;
+			productRefGroup = CD1D571F1C71BDB700BB30AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD1D571D1C71BDB700BB30AC /* LincKia */,
+				CD1D57391C71BDB800BB30AC /* LincKiaTests */,
+				CD1D57441C71BDB800BB30AC /* LincKiaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD1D571C1C71BDB700BB30AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD1D57341C71BDB700BB30AC /* LaunchScreen.storyboard in Resources */,
+				CD1D57311C71BDB700BB30AC /* Assets.xcassets in Resources */,
+				CD1D572F1C71BDB700BB30AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1D57381C71BDB800BB30AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1D57431C71BDB800BB30AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD1D571A1C71BDB700BB30AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD1D572C1C71BDB700BB30AC /* SecondViewController.m in Sources */,
+				CD1D57261C71BDB700BB30AC /* AppDelegate.m in Sources */,
+				CD1D57291C71BDB700BB30AC /* FirstViewController.m in Sources */,
+				CD1D57231C71BDB700BB30AC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1D57361C71BDB800BB30AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD1D573F1C71BDB800BB30AC /* LincKiaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD1D57411C71BDB800BB30AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD1D574A1C71BDB800BB30AC /* LincKiaUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD1D573C1C71BDB800BB30AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD1D571D1C71BDB700BB30AC /* LincKia */;
+			targetProxy = CD1D573B1C71BDB800BB30AC /* PBXContainerItemProxy */;
+		};
+		CD1D57471C71BDB800BB30AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD1D571D1C71BDB700BB30AC /* LincKia */;
+			targetProxy = CD1D57461C71BDB800BB30AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD1D572D1C71BDB700BB30AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD1D572E1C71BDB700BB30AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD1D57321C71BDB700BB30AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD1D57331C71BDB700BB30AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD1D574C1C71BDB800BB30AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CD1D574D1C71BDB800BB30AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD1D574F1C71BDB800BB30AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LincKia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sage.LincKia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CD1D57501C71BDB800BB30AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LincKia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sage.LincKia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CD1D57521C71BDB800BB30AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LincKiaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sage.LincKiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LincKia.app/LincKia";
+			};
+			name = Debug;
+		};
+		CD1D57531C71BDB800BB30AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LincKiaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sage.LincKiaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LincKia.app/LincKia";
+			};
+			name = Release;
+		};
+		CD1D57551C71BDB800BB30AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LincKiaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sage.LincKiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LincKia;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CD1D57561C71BDB800BB30AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LincKiaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Sage.LincKiaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LincKia;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD1D57191C71BDB700BB30AC /* Build configuration list for PBXProject "LincKia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD1D574C1C71BDB800BB30AC /* Debug */,
+				CD1D574D1C71BDB800BB30AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD1D574E1C71BDB800BB30AC /* Build configuration list for PBXNativeTarget "LincKia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD1D574F1C71BDB800BB30AC /* Debug */,
+				CD1D57501C71BDB800BB30AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD1D57511C71BDB800BB30AC /* Build configuration list for PBXNativeTarget "LincKiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD1D57521C71BDB800BB30AC /* Debug */,
+				CD1D57531C71BDB800BB30AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CD1D57541C71BDB800BB30AC /* Build configuration list for PBXNativeTarget "LincKiaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD1D57551C71BDB800BB30AC /* Debug */,
+				CD1D57561C71BDB800BB30AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD1D57161C71BDB700BB30AC /* Project object */;
+}
