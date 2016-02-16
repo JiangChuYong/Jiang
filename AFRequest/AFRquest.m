@@ -13,13 +13,60 @@ SingletonM(AFRquest);
 
 -(void)requestDataFromServer{
     
-    if (_style == POST) {
+    _appDelegate = [UIApplication sharedApplication].delegate;
+    _IPADRESS = [SERVER_IP stringByAppendingString:_subURLString];
+    NSLog(@"请求地址：%@",_IPADRESS);
+
+    if (!_subURLString && _requestFlag) {
+        NSLog(@"请检查链接子字符串或者请求标识");
+    }else{
         
+        if (_style == POST) {
+            [self ConnectServerViaPostStyle];
+        }
+        
+        if (_style == GET) {
+            [self ConnectServerViaGetStyle];
+        }
     }
     
-    if (_style == GET) {
-        
-    }
 }
+-(void)ConnectServerViaPostStyle{
+    
+    if (!_parameters) {
+        _parameters = nil;
+    }
+    
+    [_appDelegate.manager POST:_IPADRESS parameters:_parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        NSData * response = [NSData dataWithData:responseObject];
+        _resultDict = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"POST响应数据：%@",_resultDict);
+        [[NSNotificationCenter defaultCenter]postNotificationName:CONNECTED object:_resultDict];
+    }failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        NSLog(@"POST服务器未响应");
+        _resultDict = @{@"Code":@1};
+        [[NSNotificationCenter defaultCenter]postNotificationName:CONNECTED object:_resultDict];
+
+    }];
+    
+}
+
+-(void)ConnectServerViaGetStyle{
+    
+    [_appDelegate.manager GET:_IPADRESS parameters:_parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+        NSData * response = [NSData dataWithData:responseObject];
+        _resultDict = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingAllowFragments error:nil];
+        NSLog(@"GET响应数据：%@",_resultDict);
+        [[NSNotificationCenter defaultCenter]postNotificationName:CONNECTED object:_resultDict];
+    } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
+        NSLog(@"GET服务器未响应");
+        _resultDict = @{@"Code":@1};
+        [[NSNotificationCenter defaultCenter]postNotificationName:CONNECTED object:_resultDict];
+    }];
+    
+}
+
+
+
 
 @end

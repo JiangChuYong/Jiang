@@ -74,6 +74,7 @@
 		CD1D57451C71BDB800BB30AC /* LincKiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LincKiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1D57491C71BDB800BB30AC /* LincKiaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LincKiaUITests.m; sourceTree = "<group>"; };
 		CD1D574B1C71BDB800BB30AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD515AE41C7307A400601CA2 /* RequestFlag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestFlag.h; sourceTree = "<group>"; };
 		CD5CD00A1C71E10F00B6A34B /* AFRquest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRquest.h; sourceTree = "<group>"; };
 		CD5CD00B1C71E10F00B6A34B /* AFRquest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRquest.m; sourceTree = "<group>"; };
 		CD65AB391C71C37D00AED0F8 /* MinePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinePageViewController.h; sourceTree = "<group>"; };
@@ -215,6 +216,7 @@
 			children = (
 				CD5CD00A1C71E10F00B6A34B /* AFRquest.h */,
 				CD5CD00B1C71E10F00B6A34B /* AFRquest.m */,
+				CD515AE41C7307A400601CA2 /* RequestFlag.h */,
 			);
 			path = AFRequest;
 			sourceTree = "<group>";
