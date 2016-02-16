@@ -19,6 +19,9 @@ typedef enum{
 
 #define SERVER_IP @"http://112.74.75.66/OfficeAPI/"
 #define CONNECTED @"connected"
+#define START_OBSERVE_CONNECTION     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:CONNECTED object:nil];
+#define STOP_OBSERVE_CONNECTION         [[NSNotificationCenter defaultCenter]removeObserver:self name:CONNECTED object:nil];
+#define POST_NOTIFICATION         [[NSNotificationCenter defaultCenter]postNotificationName:CONNECTED object:_resultDict];
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking.h>

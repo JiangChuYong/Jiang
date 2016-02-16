@@ -20,8 +20,7 @@
     [super viewDidLoad];
 
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:CONNECTED object:nil];
-    
+    START_OBSERVE_CONNECTION
     _af = [AFRquest sharedInstance];
     _af.subURLString = @"api/Users/Login?deviceType=ios";
     _af.parameters = @{@"Account":@"18602515155",@"Password":@"aaa111"};
@@ -32,23 +31,28 @@
 -(void)dataReceived:(NSNotification *)notif{
 
     NSDictionary * dict = [notif object];
-
+    if (dict) {
+        STOP_OBSERVE_CONNECTION
+    }
     
     if (_af.requestFlag == UsersLogin) {
+        
+        NSLog(@"_YI_______\n%@\n__________",dict);
+
         NSDictionary * data = dict[@"Data"];
         NSString * userToken = data[@"UserToken"];
-        NSLog(@"%@",userToken);
         if (userToken) {
-            AFRquest * af = [AFRquest sharedInstance];
-            af.subURLString = [NSString stringWithFormat:@"api/Users/GetUserInfo?deviceType=ios&usertoken=%@",userToken];
-            af.style = GET;
-            af.requestFlag = GetUserInfo;
-            [af requestDataFromServer];
+            START_OBSERVE_CONNECTION
+            _af = [AFRquest sharedInstance];
+            _af.subURLString = [NSString stringWithFormat:@"api/Users/GetUserInfo?deviceType=ios&usertoken=%@",userToken];
+            _af.style = GET;
+            _af.requestFlag = GetUserInfo;
+            [_af requestDataFromServer];
         }
     }
     
     if (_af.requestFlag == GetUserInfo) {
-        NSLog(@"________\n%@\n__________",dict);
+        NSLog(@"__ER______\n%@\n__________",dict);
     }
     
 }

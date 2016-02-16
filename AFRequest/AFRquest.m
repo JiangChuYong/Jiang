@@ -40,13 +40,11 @@ SingletonM(AFRquest);
     [_appDelegate.manager POST:_IPADRESS parameters:_parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         NSData * response = [NSData dataWithData:responseObject];
         _resultDict = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingAllowFragments error:nil];
-        NSLog(@"POST响应数据：%@",_resultDict);
-        [[NSNotificationCenter defaultCenter]postNotificationName:CONNECTED object:_resultDict];
+        POST_NOTIFICATION
     }failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         NSLog(@"POST服务器未响应");
         _resultDict = @{@"Code":@1};
-        [[NSNotificationCenter defaultCenter]postNotificationName:CONNECTED object:_resultDict];
-
+        POST_NOTIFICATION
     }];
     
 }
@@ -56,14 +54,12 @@ SingletonM(AFRquest);
     [_appDelegate.manager GET:_IPADRESS parameters:_parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         NSData * response = [NSData dataWithData:responseObject];
         _resultDict = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingAllowFragments error:nil];
-        NSLog(@"GET响应数据：%@",_resultDict);
-        [[NSNotificationCenter defaultCenter]postNotificationName:CONNECTED object:_resultDict];
+        POST_NOTIFICATION
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         NSLog(@"GET服务器未响应");
         _resultDict = @{@"Code":@1};
-        [[NSNotificationCenter defaultCenter]postNotificationName:CONNECTED object:_resultDict];
+        POST_NOTIFICATION
     }];
-    
 }
 
 

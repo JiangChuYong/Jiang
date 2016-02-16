@@ -16,7 +16,7 @@ typedef enum{
     //用户登录
     UsersLogin=1,
     //获取用户信息
-    GetUserInfo,
+    GetUserInfo=2,
     
 }RequestFlag;
 
