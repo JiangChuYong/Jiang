@@ -8,7 +8,6 @@
 #import "PBSingleTon.h"
 #import "GlobalConfig.h"
 #import "CommonDefine.h"
-#import <AFNetworking.h>
 
 #ifndef LincKia_Prefix_pch
 #define LincKia_Prefix_pch
