@@ -10,7 +10,6 @@
 
 @interface HomePageViewController ()
 
-@property (nonatomic,strong) AFRquest * af;
 
 @end
 
@@ -18,41 +17,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
     START_OBSERVE_CONNECTION
-    _af = [AFRquest sharedInstance];
-    _af.subURLString = @"api/Users/Login?deviceType=ios";
-    _af.parameters = @{@"Account":@"18602515155",@"Password":@"aaa111"};
-    _af.requestFlag = UsersLogin;
-    _af.style = POST;
-    [_af requestDataFromServer];
+    AFRquest * af = [AFRquest sharedInstance];
+    af.subURLString = @"api/Users/Login?deviceType=ios";
+    af.parameters = @{@"Account":@"18602515155",@"Password":@"aaa111"};
+    af.requestFlag = UsersLogin;
+    af.style = POST;
+    [af requestDataFromServer];
 }
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    STOP_OBSERVE_CONNECTION
+}
+
 -(void)dataReceived:(NSNotification *)notif{
 
     NSDictionary * dict = [notif object];
-    if (dict) {
-        STOP_OBSERVE_CONNECTION
-    }
-    
-    if (_af.requestFlag == UsersLogin) {
-        
-        NSLog(@"_YI_______\n%@\n__________",dict);
-
-        NSDictionary * data = dict[@"Data"];
-        NSString * userToken = data[@"UserToken"];
-        if (userToken) {
-            START_OBSERVE_CONNECTION
-            _af = [AFRquest sharedInstance];
-            _af.subURLString = [NSString stringWithFormat:@"api/Users/GetUserInfo?deviceType=ios&usertoken=%@",userToken];
-            _af.style = GET;
-            _af.requestFlag = GetUserInfo;
-            [_af requestDataFromServer];
-        }
-    }
-    
-    if (_af.requestFlag == GetUserInfo) {
-        NSLog(@"__ER______\n%@\n__________",dict);
+    if ([AFRquest sharedInstance].requestFlag == UsersLogin) {
+        NSLog(@"flag == %i",[AFRquest sharedInstance].requestFlag);
+        NSLog(@"%@",dict);
     }
     
 }
