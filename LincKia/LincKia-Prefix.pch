@@ -5,13 +5,15 @@
 //  Created by Phoebe on 16/2/15.
 //  Copyright © 2016年 Phoebe. All rights reserved.
 //
+
+#ifndef LincKia_Prefix_pch
+#define LincKia_Prefix_pch
+
 #import "PBSingleTon.h"
 #import "GlobalConfig.h"
 #import "CommonDefine.h"
 #import "AFRquest.h"
-
-#ifndef LincKia_Prefix_pch
-#define LincKia_Prefix_pch
+#import "UIImageView+WebCache.h"
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

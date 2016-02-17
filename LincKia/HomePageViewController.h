@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomePageViewController : UIViewController
+@interface HomePageViewController : UIViewController <UITabBarControllerDelegate>
 
 
 @end
