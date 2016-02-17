@@ -9,7 +9,6 @@
 #import "GlobalConfig.h"
 #import "CommonDefine.h"
 #import "AFRquest.h"
-
 #ifndef LincKia_Prefix_pch
 #define LincKia_Prefix_pch
 

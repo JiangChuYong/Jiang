@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65977B091C732FC00015EFFC /* PBADBannerCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65977B011C732FC00015EFFC /* PBADBannerCellTableViewCell.m */; };
+		65977B0A1C732FC00015EFFC /* PBADBannerCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65977B021C732FC00015EFFC /* PBADBannerCellTableViewCell.xib */; };
+		65977B0B1C732FC00015EFFC /* PBButtonChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65977B041C732FC00015EFFC /* PBButtonChooseCell.m */; };
+		65977B0C1C732FC00015EFFC /* PBButtonChooseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65977B051C732FC00015EFFC /* PBButtonChooseCell.xib */; };
+		65977B0D1C732FC00015EFFC /* ZZSpaceRecommendCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65977B071C732FC00015EFFC /* ZZSpaceRecommendCellTableViewCell.m */; };
+		65977B0E1C732FC00015EFFC /* ZZSpaceRecommendCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65977B081C732FC00015EFFC /* ZZSpaceRecommendCellTableViewCell.xib */; };
 		CD1D57231C71BDB700BB30AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57221C71BDB700BB30AC /* main.m */; };
 		CD1D57261C71BDB700BB30AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57251C71BDB700BB30AC /* AppDelegate.m */; };
 		CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57281C71BDB700BB30AC /* HomePageViewController.m */; };
@@ -56,6 +62,15 @@
 /* Begin PBXFileReference section */
 		4A87F89A1AD34DBE85390708 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5209D7976CD92A98E2D1845C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		65977B001C732FC00015EFFC /* PBADBannerCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBADBannerCellTableViewCell.h; sourceTree = "<group>"; };
+		65977B011C732FC00015EFFC /* PBADBannerCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBADBannerCellTableViewCell.m; sourceTree = "<group>"; };
+		65977B021C732FC00015EFFC /* PBADBannerCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBADBannerCellTableViewCell.xib; sourceTree = "<group>"; };
+		65977B031C732FC00015EFFC /* PBButtonChooseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBButtonChooseCell.h; sourceTree = "<group>"; };
+		65977B041C732FC00015EFFC /* PBButtonChooseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBButtonChooseCell.m; sourceTree = "<group>"; };
+		65977B051C732FC00015EFFC /* PBButtonChooseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBButtonChooseCell.xib; sourceTree = "<group>"; };
+		65977B061C732FC00015EFFC /* ZZSpaceRecommendCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZSpaceRecommendCellTableViewCell.h; sourceTree = "<group>"; };
+		65977B071C732FC00015EFFC /* ZZSpaceRecommendCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZSpaceRecommendCellTableViewCell.m; sourceTree = "<group>"; };
+		65977B081C732FC00015EFFC /* ZZSpaceRecommendCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZSpaceRecommendCellTableViewCell.xib; sourceTree = "<group>"; };
 		CD1D571E1C71BDB700BB30AC /* LincKia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LincKia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1D57221C71BDB700BB30AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD1D57241C71BDB700BB30AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,6 +145,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65977AFF1C732E040015EFFC /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				65977B001C732FC00015EFFC /* PBADBannerCellTableViewCell.h */,
+				65977B011C732FC00015EFFC /* PBADBannerCellTableViewCell.m */,
+				65977B021C732FC00015EFFC /* PBADBannerCellTableViewCell.xib */,
+				65977B031C732FC00015EFFC /* PBButtonChooseCell.h */,
+				65977B041C732FC00015EFFC /* PBButtonChooseCell.m */,
+				65977B051C732FC00015EFFC /* PBButtonChooseCell.xib */,
+				65977B061C732FC00015EFFC /* ZZSpaceRecommendCellTableViewCell.h */,
+				65977B071C732FC00015EFFC /* ZZSpaceRecommendCellTableViewCell.m */,
+				65977B081C732FC00015EFFC /* ZZSpaceRecommendCellTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		8BC53963206283428D6956E3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +198,7 @@
 		CD1D57201C71BDB700BB30AC /* LincKia */ = {
 			isa = PBXGroup;
 			children = (
+				65977AFF1C732E040015EFFC /* TableViewCell */,
 				CD1D57241C71BDB700BB30AC /* AppDelegate.h */,
 				CD1D57251C71BDB700BB30AC /* AppDelegate.m */,
 				CD1D57271C71BDB700BB30AC /* HomePageViewController.h */,
@@ -378,6 +410,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65977B0A1C732FC00015EFFC /* PBADBannerCellTableViewCell.xib in Resources */,
 				CD1D57341C71BDB700BB30AC /* LaunchScreen.storyboard in Resources */,
 				CD81A0A21C72B69F00221AEF /* mine_unpressed@2x.png in Resources */,
 				CD81A09D1C72B69F00221AEF /* member_pressed@3x.png in Resources */,
@@ -389,10 +422,12 @@
 				CD81A09E1C72B69F00221AEF /* member_unpressed@2x.png in Resources */,
 				CD81A09A1C72B69F00221AEF /* home_unpressed@2x.png in Resources */,
 				CD81A09B1C72B69F00221AEF /* home_unpressed@3x.png in Resources */,
+				65977B0C1C732FC00015EFFC /* PBButtonChooseCell.xib in Resources */,
 				CD81A0A01C72B69F00221AEF /* mine_pressed@2x.png in Resources */,
 				CD81A09C1C72B69F00221AEF /* member_pressed@2x.png in Resources */,
 				CD81A0A31C72B69F00221AEF /* mine_unpressed@3x.png in Resources */,
 				CD81A0A11C72B69F00221AEF /* mine_pressed@3x.png in Resources */,
+				65977B0E1C732FC00015EFFC /* ZZSpaceRecommendCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,9 +503,12 @@
 				CD65AB3B1C71C37D00AED0F8 /* MinePageViewController.m in Sources */,
 				CD1D572C1C71BDB700BB30AC /* MemberPageViewController.m in Sources */,
 				CD1D57261C71BDB700BB30AC /* AppDelegate.m in Sources */,
+				65977B0D1C732FC00015EFFC /* ZZSpaceRecommendCellTableViewCell.m in Sources */,
 				CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */,
+				65977B091C732FC00015EFFC /* PBADBannerCellTableViewCell.m in Sources */,
 				CD7360C01C71C9A800E3971C /* UITextField+PlaceHolderSetting.m in Sources */,
 				CD7360BF1C71C9A800E3971C /* CustomTextField.m in Sources */,
+				65977B0B1C732FC00015EFFC /* PBButtonChooseCell.m in Sources */,
 				CD7360BE1C71C9A800E3971C /* CommonUtil.m in Sources */,
 				CD1D57231C71BDB700BB30AC /* main.m in Sources */,
 				CD5CD00C1C71E10F00B6A34B /* AFRquest.m in Sources */,
