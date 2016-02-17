@@ -46,11 +46,14 @@
         UIImageView * img = [[UIImageView alloc]initWithFrame:CGRectMake(Main_Screen_Width*i, 0, Main_Screen_Width, cell.bounds.size.height)];
         
         
-//        [img sd_setImageWithURL:[NSURL URLWithString:ads[i]] placeholderImage:[UIImage imageNamed:Index_Recommond_Default_Image]];
+        [img sd_setImageWithURL:[NSURL URLWithString:ads[i]] placeholderImage:[UIImage imageNamed:Index_Recommond_Default_Image]];
 
         [_ADSrollView addSubview:img];
     }
 }
+
+
+
 -(void)deleteSubviewsOfScrollView
 {
     if (_ADSrollView.subviews.count) {

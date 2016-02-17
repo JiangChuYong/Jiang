@@ -26,6 +26,7 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
 static NSString *ADCellIDKey = @"PBADBannerCellTableViewCell";
 static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
 
+//注册cell
 -(void)registCell{
     [_listTableView registerNib:[UINib nibWithNibName:@"ZZSpaceRecommendCellTableViewCell" bundle:nil] forCellReuseIdentifier:spaceListTableViewCell];
     [_listTableView registerNib:[UINib nibWithNibName:@"PBADBannerCellTableViewCell" bundle:nil] forCellReuseIdentifier:ADCellIDKey];
@@ -35,9 +36,9 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self registCell];
     _adsArr =[NSMutableArray array];
     _spaceSummaryInfoArr=[NSMutableArray array];
-    
     START_OBSERVE_CONNECTION
     AFRquest * af = [AFRquest sharedInstance];
     af.subURLString = @"api/Spaces/GetIndex?deviceType=ios&userToken=""";
@@ -52,6 +53,25 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     STOP_OBSERVE_CONNECTION
 }
 
+
+
+-(void)dataReceived:(NSNotification *)notif{
+    
+    _responseDataOfIndexDict = [notif object];
+    if ([AFRquest sharedInstance].requestFlag == GetIndex) {
+        NSLog(@"flag == %i",[AFRquest sharedInstance].requestFlag);
+        NSLog(@"%@",_responseDataOfIndexDict);
+        
+        _adsArr=_responseDataOfIndexDict[@"Data"][@"ADs"];
+        
+        _spaceSummaryInfoArr=_responseDataOfIndexDict[@"Data"][@"Spaces"];
+        [_listTableView reloadData];
+    }
+    
+}
+
+
+#pragma -- mark UITABLEVIEW DELEGATE
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
         return (Main_Screen_Height+20)*0.3f;
@@ -63,23 +83,6 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     }
 }
 
--(void)dataReceived:(NSNotification *)notif{
-    
-    _responseDataOfIndexDict = [notif object];
-    if ([AFRquest sharedInstance].requestFlag == GetIndex) {
-        NSLog(@"flag == %i",[AFRquest sharedInstance].requestFlag);
-        NSLog(@"%@",_responseDataOfIndexDict);
-        
-        
-        _adsArr=_responseDataOfIndexDict[@"Data"][@"ADs"];
-        
-        
-        _spaceSummaryInfoArr=_responseDataOfIndexDict[@"Data"][@"Spaces"];
-        [_listTableView reloadData];
-    }
-    
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _spaceSummaryInfoArr.count+2;
@@ -89,22 +92,53 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"dfsf");
-    if (indexPath.row==0) {
-        if (indexPath.row == 0) {
-            
-            PBADBannerCellTableViewCell * ADCell = [_listTableView dequeueReusableCellWithIdentifier:ADCellIDKey];
-            ADCell.ADSrollView.delegate = self;
-             _adcell = ADCell;
-            [_adcell setScrollViewContentOfSize:_adsArr withCell:_adcell];
-            
-            return ADCell;
-            
-        }
+    
+    if (indexPath.row == 0) {
+        
+        PBADBannerCellTableViewCell * ADCell = [_listTableView dequeueReusableCellWithIdentifier:ADCellIDKey];
+        ADCell.ADSrollView.delegate = self;
+        _adcell = ADCell;
+        [_adcell setScrollViewContentOfSize:_adsArr withCell:_adcell];
+        
+        return ADCell;
+        
+    }else if (indexPath.row == 1){
+        
+        PBButtonChooseCell * chooseCell = [_listTableView dequeueReusableCellWithIdentifier:ChooseCellIDKey];
+        //            [chooseCell.industryBtn addTarget:self action:@selector(pushToIndustryListPage:) forControlEvents:UIControlEventTouchDown];
+        //            [chooseCell.spaceBtn addTarget:self action:@selector(pushToLinckiaOffice:) forControlEvents:UIControlEventTouchDown];
+        //            [chooseCell.activityBtn addTarget:self action:@selector(activitySpaceButtonPressed:) forControlEvents:UIControlEventTouchDown];
+        
+        return chooseCell;
+        
+    }else{
+        ZZSpaceRecommendCellTableViewCell *spacesListTableViewCell=[_listTableView dequeueReusableCellWithIdentifier:spaceListTableViewCell];
+        //获取数据
+        NSDictionary *spaceDict=_spaceSummaryInfoArr[indexPath.row-2];
+        //主图
+        [spacesListTableViewCell.spaceImageView sd_setImageWithURL:[NSURL URLWithString:spaceDict[@"PicUrl"]] placeholderImage:[UIImage imageNamed:Index_Recommond_Default_Image]];
+        //读取空间名称
+        spacesListTableViewCell.spaceNameLabel.text = spaceDict[@"Name"];
+        //读取空间地址
+        spacesListTableViewCell.spaceAdressLabel.text =spaceDict[@"Location"];
+        //添加用户交互图片
+        UIButton *UITouchBtn =[spacesListTableViewCell valueForKey:@"UITouchBtn"];
+        UITouchBtn.tag = 5000+indexPath.row;
+        //            [UITouchBtn addTarget:self action:@selector(selectRecommond:) forControlEvents:UIControlEventTouchUpInside];
+        
+        return spacesListTableViewCell;
     }
-    return [[UITableViewCell alloc]init];
+    
+    
 }
 
-
+#pragma -- mark SCROLLVIEW PART
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if ([scrollView isEqual:_adcell.ADSrollView]) {
+        _adcell.pageControl.currentPage = scrollView.contentOffset.x/Main_Screen_Width;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

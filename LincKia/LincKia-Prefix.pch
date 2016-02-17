@@ -9,6 +9,7 @@
 #import "GlobalConfig.h"
 #import "CommonDefine.h"
 #import "AFRquest.h"
+#import <UIImageView+WebCache.h>
 #ifndef LincKia_Prefix_pch
 #define LincKia_Prefix_pch
 
