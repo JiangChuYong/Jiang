@@ -3,7 +3,10 @@
 //  LincKia
 //
 //#define LincTest
-#define Key_Data @"Data"
+
+#define USERNAME @"userName"
+#define PASSWORD @"passWord"
+#define USERTOKEN @"userToken"
 
 //分割线的颜色
 #define SeparateLineColor       RGBA(240,241,242,1)
@@ -99,10 +102,6 @@ typedef enum {
 #define SeverePollutionColor RGBA(145,41,75,1)
 //严重污染
 #define SevereContaminationColor RGBA(73,19,36,1)
-
-
-
-//登录
 
 //登录页面字体颜色
 #define Login_PlaceHolder_FontColor       RGBA(186,216,237,1)

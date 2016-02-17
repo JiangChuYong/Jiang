@@ -13,10 +13,14 @@
 @end
 
 @implementation MinePageViewController
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self cheakLoginStatus];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,6 +29,22 @@
 }
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
+}
+
+#pragma -- mark CHEAK USER INFO
+-(BOOL)cheakLoginStatus{
+    NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+    NSString * userName = [userInfo valueForKey:USERNAME];
+    NSString * passWord = [userInfo valueForKey:PASSWORD];
+    if (!userName||!passWord) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"请登录" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+        [alert show];
+    }
+    
+    
+    
+    
+    return 0;
 }
 /*
 #pragma mark - Navigation
