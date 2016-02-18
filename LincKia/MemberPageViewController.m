@@ -6,6 +6,7 @@
 //
 
 #import "MemberPageViewController.h"
+#import "LoginViewController.h"
 
 @interface MemberPageViewController ()
 
@@ -21,7 +22,8 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-  //  [self performSegueWithIdentifier:@"MemberToLogin" sender:self];
+    [self performSegueWithIdentifier:@"MemberToLogin" sender:self];
+    
 }
 
 

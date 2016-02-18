@@ -33,15 +33,19 @@
 
 #pragma -- mark CHEAK USER INFO
 -(BOOL)cheakLoginStatus{
-    NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
-    NSString * userName = [userInfo valueForKey:USERNAME];
-    NSString * passWord = [userInfo valueForKey:PASSWORD];
-    if (!userName||!passWord) {
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"请登录" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-        [alert show];
-    }
     
     
+    [self performSegueWithIdentifier:@"MineToLogin" sender:self];
+    
+//    NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+//    NSString * userName = [userInfo valueForKey:USERNAME];
+//    NSString * passWord = [userInfo valueForKey:PASSWORD];
+//    if (!userName||!passWord) {
+//        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"请登录" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+//        [alert show];
+//    }
+//    
+//    
     
     
     return 0;
