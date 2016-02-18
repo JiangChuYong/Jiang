@@ -10,6 +10,7 @@
 #import "ZZSpaceRecommendCellTableViewCell.h"
 #import "PBADBannerCellTableViewCell.h"
 #import "PBButtonChooseCell.h"
+#import "PBIndustryViewController.h"
 @interface HomePageViewController ()
 
 @property (strong, nonatomic) IBOutlet UITableView *listTableView;
@@ -112,7 +113,7 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     }else if (indexPath.row == 1){
         
         PBButtonChooseCell * chooseCell = [_listTableView dequeueReusableCellWithIdentifier:ChooseCellIDKey];
-        //            [chooseCell.industryBtn addTarget:self action:@selector(pushToIndustryListPage:) forControlEvents:UIControlEventTouchDown];
+                    [chooseCell.industryBtn addTarget:self action:@selector(pushToIndustryListPage:) forControlEvents:UIControlEventTouchDown];
         //            [chooseCell.spaceBtn addTarget:self action:@selector(pushToLinckiaOffice:) forControlEvents:UIControlEventTouchDown];
         //            [chooseCell.activityBtn addTarget:self action:@selector(activitySpaceButtonPressed:) forControlEvents:UIControlEventTouchDown];
         
@@ -138,6 +139,15 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     
     
 }
+
+//跳转至 企业服务页面
+- (void)pushToIndustryListPage:(UIButton *)sender
+{
+    PBIndustryViewController * industryVC = [[PBIndustryViewController alloc]init];
+    //[self.navigationController pushViewController:industryVC animated:YES];
+    [self presentViewController:industryVC animated:YES completion:nil];
+}
+
 
 #pragma -- mark SCROLLVIEW PART
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView

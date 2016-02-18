@@ -25,6 +25,8 @@
 		65B100481C74154300AF8283 /* office_community_pressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B100441C74154300AF8283 /* office_community_pressed@3x.png */; };
 		65B100491C74154300AF8283 /* office_community_unpressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B100451C74154300AF8283 /* office_community_unpressed@2x.png */; };
 		65B1004A1C74154300AF8283 /* office_community_unpressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B100461C74154300AF8283 /* office_community_unpressed@3x.png */; };
+		65B419441C756B7700FA817B /* PBIndustryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B419421C756B7700FA817B /* PBIndustryViewController.m */; };
+		65B419451C756B7700FA817B /* PBIndustryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B419431C756B7700FA817B /* PBIndustryViewController.xib */; };
 		CD1D57231C71BDB700BB30AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57221C71BDB700BB30AC /* main.m */; };
 		CD1D57261C71BDB700BB30AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57251C71BDB700BB30AC /* AppDelegate.m */; };
 		CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57281C71BDB700BB30AC /* HomePageViewController.m */; };
@@ -116,6 +118,9 @@
 		65B100441C74154300AF8283 /* office_community_pressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "office_community_pressed@3x.png"; sourceTree = "<group>"; };
 		65B100451C74154300AF8283 /* office_community_unpressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "office_community_unpressed@2x.png"; sourceTree = "<group>"; };
 		65B100461C74154300AF8283 /* office_community_unpressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "office_community_unpressed@3x.png"; sourceTree = "<group>"; };
+		65B419411C756B7700FA817B /* PBIndustryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBIndustryViewController.h; sourceTree = "<group>"; };
+		65B419421C756B7700FA817B /* PBIndustryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBIndustryViewController.m; sourceTree = "<group>"; };
+		65B419431C756B7700FA817B /* PBIndustryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBIndustryViewController.xib; sourceTree = "<group>"; };
 		CD1D571E1C71BDB700BB30AC /* LincKia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LincKia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1D57221C71BDB700BB30AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD1D57241C71BDB700BB30AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -229,6 +234,16 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		65B419401C756B7700FA817B /* IndustryList */ = {
+			isa = PBXGroup;
+			children = (
+				65B419411C756B7700FA817B /* PBIndustryViewController.h */,
+				65B419421C756B7700FA817B /* PBIndustryViewController.m */,
+				65B419431C756B7700FA817B /* PBIndustryViewController.xib */,
+			);
+			path = IndustryList;
+			sourceTree = "<group>";
+		};
 		8BC53963206283428D6956E3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +281,7 @@
 		CD1D57201C71BDB700BB30AC /* LincKia */ = {
 			isa = PBXGroup;
 			children = (
+				65B419401C756B7700FA817B /* IndustryList */,
 				65977AFF1C732E040015EFFC /* TableViewCell */,
 				CD1D57241C71BDB700BB30AC /* AppDelegate.h */,
 				CD1D57251C71BDB700BB30AC /* AppDelegate.m */,
@@ -551,6 +567,7 @@
 				65B100491C74154300AF8283 /* office_community_unpressed@2x.png in Resources */,
 				CD25C7561C74559C00F228E0 /* register_button_bg_unpressed@3x.png in Resources */,
 				CD25C74D1C74559C00F228E0 /* cellphone_code_clicked@3x.png in Resources */,
+				65B419451C756B7700FA817B /* PBIndustryViewController.xib in Resources */,
 				65B1003A1C7414DF00AF8283 /* activity_space_unpressed@3x.png in Resources */,
 				CD25C7601C74567E00F228E0 /* title_back_unpressed@3x.png in Resources */,
 				CD25C7511C74559C00F228E0 /* login_other_accounts@3x.png in Resources */,
@@ -657,6 +674,7 @@
 				65977B0D1C732FC00015EFFC /* ZZSpaceRecommendCellTableViewCell.m in Sources */,
 				CD25C7631C74570F00F228E0 /* PBButton.m in Sources */,
 				CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */,
+				65B419441C756B7700FA817B /* PBIndustryViewController.m in Sources */,
 				65977B091C732FC00015EFFC /* PBADBannerCellTableViewCell.m in Sources */,
 				CD7360C01C71C9A800E3971C /* UITextField+PlaceHolderSetting.m in Sources */,
 				CD7360BF1C71C9A800E3971C /* CustomTextField.m in Sources */,
