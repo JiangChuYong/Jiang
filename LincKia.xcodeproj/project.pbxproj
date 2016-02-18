@@ -37,15 +37,7 @@
 		CD1D573F1C71BDB800BB30AC /* LincKiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D573E1C71BDB800BB30AC /* LincKiaTests.m */; };
 		CD1D574A1C71BDB800BB30AC /* LincKiaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57491C71BDB800BB30AC /* LincKiaUITests.m */; };
 		CD25C73C1C7454E000F228E0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD25C73B1C7454E000F228E0 /* LoginViewController.m */; };
-		CD25C74D1C74559C00F228E0 /* cellphone_code_clicked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C73E1C74559C00F228E0 /* cellphone_code_clicked@3x.png */; };
-		CD25C74E1C74559C00F228E0 /* cellphone_code_unclicked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C73F1C74559C00F228E0 /* cellphone_code_unclicked@3x.png */; };
-		CD25C74F1C74559C00F228E0 /* choice_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C7401C74559C00F228E0 /* choice_selected@3x.png */; };
-		CD25C7501C74559C00F228E0 /* choice_unselected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C7411C74559C00F228E0 /* choice_unselected@3x.png */; };
-		CD25C7511C74559C00F228E0 /* login_other_accounts@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C7421C74559C00F228E0 /* login_other_accounts@3x.png */; };
-		CD25C7521C74559C00F228E0 /* login_qq@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C7431C74559C00F228E0 /* login_qq@3x.png */; };
-		CD25C7531C74559C00F228E0 /* login_sina@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C7441C74559C00F228E0 /* login_sina@3x.png */; };
 		CD25C7541C74559C00F228E0 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C7451C74559C00F228E0 /* logo@3x.png */; };
-		CD25C7551C74559C00F228E0 /* register_button_bg_pressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C7461C74559C00F228E0 /* register_button_bg_pressed@3x.png */; };
 		CD25C7561C74559C00F228E0 /* register_button_bg_unpressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C7471C74559C00F228E0 /* register_button_bg_unpressed@3x.png */; };
 		CD25C7571C74559C00F228E0 /* register_cellphone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C7481C74559C00F228E0 /* register_cellphone@3x.png */; };
 		CD25C7581C74559C00F228E0 /* register_content_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C7491C74559C00F228E0 /* register_content_bg@3x.png */; };
@@ -141,15 +133,7 @@
 		CD1D574B1C71BDB800BB30AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD25C73A1C7454E000F228E0 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		CD25C73B1C7454E000F228E0 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		CD25C73E1C74559C00F228E0 /* cellphone_code_clicked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellphone_code_clicked@3x.png"; sourceTree = "<group>"; };
-		CD25C73F1C74559C00F228E0 /* cellphone_code_unclicked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellphone_code_unclicked@3x.png"; sourceTree = "<group>"; };
-		CD25C7401C74559C00F228E0 /* choice_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "choice_selected@3x.png"; sourceTree = "<group>"; };
-		CD25C7411C74559C00F228E0 /* choice_unselected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "choice_unselected@3x.png"; sourceTree = "<group>"; };
-		CD25C7421C74559C00F228E0 /* login_other_accounts@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_other_accounts@3x.png"; sourceTree = "<group>"; };
-		CD25C7431C74559C00F228E0 /* login_qq@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_qq@3x.png"; sourceTree = "<group>"; };
-		CD25C7441C74559C00F228E0 /* login_sina@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_sina@3x.png"; sourceTree = "<group>"; };
 		CD25C7451C74559C00F228E0 /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
-		CD25C7461C74559C00F228E0 /* register_button_bg_pressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register_button_bg_pressed@3x.png"; sourceTree = "<group>"; };
 		CD25C7471C74559C00F228E0 /* register_button_bg_unpressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register_button_bg_unpressed@3x.png"; sourceTree = "<group>"; };
 		CD25C7481C74559C00F228E0 /* register_cellphone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register_cellphone@3x.png"; sourceTree = "<group>"; };
 		CD25C7491C74559C00F228E0 /* register_content_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register_content_bg@3x.png"; sourceTree = "<group>"; };
@@ -332,15 +316,7 @@
 		CD25C73D1C74559C00F228E0 /* 注册与登录 */ = {
 			isa = PBXGroup;
 			children = (
-				CD25C73E1C74559C00F228E0 /* cellphone_code_clicked@3x.png */,
-				CD25C73F1C74559C00F228E0 /* cellphone_code_unclicked@3x.png */,
-				CD25C7401C74559C00F228E0 /* choice_selected@3x.png */,
-				CD25C7411C74559C00F228E0 /* choice_unselected@3x.png */,
-				CD25C7421C74559C00F228E0 /* login_other_accounts@3x.png */,
-				CD25C7431C74559C00F228E0 /* login_qq@3x.png */,
-				CD25C7441C74559C00F228E0 /* login_sina@3x.png */,
 				CD25C7451C74559C00F228E0 /* logo@3x.png */,
-				CD25C7461C74559C00F228E0 /* register_button_bg_pressed@3x.png */,
 				CD25C7471C74559C00F228E0 /* register_button_bg_unpressed@3x.png */,
 				CD25C7481C74559C00F228E0 /* register_cellphone@3x.png */,
 				CD25C7491C74559C00F228E0 /* register_content_bg@3x.png */,
@@ -545,10 +521,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD25C74F1C74559C00F228E0 /* choice_selected@3x.png in Resources */,
 				65977B0A1C732FC00015EFFC /* PBADBannerCellTableViewCell.xib in Resources */,
 				CD1D57341C71BDB700BB30AC /* LaunchScreen.storyboard in Resources */,
-				CD25C74E1C74559C00F228E0 /* cellphone_code_unclicked@3x.png in Resources */,
 				65B1003F1C7414F900AF8283 /* enterprise_-service_pressed@2x.png in Resources */,
 				CD81A0A21C72B69F00221AEF /* mine_unpressed@2x.png in Resources */,
 				CD81A09D1C72B69F00221AEF /* member_pressed@3x.png in Resources */,
@@ -560,18 +534,14 @@
 				CD25C7581C74559C00F228E0 /* register_content_bg@3x.png in Resources */,
 				65B100401C7414F900AF8283 /* enterprise_-service_pressed@3x.png in Resources */,
 				CD81A09F1C72B69F00221AEF /* member_unpressed@3x.png in Resources */,
-				CD25C7551C74559C00F228E0 /* register_button_bg_pressed@3x.png in Resources */,
 				CD1D57311C71BDB700BB30AC /* Assets.xcassets in Resources */,
 				CD81A0991C72B69F00221AEF /* home_pressed@3x.png in Resources */,
 				CD25C7571C74559C00F228E0 /* register_cellphone@3x.png in Resources */,
 				65B100491C74154300AF8283 /* office_community_unpressed@2x.png in Resources */,
 				CD25C7561C74559C00F228E0 /* register_button_bg_unpressed@3x.png in Resources */,
-				CD25C74D1C74559C00F228E0 /* cellphone_code_clicked@3x.png in Resources */,
 				65B419451C756B7700FA817B /* PBIndustryViewController.xib in Resources */,
 				65B1003A1C7414DF00AF8283 /* activity_space_unpressed@3x.png in Resources */,
 				CD25C7601C74567E00F228E0 /* title_back_unpressed@3x.png in Resources */,
-				CD25C7511C74559C00F228E0 /* login_other_accounts@3x.png in Resources */,
-				CD25C7501C74559C00F228E0 /* choice_unselected@3x.png in Resources */,
 				CD81A0981C72B69F00221AEF /* home_pressed@2x.png in Resources */,
 				CD1D572F1C71BDB700BB30AC /* Main.storyboard in Resources */,
 				65B100471C74154300AF8283 /* office_community_pressed@2x.png in Resources */,
@@ -579,7 +549,6 @@
 				CD81A09E1C72B69F00221AEF /* member_unpressed@2x.png in Resources */,
 				CD81A09A1C72B69F00221AEF /* home_unpressed@2x.png in Resources */,
 				CD25C7541C74559C00F228E0 /* logo@3x.png in Resources */,
-				CD25C7531C74559C00F228E0 /* login_sina@3x.png in Resources */,
 				CD8637AC1C7567950090AD7E /* welcome@3x.png in Resources */,
 				CD81A09B1C72B69F00221AEF /* home_unpressed@3x.png in Resources */,
 				65977B0C1C732FC00015EFFC /* PBButtonChooseCell.xib in Resources */,
@@ -588,7 +557,6 @@
 				65B100421C7414F900AF8283 /* enterprise_-service_unpressed@3x.png in Resources */,
 				CD8637AB1C7567950090AD7E /* welcome@2x.png in Resources */,
 				CD81A0A01C72B69F00221AEF /* mine_pressed@2x.png in Resources */,
-				CD25C7521C74559C00F228E0 /* login_qq@3x.png in Resources */,
 				CD81A09C1C72B69F00221AEF /* member_pressed@2x.png in Resources */,
 				CD81A0A31C72B69F00221AEF /* mine_unpressed@3x.png in Resources */,
 				CD25C7591C74559C00F228E0 /* register_password@3x.png in Resources */,
