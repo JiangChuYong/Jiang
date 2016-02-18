@@ -7,9 +7,11 @@
 
 #import "MemberPageViewController.h"
 #import "LoginViewController.h"
+#import "MemberCollectionViewCell.h"
 
-@interface MemberPageViewController ()
-
+@interface MemberPageViewController () <UICollectionViewDataSource,UICollectionViewDelegate>
+@property (weak, nonatomic) IBOutlet UICollectionView *collection;
+@property (strong,nonatomic) NSArray * cellNameArray;
 @end
 
 @implementation MemberPageViewController
@@ -17,15 +19,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _cellNameArray = [NSArray arrayWithObjects:@"发快递",@"滴滴出行",@"快递查询",@"环境监测",@"会议室", nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    [self performSegueWithIdentifier:@"MemberToLogin" sender:self];
     
 }
-
-
+#pragma -- mark CollectionView Delegate
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return _cellNameArray.count;
+}
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+       MemberCollectionViewCell * cell = [_collection dequeueReusableCellWithReuseIdentifier:@"MemberCollectionViewCell" forIndexPath:indexPath];
+    cell.label.text = _cellNameArray[indexPath.row];
+    cell.image.image = [UIImage imageNamed:_cellNameArray[indexPath.row]];
+    return cell;
+}
 
 @end

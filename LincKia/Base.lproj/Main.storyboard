@@ -9,7 +9,7 @@
         <scene sceneID="JRI-GI-8Ua">
             <objects>
                 <navigationController id="6Ia-Am-zfq" userLabel="首页" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="首页" image="register_content_bg" selectedImage="home_pressed" id="uUu-N9-HOG"/>
+                    <tabBarItem key="tabBarItem" title="首页" image="home_unpressed.png" selectedImage="home_pressed" id="uUu-N9-HOG"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LR3-8t-srI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -256,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m54-Lb-PlR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-135" y="1513"/>
+            <point key="canvasLocation" x="417" y="1488"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -277,7 +277,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-548" y="744"/>
+            <point key="canvasLocation" x="-598" y="772"/>
         </scene>
         <!--会员-->
         <scene sceneID="1Rh-js-tHD">
@@ -312,10 +312,71 @@
                     <view key="view" contentMode="scaleToFill" id="Z5r-re-LNw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EfS-vT-H7N">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="5St-Ob-qhh">
+                                    <size key="itemSize" width="75" height="105"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemberCollectionViewCell" id="GdD-wC-omU" customClass="MemberCollectionViewCell">
+                                        <rect key="frame" x="15" y="79" width="75" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ph-mi-wJE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="75" id="8hU-Q2-f8v"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IT咨询" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCV-jp-5NW">
+                                                    <rect key="frame" x="0.0" y="80" width="75" height="25"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="TCV-jp-5NW" secondAttribute="trailing" id="49Q-x4-8ri"/>
+                                            <constraint firstItem="8ph-mi-wJE" firstAttribute="top" secondItem="GdD-wC-omU" secondAttribute="top" id="E7C-Tv-1ul"/>
+                                            <constraint firstAttribute="trailing" secondItem="8ph-mi-wJE" secondAttribute="trailing" id="Iyp-km-QxS"/>
+                                            <constraint firstAttribute="bottom" secondItem="TCV-jp-5NW" secondAttribute="bottom" id="PhF-EY-lDj"/>
+                                            <constraint firstItem="8ph-mi-wJE" firstAttribute="leading" secondItem="GdD-wC-omU" secondAttribute="leading" id="RO1-lc-Z1G"/>
+                                            <constraint firstItem="TCV-jp-5NW" firstAttribute="top" secondItem="8ph-mi-wJE" secondAttribute="bottom" constant="5" id="auz-Lw-iPe"/>
+                                            <constraint firstItem="TCV-jp-5NW" firstAttribute="leading" secondItem="GdD-wC-omU" secondAttribute="leading" id="iBQ-1j-9Br"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="image" destination="8ph-mi-wJE" id="JZj-MO-c9A"/>
+                                            <outlet property="label" destination="TCV-jp-5NW" id="2Xv-wf-Abh"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="cAg-Qv-4cj" id="Yan-gp-Kzl"/>
+                                    <outlet property="delegate" destination="cAg-Qv-4cj" id="YOA-Ff-8EQ"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EfS-vT-H7N" firstAttribute="top" secondItem="SpD-dJ-3jZ" secondAttribute="bottom" constant="-64" id="9U8-nO-d73"/>
+                            <constraint firstItem="EfS-vT-H7N" firstAttribute="leading" secondItem="Z5r-re-LNw" secondAttribute="leading" id="GYF-RU-fml"/>
+                            <constraint firstItem="r8p-7K-mGd" firstAttribute="top" secondItem="EfS-vT-H7N" secondAttribute="bottom" constant="64" id="IyN-8J-pBt"/>
+                            <constraint firstAttribute="trailing" secondItem="EfS-vT-H7N" secondAttribute="trailing" id="w9E-Q0-9ch"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="会员" id="OPY-U0-G5G"/>
                     <connections>
+                        <outlet property="collection" destination="EfS-vT-H7N" id="ZEY-QM-jn1"/>
                         <segue destination="3PK-Ra-LPo" kind="modal" identifier="MemberToLogin" id="gUA-3g-ppz"/>
                     </connections>
                 </viewController>
@@ -343,7 +404,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XbN-wG-ukE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="370" y="1404"/>
+            <point key="canvasLocation" x="-598" y="1488"/>
         </scene>
         <!--我的-->
         <scene sceneID="HPF-MK-wjw">
@@ -365,11 +426,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgo-Zy-dIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="834" y="1336"/>
+            <point key="canvasLocation" x="-74" y="1488"/>
         </scene>
     </scenes>
     <resources>
         <image name="home_pressed" width="24" height="24"/>
+        <image name="home_unpressed.png" width="24" height="24"/>
         <image name="logo.png" width="239" height="109"/>
         <image name="member_pressed" width="24" height="24"/>
         <image name="member_unpressed" width="24" height="24"/>
@@ -377,13 +439,12 @@
         <image name="mine_unpressed" width="24" height="24"/>
         <image name="register_button_bg_unpressed.png" width="298" height="75"/>
         <image name="register_cellphone.png" width="28" height="28"/>
-        <image name="register_content_bg" width="414" height="736"/>
         <image name="register_content_bg.png" width="414" height="736"/>
         <image name="register_password.png" width="28" height="28"/>
         <image name="title_back_unpressed.png" width="22" height="22"/>
         <image name="users_textfield_unclicked.png" width="292" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="huh-qE-qeJ"/>
+        <segue reference="gUA-3g-ppz"/>
     </inferredMetricsTieBreakers>
 </document>
