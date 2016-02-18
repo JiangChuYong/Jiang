@@ -35,6 +35,13 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    UINavigationController * navi = (UINavigationController *)self.parentViewController;
+    navi.navigationBarHidden = YES;
+    
+    
+    
+    
     
     [self registCell];
     _adsArr =[NSMutableArray array];
@@ -145,7 +152,5 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     // Dispose of any resources that can be recreated.
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
+
 @end

@@ -21,15 +21,9 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    [self performSegueWithIdentifier:@"MemberToLogin" sender:self];
+  //  [self performSegueWithIdentifier:@"MemberToLogin" sender:self];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
--(UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
+
 @end

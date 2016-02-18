@@ -60,6 +60,7 @@ SingletonM(AFRquest);
         _resultDict = @{@"Code":@1};
         POST_NOTIFICATION
     }];
+    
 }
 
 
