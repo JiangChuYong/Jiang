@@ -77,8 +77,6 @@
 		CD6945021C75C89600E04081 /* PBMineTableViewSecondCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6944F91C75C89600E04081 /* PBMineTableViewSecondCell.xib */; };
 		CD6945031C75C89600E04081 /* PBMineTableViewSingleLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6944FB1C75C89600E04081 /* PBMineTableViewSingleLineCell.m */; };
 		CD6945041C75C89600E04081 /* PBMineTableViewSingleLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6944FC1C75C89600E04081 /* PBMineTableViewSingleLineCell.xib */; };
-		CD6945231C75C8C000E04081 /* home_unpressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6945061C75C8C000E04081 /* home_unpressed@2x.png */; };
-		CD6945241C75C8C000E04081 /* home_unpressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6945071C75C8C000E04081 /* home_unpressed@3x.png */; };
 		CD6945251C75C8C000E04081 /* mine_account_number@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6945081C75C8C000E04081 /* mine_account_number@2x.png */; };
 		CD6945261C75C8C000E04081 /* mine_account_number@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6945091C75C8C000E04081 /* mine_account_number@3x.png */; };
 		CD6945271C75C8C000E04081 /* mine_appointment_visit.png in Resources */ = {isa = PBXBuildFile; fileRef = CD69450A1C75C8C000E04081 /* mine_appointment_visit.png */; };
@@ -248,8 +246,6 @@
 		CD6944FA1C75C89600E04081 /* PBMineTableViewSingleLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMineTableViewSingleLineCell.h; sourceTree = "<group>"; };
 		CD6944FB1C75C89600E04081 /* PBMineTableViewSingleLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMineTableViewSingleLineCell.m; sourceTree = "<group>"; };
 		CD6944FC1C75C89600E04081 /* PBMineTableViewSingleLineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBMineTableViewSingleLineCell.xib; sourceTree = "<group>"; };
-		CD6945061C75C8C000E04081 /* home_unpressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_unpressed@2x.png"; sourceTree = "<group>"; };
-		CD6945071C75C8C000E04081 /* home_unpressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_unpressed@3x.png"; sourceTree = "<group>"; };
 		CD6945081C75C8C000E04081 /* mine_account_number@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_account_number@2x.png"; sourceTree = "<group>"; };
 		CD6945091C75C8C000E04081 /* mine_account_number@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_account_number@3x.png"; sourceTree = "<group>"; };
 		CD69450A1C75C8C000E04081 /* mine_appointment_visit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_appointment_visit.png; sourceTree = "<group>"; };
@@ -550,8 +546,6 @@
 		CD6945051C75C8C000E04081 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
-				CD6945061C75C8C000E04081 /* home_unpressed@2x.png */,
-				CD6945071C75C8C000E04081 /* home_unpressed@3x.png */,
 				CD6945081C75C8C000E04081 /* mine_account_number@2x.png */,
 				CD6945091C75C8C000E04081 /* mine_account_number@3x.png */,
 				CD69450A1C75C8C000E04081 /* mine_appointment_visit.png */,
@@ -800,11 +794,9 @@
 				CD45EDFC1C77115E0042E9A2 /* service_mine_organization@2x.png in Resources */,
 				CD45EDFE1C77115E0042E9A2 /* service_mine_wage@2x.png in Resources */,
 				CD81A0991C72B69F00221AEF /* home_pressed@3x.png in Resources */,
-				CD6945241C75C8C000E04081 /* home_unpressed@3x.png in Resources */,
 				CD25C7571C74559C00F228E0 /* register_cellphone@3x.png in Resources */,
 				CD6945281C75C8C000E04081 /* mine_appointment_visit@2x.png in Resources */,
 				CD45EE0B1C77115E0042E9A2 /* 环境监测@3x.png in Resources */,
-				CD6945231C75C8C000E04081 /* home_unpressed@2x.png in Resources */,
 				65B100491C74154300AF8283 /* office_community_unpressed@2x.png in Resources */,
 				CD45EDFD1C77115E0042E9A2 /* service_mine_organization@3x.png in Resources */,
 				CD25C7561C74559C00F228E0 /* register_button_bg_unpressed@3x.png in Resources */,
