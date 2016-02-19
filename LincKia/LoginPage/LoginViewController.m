@@ -37,30 +37,34 @@
 }
 -(void)requestData{
     START_OBSERVE_CONNECTION
+    SHOW_LOADING
     AFRquest * af = [AFRquest sharedInstance];
     af.subURLString = @"api/Users/Login?deviceType=ios";
     af.parameters = @{@"Account":_phone.text,@"Password":_password.text};
     af.requestFlag = UsersLogin;
     af.style = POST;
     [af requestDataFromServer];
-
 }
 
 -(void)dataReceived:(NSNotification *)notif{
-    
     NSLog(@"%@",[notif object]);
+    STOP_LOADING
+    NSDictionary * userInfo = [notif object];
+    NSDictionary * data = userInfo[@"Data"];
     if ([AFRquest sharedInstance].requestFlag == UsersLogin) {
-        NSDictionary * userInfo = [notif object];
         NSNumber * code = userInfo[@"Code"];
         if ([code intValue] == 0) {
             [self dismissViewControllerAnimated:YES completion:^{}];
             NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
             [user setValue:_phone.text forKey:USERNAME];
             [user setValue:_password.text forKey:PASSWORD];
+            [user setValue:data[@"UserToken"] forKey:USERTOKEN];
             [user synchronize];
+        }else{
+            NSString * errorInfo = userInfo[@"Description"];
+            [[PBAlert sharedInstance]showText:errorInfo inView:self.view withTime:2.0];
         }
     }
- 
 }
 #pragma -- mark Button Action
 
@@ -74,13 +78,12 @@
         if ([self isRightPhoneNum]) {
             [self requestData];
         }else{
-            NSLog(@"手机号有误");
+            [[PBAlert sharedInstance]showText:@"您输入的手机号有误" inView:self.view withTime:2];
         }
     }else{
-        NSLog(@"密码输入有误");
+        [[PBAlert sharedInstance]showText:@"密码输入有误" inView:self.view withTime:2];
     }
     
-
 }
 
 - (IBAction)toRegisterPage:(UIButton *)sender {
@@ -94,7 +97,6 @@
 - (IBAction)textFieldChanged:(UITextField *)sender {
     
     //输入字符数控制
-    
     if ([sender isEqual:_phone]) {
         if (sender.text.length > 11) {
             sender.text = [sender.text substringToIndex:11];
