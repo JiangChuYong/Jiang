@@ -19,6 +19,12 @@ typedef enum{
     GetUserInfo=2,
     //首页
     GetIndex=3,
+    //企业服务
+    GetIndustryList=4,
+    //获取海星伙伴列表
+    GetLinckiaPartnerList=5,
+    //获取海星伙伴详细信息
+    GetLinckiaPartnerInfo=6,
     
 }RequestFlag;
 

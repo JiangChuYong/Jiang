@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652BFEAE1C76F3CE000D4EEA /* PBCompanyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 652BFEAC1C76F3CE000D4EEA /* PBCompanyDetailViewController.m */; };
+		655AC3E21C76ED3E00489C63 /* nodata@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655AC3E01C76ED3E00489C63 /* nodata@2x.png */; };
+		655AC3E31C76ED3E00489C63 /* nodata@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655AC3E11C76ED3E00489C63 /* nodata@3x.png */; };
 		65B100371C7414DF00AF8283 /* activity_space_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B100331C7414DF00AF8283 /* activity_space_pressed@2x.png */; };
 		65B100381C7414DF00AF8283 /* activity_space_pressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B100341C7414DF00AF8283 /* activity_space_pressed@3x.png */; };
 		65B100391C7414DF00AF8283 /* activity_space_unpressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B100351C7414DF00AF8283 /* activity_space_unpressed@2x.png */; };
@@ -20,7 +23,34 @@
 		65B100491C74154300AF8283 /* office_community_unpressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B100451C74154300AF8283 /* office_community_unpressed@2x.png */; };
 		65B1004A1C74154300AF8283 /* office_community_unpressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B100461C74154300AF8283 /* office_community_unpressed@3x.png */; };
 		65B419441C756B7700FA817B /* PBIndustryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B419421C756B7700FA817B /* PBIndustryViewController.m */; };
-		65B419451C756B7700FA817B /* PBIndustryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B419431C756B7700FA817B /* PBIndustryViewController.xib */; };
+		65B419641C75C25200FA817B /* PBCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B419621C75C25200FA817B /* PBCollectionCell.m */; };
+		65B419651C75C25200FA817B /* PBCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B419631C75C25200FA817B /* PBCollectionCell.xib */; };
+		65B4196B1C75D06B00FA817B /* JCYGlobalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B4196A1C75D06B00FA817B /* JCYGlobalData.m */; };
+		65B4196F1C75D18600FA817B /* PBCompanyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B4196D1C75D18600FA817B /* PBCompanyListViewController.m */; };
+		65B419741C75D1BF00FA817B /* PBCompanyListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B419721C75D1BF00FA817B /* PBCompanyListTableViewCell.m */; };
+		65B419751C75D1BF00FA817B /* PBCompanyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B419731C75D1BF00FA817B /* PBCompanyListTableViewCell.xib */; };
+		65D8ACE61C7706A100D929BA /* but_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACD41C7706A100D929BA /* but_phone@2x.png */; };
+		65D8ACE71C7706A100D929BA /* but_phone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACD51C7706A100D929BA /* but_phone@3x.png */; };
+		65D8ACE81C7706A100D929BA /* inquiry express@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACD61C7706A100D929BA /* inquiry express@3x.png */; };
+		65D8ACE91C7706A100D929BA /* key@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACD71C7706A100D929BA /* key@3x.png */; };
+		65D8ACEA1C7706A100D929BA /* 中通快递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACD81C7706A100D929BA /* 中通快递@2x.png */; };
+		65D8ACEB1C7706A100D929BA /* 中通快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACD91C7706A100D929BA /* 中通快递@3x.png */; };
+		65D8ACEC1C7706A100D929BA /* 圆通速递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACDA1C7706A100D929BA /* 圆通速递@2x.png */; };
+		65D8ACED1C7706A100D929BA /* 圆通速递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACDB1C7706A100D929BA /* 圆通速递@3x.png */; };
+		65D8ACEE1C7706A100D929BA /* 天天快递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACDC1C7706A100D929BA /* 天天快递@2x.png */; };
+		65D8ACEF1C7706A100D929BA /* 天天快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACDD1C7706A100D929BA /* 天天快递@3x.png */; };
+		65D8ACF01C7706A100D929BA /* 宅急送@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACDE1C7706A100D929BA /* 宅急送@2x.png */; };
+		65D8ACF11C7706A100D929BA /* 宅急送@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACDF1C7706A100D929BA /* 宅急送@3x.png */; };
+		65D8ACF21C7706A100D929BA /* 申通快递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACE01C7706A100D929BA /* 申通快递@2x.png */; };
+		65D8ACF31C7706A100D929BA /* 申通快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACE11C7706A100D929BA /* 申通快递@3x.png */; };
+		65D8ACF41C7706A100D929BA /* 韵达快递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACE21C7706A100D929BA /* 韵达快递@2x.png */; };
+		65D8ACF51C7706A100D929BA /* 韵达快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACE31C7706A100D929BA /* 韵达快递@3x.png */; };
+		65D8ACF61C7706A100D929BA /* 顺丰速运@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACE41C7706A100D929BA /* 顺丰速运@2x.png */; };
+		65D8ACF71C7706A100D929BA /* 顺丰速运@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACE51C7706A100D929BA /* 顺丰速运@3x.png */; };
+		65D8ACFD1C77074200D929BA /* company_detail_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACF91C77074200D929BA /* company_detail_icon@2x.png */; };
+		65D8ACFE1C77074200D929BA /* company_detail_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACFA1C77074200D929BA /* company_detail_icon@3x.png */; };
+		65D8ACFF1C77074200D929BA /* company_detail_phone_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACFB1C77074200D929BA /* company_detail_phone_icon@2x.png */; };
+		65D8AD001C77074200D929BA /* company_detail_phone_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65D8ACFC1C77074200D929BA /* company_detail_phone_icon@3x.png */; };
 		CD1D57231C71BDB700BB30AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57221C71BDB700BB30AC /* main.m */; };
 		CD1D57261C71BDB700BB30AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57251C71BDB700BB30AC /* AppDelegate.m */; };
 		CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57281C71BDB700BB30AC /* HomePageViewController.m */; };
@@ -108,6 +138,10 @@
 /* Begin PBXFileReference section */
 		4A87F89A1AD34DBE85390708 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5209D7976CD92A98E2D1845C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		652BFEAB1C76F3CE000D4EEA /* PBCompanyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCompanyDetailViewController.h; sourceTree = "<group>"; };
+		652BFEAC1C76F3CE000D4EEA /* PBCompanyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCompanyDetailViewController.m; sourceTree = "<group>"; };
+		655AC3E01C76ED3E00489C63 /* nodata@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nodata@2x.png"; sourceTree = "<group>"; };
+		655AC3E11C76ED3E00489C63 /* nodata@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nodata@3x.png"; sourceTree = "<group>"; };
 		65B100331C7414DF00AF8283 /* activity_space_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity_space_pressed@2x.png"; sourceTree = "<group>"; };
 		65B100341C7414DF00AF8283 /* activity_space_pressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity_space_pressed@3x.png"; sourceTree = "<group>"; };
 		65B100351C7414DF00AF8283 /* activity_space_unpressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity_space_unpressed@2x.png"; sourceTree = "<group>"; };
@@ -122,7 +156,38 @@
 		65B100461C74154300AF8283 /* office_community_unpressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "office_community_unpressed@3x.png"; sourceTree = "<group>"; };
 		65B419411C756B7700FA817B /* PBIndustryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBIndustryViewController.h; sourceTree = "<group>"; };
 		65B419421C756B7700FA817B /* PBIndustryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBIndustryViewController.m; sourceTree = "<group>"; };
-		65B419431C756B7700FA817B /* PBIndustryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBIndustryViewController.xib; sourceTree = "<group>"; };
+		65B419611C75C25200FA817B /* PBCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCollectionCell.h; sourceTree = "<group>"; };
+		65B419621C75C25200FA817B /* PBCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCollectionCell.m; sourceTree = "<group>"; };
+		65B419631C75C25200FA817B /* PBCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBCollectionCell.xib; sourceTree = "<group>"; };
+		65B419691C75D06B00FA817B /* JCYGlobalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYGlobalData.h; sourceTree = "<group>"; };
+		65B4196A1C75D06B00FA817B /* JCYGlobalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYGlobalData.m; sourceTree = "<group>"; };
+		65B4196C1C75D18600FA817B /* PBCompanyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCompanyListViewController.h; sourceTree = "<group>"; };
+		65B4196D1C75D18600FA817B /* PBCompanyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCompanyListViewController.m; sourceTree = "<group>"; };
+		65B419711C75D1BF00FA817B /* PBCompanyListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCompanyListTableViewCell.h; sourceTree = "<group>"; };
+		65B419721C75D1BF00FA817B /* PBCompanyListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCompanyListTableViewCell.m; sourceTree = "<group>"; };
+		65B419731C75D1BF00FA817B /* PBCompanyListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBCompanyListTableViewCell.xib; sourceTree = "<group>"; };
+		65D8ACD41C7706A100D929BA /* but_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "but_phone@2x.png"; sourceTree = "<group>"; };
+		65D8ACD51C7706A100D929BA /* but_phone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "but_phone@3x.png"; sourceTree = "<group>"; };
+		65D8ACD61C7706A100D929BA /* inquiry express@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inquiry express@3x.png"; sourceTree = "<group>"; };
+		65D8ACD71C7706A100D929BA /* key@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key@3x.png"; sourceTree = "<group>"; };
+		65D8ACD81C7706A100D929BA /* 中通快递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中通快递@2x.png"; sourceTree = "<group>"; };
+		65D8ACD91C7706A100D929BA /* 中通快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中通快递@3x.png"; sourceTree = "<group>"; };
+		65D8ACDA1C7706A100D929BA /* 圆通速递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆通速递@2x.png"; sourceTree = "<group>"; };
+		65D8ACDB1C7706A100D929BA /* 圆通速递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆通速递@3x.png"; sourceTree = "<group>"; };
+		65D8ACDC1C7706A100D929BA /* 天天快递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "天天快递@2x.png"; sourceTree = "<group>"; };
+		65D8ACDD1C7706A100D929BA /* 天天快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "天天快递@3x.png"; sourceTree = "<group>"; };
+		65D8ACDE1C7706A100D929BA /* 宅急送@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "宅急送@2x.png"; sourceTree = "<group>"; };
+		65D8ACDF1C7706A100D929BA /* 宅急送@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "宅急送@3x.png"; sourceTree = "<group>"; };
+		65D8ACE01C7706A100D929BA /* 申通快递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "申通快递@2x.png"; sourceTree = "<group>"; };
+		65D8ACE11C7706A100D929BA /* 申通快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "申通快递@3x.png"; sourceTree = "<group>"; };
+		65D8ACE21C7706A100D929BA /* 韵达快递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "韵达快递@2x.png"; sourceTree = "<group>"; };
+		65D8ACE31C7706A100D929BA /* 韵达快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "韵达快递@3x.png"; sourceTree = "<group>"; };
+		65D8ACE41C7706A100D929BA /* 顺丰速运@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "顺丰速运@2x.png"; sourceTree = "<group>"; };
+		65D8ACE51C7706A100D929BA /* 顺丰速运@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "顺丰速运@3x.png"; sourceTree = "<group>"; };
+		65D8ACF91C77074200D929BA /* company_detail_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "company_detail_icon@2x.png"; sourceTree = "<group>"; };
+		65D8ACFA1C77074200D929BA /* company_detail_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "company_detail_icon@3x.png"; sourceTree = "<group>"; };
+		65D8ACFB1C77074200D929BA /* company_detail_phone_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "company_detail_phone_icon@2x.png"; sourceTree = "<group>"; };
+		65D8ACFC1C77074200D929BA /* company_detail_phone_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "company_detail_phone_icon@3x.png"; sourceTree = "<group>"; };
 		CD1D571E1C71BDB700BB30AC /* LincKia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LincKia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1D57221C71BDB700BB30AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD1D57241C71BDB700BB30AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -241,14 +306,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		655AC3DF1C76ED3E00489C63 /* 购物车 */ = {
+			isa = PBXGroup;
+			children = (
+				655AC3E01C76ED3E00489C63 /* nodata@2x.png */,
+				655AC3E11C76ED3E00489C63 /* nodata@3x.png */,
+			);
+			path = "购物车";
+			sourceTree = "<group>";
+		};
 		65B419401C756B7700FA817B /* IndustryList */ = {
 			isa = PBXGroup;
 			children = (
 				65B419411C756B7700FA817B /* PBIndustryViewController.h */,
 				65B419421C756B7700FA817B /* PBIndustryViewController.m */,
-				65B419431C756B7700FA817B /* PBIndustryViewController.xib */,
+				65B419611C75C25200FA817B /* PBCollectionCell.h */,
+				65B419621C75C25200FA817B /* PBCollectionCell.m */,
+				65B419631C75C25200FA817B /* PBCollectionCell.xib */,
+				65B4196C1C75D18600FA817B /* PBCompanyListViewController.h */,
+				65B4196D1C75D18600FA817B /* PBCompanyListViewController.m */,
+				65B419711C75D1BF00FA817B /* PBCompanyListTableViewCell.h */,
+				65B419721C75D1BF00FA817B /* PBCompanyListTableViewCell.m */,
+				65B419731C75D1BF00FA817B /* PBCompanyListTableViewCell.xib */,
+				652BFEAB1C76F3CE000D4EEA /* PBCompanyDetailViewController.h */,
+				652BFEAC1C76F3CE000D4EEA /* PBCompanyDetailViewController.m */,
 			);
 			path = IndustryList;
+			sourceTree = "<group>";
+		};
+		65D8ACD31C7706A100D929BA /* 快递 */ = {
+			isa = PBXGroup;
+			children = (
+				65D8ACD41C7706A100D929BA /* but_phone@2x.png */,
+				65D8ACD51C7706A100D929BA /* but_phone@3x.png */,
+				65D8ACD61C7706A100D929BA /* inquiry express@3x.png */,
+				65D8ACD71C7706A100D929BA /* key@3x.png */,
+				65D8ACD81C7706A100D929BA /* 中通快递@2x.png */,
+				65D8ACD91C7706A100D929BA /* 中通快递@3x.png */,
+				65D8ACDA1C7706A100D929BA /* 圆通速递@2x.png */,
+				65D8ACDB1C7706A100D929BA /* 圆通速递@3x.png */,
+				65D8ACDC1C7706A100D929BA /* 天天快递@2x.png */,
+				65D8ACDD1C7706A100D929BA /* 天天快递@3x.png */,
+				65D8ACDE1C7706A100D929BA /* 宅急送@2x.png */,
+				65D8ACDF1C7706A100D929BA /* 宅急送@3x.png */,
+				65D8ACE01C7706A100D929BA /* 申通快递@2x.png */,
+				65D8ACE11C7706A100D929BA /* 申通快递@3x.png */,
+				65D8ACE21C7706A100D929BA /* 韵达快递@2x.png */,
+				65D8ACE31C7706A100D929BA /* 韵达快递@3x.png */,
+				65D8ACE41C7706A100D929BA /* 顺丰速运@2x.png */,
+				65D8ACE51C7706A100D929BA /* 顺丰速运@3x.png */,
+			);
+			name = "快递";
+			path = "images/快递";
+			sourceTree = "<group>";
+		};
+		65D8ACF81C77074200D929BA /* 公司详情 */ = {
+			isa = PBXGroup;
+			children = (
+				65D8ACF91C77074200D929BA /* company_detail_icon@2x.png */,
+				65D8ACFA1C77074200D929BA /* company_detail_icon@3x.png */,
+				65D8ACFB1C77074200D929BA /* company_detail_phone_icon@2x.png */,
+				65D8ACFC1C77074200D929BA /* company_detail_phone_icon@3x.png */,
+			);
+			name = "公司详情";
+			path = "images/公司详情";
 			sourceTree = "<group>";
 		};
 		8BC53963206283428D6956E3 /* Pods */ = {
@@ -264,6 +385,8 @@
 			isa = PBXGroup;
 			children = (
 				CD81A08A1C72B69F00221AEF /* images */,
+				65D8ACF81C77074200D929BA /* 公司详情 */,
+				65D8ACD31C7706A100D929BA /* 快递 */,
 				CD6944B41C75B2C300E04081 /* 会员 */,
 				CD5CD0091C71E0EC00B6A34B /* AFRequest */,
 				CD7360B51C71C9A800E3971C /* Config */,
@@ -438,6 +561,8 @@
 				CD7360C21C71CA5200E3971C /* PBSingleTon.h */,
 				CD25C7611C74570F00F228E0 /* PBButton.h */,
 				CD25C7621C74570F00F228E0 /* PBButton.m */,
+				65B419691C75D06B00FA817B /* JCYGlobalData.h */,
+				65B4196A1C75D06B00FA817B /* JCYGlobalData.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -445,6 +570,7 @@
 		CD81A08A1C72B69F00221AEF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				655AC3DF1C76ED3E00489C63 /* 购物车 */,
 				CD25C75C1C74567E00F228E0 /* 通用 */,
 				CD25C73D1C74559C00F228E0 /* 注册与登录 */,
 				CD81A08B1C72B69F00221AEF /* 首页 */,
@@ -598,52 +724,76 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD6944CA1C75B2C300E04081 /* service_mine_organization@3x.png in Resources */,
+				65D8ACF61C7706A100D929BA /* 顺丰速运@2x.png in Resources */,
 				CD1D57341C71BDB700BB30AC /* LaunchScreen.storyboard in Resources */,
 				65B1003F1C7414F900AF8283 /* enterprise_-service_pressed@2x.png in Resources */,
+				65D8ACE81C7706A100D929BA /* inquiry express@3x.png in Resources */,
 				CD81A0A21C72B69F00221AEF /* mine_unpressed@2x.png in Resources */,
 				CD81A09D1C72B69F00221AEF /* member_pressed@3x.png in Resources */,
 				65B1004A1C74154300AF8283 /* office_community_unpressed@3x.png in Resources */,
 				CD25C75A1C74559C00F228E0 /* users_textfield_clicked@3x.png in Resources */,
+				65D8ACFE1C77074200D929BA /* company_detail_icon@3x.png in Resources */,
 				65B100391C7414DF00AF8283 /* activity_space_unpressed@2x.png in Resources */,
 				CD6944D11C75B2C300E04081 /* 开门@2x.png in Resources */,
 				65B100481C74154300AF8283 /* office_community_pressed@3x.png in Resources */,
+				65D8AD001C77074200D929BA /* company_detail_phone_icon@3x.png in Resources */,
 				65B100381C7414DF00AF8283 /* activity_space_pressed@3x.png in Resources */,
 				CD6944EF1C75BDE500E04081 /* ZZSpaceRecommendCellTableViewCell.xib in Resources */,
 				CD25C7581C74559C00F228E0 /* register_content_bg@3x.png in Resources */,
 				65B100401C7414F900AF8283 /* enterprise_-service_pressed@3x.png in Resources */,
+				65D8ACE71C7706A100D929BA /* but_phone@3x.png in Resources */,
+				65D8ACF41C7706A100D929BA /* 韵达快递@2x.png in Resources */,
 				CD6944D41C75B2C300E04081 /* 快递查询@3x.png in Resources */,
 				CD6944CD1C75B2C300E04081 /* 会议室@2x.png in Resources */,
+				65D8ACFD1C77074200D929BA /* company_detail_icon@2x.png in Resources */,
 				CD81A09F1C72B69F00221AEF /* member_unpressed@3x.png in Resources */,
 				CD1D57311C71BDB700BB30AC /* Assets.xcassets in Resources */,
 				CD81A0991C72B69F00221AEF /* home_pressed@3x.png in Resources */,
+				65D8ACEB1C7706A100D929BA /* 中通快递@3x.png in Resources */,
 				CD25C7571C74559C00F228E0 /* register_cellphone@3x.png in Resources */,
 				CD6944D31C75B2C300E04081 /* 快递查询@2x.png in Resources */,
 				CD6944D71C75B2C300E04081 /* 环境监测@2x.png in Resources */,
 				65B100491C74154300AF8283 /* office_community_unpressed@2x.png in Resources */,
+				65D8ACF21C7706A100D929BA /* 申通快递@2x.png in Resources */,
 				CD6944D81C75B2C300E04081 /* 环境监测@3x.png in Resources */,
 				CD25C7561C74559C00F228E0 /* register_button_bg_unpressed@3x.png in Resources */,
-				65B419451C756B7700FA817B /* PBIndustryViewController.xib in Resources */,
 				65B1003A1C7414DF00AF8283 /* activity_space_unpressed@3x.png in Resources */,
 				CD25C7601C74567E00F228E0 /* title_back_unpressed@3x.png in Resources */,
+				65B419651C75C25200FA817B /* PBCollectionCell.xib in Resources */,
 				CD81A0981C72B69F00221AEF /* home_pressed@2x.png in Resources */,
 				CD1D572F1C71BDB700BB30AC /* Main.storyboard in Resources */,
 				65B100471C74154300AF8283 /* office_community_pressed@2x.png in Resources */,
+				65D8ACF01C7706A100D929BA /* 宅急送@2x.png in Resources */,
 				65B100371C7414DF00AF8283 /* activity_space_pressed@2x.png in Resources */,
 				CD6944D61C75B2C300E04081 /* 滴滴出行@3x.png in Resources */,
 				CD81A09E1C72B69F00221AEF /* member_unpressed@2x.png in Resources */,
+				655AC3E31C76ED3E00489C63 /* nodata@3x.png in Resources */,
 				CD81A09A1C72B69F00221AEF /* home_unpressed@2x.png in Resources */,
+				65D8ACF71C7706A100D929BA /* 顺丰速运@3x.png in Resources */,
+				65D8ACF31C7706A100D929BA /* 申通快递@3x.png in Resources */,
+				65D8ACEE1C7706A100D929BA /* 天天快递@2x.png in Resources */,
 				CD6944D01C75B2C300E04081 /* 发快递@3x.png in Resources */,
 				CD6944ED1C75BDE500E04081 /* PBButtonChooseCell.xib in Resources */,
 				CD25C7541C74559C00F228E0 /* logo@3x.png in Resources */,
+				65D8ACEF1C7706A100D929BA /* 天天快递@3x.png in Resources */,
+				655AC3E21C76ED3E00489C63 /* nodata@2x.png in Resources */,
 				CD8637AC1C7567950090AD7E /* welcome@3x.png in Resources */,
 				CD6944CE1C75B2C300E04081 /* 会议室@3x.png in Resources */,
+				65D8ACEA1C7706A100D929BA /* 中通快递@2x.png in Resources */,
 				CD6944EB1C75BDE500E04081 /* PBADBannerCellTableViewCell.xib in Resources */,
 				CD6944D21C75B2C300E04081 /* 开门@3x.png in Resources */,
 				CD81A09B1C72B69F00221AEF /* home_unpressed@3x.png in Resources */,
+				65D8ACF51C7706A100D929BA /* 韵达快递@3x.png in Resources */,
+				65D8ACED1C7706A100D929BA /* 圆通速递@3x.png in Resources */,
+				65D8ACEC1C7706A100D929BA /* 圆通速递@2x.png in Resources */,
 				CD6944CF1C75B2C300E04081 /* 发快递@2x.png in Resources */,
 				CD6944CB1C75B2C300E04081 /* service_mine_wage@2x.png in Resources */,
 				CD6944C81C75B2C300E04081 /* service_coffee@3x.png in Resources */,
 				CD6944CC1C75B2C300E04081 /* service_mine_wage@3x.png in Resources */,
+				65D8ACFF1C77074200D929BA /* company_detail_phone_icon@2x.png in Resources */,
+				65D8ACE91C7706A100D929BA /* key@3x.png in Resources */,
+				65D8ACE61C7706A100D929BA /* but_phone@2x.png in Resources */,
+				65D8ACF11C7706A100D929BA /* 宅急送@3x.png in Resources */,
 				65B100411C7414F900AF8283 /* enterprise_-service_unpressed@2x.png in Resources */,
 				CD25C75F1C74567E00F228E0 /* title_back_unpressed@2x.png in Resources */,
 				65B100421C7414F900AF8283 /* enterprise_-service_unpressed@3x.png in Resources */,
@@ -657,6 +807,7 @@
 				CD6944D51C75B2C300E04081 /* 滴滴出行@2x.png in Resources */,
 				CD81A0A11C72B69F00221AEF /* mine_pressed@3x.png in Resources */,
 				CD25C75B1C74559C00F228E0 /* users_textfield_unclicked@3x.png in Resources */,
+				65B419751C75D1BF00FA817B /* PBCompanyListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,11 +881,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD65AB3B1C71C37D00AED0F8 /* MinePageViewController.m in Sources */,
+				65B4196B1C75D06B00FA817B /* JCYGlobalData.m in Sources */,
 				CD1D572C1C71BDB700BB30AC /* MemberPageViewController.m in Sources */,
+				65B419741C75D1BF00FA817B /* PBCompanyListTableViewCell.m in Sources */,
+				65B4196F1C75D18600FA817B /* PBCompanyListViewController.m in Sources */,
 				CD6944EC1C75BDE500E04081 /* PBButtonChooseCell.m in Sources */,
+				65B419641C75C25200FA817B /* PBCollectionCell.m in Sources */,
 				CD6944EE1C75BDE500E04081 /* ZZSpaceRecommendCellTableViewCell.m in Sources */,
 				CD1D57261C71BDB700BB30AC /* AppDelegate.m in Sources */,
 				CD25C7631C74570F00F228E0 /* PBButton.m in Sources */,
+				652BFEAE1C76F3CE000D4EEA /* PBCompanyDetailViewController.m in Sources */,
 				CD6944EA1C75BDE500E04081 /* PBADBannerCellTableViewCell.m in Sources */,
 				CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */,
 				65B419441C756B7700FA817B /* PBIndustryViewController.m in Sources */,
