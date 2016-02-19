@@ -599,6 +599,7 @@
 			isa = PBXGroup;
 			children = (
 				6530F68F1C771418005BD7C1 /* images */,
+				CD81A08A1C72B69F00221AEF /* images */,
 				CD5CD0091C71E0EC00B6A34B /* AFRequest */,
 				CD7360B51C71C9A800E3971C /* Config */,
 				CD1D57201C71BDB700BB30AC /* LincKia */,
@@ -668,6 +669,64 @@
 				CD1D574B1C71BDB800BB30AC /* Info.plist */,
 			);
 			path = LincKiaUITests;
+			sourceTree = "<group>";
+		};
+		CD25C73D1C74559C00F228E0 /* 注册与登录 */ = {
+			isa = PBXGroup;
+			children = (
+				CD25C7451C74559C00F228E0 /* logo@3x.png */,
+				CD25C7471C74559C00F228E0 /* register_button_bg_unpressed@3x.png */,
+				CD25C7481C74559C00F228E0 /* register_cellphone@3x.png */,
+				CD25C7491C74559C00F228E0 /* register_content_bg@3x.png */,
+				CD25C74A1C74559C00F228E0 /* register_password@3x.png */,
+				CD25C74B1C74559C00F228E0 /* users_textfield_clicked@3x.png */,
+				CD25C74C1C74559C00F228E0 /* users_textfield_unclicked@3x.png */,
+			);
+			path = "注册与登录";
+			sourceTree = "<group>";
+		};
+		CD25C75C1C74567E00F228E0 /* 通用 */ = {
+			isa = PBXGroup;
+			children = (
+				CD69454E1C75CC6600E04081 /* headphoto_defaluted@3x.png */,
+				CD6945481C75CC5600E04081 /* headphoto_defaluted@2x.png */,
+				CD6945491C75CC5600E04081 /* hint@2x.png */,
+				CD69454A1C75CC5600E04081 /* hint@3x.png */,
+				CD6945461C75C98100E04081 /* push_arrow@3x.png */,
+				CD6945441C75C96900E04081 /* push_arrow@2x.png */,
+				CD6945401C75C90C00E04081 /* line@2x.png */,
+				CD6945411C75C90C00E04081 /* line@3x.png */,
+				CD8637A91C7567950090AD7E /* welcome@2x.png */,
+				CD8637AA1C7567950090AD7E /* welcome@3x.png */,
+				CD25C75D1C74567E00F228E0 /* title_back_unpressed@2x.png */,
+				CD25C75E1C74567E00F228E0 /* title_back_unpressed@3x.png */,
+			);
+			path = "通用";
+			sourceTree = "<group>";
+		};
+		CD45EDE71C77115E0042E9A2 /* 会员 */ = {
+			isa = PBXGroup;
+			children = (
+				CD45EDE81C77115E0042E9A2 /* service_coffee@2x.png */,
+				CD45EDE91C77115E0042E9A2 /* service_coffee@3x.png */,
+				CD45EDEA1C77115E0042E9A2 /* service_mine_organization@2x.png */,
+				CD45EDEB1C77115E0042E9A2 /* service_mine_organization@3x.png */,
+				CD45EDEC1C77115E0042E9A2 /* service_mine_wage@2x.png */,
+				CD45EDED1C77115E0042E9A2 /* service_mine_wage@3x.png */,
+				CD45EDEE1C77115E0042E9A2 /* 会议室@2x.png */,
+				CD45EDEF1C77115E0042E9A2 /* 会议室@3x.png */,
+				CD45EDF01C77115E0042E9A2 /* 发快递@2x.png */,
+				CD45EDF11C77115E0042E9A2 /* 发快递@3x.png */,
+				CD45EDF21C77115E0042E9A2 /* 开门@2x.png */,
+				CD45EDF31C77115E0042E9A2 /* 开门@3x.png */,
+				CD45EDF41C77115E0042E9A2 /* 快递查询@2x.png */,
+				CD45EDF51C77115E0042E9A2 /* 快递查询@3x.png */,
+				CD45EDF61C77115E0042E9A2 /* 滴滴出行@2x.png */,
+				CD45EDF71C77115E0042E9A2 /* 滴滴出行@3x.png */,
+				CD45EDF81C77115E0042E9A2 /* 环境监测@2x.png */,
+				CD45EDF91C77115E0042E9A2 /* 环境监测@3x.png */,
+			);
+			path = "会员";
 			sourceTree = "<group>";
 		};
 		CD5CD0091C71E0EC00B6A34B /* AFRequest */ = {
@@ -777,8 +836,53 @@
 				CD25C7621C74570F00F228E0 /* PBButton.m */,
 				65B419691C75D06B00FA817B /* JCYGlobalData.h */,
 				65B4196A1C75D06B00FA817B /* JCYGlobalData.m */,
+				CD45EDE41C76F8DF0042E9A2 /* PBAlert.h */,
+				CD45EDE51C76F8DF0042E9A2 /* PBAlert.m */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		CD81A08A1C72B69F00221AEF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CD45EDE71C77115E0042E9A2 /* 会员 */,
+				CD6945051C75C8C000E04081 /* 我的 */,
+				CD25C75C1C74567E00F228E0 /* 通用 */,
+				CD25C73D1C74559C00F228E0 /* 注册与登录 */,
+				CD81A08B1C72B69F00221AEF /* 首页 */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		CD81A08B1C72B69F00221AEF /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				CD81A08C1C72B69F00221AEF /* home_pressed@2x.png */,
+				CD81A08D1C72B69F00221AEF /* home_pressed@3x.png */,
+				CD81A08E1C72B69F00221AEF /* home_unpressed@2x.png */,
+				CD81A08F1C72B69F00221AEF /* home_unpressed@3x.png */,
+				CD81A0901C72B69F00221AEF /* member_pressed@2x.png */,
+				CD81A0911C72B69F00221AEF /* member_pressed@3x.png */,
+				CD81A0921C72B69F00221AEF /* member_unpressed@2x.png */,
+				CD81A0931C72B69F00221AEF /* member_unpressed@3x.png */,
+				CD81A0941C72B69F00221AEF /* mine_pressed@2x.png */,
+				CD81A0951C72B69F00221AEF /* mine_pressed@3x.png */,
+				CD81A0961C72B69F00221AEF /* mine_unpressed@2x.png */,
+				CD81A0971C72B69F00221AEF /* mine_unpressed@3x.png */,
+				65B100331C7414DF00AF8283 /* activity_space_pressed@2x.png */,
+				65B100341C7414DF00AF8283 /* activity_space_pressed@3x.png */,
+				65B100351C7414DF00AF8283 /* activity_space_unpressed@2x.png */,
+				65B100361C7414DF00AF8283 /* activity_space_unpressed@3x.png */,
+				65B1003B1C7414F900AF8283 /* enterprise_-service_pressed@2x.png */,
+				65B1003C1C7414F900AF8283 /* enterprise_-service_pressed@3x.png */,
+				65B1003D1C7414F900AF8283 /* enterprise_-service_unpressed@2x.png */,
+				65B1003E1C7414F900AF8283 /* enterprise_-service_unpressed@3x.png */,
+				65B100431C74154300AF8283 /* office_community_pressed@2x.png */,
+				65B100441C74154300AF8283 /* office_community_pressed@3x.png */,
+				65B100451C74154300AF8283 /* office_community_unpressed@2x.png */,
+				65B100461C74154300AF8283 /* office_community_unpressed@3x.png */,
+			);
+			path = "首页";
 			sourceTree = "<group>";
 		};
 		F81859BCEED719930C5348E8 /* Frameworks */ = {
@@ -899,6 +1003,12 @@
 				6530F6EB1C771418005BD7C1 /* 发快递@2x.png in Resources */,
 				6530F7091C771418005BD7C1 /* 顺丰速运@2x.png in Resources */,
 				6530F72A1C771418005BD7C1 /* mine_unpressed@2x.png in Resources */,
+				CD69453A1C75C8C000E04081 /* mine_review@2x.png in Resources */,
+				CD69454B1C75CC5600E04081 /* headphoto_defaluted@2x.png in Resources */,
+				CD45EDFA1C77115E0042E9A2 /* service_coffee@2x.png in Resources */,
+				CD45EE051C77115E0042E9A2 /* 开门@3x.png in Resources */,
+				CD6945301C75C8C000E04081 /* mine_customer_service_center@3x.png in Resources */,
+				CD6945291C75C8C000E04081 /* mine_bg@2x.png in Resources */,
 				CD1D57341C71BDB700BB30AC /* LaunchScreen.storyboard in Resources */,
 				6530F7251C771418005BD7C1 /* member_pressed@3x.png in Resources */,
 				6530F6EC1C771418005BD7C1 /* 发快递@3x.png in Resources */,
@@ -906,6 +1016,24 @@
 				6530F6EE1C771418005BD7C1 /* 开门@3x.png in Resources */,
 				6530F6ED1C771418005BD7C1 /* 开门@2x.png in Resources */,
 				6530F7051C771418005BD7C1 /* 申通快递@2x.png in Resources */,
+				65B1003F1C7414F900AF8283 /* enterprise_-service_pressed@2x.png in Resources */,
+				CD45EE001C77115E0042E9A2 /* 会议室@2x.png in Resources */,
+				CD6945341C75C8C000E04081 /* mine_online_orientation@2x.png in Resources */,
+				CD69452E1C75C8C000E04081 /* mine_coffice@3x.png in Resources */,
+				CD69454C1C75CC5600E04081 /* hint@2x.png in Resources */,
+				CD81A0A21C72B69F00221AEF /* mine_unpressed@2x.png in Resources */,
+				CD6945371C75C8C000E04081 /* mine_pay@3x.png in Resources */,
+				CD69454D1C75CC5600E04081 /* hint@3x.png in Resources */,
+				CD45EE091C77115E0042E9A2 /* 滴滴出行@3x.png in Resources */,
+				CD81A09D1C72B69F00221AEF /* member_pressed@3x.png in Resources */,
+				65B1004A1C74154300AF8283 /* office_community_unpressed@3x.png in Resources */,
+				CD25C75A1C74559C00F228E0 /* users_textfield_clicked@3x.png in Resources */,
+				65B100391C7414DF00AF8283 /* activity_space_unpressed@2x.png in Resources */,
+				65B100481C74154300AF8283 /* office_community_pressed@3x.png in Resources */,
+				65B100381C7414DF00AF8283 /* activity_space_pressed@3x.png in Resources */,
+				CD45EE071C77115E0042E9A2 /* 快递查询@3x.png in Resources */,
+				CD69453D1C75C8C000E04081 /* mine_service@3x.png in Resources */,
+				CD45EE011C77115E0042E9A2 /* 会议室@3x.png in Resources */,
 				CD6944EF1C75BDE500E04081 /* ZZSpaceRecommendCellTableViewCell.xib in Resources */,
 				6530F6F11C771418005BD7C1 /* 滴滴出行@2x.png in Resources */,
 				6530F72B1C771418005BD7C1 /* mine_unpressed@3x.png in Resources */,
@@ -921,6 +1049,14 @@
 				6530F72C1C771418005BD7C1 /* office_community_pressed@2x.png in Resources */,
 				6530F7151C771418005BD7C1 /* title_back_unpressed@3x.png in Resources */,
 				6530F6E81C771418005BD7C1 /* service_mine_wage@3x.png in Resources */,
+				CD6945431C75C90C00E04081 /* line@3x.png in Resources */,
+				CD25C7581C74559C00F228E0 /* register_content_bg@3x.png in Resources */,
+				CD6945271C75C8C000E04081 /* mine_appointment_visit.png in Resources */,
+				65B100401C7414F900AF8283 /* enterprise_-service_pressed@3x.png in Resources */,
+				CD6945041C75C89600E04081 /* PBMineTableViewSingleLineCell.xib in Resources */,
+				CD6945351C75C8C000E04081 /* mine_online_orientation@3x.png in Resources */,
+				CD81A09F1C72B69F00221AEF /* member_unpressed@3x.png in Resources */,
+				CD69453E1C75C8C000E04081 /* mine_set_up@2x.png in Resources */,
 				CD1D57311C71BDB700BB30AC /* Assets.xcassets in Resources */,
 				6530F7121C771418005BD7C1 /* nodata@2x.png in Resources */,
 				6530F7271C771418005BD7C1 /* member_unpressed@3x.png in Resources */,
@@ -954,13 +1090,47 @@
 				6530F6E61C771418005BD7C1 /* service_mine_organization@3x.png in Resources */,
 				6530F71D1C771418005BD7C1 /* enterprise_-service_pressed@3x.png in Resources */,
 				6530F7191C771418005BD7C1 /* activity_space_pressed@3x.png in Resources */,
+				CD69452A1C75C8C000E04081 /* mine_bg@3x.png in Resources */,
+				CD69452C1C75C8C000E04081 /* mine_card@3x.png in Resources */,
+				CD45EDFC1C77115E0042E9A2 /* service_mine_organization@2x.png in Resources */,
+				CD45EDFE1C77115E0042E9A2 /* service_mine_wage@2x.png in Resources */,
+				CD81A0991C72B69F00221AEF /* home_pressed@3x.png in Resources */,
+				CD25C7571C74559C00F228E0 /* register_cellphone@3x.png in Resources */,
+				CD6945281C75C8C000E04081 /* mine_appointment_visit@2x.png in Resources */,
+				CD45EE0B1C77115E0042E9A2 /* 环境监测@3x.png in Resources */,
+				65B100491C74154300AF8283 /* office_community_unpressed@2x.png in Resources */,
+				CD45EDFD1C77115E0042E9A2 /* service_mine_organization@3x.png in Resources */,
+				CD25C7561C74559C00F228E0 /* register_button_bg_unpressed@3x.png in Resources */,
+				65B419451C756B7700FA817B /* PBIndustryViewController.xib in Resources */,
+				65B1003A1C7414DF00AF8283 /* activity_space_unpressed@3x.png in Resources */,
+				CD25C7601C74567E00F228E0 /* title_back_unpressed@3x.png in Resources */,
+				CD69452D1C75C8C000E04081 /* mine_coffice@2x.png in Resources */,
+				CD6945331C75C8C000E04081 /* mine_help@3x.png in Resources */,
+				CD6945361C75C8C000E04081 /* mine_pay@2x.png in Resources */,
+				CD81A0981C72B69F00221AEF /* home_pressed@2x.png in Resources */,
 				CD1D572F1C71BDB700BB30AC /* Main.storyboard in Resources */,
 				6530F6F41C771418005BD7C1 /* 环境监测@3x.png in Resources */,
 				6530F70A1C771418005BD7C1 /* 顺丰速运@3x.png in Resources */,
 				6530F6FD1C771418005BD7C1 /* 中通快递@2x.png in Resources */,
 				6530F72E1C771418005BD7C1 /* office_community_unpressed@2x.png in Resources */,
+				CD6945251C75C8C000E04081 /* mine_account_number@2x.png in Resources */,
+				65B100471C74154300AF8283 /* office_community_pressed@2x.png in Resources */,
+				CD6944FE1C75C89600E04081 /* PBDoubleTableViewCell.xib in Resources */,
+				65B100371C7414DF00AF8283 /* activity_space_pressed@2x.png in Resources */,
+				CD45EE081C77115E0042E9A2 /* 滴滴出行@2x.png in Resources */,
+				CD6945381C75C8C000E04081 /* mine_resume@2x.png in Resources */,
+				CD6945261C75C8C000E04081 /* mine_account_number@3x.png in Resources */,
+				CD81A09E1C72B69F00221AEF /* member_unpressed@2x.png in Resources */,
+				CD81A09A1C72B69F00221AEF /* home_unpressed@2x.png in Resources */,
+				CD6945001C75C89600E04081 /* PBMineTableViewHeadCellTableViewCell.xib in Resources */,
+				CD6945021C75C89600E04081 /* PBMineTableViewSecondCell.xib in Resources */,
 				CD6944ED1C75BDE500E04081 /* PBButtonChooseCell.xib in Resources */,
 				6530F7021C771418005BD7C1 /* 天天快递@3x.png in Resources */,
+				CD25C7541C74559C00F228E0 /* logo@3x.png in Resources */,
+				CD8637AC1C7567950090AD7E /* welcome@3x.png in Resources */,
+				CD45EE031C77115E0042E9A2 /* 发快递@3x.png in Resources */,
+				CD45EDFB1C77115E0042E9A2 /* service_coffee@3x.png in Resources */,
+				CD69452F1C75C8C000E04081 /* mine_customer_service_center@2x.png in Resources */,
 				CD6944EB1C75BDE500E04081 /* PBADBannerCellTableViewCell.xib in Resources */,
 				6530F7031C771418005BD7C1 /* 宅急送@2x.png in Resources */,
 				6530F7111C771418005BD7C1 /* users_textfield_unclicked@3x.png in Resources */,
@@ -980,6 +1150,33 @@
 				6530F72D1C771418005BD7C1 /* office_community_pressed@3x.png in Resources */,
 				6530F7081C771418005BD7C1 /* 韵达快递@3x.png in Resources */,
 				6530F7131C771418005BD7C1 /* nodata@3x.png in Resources */,
+				CD81A09B1C72B69F00221AEF /* home_unpressed@3x.png in Resources */,
+				CD69453C1C75C8C000E04081 /* mine_service@2x.png in Resources */,
+				CD69452B1C75C8C000E04081 /* mine_card@2x.png in Resources */,
+				CD6945321C75C8C000E04081 /* mine_help@2x.png in Resources */,
+				CD6945311C75C8C000E04081 /* mine_headphoto_example.png in Resources */,
+				CD69453F1C75C8C000E04081 /* mine_set_up@3x.png in Resources */,
+				CD45EE061C77115E0042E9A2 /* 快递查询@2x.png in Resources */,
+				65B100411C7414F900AF8283 /* enterprise_-service_unpressed@2x.png in Resources */,
+				CD25C75F1C74567E00F228E0 /* title_back_unpressed@2x.png in Resources */,
+				65B100421C7414F900AF8283 /* enterprise_-service_unpressed@3x.png in Resources */,
+				CD8637AB1C7567950090AD7E /* welcome@2x.png in Resources */,
+				CD81A0A01C72B69F00221AEF /* mine_pressed@2x.png in Resources */,
+				CD6945471C75C98100E04081 /* push_arrow@3x.png in Resources */,
+				CD81A09C1C72B69F00221AEF /* member_pressed@2x.png in Resources */,
+				CD45EE021C77115E0042E9A2 /* 发快递@2x.png in Resources */,
+				CD69454F1C75CC6600E04081 /* headphoto_defaluted@3x.png in Resources */,
+				CD6945421C75C90C00E04081 /* line@2x.png in Resources */,
+				CD45EE0A1C77115E0042E9A2 /* 环境监测@2x.png in Resources */,
+				CD45EDFF1C77115E0042E9A2 /* service_mine_wage@3x.png in Resources */,
+				CD6945451C75C96900E04081 /* push_arrow@2x.png in Resources */,
+				CD81A0A31C72B69F00221AEF /* mine_unpressed@3x.png in Resources */,
+				CD45EE041C77115E0042E9A2 /* 开门@2x.png in Resources */,
+				CD25C7591C74559C00F228E0 /* register_password@3x.png in Resources */,
+				CD6945391C75C8C000E04081 /* mine_resume@3x.png in Resources */,
+				CD81A0A11C72B69F00221AEF /* mine_pressed@3x.png in Resources */,
+				CD69453B1C75C8C000E04081 /* mine_review@3x.png in Resources */,
+				CD25C75B1C74559C00F228E0 /* users_textfield_unclicked@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1057,6 +1254,7 @@
 				CD1D572C1C71BDB700BB30AC /* MemberPageViewController.m in Sources */,
 				65B419741C75D1BF00FA817B /* PBCompanyListTableViewCell.m in Sources */,
 				65B4196F1C75D18600FA817B /* PBCompanyListViewController.m in Sources */,
+				CD6945031C75C89600E04081 /* PBMineTableViewSingleLineCell.m in Sources */,
 				CD6944EC1C75BDE500E04081 /* PBButtonChooseCell.m in Sources */,
 				65B419641C75C25200FA817B /* PBCollectionCell.m in Sources */,
 				CD6944EE1C75BDE500E04081 /* ZZSpaceRecommendCellTableViewCell.m in Sources */,
