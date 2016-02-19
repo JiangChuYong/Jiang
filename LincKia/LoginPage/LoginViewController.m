@@ -78,13 +78,12 @@
         if ([self isRightPhoneNum]) {
             [self requestData];
         }else{
-            NSLog(@"手机号有误");
+            [[PBAlert sharedInstance]showText:@"您输入的手机号有误" inView:self.view withTime:2];
         }
     }else{
-        NSLog(@"密码输入有误");
+        [[PBAlert sharedInstance]showText:@"密码输入有误" inView:self.view withTime:2];
     }
     
-
 }
 
 - (IBAction)toRegisterPage:(UIButton *)sender {

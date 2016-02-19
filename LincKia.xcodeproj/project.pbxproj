@@ -41,27 +41,27 @@
 		CD25C7601C74567E00F228E0 /* title_back_unpressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C75E1C74567E00F228E0 /* title_back_unpressed@3x.png */; };
 		CD25C7631C74570F00F228E0 /* PBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CD25C7621C74570F00F228E0 /* PBButton.m */; };
 		CD45EDE61C76F8DF0042E9A2 /* PBAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45EDE51C76F8DF0042E9A2 /* PBAlert.m */; };
+		CD45EDFA1C77115E0042E9A2 /* service_coffee@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDE81C77115E0042E9A2 /* service_coffee@2x.png */; };
+		CD45EDFB1C77115E0042E9A2 /* service_coffee@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDE91C77115E0042E9A2 /* service_coffee@3x.png */; };
+		CD45EDFC1C77115E0042E9A2 /* service_mine_organization@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDEA1C77115E0042E9A2 /* service_mine_organization@2x.png */; };
+		CD45EDFD1C77115E0042E9A2 /* service_mine_organization@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDEB1C77115E0042E9A2 /* service_mine_organization@3x.png */; };
+		CD45EDFE1C77115E0042E9A2 /* service_mine_wage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDEC1C77115E0042E9A2 /* service_mine_wage@2x.png */; };
+		CD45EDFF1C77115E0042E9A2 /* service_mine_wage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDED1C77115E0042E9A2 /* service_mine_wage@3x.png */; };
+		CD45EE001C77115E0042E9A2 /* 会议室@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDEE1C77115E0042E9A2 /* 会议室@2x.png */; };
+		CD45EE011C77115E0042E9A2 /* 会议室@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDEF1C77115E0042E9A2 /* 会议室@3x.png */; };
+		CD45EE021C77115E0042E9A2 /* 发快递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDF01C77115E0042E9A2 /* 发快递@2x.png */; };
+		CD45EE031C77115E0042E9A2 /* 发快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDF11C77115E0042E9A2 /* 发快递@3x.png */; };
+		CD45EE041C77115E0042E9A2 /* 开门@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDF21C77115E0042E9A2 /* 开门@2x.png */; };
+		CD45EE051C77115E0042E9A2 /* 开门@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDF31C77115E0042E9A2 /* 开门@3x.png */; };
+		CD45EE061C77115E0042E9A2 /* 快递查询@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDF41C77115E0042E9A2 /* 快递查询@2x.png */; };
+		CD45EE071C77115E0042E9A2 /* 快递查询@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDF51C77115E0042E9A2 /* 快递查询@3x.png */; };
+		CD45EE081C77115E0042E9A2 /* 滴滴出行@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDF61C77115E0042E9A2 /* 滴滴出行@2x.png */; };
+		CD45EE091C77115E0042E9A2 /* 滴滴出行@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDF71C77115E0042E9A2 /* 滴滴出行@3x.png */; };
+		CD45EE0A1C77115E0042E9A2 /* 环境监测@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDF81C77115E0042E9A2 /* 环境监测@2x.png */; };
+		CD45EE0B1C77115E0042E9A2 /* 环境监测@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD45EDF91C77115E0042E9A2 /* 环境监测@3x.png */; };
 		CD5CD00C1C71E10F00B6A34B /* AFRquest.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CD00B1C71E10F00B6A34B /* AFRquest.m */; };
 		CD65AB3B1C71C37D00AED0F8 /* MinePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65AB3A1C71C37D00AED0F8 /* MinePageViewController.m */; };
 		CD69448D1C75AD9D00E04081 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD69448C1C75AD9D00E04081 /* LoginViewController.m */; };
-		CD6944C71C75B2C300E04081 /* service_coffee@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944B51C75B2C300E04081 /* service_coffee@2x.png */; };
-		CD6944C81C75B2C300E04081 /* service_coffee@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944B61C75B2C300E04081 /* service_coffee@3x.png */; };
-		CD6944C91C75B2C300E04081 /* service_mine_organization@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944B71C75B2C300E04081 /* service_mine_organization@2x.png */; };
-		CD6944CA1C75B2C300E04081 /* service_mine_organization@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944B81C75B2C300E04081 /* service_mine_organization@3x.png */; };
-		CD6944CB1C75B2C300E04081 /* service_mine_wage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944B91C75B2C300E04081 /* service_mine_wage@2x.png */; };
-		CD6944CC1C75B2C300E04081 /* service_mine_wage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944BA1C75B2C300E04081 /* service_mine_wage@3x.png */; };
-		CD6944CD1C75B2C300E04081 /* 会议室@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944BB1C75B2C300E04081 /* 会议室@2x.png */; };
-		CD6944CE1C75B2C300E04081 /* 会议室@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944BC1C75B2C300E04081 /* 会议室@3x.png */; };
-		CD6944CF1C75B2C300E04081 /* 发快递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944BD1C75B2C300E04081 /* 发快递@2x.png */; };
-		CD6944D01C75B2C300E04081 /* 发快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944BE1C75B2C300E04081 /* 发快递@3x.png */; };
-		CD6944D11C75B2C300E04081 /* 开门@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944BF1C75B2C300E04081 /* 开门@2x.png */; };
-		CD6944D21C75B2C300E04081 /* 开门@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944C01C75B2C300E04081 /* 开门@3x.png */; };
-		CD6944D31C75B2C300E04081 /* 快递查询@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944C11C75B2C300E04081 /* 快递查询@2x.png */; };
-		CD6944D41C75B2C300E04081 /* 快递查询@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944C21C75B2C300E04081 /* 快递查询@3x.png */; };
-		CD6944D51C75B2C300E04081 /* 滴滴出行@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944C31C75B2C300E04081 /* 滴滴出行@2x.png */; };
-		CD6944D61C75B2C300E04081 /* 滴滴出行@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944C41C75B2C300E04081 /* 滴滴出行@3x.png */; };
-		CD6944D71C75B2C300E04081 /* 环境监测@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944C51C75B2C300E04081 /* 环境监测@2x.png */; };
-		CD6944D81C75B2C300E04081 /* 环境监测@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6944C61C75B2C300E04081 /* 环境监测@3x.png */; };
 		CD6944E91C75BDE500E04081 /* MemberCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6944DF1C75BDE500E04081 /* MemberCollectionViewCell.m */; };
 		CD6944EA1C75BDE500E04081 /* PBADBannerCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD6944E11C75BDE500E04081 /* PBADBannerCellTableViewCell.m */; };
 		CD6944EB1C75BDE500E04081 /* PBADBannerCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6944E21C75BDE500E04081 /* PBADBannerCellTableViewCell.xib */; };
@@ -200,6 +200,24 @@
 		CD25C7621C74570F00F228E0 /* PBButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBButton.m; sourceTree = "<group>"; };
 		CD45EDE41C76F8DF0042E9A2 /* PBAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBAlert.h; sourceTree = "<group>"; };
 		CD45EDE51C76F8DF0042E9A2 /* PBAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBAlert.m; sourceTree = "<group>"; };
+		CD45EDE81C77115E0042E9A2 /* service_coffee@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service_coffee@2x.png"; sourceTree = "<group>"; };
+		CD45EDE91C77115E0042E9A2 /* service_coffee@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service_coffee@3x.png"; sourceTree = "<group>"; };
+		CD45EDEA1C77115E0042E9A2 /* service_mine_organization@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service_mine_organization@2x.png"; sourceTree = "<group>"; };
+		CD45EDEB1C77115E0042E9A2 /* service_mine_organization@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service_mine_organization@3x.png"; sourceTree = "<group>"; };
+		CD45EDEC1C77115E0042E9A2 /* service_mine_wage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service_mine_wage@2x.png"; sourceTree = "<group>"; };
+		CD45EDED1C77115E0042E9A2 /* service_mine_wage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service_mine_wage@3x.png"; sourceTree = "<group>"; };
+		CD45EDEE1C77115E0042E9A2 /* 会议室@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "会议室@2x.png"; sourceTree = "<group>"; };
+		CD45EDEF1C77115E0042E9A2 /* 会议室@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "会议室@3x.png"; sourceTree = "<group>"; };
+		CD45EDF01C77115E0042E9A2 /* 发快递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发快递@2x.png"; sourceTree = "<group>"; };
+		CD45EDF11C77115E0042E9A2 /* 发快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发快递@3x.png"; sourceTree = "<group>"; };
+		CD45EDF21C77115E0042E9A2 /* 开门@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开门@2x.png"; sourceTree = "<group>"; };
+		CD45EDF31C77115E0042E9A2 /* 开门@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开门@3x.png"; sourceTree = "<group>"; };
+		CD45EDF41C77115E0042E9A2 /* 快递查询@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "快递查询@2x.png"; sourceTree = "<group>"; };
+		CD45EDF51C77115E0042E9A2 /* 快递查询@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "快递查询@3x.png"; sourceTree = "<group>"; };
+		CD45EDF61C77115E0042E9A2 /* 滴滴出行@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "滴滴出行@2x.png"; sourceTree = "<group>"; };
+		CD45EDF71C77115E0042E9A2 /* 滴滴出行@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "滴滴出行@3x.png"; sourceTree = "<group>"; };
+		CD45EDF81C77115E0042E9A2 /* 环境监测@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "环境监测@2x.png"; sourceTree = "<group>"; };
+		CD45EDF91C77115E0042E9A2 /* 环境监测@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "环境监测@3x.png"; sourceTree = "<group>"; };
 		CD515AE41C7307A400601CA2 /* RequestFlag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestFlag.h; sourceTree = "<group>"; };
 		CD5CD00A1C71E10F00B6A34B /* AFRquest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRquest.h; sourceTree = "<group>"; };
 		CD5CD00B1C71E10F00B6A34B /* AFRquest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRquest.m; sourceTree = "<group>"; };
@@ -207,24 +225,6 @@
 		CD65AB3A1C71C37D00AED0F8 /* MinePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinePageViewController.m; sourceTree = "<group>"; };
 		CD69448B1C75AD9D00E04081 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		CD69448C1C75AD9D00E04081 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		CD6944B51C75B2C300E04081 /* service_coffee@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service_coffee@2x.png"; sourceTree = "<group>"; };
-		CD6944B61C75B2C300E04081 /* service_coffee@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service_coffee@3x.png"; sourceTree = "<group>"; };
-		CD6944B71C75B2C300E04081 /* service_mine_organization@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service_mine_organization@2x.png"; sourceTree = "<group>"; };
-		CD6944B81C75B2C300E04081 /* service_mine_organization@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service_mine_organization@3x.png"; sourceTree = "<group>"; };
-		CD6944B91C75B2C300E04081 /* service_mine_wage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service_mine_wage@2x.png"; sourceTree = "<group>"; };
-		CD6944BA1C75B2C300E04081 /* service_mine_wage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service_mine_wage@3x.png"; sourceTree = "<group>"; };
-		CD6944BB1C75B2C300E04081 /* 会议室@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "会议室@2x.png"; sourceTree = "<group>"; };
-		CD6944BC1C75B2C300E04081 /* 会议室@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "会议室@3x.png"; sourceTree = "<group>"; };
-		CD6944BD1C75B2C300E04081 /* 发快递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发快递@2x.png"; sourceTree = "<group>"; };
-		CD6944BE1C75B2C300E04081 /* 发快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "发快递@3x.png"; sourceTree = "<group>"; };
-		CD6944BF1C75B2C300E04081 /* 开门@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开门@2x.png"; sourceTree = "<group>"; };
-		CD6944C01C75B2C300E04081 /* 开门@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开门@3x.png"; sourceTree = "<group>"; };
-		CD6944C11C75B2C300E04081 /* 快递查询@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "快递查询@2x.png"; sourceTree = "<group>"; };
-		CD6944C21C75B2C300E04081 /* 快递查询@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "快递查询@3x.png"; sourceTree = "<group>"; };
-		CD6944C31C75B2C300E04081 /* 滴滴出行@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "滴滴出行@2x.png"; sourceTree = "<group>"; };
-		CD6944C41C75B2C300E04081 /* 滴滴出行@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "滴滴出行@3x.png"; sourceTree = "<group>"; };
-		CD6944C51C75B2C300E04081 /* 环境监测@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "环境监测@2x.png"; sourceTree = "<group>"; };
-		CD6944C61C75B2C300E04081 /* 环境监测@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "环境监测@3x.png"; sourceTree = "<group>"; };
 		CD6944DE1C75BDE500E04081 /* MemberCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberCollectionViewCell.h; sourceTree = "<group>"; };
 		CD6944DF1C75BDE500E04081 /* MemberCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberCollectionViewCell.m; sourceTree = "<group>"; };
 		CD6944E01C75BDE500E04081 /* PBADBannerCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBADBannerCellTableViewCell.h; sourceTree = "<group>"; };
@@ -361,7 +361,6 @@
 			isa = PBXGroup;
 			children = (
 				CD81A08A1C72B69F00221AEF /* images */,
-				CD6944B41C75B2C300E04081 /* 会员 */,
 				CD5CD0091C71E0EC00B6A34B /* AFRequest */,
 				CD7360B51C71C9A800E3971C /* Config */,
 				CD1D57201C71BDB700BB30AC /* LincKia */,
@@ -466,6 +465,31 @@
 			path = "通用";
 			sourceTree = "<group>";
 		};
+		CD45EDE71C77115E0042E9A2 /* 会员 */ = {
+			isa = PBXGroup;
+			children = (
+				CD45EDE81C77115E0042E9A2 /* service_coffee@2x.png */,
+				CD45EDE91C77115E0042E9A2 /* service_coffee@3x.png */,
+				CD45EDEA1C77115E0042E9A2 /* service_mine_organization@2x.png */,
+				CD45EDEB1C77115E0042E9A2 /* service_mine_organization@3x.png */,
+				CD45EDEC1C77115E0042E9A2 /* service_mine_wage@2x.png */,
+				CD45EDED1C77115E0042E9A2 /* service_mine_wage@3x.png */,
+				CD45EDEE1C77115E0042E9A2 /* 会议室@2x.png */,
+				CD45EDEF1C77115E0042E9A2 /* 会议室@3x.png */,
+				CD45EDF01C77115E0042E9A2 /* 发快递@2x.png */,
+				CD45EDF11C77115E0042E9A2 /* 发快递@3x.png */,
+				CD45EDF21C77115E0042E9A2 /* 开门@2x.png */,
+				CD45EDF31C77115E0042E9A2 /* 开门@3x.png */,
+				CD45EDF41C77115E0042E9A2 /* 快递查询@2x.png */,
+				CD45EDF51C77115E0042E9A2 /* 快递查询@3x.png */,
+				CD45EDF61C77115E0042E9A2 /* 滴滴出行@2x.png */,
+				CD45EDF71C77115E0042E9A2 /* 滴滴出行@3x.png */,
+				CD45EDF81C77115E0042E9A2 /* 环境监测@2x.png */,
+				CD45EDF91C77115E0042E9A2 /* 环境监测@3x.png */,
+			);
+			path = "会员";
+			sourceTree = "<group>";
+		};
 		CD5CD0091C71E0EC00B6A34B /* AFRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,32 +507,6 @@
 				CD69448C1C75AD9D00E04081 /* LoginViewController.m */,
 			);
 			path = LoginPage;
-			sourceTree = "<group>";
-		};
-		CD6944B41C75B2C300E04081 /* 会员 */ = {
-			isa = PBXGroup;
-			children = (
-				CD6944B51C75B2C300E04081 /* service_coffee@2x.png */,
-				CD6944B61C75B2C300E04081 /* service_coffee@3x.png */,
-				CD6944B71C75B2C300E04081 /* service_mine_organization@2x.png */,
-				CD6944B81C75B2C300E04081 /* service_mine_organization@3x.png */,
-				CD6944B91C75B2C300E04081 /* service_mine_wage@2x.png */,
-				CD6944BA1C75B2C300E04081 /* service_mine_wage@3x.png */,
-				CD6944BB1C75B2C300E04081 /* 会议室@2x.png */,
-				CD6944BC1C75B2C300E04081 /* 会议室@3x.png */,
-				CD6944BD1C75B2C300E04081 /* 发快递@2x.png */,
-				CD6944BE1C75B2C300E04081 /* 发快递@3x.png */,
-				CD6944BF1C75B2C300E04081 /* 开门@2x.png */,
-				CD6944C01C75B2C300E04081 /* 开门@3x.png */,
-				CD6944C11C75B2C300E04081 /* 快递查询@2x.png */,
-				CD6944C21C75B2C300E04081 /* 快递查询@3x.png */,
-				CD6944C31C75B2C300E04081 /* 滴滴出行@2x.png */,
-				CD6944C41C75B2C300E04081 /* 滴滴出行@3x.png */,
-				CD6944C51C75B2C300E04081 /* 环境监测@2x.png */,
-				CD6944C61C75B2C300E04081 /* 环境监测@3x.png */,
-			);
-			name = "会员";
-			path = "images/会员";
 			sourceTree = "<group>";
 		};
 		CD6944DD1C75BDE500E04081 /* ViewCells */ = {
@@ -608,6 +606,7 @@
 		CD81A08A1C72B69F00221AEF /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CD45EDE71C77115E0042E9A2 /* 会员 */,
 				CD6945051C75C8C000E04081 /* 我的 */,
 				CD25C75C1C74567E00F228E0 /* 通用 */,
 				CD25C73D1C74559C00F228E0 /* 注册与登录 */,
@@ -761,50 +760,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD6944CA1C75B2C300E04081 /* service_mine_organization@3x.png in Resources */,
 				CD69453A1C75C8C000E04081 /* mine_review@2x.png in Resources */,
 				CD69454B1C75CC5600E04081 /* headphoto_defaluted@2x.png in Resources */,
+				CD45EDFA1C77115E0042E9A2 /* service_coffee@2x.png in Resources */,
+				CD45EE051C77115E0042E9A2 /* 开门@3x.png in Resources */,
 				CD6945301C75C8C000E04081 /* mine_customer_service_center@3x.png in Resources */,
 				CD6945291C75C8C000E04081 /* mine_bg@2x.png in Resources */,
 				CD1D57341C71BDB700BB30AC /* LaunchScreen.storyboard in Resources */,
 				65B1003F1C7414F900AF8283 /* enterprise_-service_pressed@2x.png in Resources */,
+				CD45EE001C77115E0042E9A2 /* 会议室@2x.png in Resources */,
 				CD6945341C75C8C000E04081 /* mine_online_orientation@2x.png in Resources */,
 				CD69452E1C75C8C000E04081 /* mine_coffice@3x.png in Resources */,
 				CD69454C1C75CC5600E04081 /* hint@2x.png in Resources */,
 				CD81A0A21C72B69F00221AEF /* mine_unpressed@2x.png in Resources */,
 				CD6945371C75C8C000E04081 /* mine_pay@3x.png in Resources */,
 				CD69454D1C75CC5600E04081 /* hint@3x.png in Resources */,
+				CD45EE091C77115E0042E9A2 /* 滴滴出行@3x.png in Resources */,
 				CD81A09D1C72B69F00221AEF /* member_pressed@3x.png in Resources */,
 				65B1004A1C74154300AF8283 /* office_community_unpressed@3x.png in Resources */,
 				CD25C75A1C74559C00F228E0 /* users_textfield_clicked@3x.png in Resources */,
 				65B100391C7414DF00AF8283 /* activity_space_unpressed@2x.png in Resources */,
-				CD6944D11C75B2C300E04081 /* 开门@2x.png in Resources */,
 				65B100481C74154300AF8283 /* office_community_pressed@3x.png in Resources */,
 				65B100381C7414DF00AF8283 /* activity_space_pressed@3x.png in Resources */,
+				CD45EE071C77115E0042E9A2 /* 快递查询@3x.png in Resources */,
 				CD69453D1C75C8C000E04081 /* mine_service@3x.png in Resources */,
+				CD45EE011C77115E0042E9A2 /* 会议室@3x.png in Resources */,
 				CD6944EF1C75BDE500E04081 /* ZZSpaceRecommendCellTableViewCell.xib in Resources */,
 				CD6945431C75C90C00E04081 /* line@3x.png in Resources */,
 				CD25C7581C74559C00F228E0 /* register_content_bg@3x.png in Resources */,
 				CD6945271C75C8C000E04081 /* mine_appointment_visit.png in Resources */,
 				65B100401C7414F900AF8283 /* enterprise_-service_pressed@3x.png in Resources */,
 				CD6945041C75C89600E04081 /* PBMineTableViewSingleLineCell.xib in Resources */,
-				CD6944D41C75B2C300E04081 /* 快递查询@3x.png in Resources */,
-				CD6944CD1C75B2C300E04081 /* 会议室@2x.png in Resources */,
 				CD6945351C75C8C000E04081 /* mine_online_orientation@3x.png in Resources */,
 				CD81A09F1C72B69F00221AEF /* member_unpressed@3x.png in Resources */,
 				CD69453E1C75C8C000E04081 /* mine_set_up@2x.png in Resources */,
 				CD1D57311C71BDB700BB30AC /* Assets.xcassets in Resources */,
 				CD69452A1C75C8C000E04081 /* mine_bg@3x.png in Resources */,
 				CD69452C1C75C8C000E04081 /* mine_card@3x.png in Resources */,
+				CD45EDFC1C77115E0042E9A2 /* service_mine_organization@2x.png in Resources */,
+				CD45EDFE1C77115E0042E9A2 /* service_mine_wage@2x.png in Resources */,
 				CD81A0991C72B69F00221AEF /* home_pressed@3x.png in Resources */,
 				CD6945241C75C8C000E04081 /* home_unpressed@3x.png in Resources */,
 				CD25C7571C74559C00F228E0 /* register_cellphone@3x.png in Resources */,
 				CD6945281C75C8C000E04081 /* mine_appointment_visit@2x.png in Resources */,
-				CD6944D31C75B2C300E04081 /* 快递查询@2x.png in Resources */,
-				CD6944D71C75B2C300E04081 /* 环境监测@2x.png in Resources */,
+				CD45EE0B1C77115E0042E9A2 /* 环境监测@3x.png in Resources */,
 				CD6945231C75C8C000E04081 /* home_unpressed@2x.png in Resources */,
 				65B100491C74154300AF8283 /* office_community_unpressed@2x.png in Resources */,
-				CD6944D81C75B2C300E04081 /* 环境监测@3x.png in Resources */,
+				CD45EDFD1C77115E0042E9A2 /* service_mine_organization@3x.png in Resources */,
 				CD25C7561C74559C00F228E0 /* register_button_bg_unpressed@3x.png in Resources */,
 				65B419451C756B7700FA817B /* PBIndustryViewController.xib in Resources */,
 				65B1003A1C7414DF00AF8283 /* activity_space_unpressed@3x.png in Resources */,
@@ -818,46 +820,43 @@
 				65B100471C74154300AF8283 /* office_community_pressed@2x.png in Resources */,
 				CD6944FE1C75C89600E04081 /* PBDoubleTableViewCell.xib in Resources */,
 				65B100371C7414DF00AF8283 /* activity_space_pressed@2x.png in Resources */,
+				CD45EE081C77115E0042E9A2 /* 滴滴出行@2x.png in Resources */,
 				CD6945381C75C8C000E04081 /* mine_resume@2x.png in Resources */,
 				CD6945261C75C8C000E04081 /* mine_account_number@3x.png in Resources */,
-				CD6944D61C75B2C300E04081 /* 滴滴出行@3x.png in Resources */,
 				CD81A09E1C72B69F00221AEF /* member_unpressed@2x.png in Resources */,
 				CD81A09A1C72B69F00221AEF /* home_unpressed@2x.png in Resources */,
 				CD6945001C75C89600E04081 /* PBMineTableViewHeadCellTableViewCell.xib in Resources */,
 				CD6945021C75C89600E04081 /* PBMineTableViewSecondCell.xib in Resources */,
-				CD6944D01C75B2C300E04081 /* 发快递@3x.png in Resources */,
 				CD6944ED1C75BDE500E04081 /* PBButtonChooseCell.xib in Resources */,
 				CD25C7541C74559C00F228E0 /* logo@3x.png in Resources */,
 				CD8637AC1C7567950090AD7E /* welcome@3x.png in Resources */,
-				CD6944CE1C75B2C300E04081 /* 会议室@3x.png in Resources */,
+				CD45EE031C77115E0042E9A2 /* 发快递@3x.png in Resources */,
+				CD45EDFB1C77115E0042E9A2 /* service_coffee@3x.png in Resources */,
 				CD69452F1C75C8C000E04081 /* mine_customer_service_center@2x.png in Resources */,
 				CD6944EB1C75BDE500E04081 /* PBADBannerCellTableViewCell.xib in Resources */,
-				CD6944D21C75B2C300E04081 /* 开门@3x.png in Resources */,
 				CD81A09B1C72B69F00221AEF /* home_unpressed@3x.png in Resources */,
 				CD69453C1C75C8C000E04081 /* mine_service@2x.png in Resources */,
 				CD69452B1C75C8C000E04081 /* mine_card@2x.png in Resources */,
-				CD6944CF1C75B2C300E04081 /* 发快递@2x.png in Resources */,
 				CD6945321C75C8C000E04081 /* mine_help@2x.png in Resources */,
 				CD6945311C75C8C000E04081 /* mine_headphoto_example.png in Resources */,
-				CD6944CB1C75B2C300E04081 /* service_mine_wage@2x.png in Resources */,
 				CD69453F1C75C8C000E04081 /* mine_set_up@3x.png in Resources */,
-				CD6944C81C75B2C300E04081 /* service_coffee@3x.png in Resources */,
-				CD6944CC1C75B2C300E04081 /* service_mine_wage@3x.png in Resources */,
+				CD45EE061C77115E0042E9A2 /* 快递查询@2x.png in Resources */,
 				65B100411C7414F900AF8283 /* enterprise_-service_unpressed@2x.png in Resources */,
 				CD25C75F1C74567E00F228E0 /* title_back_unpressed@2x.png in Resources */,
 				65B100421C7414F900AF8283 /* enterprise_-service_unpressed@3x.png in Resources */,
-				CD6944C91C75B2C300E04081 /* service_mine_organization@2x.png in Resources */,
 				CD8637AB1C7567950090AD7E /* welcome@2x.png in Resources */,
 				CD81A0A01C72B69F00221AEF /* mine_pressed@2x.png in Resources */,
 				CD6945471C75C98100E04081 /* push_arrow@3x.png in Resources */,
 				CD81A09C1C72B69F00221AEF /* member_pressed@2x.png in Resources */,
-				CD6944C71C75B2C300E04081 /* service_coffee@2x.png in Resources */,
+				CD45EE021C77115E0042E9A2 /* 发快递@2x.png in Resources */,
 				CD69454F1C75CC6600E04081 /* headphoto_defaluted@3x.png in Resources */,
 				CD6945421C75C90C00E04081 /* line@2x.png in Resources */,
+				CD45EE0A1C77115E0042E9A2 /* 环境监测@2x.png in Resources */,
+				CD45EDFF1C77115E0042E9A2 /* service_mine_wage@3x.png in Resources */,
 				CD6945451C75C96900E04081 /* push_arrow@2x.png in Resources */,
 				CD81A0A31C72B69F00221AEF /* mine_unpressed@3x.png in Resources */,
+				CD45EE041C77115E0042E9A2 /* 开门@2x.png in Resources */,
 				CD25C7591C74559C00F228E0 /* register_password@3x.png in Resources */,
-				CD6944D51C75B2C300E04081 /* 滴滴出行@2x.png in Resources */,
 				CD6945391C75C8C000E04081 /* mine_resume@3x.png in Resources */,
 				CD81A0A11C72B69F00221AEF /* mine_pressed@3x.png in Resources */,
 				CD69453B1C75C8C000E04081 /* mine_review@3x.png in Resources */,
