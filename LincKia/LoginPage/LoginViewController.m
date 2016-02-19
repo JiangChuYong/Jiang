@@ -37,17 +37,18 @@
 }
 -(void)requestData{
     START_OBSERVE_CONNECTION
+    SHOW_LOADING
     AFRquest * af = [AFRquest sharedInstance];
     af.subURLString = @"api/Users/Login?deviceType=ios";
     af.parameters = @{@"Account":_phone.text,@"Password":_password.text};
     af.requestFlag = UsersLogin;
     af.style = POST;
     [af requestDataFromServer];
-
 }
 
 -(void)dataReceived:(NSNotification *)notif{
     NSLog(@"%@",[notif object]);
+    STOP_LOADING
     NSDictionary * userInfo = [notif object];
     NSDictionary * data = userInfo[@"Data"];
     if ([AFRquest sharedInstance].requestFlag == UsersLogin) {
@@ -61,8 +62,7 @@
             [user synchronize];
         }else{
             NSString * errorInfo = userInfo[@"Description"];
-            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:errorInfo delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
-            [alert show];
+            [[PBAlert sharedInstance]showText:errorInfo inView:self.view withTime:2.0];
         }
     }
 }

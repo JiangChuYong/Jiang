@@ -16,6 +16,7 @@ SingletonH(CommonUtil);
 -(NSString *) imgUrlForSpaceType:(SpaceType)spaceType;
 -(NSString *) payCountingIDUrlForPayAccountIDStyle:(PayAccountIDStyle)payAccountIDStyle;
 -(NSString *) dataStrWithDateStr:(NSString *)sourceDateStr;
+//判断手机号是否有效
 + (BOOL)isValidateMobile:(NSString *)mobile;
 //遍历非法字符
 + (BOOL)stringContainsEmoji:(NSString *)string;//是否含有表情

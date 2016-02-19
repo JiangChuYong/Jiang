@@ -40,6 +40,7 @@
 		CD25C75F1C74567E00F228E0 /* title_back_unpressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C75D1C74567E00F228E0 /* title_back_unpressed@2x.png */; };
 		CD25C7601C74567E00F228E0 /* title_back_unpressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD25C75E1C74567E00F228E0 /* title_back_unpressed@3x.png */; };
 		CD25C7631C74570F00F228E0 /* PBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CD25C7621C74570F00F228E0 /* PBButton.m */; };
+		CD45EDE61C76F8DF0042E9A2 /* PBAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45EDE51C76F8DF0042E9A2 /* PBAlert.m */; };
 		CD5CD00C1C71E10F00B6A34B /* AFRquest.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CD00B1C71E10F00B6A34B /* AFRquest.m */; };
 		CD65AB3B1C71C37D00AED0F8 /* MinePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD65AB3A1C71C37D00AED0F8 /* MinePageViewController.m */; };
 		CD69448D1C75AD9D00E04081 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD69448C1C75AD9D00E04081 /* LoginViewController.m */; };
@@ -197,6 +198,8 @@
 		CD25C75E1C74567E00F228E0 /* title_back_unpressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title_back_unpressed@3x.png"; sourceTree = "<group>"; };
 		CD25C7611C74570F00F228E0 /* PBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBButton.h; sourceTree = "<group>"; };
 		CD25C7621C74570F00F228E0 /* PBButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBButton.m; sourceTree = "<group>"; };
+		CD45EDE41C76F8DF0042E9A2 /* PBAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBAlert.h; sourceTree = "<group>"; };
+		CD45EDE51C76F8DF0042E9A2 /* PBAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBAlert.m; sourceTree = "<group>"; };
 		CD515AE41C7307A400601CA2 /* RequestFlag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestFlag.h; sourceTree = "<group>"; };
 		CD5CD00A1C71E10F00B6A34B /* AFRquest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRquest.h; sourceTree = "<group>"; };
 		CD5CD00B1C71E10F00B6A34B /* AFRquest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRquest.m; sourceTree = "<group>"; };
@@ -596,6 +599,8 @@
 				CD7360C21C71CA5200E3971C /* PBSingleTon.h */,
 				CD25C7611C74570F00F228E0 /* PBButton.h */,
 				CD25C7621C74570F00F228E0 /* PBButton.m */,
+				CD45EDE41C76F8DF0042E9A2 /* PBAlert.h */,
+				CD45EDE51C76F8DF0042E9A2 /* PBAlert.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -939,6 +944,7 @@
 				CD6944EA1C75BDE500E04081 /* PBADBannerCellTableViewCell.m in Sources */,
 				CD6945011C75C89600E04081 /* PBMineTableViewSecondCell.m in Sources */,
 				CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */,
+				CD45EDE61C76F8DF0042E9A2 /* PBAlert.m in Sources */,
 				CD6944FD1C75C89600E04081 /* PBDoubleTableViewCell.m in Sources */,
 				65B419441C756B7700FA817B /* PBIndustryViewController.m in Sources */,
 				CD69448D1C75AD9D00E04081 /* LoginViewController.m in Sources */,
