@@ -7,7 +7,7 @@
 //
 
 #import "PBIndustryViewController.h"
-//#import "PBCollectionCell.h"
+#import "PBCollectionCell.h"
 //#import "PBIndustryDetailModel.h"
 //#import "PBIndustryInfoModel.h"
 //#import "PagingResultOfEnumerableOfIndustryInfoModel.h"
@@ -15,18 +15,48 @@
 
 @interface PBIndustryViewController ()
 @property (strong,nonatomic) NSMutableArray * industryArray;
+@property (strong,nonatomic) NSDictionary *responseDataOfIndexDict;
 
 @end
 
 @implementation PBIndustryViewController
 
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    STOP_OBSERVE_CONNECTION
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [[ZZAllService sharedInstance] serviceQueryByObj:@{@"Page":@1,@"Rows":@10,@"SortProperty":@"Name",@"SortDirection":@"asc"} delegate:self httpTag:HTTPHelperTag_Spaces_GetIndustryList];
-//    [self.collectionView registerClass:[PBCollectionCell class] forCellWithReuseIdentifier:@"CollectionCell"];
-    NSLog(@"dfafdsf");
+
+        START_OBSERVE_CONNECTION
+        AFRquest * af = [AFRquest sharedInstance];
+        af.subURLString = @"api/Industry/GetIndustryList?userToken=""&deviceType=ios";
+         af.parameters = @{@"Page":@1,@"Rows":@10,@"SortProperty":@"Name",@"SortDirection":@"asc"};
+        af.requestFlag = GetIndustryList;
+        af.style = GET;
+        [af requestDataFromServer];
+
+    
+    [self.collectionView registerClass:[PBCollectionCell class] forCellWithReuseIdentifier:@"CollectionCell"];
    
 }
+
+
+-(void)dataReceived:(NSNotification *)notif{
+    
+        _responseDataOfIndexDict = [notif object];
+        if ([AFRquest sharedInstance].requestFlag == GetIndustryList) {
+            NSLog(@"flag == %i",[AFRquest sharedInstance].requestFlag);
+            NSLog(@"%@",_responseDataOfIndexDict);
+    
+            _industryArray=_responseDataOfIndexDict[@"Data"][@"Data"];
+    
+            [_collectionView reloadData];
+        }
+    
+}
+
 
 - (IBAction)backButtonPressed:(UIButton *)sender {
     //[self.navigationController popViewControllerAnimated:YES];
@@ -45,44 +75,24 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {    
-//    PBCollectionCell *cell = (PBCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionCell" forIndexPath:indexPath];
-//    PBIndustryDetailModel * industryDetail = _industryArray[indexPath.row];
-//    [cell.image sd_setImageWithURL:[NSURL URLWithString:industryDetail.pic] placeholderImage:[UIImage imageNamed:Index_Recommond_Default_Image]];
-//    cell.name.text = industryDetail.industryName;
-//    return cell;
-    return [[UICollectionViewCell alloc]init];
+    PBCollectionCell *cell = (PBCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionCell" forIndexPath:indexPath];
+    NSDictionary *tempDict=[_industryArray objectAtIndex:indexPath.row];
+    
+    [cell.image sd_setImageWithURL:[NSURL URLWithString:tempDict[@"pic"]] placeholderImage:[UIImage imageNamed:Index_Recommond_Default_Image]];
+    
+
+    cell.name.text = tempDict[@"industryName"];
+    return cell;
 }
-//-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    PBIndustryDetailModel * industryDetail = _industryArray[indexPath.row];
-//    [ZZGlobalModel sharedInstance].industryId = industryDetail.id;
-//    [ZZGlobalModel sharedInstance].industryName = industryDetail.industryName;
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary  * industryDetail = _industryArray[indexPath.row];
+    [JCYGlobalData sharedInstance].industryId = industryDetail[@"id"];
+    [JCYGlobalData sharedInstance].industryName = industryDetail[@"industryName"];
 //    PBCompanyListViewController * viewController = [[PBCompanyListViewController alloc]init];
 //    [self.navigationController pushViewController:viewController animated:YES];
-//}
-//#pragma -- mark REQUEST PART
-///** *校验数据开始，如果没有通过校验，则返回校验提示*/
-//-(void)validateFailed:(int)tag validateInfo:(NSString *)validateInfo{
-//    NSLog(@"validateFailed");
-//}
-///** *获取数据开始*/
-//-(void)gainDataStart:(int)tag{
-//    [[AlertUtils sharedInstance]showWithText:LOAD_Start_TEXT inView:self.view];
-//}
-////获取数据成功
-//-(void)gainDataSuccess:(int)tag responseObj:(id)responseObj{
-//    PBIndustryInfoModel * response = [responseObj jsonToModel:PBIndustryInfoModel.class];
-//    if (response.Code == SERVER_SUCCESS) {
-//        _industryArray = [NSMutableArray arrayWithArray:response.Data.Data];
-//        [self.collectionView reloadData];
-//    }
-//    [[AlertUtils sharedInstance]stopHUD];
-//}
-//-(void)gainDataFailed:(int)tag errorInfo:(NSString *)errorInfo{
-//    [[AlertUtils sharedInstance]stopHUD];
-//    [[AlertUtils sharedInstance] showWithText:errorInfo inView:self.view lastTime:2.0];
-//}
-//
+    [self performSegueWithIdentifier:@"IndustryToCompany" sender:self];
+}
 /*
 #pragma mark - Navigation
 

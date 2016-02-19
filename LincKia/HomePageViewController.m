@@ -143,9 +143,11 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
 //跳转至 企业服务页面
 - (void)pushToIndustryListPage:(UIButton *)sender
 {
-    PBIndustryViewController * industryVC = [[PBIndustryViewController alloc]init];
-    //[self.navigationController pushViewController:industryVC animated:YES];
-    [self presentViewController:industryVC animated:YES completion:nil];
+//    PBIndustryViewController * industryVC = [[PBIndustryViewController alloc]init];
+//    //[self.navigationController pushViewController:industryVC animated:YES];
+//    [self presentViewController:industryVC animated:YES completion:nil];
+    
+    [self performSegueWithIdentifier:@"HomeToIndustry" sender:self];
 }
 
 
