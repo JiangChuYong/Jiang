@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PBActivitySpaceListViewController">
+            <connections>
+                <outlet property="nodataView" destination="mh5-y4-4ro" id="pYG-Rk-nHN"/>
+                <outlet property="spacesListTableview" destination="LCx-un-9mc" id="6M4-NW-xD8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMQ-yd-ZGK">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZP-gT-Wyh" customClass="PBButton">
+                            <rect key="frame" x="15" y="31" width="22" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="4fR-dP-B3P"/>
+                                <constraint firstAttribute="width" constant="22" id="FU5-H0-ULh"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="title_back_unpressed.png"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="uyv-pe-CkO"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动空间" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9D-FR-ahe">
+                            <rect key="frame" x="126" y="31" width="68" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="55o-Li-2Kn"/>
+                                <constraint firstAttribute="width" constant="68" id="LY3-3A-35x"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2m-ff-9Ur" customClass="PBButton">
+                            <rect key="frame" x="283" y="31" width="22" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="Aq0-m1-Byv"/>
+                                <constraint firstAttribute="width" constant="22" id="Nbo-4L-dAw"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="title_search_unpressed@3x.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="searchButtonPress:" destination="-1" eventType="touchUpInside" id="0zp-N7-s40"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.2666666667" green="0.59607843140000005" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="G9D-FR-ahe" firstAttribute="centerY" secondItem="5ZP-gT-Wyh" secondAttribute="centerY" id="6aT-5d-ddj"/>
+                        <constraint firstItem="G9D-FR-ahe" firstAttribute="centerX" secondItem="vMQ-yd-ZGK" secondAttribute="centerX" id="StO-ml-hpW"/>
+                        <constraint firstItem="e2m-ff-9Ur" firstAttribute="top" secondItem="vMQ-yd-ZGK" secondAttribute="top" constant="31" id="ZgD-gb-9Pf"/>
+                        <constraint firstAttribute="trailing" secondItem="e2m-ff-9Ur" secondAttribute="trailing" constant="15" id="igd-C9-M6D"/>
+                        <constraint firstItem="5ZP-gT-Wyh" firstAttribute="top" secondItem="vMQ-yd-ZGK" secondAttribute="top" constant="31" id="k9g-04-iiD"/>
+                        <constraint firstAttribute="height" constant="64" id="scY-5U-I9x"/>
+                        <constraint firstItem="5ZP-gT-Wyh" firstAttribute="leading" secondItem="vMQ-yd-ZGK" secondAttribute="leading" constant="15" id="zsw-YR-hyH"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mh5-y4-4ro">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nodata.png" translatesAutoresizingMaskIntoConstraints="NO" id="c9L-Vr-4dz">
+                            <rect key="frame" x="118.5" y="146.5" width="83" height="83"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="c9L-Vr-4dz" firstAttribute="centerY" secondItem="mh5-y4-4ro" secondAttribute="centerY" constant="-64" id="pdT-L5-RGa"/>
+                        <constraint firstItem="c9L-Vr-4dz" firstAttribute="centerX" secondItem="mh5-y4-4ro" secondAttribute="centerX" id="yxp-Y6-xOk"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LCx-un-9mc">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Cck-PO-yJy"/>
+                        <outlet property="delegate" destination="-1" id="h96-pl-l7r"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="vMQ-yd-ZGK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3No-4O-g9F"/>
+                <constraint firstItem="vMQ-yd-ZGK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="CBd-XU-9eh"/>
+                <constraint firstAttribute="bottom" secondItem="LCx-un-9mc" secondAttribute="bottom" id="H9F-sC-czR"/>
+                <constraint firstItem="LCx-un-9mc" firstAttribute="top" secondItem="vMQ-yd-ZGK" secondAttribute="bottom" id="HWW-s4-ndd"/>
+                <constraint firstItem="mh5-y4-4ro" firstAttribute="top" secondItem="vMQ-yd-ZGK" secondAttribute="bottom" id="LLt-G7-vtD"/>
+                <constraint firstAttribute="trailing" secondItem="mh5-y4-4ro" secondAttribute="trailing" id="Rr9-Xw-0O4"/>
+                <constraint firstAttribute="trailing" secondItem="vMQ-yd-ZGK" secondAttribute="trailing" id="ZSW-W5-z3R"/>
+                <constraint firstItem="LCx-un-9mc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hvO-TY-hUA"/>
+                <constraint firstAttribute="trailing" secondItem="LCx-un-9mc" secondAttribute="trailing" id="l3Y-7K-xD9"/>
+                <constraint firstItem="mh5-y4-4ro" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mqN-qg-ghj"/>
+                <constraint firstAttribute="bottom" secondItem="mh5-y4-4ro" secondAttribute="bottom" id="tIc-6N-4vG"/>
+            </constraints>
+            <point key="canvasLocation" x="199" y="166"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="nodata.png" width="83" height="83"/>
+        <image name="title_back_unpressed.png" width="22" height="22"/>
+        <image name="title_search_unpressed@3x.png" width="86" height="86"/>
+    </resources>
+</document>

@@ -33,7 +33,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)backButtonPressed:(UIButton *)sender {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -66,7 +66,10 @@
 }
 
 
-
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    STOP_OBSERVE_CONNECTION
+}
 
 #pragma -- mark SCROLLVIEW DELEGATE
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
