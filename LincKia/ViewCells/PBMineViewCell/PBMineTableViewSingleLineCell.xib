@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="eEP-2S-mPd" customClass="PBMineTableViewSingleLineCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eEP-2S-mPd" id="WMk-Dz-WJz">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a6B-XU-Dic">
+                        <rect key="frame" x="0.0" y="48.5" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="xSe-et-xo6"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wux-5E-fGZ">
+                        <rect key="frame" x="15" y="13" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="nkX-iQ-og5"/>
+                            <constraint firstAttribute="height" constant="22" id="zlW-M6-jhf"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="海星客专业资历" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFj-qT-hWO">
+                        <rect key="frame" x="52" y="16" width="218" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0039215686269999999" green="0.047058823530000002" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="push_arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="7PQ-HF-dv4">
+                        <rect key="frame" x="285" y="14" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="RwE-B2-9SP"/>
+                            <constraint firstAttribute="height" constant="20" id="gO7-7w-3kP"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7PQ-HF-dv4" firstAttribute="centerY" secondItem="Wux-5E-fGZ" secondAttribute="centerY" id="6Cy-yb-4wZ"/>
+                    <constraint firstItem="Wux-5E-fGZ" firstAttribute="leading" secondItem="WMk-Dz-WJz" secondAttribute="leading" constant="15" id="7l6-uj-x7O"/>
+                    <constraint firstAttribute="trailing" secondItem="a6B-XU-Dic" secondAttribute="trailing" id="8ym-lp-ivw"/>
+                    <constraint firstItem="Wux-5E-fGZ" firstAttribute="centerY" secondItem="pFj-qT-hWO" secondAttribute="centerY" id="HBQ-8b-LIb"/>
+                    <constraint firstItem="Wux-5E-fGZ" firstAttribute="top" secondItem="WMk-Dz-WJz" secondAttribute="top" constant="13" id="Hdd-Dd-b3M"/>
+                    <constraint firstAttribute="trailing" secondItem="7PQ-HF-dv4" secondAttribute="trailing" constant="15" id="IAE-jd-hT6"/>
+                    <constraint firstItem="a6B-XU-Dic" firstAttribute="leading" secondItem="WMk-Dz-WJz" secondAttribute="leading" id="UPb-Kn-Bqa"/>
+                    <constraint firstItem="7PQ-HF-dv4" firstAttribute="leading" secondItem="pFj-qT-hWO" secondAttribute="trailing" constant="15" id="ZkA-Xq-RNY"/>
+                    <constraint firstItem="a6B-XU-Dic" firstAttribute="top" secondItem="WMk-Dz-WJz" secondAttribute="top" constant="48.5" id="kH2-8B-MGv"/>
+                    <constraint firstItem="pFj-qT-hWO" firstAttribute="leading" secondItem="Wux-5E-fGZ" secondAttribute="trailing" constant="15" id="vkg-1q-5Qz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="img" destination="Wux-5E-fGZ" id="NvA-1t-UC5"/>
+                <outlet property="name" destination="pFj-qT-hWO" id="76Q-tL-u7i"/>
+                <outlet property="navi" destination="7PQ-HF-dv4" id="RlK-Ty-X6b"/>
+            </connections>
+            <point key="canvasLocation" x="280" y="258"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="push_arrow.png" width="22" height="22"/>
+    </resources>
+</document>

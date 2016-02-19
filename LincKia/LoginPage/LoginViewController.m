@@ -47,20 +47,24 @@
 }
 
 -(void)dataReceived:(NSNotification *)notif{
-    
     NSLog(@"%@",[notif object]);
+    NSDictionary * userInfo = [notif object];
+    NSDictionary * data = userInfo[@"Data"];
     if ([AFRquest sharedInstance].requestFlag == UsersLogin) {
-        NSDictionary * userInfo = [notif object];
         NSNumber * code = userInfo[@"Code"];
         if ([code intValue] == 0) {
             [self dismissViewControllerAnimated:YES completion:^{}];
             NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
             [user setValue:_phone.text forKey:USERNAME];
             [user setValue:_password.text forKey:PASSWORD];
+            [user setValue:data[@"UserToken"] forKey:USERTOKEN];
             [user synchronize];
+        }else{
+            NSString * errorInfo = userInfo[@"Description"];
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:errorInfo delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [alert show];
         }
     }
- 
 }
 #pragma -- mark Button Action
 
@@ -94,7 +98,6 @@
 - (IBAction)textFieldChanged:(UITextField *)sender {
     
     //输入字符数控制
-    
     if ([sender isEqual:_phone]) {
         if (sender.text.length > 11) {
             sender.text = [sender.text substringToIndex:11];
