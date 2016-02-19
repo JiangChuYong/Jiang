@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PBActivitySpaceListViewController : UIViewController <ServiceHelperDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface PBActivitySpaceListViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 
 
 @end
