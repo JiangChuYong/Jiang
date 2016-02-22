@@ -53,22 +53,6 @@
 		CD29E8691C7AFE3500871F69 /* company_detail_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7E51C7AFE3500871F69 /* company_detail_icon@3x.png */; };
 		CD29E86A1C7AFE3500871F69 /* company_detail_phone_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7E61C7AFE3500871F69 /* company_detail_phone_icon@2x.png */; };
 		CD29E86B1C7AFE3500871F69 /* company_detail_phone_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7E71C7AFE3500871F69 /* company_detail_phone_icon@3x.png */; };
-		CD29E86C1C7AFE3500871F69 /* but_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7E91C7AFE3500871F69 /* but_phone@2x.png */; };
-		CD29E86D1C7AFE3500871F69 /* but_phone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7EA1C7AFE3500871F69 /* but_phone@3x.png */; };
-		CD29E8701C7AFE3500871F69 /* 中通快递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7ED1C7AFE3500871F69 /* 中通快递@2x.png */; };
-		CD29E8711C7AFE3500871F69 /* 中通快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7EE1C7AFE3500871F69 /* 中通快递@3x.png */; };
-		CD29E8721C7AFE3500871F69 /* 圆通速递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7EF1C7AFE3500871F69 /* 圆通速递@2x.png */; };
-		CD29E8731C7AFE3500871F69 /* 圆通速递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7F01C7AFE3500871F69 /* 圆通速递@3x.png */; };
-		CD29E8741C7AFE3500871F69 /* 天天快递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7F11C7AFE3500871F69 /* 天天快递@2x.png */; };
-		CD29E8751C7AFE3500871F69 /* 天天快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7F21C7AFE3500871F69 /* 天天快递@3x.png */; };
-		CD29E8761C7AFE3500871F69 /* 宅急送@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7F31C7AFE3500871F69 /* 宅急送@2x.png */; };
-		CD29E8771C7AFE3500871F69 /* 宅急送@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7F41C7AFE3500871F69 /* 宅急送@3x.png */; };
-		CD29E8781C7AFE3500871F69 /* 申通快递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7F51C7AFE3500871F69 /* 申通快递@2x.png */; };
-		CD29E8791C7AFE3500871F69 /* 申通快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7F61C7AFE3500871F69 /* 申通快递@3x.png */; };
-		CD29E87A1C7AFE3500871F69 /* 韵达快递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7F71C7AFE3500871F69 /* 韵达快递@2x.png */; };
-		CD29E87B1C7AFE3500871F69 /* 韵达快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7F81C7AFE3500871F69 /* 韵达快递@3x.png */; };
-		CD29E87C1C7AFE3500871F69 /* 顺丰速运@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7F91C7AFE3500871F69 /* 顺丰速运@2x.png */; };
-		CD29E87D1C7AFE3500871F69 /* 顺丰速运@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7FA1C7AFE3500871F69 /* 顺丰速运@3x.png */; };
 		CD29E87E1C7AFE3500871F69 /* mine_account_number@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7FC1C7AFE3500871F69 /* mine_account_number@2x.png */; };
 		CD29E87F1C7AFE3500871F69 /* mine_account_number@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7FD1C7AFE3500871F69 /* mine_account_number@3x.png */; };
 		CD29E8801C7AFE3500871F69 /* mine_appointment_visit.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E7FE1C7AFE3500871F69 /* mine_appointment_visit.png */; };
@@ -169,6 +153,22 @@
 		CD29E9071C7AFFD400871F69 /* title_back_unpressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E8F31C7AFFD400871F69 /* title_back_unpressed@3x.png */; };
 		CD29E9081C7AFFD400871F69 /* welcome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E8F41C7AFFD400871F69 /* welcome@2x.png */; };
 		CD29E9091C7AFFD400871F69 /* welcome@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E8F51C7AFFD400871F69 /* welcome@3x.png */; };
+		CD29E91B1C7B00E600871F69 /* but_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E90B1C7B00E600871F69 /* but_phone@2x.png */; };
+		CD29E91C1C7B00E600871F69 /* but_phone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E90C1C7B00E600871F69 /* but_phone@3x.png */; };
+		CD29E91D1C7B00E600871F69 /* 中通快递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E90D1C7B00E600871F69 /* 中通快递@2x.png */; };
+		CD29E91E1C7B00E600871F69 /* 中通快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E90E1C7B00E600871F69 /* 中通快递@3x.png */; };
+		CD29E91F1C7B00E600871F69 /* 圆通速递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E90F1C7B00E600871F69 /* 圆通速递@2x.png */; };
+		CD29E9201C7B00E600871F69 /* 圆通速递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9101C7B00E600871F69 /* 圆通速递@3x.png */; };
+		CD29E9211C7B00E600871F69 /* 天天快递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9111C7B00E600871F69 /* 天天快递@2x.png */; };
+		CD29E9221C7B00E600871F69 /* 天天快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9121C7B00E600871F69 /* 天天快递@3x.png */; };
+		CD29E9231C7B00E600871F69 /* 宅急送@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9131C7B00E600871F69 /* 宅急送@2x.png */; };
+		CD29E9241C7B00E600871F69 /* 宅急送@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9141C7B00E600871F69 /* 宅急送@3x.png */; };
+		CD29E9251C7B00E600871F69 /* 申通快递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9151C7B00E600871F69 /* 申通快递@2x.png */; };
+		CD29E9261C7B00E600871F69 /* 申通快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9161C7B00E600871F69 /* 申通快递@3x.png */; };
+		CD29E9271C7B00E600871F69 /* 韵达快递@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9171C7B00E600871F69 /* 韵达快递@2x.png */; };
+		CD29E9281C7B00E600871F69 /* 韵达快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9181C7B00E600871F69 /* 韵达快递@3x.png */; };
+		CD29E9291C7B00E600871F69 /* 顺丰速运@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9191C7B00E600871F69 /* 顺丰速运@2x.png */; };
+		CD29E92A1C7B00E600871F69 /* 顺丰速运@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E91A1C7B00E600871F69 /* 顺丰速运@3x.png */; };
 		CD45EDE61C76F8DF0042E9A2 /* PBAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45EDE51C76F8DF0042E9A2 /* PBAlert.m */; };
 		CD4F06C11C7ADA6B00F6478A /* ExpressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4F06C01C7ADA6B00F6478A /* ExpressTableViewCell.m */; };
 		CD5CD00C1C71E10F00B6A34B /* AFRquest.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CD00B1C71E10F00B6A34B /* AFRquest.m */; };
@@ -282,22 +282,6 @@
 		CD29E7E51C7AFE3500871F69 /* company_detail_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "company_detail_icon@3x.png"; sourceTree = "<group>"; };
 		CD29E7E61C7AFE3500871F69 /* company_detail_phone_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "company_detail_phone_icon@2x.png"; sourceTree = "<group>"; };
 		CD29E7E71C7AFE3500871F69 /* company_detail_phone_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "company_detail_phone_icon@3x.png"; sourceTree = "<group>"; };
-		CD29E7E91C7AFE3500871F69 /* but_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "but_phone@2x.png"; sourceTree = "<group>"; };
-		CD29E7EA1C7AFE3500871F69 /* but_phone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "but_phone@3x.png"; sourceTree = "<group>"; };
-		CD29E7ED1C7AFE3500871F69 /* 中通快递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中通快递@2x.png"; sourceTree = "<group>"; };
-		CD29E7EE1C7AFE3500871F69 /* 中通快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中通快递@3x.png"; sourceTree = "<group>"; };
-		CD29E7EF1C7AFE3500871F69 /* 圆通速递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆通速递@2x.png"; sourceTree = "<group>"; };
-		CD29E7F01C7AFE3500871F69 /* 圆通速递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆通速递@3x.png"; sourceTree = "<group>"; };
-		CD29E7F11C7AFE3500871F69 /* 天天快递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "天天快递@2x.png"; sourceTree = "<group>"; };
-		CD29E7F21C7AFE3500871F69 /* 天天快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "天天快递@3x.png"; sourceTree = "<group>"; };
-		CD29E7F31C7AFE3500871F69 /* 宅急送@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "宅急送@2x.png"; sourceTree = "<group>"; };
-		CD29E7F41C7AFE3500871F69 /* 宅急送@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "宅急送@3x.png"; sourceTree = "<group>"; };
-		CD29E7F51C7AFE3500871F69 /* 申通快递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "申通快递@2x.png"; sourceTree = "<group>"; };
-		CD29E7F61C7AFE3500871F69 /* 申通快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "申通快递@3x.png"; sourceTree = "<group>"; };
-		CD29E7F71C7AFE3500871F69 /* 韵达快递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "韵达快递@2x.png"; sourceTree = "<group>"; };
-		CD29E7F81C7AFE3500871F69 /* 韵达快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "韵达快递@3x.png"; sourceTree = "<group>"; };
-		CD29E7F91C7AFE3500871F69 /* 顺丰速运@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "顺丰速运@2x.png"; sourceTree = "<group>"; };
-		CD29E7FA1C7AFE3500871F69 /* 顺丰速运@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "顺丰速运@3x.png"; sourceTree = "<group>"; };
 		CD29E7FC1C7AFE3500871F69 /* mine_account_number@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_account_number@2x.png"; sourceTree = "<group>"; };
 		CD29E7FD1C7AFE3500871F69 /* mine_account_number@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mine_account_number@3x.png"; sourceTree = "<group>"; };
 		CD29E7FE1C7AFE3500871F69 /* mine_appointment_visit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mine_appointment_visit.png; sourceTree = "<group>"; };
@@ -398,6 +382,22 @@
 		CD29E8F31C7AFFD400871F69 /* title_back_unpressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title_back_unpressed@3x.png"; sourceTree = "<group>"; };
 		CD29E8F41C7AFFD400871F69 /* welcome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "welcome@2x.png"; sourceTree = "<group>"; };
 		CD29E8F51C7AFFD400871F69 /* welcome@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "welcome@3x.png"; sourceTree = "<group>"; };
+		CD29E90B1C7B00E600871F69 /* but_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "but_phone@2x.png"; sourceTree = "<group>"; };
+		CD29E90C1C7B00E600871F69 /* but_phone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "but_phone@3x.png"; sourceTree = "<group>"; };
+		CD29E90D1C7B00E600871F69 /* 中通快递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中通快递@2x.png"; sourceTree = "<group>"; };
+		CD29E90E1C7B00E600871F69 /* 中通快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中通快递@3x.png"; sourceTree = "<group>"; };
+		CD29E90F1C7B00E600871F69 /* 圆通速递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆通速递@2x.png"; sourceTree = "<group>"; };
+		CD29E9101C7B00E600871F69 /* 圆通速递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆通速递@3x.png"; sourceTree = "<group>"; };
+		CD29E9111C7B00E600871F69 /* 天天快递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "天天快递@2x.png"; sourceTree = "<group>"; };
+		CD29E9121C7B00E600871F69 /* 天天快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "天天快递@3x.png"; sourceTree = "<group>"; };
+		CD29E9131C7B00E600871F69 /* 宅急送@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "宅急送@2x.png"; sourceTree = "<group>"; };
+		CD29E9141C7B00E600871F69 /* 宅急送@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "宅急送@3x.png"; sourceTree = "<group>"; };
+		CD29E9151C7B00E600871F69 /* 申通快递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "申通快递@2x.png"; sourceTree = "<group>"; };
+		CD29E9161C7B00E600871F69 /* 申通快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "申通快递@3x.png"; sourceTree = "<group>"; };
+		CD29E9171C7B00E600871F69 /* 韵达快递@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "韵达快递@2x.png"; sourceTree = "<group>"; };
+		CD29E9181C7B00E600871F69 /* 韵达快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "韵达快递@3x.png"; sourceTree = "<group>"; };
+		CD29E9191C7B00E600871F69 /* 顺丰速运@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "顺丰速运@2x.png"; sourceTree = "<group>"; };
+		CD29E91A1C7B00E600871F69 /* 顺丰速运@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "顺丰速运@3x.png"; sourceTree = "<group>"; };
 		CD45EDE41C76F8DF0042E9A2 /* PBAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBAlert.h; sourceTree = "<group>"; };
 		CD45EDE51C76F8DF0042E9A2 /* PBAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBAlert.m; sourceTree = "<group>"; };
 		CD4F06BF1C7ADA6B00F6478A /* ExpressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressTableViewCell.h; sourceTree = "<group>"; };
@@ -598,10 +598,10 @@
 		CD29E7CF1C7AFE3500871F69 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CD29E90A1C7B00E600871F69 /* 快递 */,
 				CD29E8E11C7AFFD300871F69 /* 通用 */,
 				CD29E7D01C7AFE3500871F69 /* 会员 */,
 				CD29E7E31C7AFE3500871F69 /* 公司详情 */,
-				CD29E7E81C7AFE3500871F69 /* 快递 */,
 				CD29E7FB1C7AFE3500871F69 /* 我的 */,
 				CD29E8171C7AFE3500871F69 /* 注册与登录 */,
 				CD29E81F1C7AFE3500871F69 /* 空间详情 */,
@@ -644,29 +644,6 @@
 				CD29E7E71C7AFE3500871F69 /* company_detail_phone_icon@3x.png */,
 			);
 			path = "公司详情";
-			sourceTree = "<group>";
-		};
-		CD29E7E81C7AFE3500871F69 /* 快递 */ = {
-			isa = PBXGroup;
-			children = (
-				CD29E7E91C7AFE3500871F69 /* but_phone@2x.png */,
-				CD29E7EA1C7AFE3500871F69 /* but_phone@3x.png */,
-				CD29E7ED1C7AFE3500871F69 /* 中通快递@2x.png */,
-				CD29E7EE1C7AFE3500871F69 /* 中通快递@3x.png */,
-				CD29E7EF1C7AFE3500871F69 /* 圆通速递@2x.png */,
-				CD29E7F01C7AFE3500871F69 /* 圆通速递@3x.png */,
-				CD29E7F11C7AFE3500871F69 /* 天天快递@2x.png */,
-				CD29E7F21C7AFE3500871F69 /* 天天快递@3x.png */,
-				CD29E7F31C7AFE3500871F69 /* 宅急送@2x.png */,
-				CD29E7F41C7AFE3500871F69 /* 宅急送@3x.png */,
-				CD29E7F51C7AFE3500871F69 /* 申通快递@2x.png */,
-				CD29E7F61C7AFE3500871F69 /* 申通快递@3x.png */,
-				CD29E7F71C7AFE3500871F69 /* 韵达快递@2x.png */,
-				CD29E7F81C7AFE3500871F69 /* 韵达快递@3x.png */,
-				CD29E7F91C7AFE3500871F69 /* 顺丰速运@2x.png */,
-				CD29E7FA1C7AFE3500871F69 /* 顺丰速运@3x.png */,
-			);
-			path = "快递";
 			sourceTree = "<group>";
 		};
 		CD29E7FB1C7AFE3500871F69 /* 我的 */ = {
@@ -802,6 +779,29 @@
 				CD29E8F51C7AFFD400871F69 /* welcome@3x.png */,
 			);
 			path = "通用";
+			sourceTree = "<group>";
+		};
+		CD29E90A1C7B00E600871F69 /* 快递 */ = {
+			isa = PBXGroup;
+			children = (
+				CD29E90B1C7B00E600871F69 /* but_phone@2x.png */,
+				CD29E90C1C7B00E600871F69 /* but_phone@3x.png */,
+				CD29E90D1C7B00E600871F69 /* 中通快递@2x.png */,
+				CD29E90E1C7B00E600871F69 /* 中通快递@3x.png */,
+				CD29E90F1C7B00E600871F69 /* 圆通速递@2x.png */,
+				CD29E9101C7B00E600871F69 /* 圆通速递@3x.png */,
+				CD29E9111C7B00E600871F69 /* 天天快递@2x.png */,
+				CD29E9121C7B00E600871F69 /* 天天快递@3x.png */,
+				CD29E9131C7B00E600871F69 /* 宅急送@2x.png */,
+				CD29E9141C7B00E600871F69 /* 宅急送@3x.png */,
+				CD29E9151C7B00E600871F69 /* 申通快递@2x.png */,
+				CD29E9161C7B00E600871F69 /* 申通快递@3x.png */,
+				CD29E9171C7B00E600871F69 /* 韵达快递@2x.png */,
+				CD29E9181C7B00E600871F69 /* 韵达快递@3x.png */,
+				CD29E9191C7B00E600871F69 /* 顺丰速运@2x.png */,
+				CD29E91A1C7B00E600871F69 /* 顺丰速运@3x.png */,
+			);
+			path = "快递";
 			sourceTree = "<group>";
 		};
 		CD5CD0091C71E0EC00B6A34B /* AFRequest */ = {
@@ -1015,11 +1015,9 @@
 				CD29E8C21C7AFE3500871F69 /* enterprise_-service_unpressed@2x.png in Resources */,
 				CD29E86B1C7AFE3500871F69 /* company_detail_phone_icon@3x.png in Resources */,
 				CD29E8591C7AFE3500871F69 /* service_mine_organization@3x.png in Resources */,
-				CD29E8731C7AFE3500871F69 /* 圆通速递@3x.png in Resources */,
-				CD29E8771C7AFE3500871F69 /* 宅急送@3x.png in Resources */,
 				CD29E89E1C7AFE3500871F69 /* users_textfield_clicked@3x.png in Resources */,
 				CD29E8AD1C7AFE3500871F69 /* map@3x.png in Resources */,
-				CD29E87A1C7AFE3500871F69 /* 韵达快递@2x.png in Resources */,
+				CD29E91D1C7B00E600871F69 /* 中通快递@2x.png in Resources */,
 				CD29E87F1C7AFE3500871F69 /* mine_account_number@3x.png in Resources */,
 				CD29E8861C7AFE3500871F69 /* mine_coffice@2x.png in Resources */,
 				CD29E8F91C7AFFD400871F69 /* bottom_line@3x.png in Resources */,
@@ -1027,6 +1025,7 @@
 				CD29E9091C7AFFD400871F69 /* welcome@3x.png in Resources */,
 				CD29E8CE1C7AFE3500871F69 /* mine_unpressed@2x.png in Resources */,
 				CD29E8C11C7AFE3500871F69 /* enterprise_-service_pressed@3x.png in Resources */,
+				CD29E9271C7B00E600871F69 /* 韵达快递@2x.png in Resources */,
 				CD29E8A31C7AFE3500871F69 /* button_reservation_unpressed@3x.png in Resources */,
 				CD29E8871C7AFE3500871F69 /* mine_coffice@3x.png in Resources */,
 				CD29E88C1C7AFE3500871F69 /* mine_help@3x.png in Resources */,
@@ -1034,15 +1033,16 @@
 				CD29E86A1C7AFE3500871F69 /* company_detail_phone_icon@2x.png in Resources */,
 				CD29E89B1C7AFE3500871F69 /* register_cellphone@3x.png in Resources */,
 				CD29E8B41C7AFE3500871F69 /* star_full@3x.png in Resources */,
+				CD29E9221C7B00E600871F69 /* 天天快递@3x.png in Resources */,
 				CD29E8BE1C7AFE3500871F69 /* activity_space_unpressed@2x.png in Resources */,
 				CD1D57341C71BDB700BB30AC /* LaunchScreen.storyboard in Resources */,
-				CD29E87B1C7AFE3500871F69 /* 韵达快递@3x.png in Resources */,
 				CD29E8D31C7AFE3500871F69 /* office_community_unpressed@3x.png in Resources */,
 				CD29E8601C7AFE3500871F69 /* 开门@2x.png in Resources */,
 				CD6944EF1C75BDE500E04081 /* ZZSpaceRecommendCellTableViewCell.xib in Resources */,
-				CD29E86D1C7AFE3500871F69 /* but_phone@3x.png in Resources */,
+				CD29E9281C7B00E600871F69 /* 韵达快递@3x.png in Resources */,
 				CD29E8AA1C7AFE3500871F69 /* community_introduce_hardware_facility@2x.png in Resources */,
 				CD29E8821C7AFE3500871F69 /* mine_bg@2x.png in Resources */,
+				CD29E91F1C7B00E600871F69 /* 圆通速递@2x.png in Resources */,
 				CD29E8CC1C7AFE3500871F69 /* mine_pressed@2x.png in Resources */,
 				CD29E8A51C7AFE3500871F69 /* community_introduce_but_phone@3x.png in Resources */,
 				CD29E8C61C7AFE3500871F69 /* home_unpressed@2x.png in Resources */,
@@ -1062,8 +1062,8 @@
 				CD29E8FE1C7AFFD400871F69 /* hint@2x.png in Resources */,
 				CD29E8841C7AFE3500871F69 /* mine_card@2x.png in Resources */,
 				CD29E8611C7AFE3500871F69 /* 开门@3x.png in Resources */,
-				CD29E87D1C7AFE3500871F69 /* 顺丰速运@3x.png in Resources */,
 				CD29E8561C7AFE3500871F69 /* service_coffee@2x.png in Resources */,
+				CD29E9211C7B00E600871F69 /* 天天快递@2x.png in Resources */,
 				CD29E8941C7AFE3500871F69 /* mine_review@3x.png in Resources */,
 				CD29E8651C7AFE3500871F69 /* 滴滴出行@3x.png in Resources */,
 				CD29E9061C7AFFD400871F69 /* title_back_unpressed@2x.png in Resources */,
@@ -1088,17 +1088,12 @@
 				CD29E8D01C7AFE3500871F69 /* office_community_pressed@2x.png in Resources */,
 				CD6944FE1C75C89600E04081 /* PBDoubleTableViewCell.xib in Resources */,
 				CD29E8C91C7AFE3500871F69 /* member_pressed@3x.png in Resources */,
-				CD29E8711C7AFE3500871F69 /* 中通快递@3x.png in Resources */,
-				CD29E8701C7AFE3500871F69 /* 中通快递@2x.png in Resources */,
-				CD29E86C1C7AFE3500871F69 /* but_phone@2x.png in Resources */,
 				CD29E88B1C7AFE3500871F69 /* mine_help@2x.png in Resources */,
 				CD29E89C1C7AFE3500871F69 /* register_content_bg@3x.png in Resources */,
 				CD29E85E1C7AFE3500871F69 /* 发快递@2x.png in Resources */,
-				CD29E8791C7AFE3500871F69 /* 申通快递@3x.png in Resources */,
 				CD29E8CF1C7AFE3500871F69 /* mine_unpressed@3x.png in Resources */,
 				659EAC771C7AD0A000208837 /* SpaceTableFacilitiesCell.xib in Resources */,
 				CD29E85F1C7AFE3500871F69 /* 发快递@3x.png in Resources */,
-				CD29E8721C7AFE3500871F69 /* 圆通速递@2x.png in Resources */,
 				CD6945001C75C89600E04081 /* PBMineTableViewHeadCellTableViewCell.xib in Resources */,
 				CD29E88E1C7AFE3500871F69 /* mine_online_orientation@3x.png in Resources */,
 				CD29E8991C7AFE3500871F69 /* logo@3x.png in Resources */,
@@ -1107,20 +1102,24 @@
 				CD29E9021C7AFFD400871F69 /* nodata@2x.png in Resources */,
 				CD29E9031C7AFFD400871F69 /* nodata@3x.png in Resources */,
 				CD29E8971C7AFE3500871F69 /* mine_set_up@2x.png in Resources */,
+				CD29E91C1C7B00E600871F69 /* but_phone@3x.png in Resources */,
 				CD29E8B21C7AFE3500871F69 /* personal_office@3x.png in Resources */,
 				CD29E8FD1C7AFFD400871F69 /* headphoto_defaluted@3x.png in Resources */,
 				CD29E8BC1C7AFE3500871F69 /* activity_space_pressed@2x.png in Resources */,
 				CD29E9001C7AFFD400871F69 /* line@2x.png in Resources */,
+				CD29E9241C7B00E600871F69 /* 宅急送@3x.png in Resources */,
 				CD29E8BF1C7AFE3500871F69 /* activity_space_unpressed@3x.png in Resources */,
 				CD29E8C71C7AFE3500871F69 /* home_unpressed@3x.png in Resources */,
 				CD29E8A01C7AFE3500871F69 /* arrow@2x.png in Resources */,
 				CD29E8D11C7AFE3500871F69 /* office_community_pressed@3x.png in Resources */,
+				CD29E91B1C7B00E600871F69 /* but_phone@2x.png in Resources */,
 				CD29E8801C7AFE3500871F69 /* mine_appointment_visit.png in Resources */,
 				CD29E8A21C7AFE3500871F69 /* button_reservation_pressed@3x.png in Resources */,
 				CD29E8C01C7AFE3500871F69 /* enterprise_-service_pressed@2x.png in Resources */,
 				CD29E8581C7AFE3500871F69 /* service_mine_organization@2x.png in Resources */,
 				CD29E8671C7AFE3500871F69 /* 环境监测@3x.png in Resources */,
 				CD29E88F1C7AFE3500871F69 /* mine_pay@2x.png in Resources */,
+				CD29E91E1C7B00E600871F69 /* 中通快递@3x.png in Resources */,
 				CD29E8B11C7AFE3500871F69 /* personal_office@2x.png in Resources */,
 				CD29E85D1C7AFE3500871F69 /* 会议室@3x.png in Resources */,
 				CD29E9041C7AFFD400871F69 /* push_arrow@2x.png in Resources */,
@@ -1132,12 +1131,11 @@
 				CD29E8B31C7AFE3500871F69 /* star_empty@3x.png in Resources */,
 				CD6944EB1C75BDE500E04081 /* PBADBannerCellTableViewCell.xib in Resources */,
 				CD29E8A11C7AFE3500871F69 /* arrow@3x.png in Resources */,
+				CD29E9231C7B00E600871F69 /* 宅急送@2x.png in Resources */,
 				CD29E8AE1C7AFE3500871F69 /* map_pointing@3x.png in Resources */,
-				CD29E8781C7AFE3500871F69 /* 申通快递@2x.png in Resources */,
-				CD29E8741C7AFE3500871F69 /* 天天快递@2x.png in Resources */,
-				CD29E8751C7AFE3500871F69 /* 天天快递@3x.png in Resources */,
-				CD29E8761C7AFE3500871F69 /* 宅急送@2x.png in Resources */,
 				CD29E8B01C7AFE3500871F69 /* open_desk@3x.png in Resources */,
+				CD29E9201C7B00E600871F69 /* 圆通速递@3x.png in Resources */,
+				CD29E9291C7B00E600871F69 /* 顺丰速运@2x.png in Resources */,
 				CD29E8FF1C7AFFD400871F69 /* hint@3x.png in Resources */,
 				CD29E8881C7AFE3500871F69 /* mine_customer_service_center@2x.png in Resources */,
 				CD29E8681C7AFE3500871F69 /* company_detail_icon@2x.png in Resources */,
@@ -1148,9 +1146,12 @@
 				CD29E8621C7AFE3500871F69 /* 快递查询@2x.png in Resources */,
 				CD29E8951C7AFE3500871F69 /* mine_service@2x.png in Resources */,
 				65B419751C75D1BF00FA817B /* PBCompanyListTableViewCell.xib in Resources */,
+				CD29E92A1C7B00E600871F69 /* 顺丰速运@3x.png in Resources */,
 				CD29E8F71C7AFFD400871F69 /* banner_logo@3x.png in Resources */,
 				CD29E9081C7AFFD400871F69 /* welcome@2x.png in Resources */,
 				CD29E8A41C7AFE3500871F69 /* community_introduce_but_phone@2x.png in Resources */,
+				CD29E9251C7B00E600871F69 /* 申通快递@2x.png in Resources */,
+				CD29E9261C7B00E600871F69 /* 申通快递@3x.png in Resources */,
 				CD29E89A1C7AFE3500871F69 /* register_button_bg_unpressed@3x.png in Resources */,
 				CD29E8961C7AFE3500871F69 /* mine_service@3x.png in Resources */,
 				CD29E9051C7AFFD400871F69 /* push_arrow@3x.png in Resources */,
@@ -1158,7 +1159,6 @@
 				CD29E8AC1C7AFE3500871F69 /* horizonal_line@3x.png in Resources */,
 				CD29E8831C7AFE3500871F69 /* mine_bg@3x.png in Resources */,
 				CD29E89D1C7AFE3500871F69 /* register_password@3x.png in Resources */,
-				CD29E87C1C7AFE3500871F69 /* 顺丰速运@2x.png in Resources */,
 				CD29E8641C7AFE3500871F69 /* 滴滴出行@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
