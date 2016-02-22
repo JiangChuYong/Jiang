@@ -25,7 +25,9 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
+    [super viewWillAppear:animated];
+    UINavigationController * navi = (UINavigationController *)self.parentViewController;
+    navi.tabBarController.tabBar.hidden = YES;
     
 }
 #pragma -- mark CollectionView Delegate
