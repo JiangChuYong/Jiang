@@ -115,7 +115,7 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
         PBButtonChooseCell * chooseCell = [_listTableView dequeueReusableCellWithIdentifier:ChooseCellIDKey];
                     [chooseCell.industryBtn addTarget:self action:@selector(pushToIndustryListPage:) forControlEvents:UIControlEventTouchDown];
         //            [chooseCell.spaceBtn addTarget:self action:@selector(pushToLinckiaOffice:) forControlEvents:UIControlEventTouchDown];
-        //            [chooseCell.activityBtn addTarget:self action:@selector(activitySpaceButtonPressed:) forControlEvents:UIControlEventTouchDown];
+                [chooseCell.activityBtn addTarget:self action:@selector(activitySpaceButtonPressed:) forControlEvents:UIControlEventTouchDown];
         
         return chooseCell;
         
@@ -149,6 +149,15 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     
     [self performSegueWithIdentifier:@"HomeToIndustry" sender:self];
 }
+
+//跳转至 活动空间页面
+- (void)activitySpaceButtonPressed:(UIButton *)sender
+{
+   
+    
+    [self performSegueWithIdentifier:@"HomeToActivity" sender:self];
+}
+
 
 
 #pragma -- mark SCROLLVIEW PART

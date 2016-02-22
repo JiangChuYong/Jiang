@@ -25,6 +25,10 @@ typedef enum{
     GetLinckiaPartnerList=5,
     //获取海星伙伴详细信息
     GetLinckiaPartnerInfo=6,
+    //获取活动空间
+    GetActiveSpaceList=7,
+    //活动空间详情
+    ActiveSpaceGetOne=8,
     
 }RequestFlag;
 
