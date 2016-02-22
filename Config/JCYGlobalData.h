@@ -18,6 +18,8 @@ SingletonH(JCYGlobalData)
 @property (nonatomic, strong) NSString *industryName;
 //选中公司的详细信息
 @property (nonatomic, strong) NSString * companyID;
+//活动空间详细信息
+@property (strong, nonatomic) NSString * ActivitySpaceId ;
 
 
 @end
