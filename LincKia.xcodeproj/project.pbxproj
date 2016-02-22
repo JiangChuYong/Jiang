@@ -100,26 +100,6 @@
 		CD4F06901C7AD91A00F6478A /* register_password@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06181C7AD91A00F6478A /* register_password@3x.png */; };
 		CD4F06911C7AD91A00F6478A /* users_textfield_clicked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06191C7AD91A00F6478A /* users_textfield_clicked@3x.png */; };
 		CD4F06921C7AD91A00F6478A /* users_textfield_unclicked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F061A1C7AD91A00F6478A /* users_textfield_unclicked@3x.png */; };
-		CD4F06931C7AD91A00F6478A /* banner_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F061C1C7AD91A00F6478A /* banner_logo@2x.png */; };
-		CD4F06941C7AD91A00F6478A /* banner_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F061D1C7AD91A00F6478A /* banner_logo@3x.png */; };
-		CD4F06951C7AD91A00F6478A /* bottom_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F061E1C7AD91A00F6478A /* bottom_line@2x.png */; };
-		CD4F06961C7AD91A00F6478A /* bottom_line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F061F1C7AD91A00F6478A /* bottom_line@3x.png */; };
-		CD4F06971C7AD91A00F6478A /* community_introduce_but_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06201C7AD91A00F6478A /* community_introduce_but_phone@2x.png */; };
-		CD4F06981C7AD91A00F6478A /* community_introduce_but_phone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06211C7AD91A00F6478A /* community_introduce_but_phone@3x.png */; };
-		CD4F06991C7AD91A00F6478A /* headphoto_defaluted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06221C7AD91A00F6478A /* headphoto_defaluted@2x.png */; };
-		CD4F069A1C7AD91A00F6478A /* headphoto_defaluted@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06231C7AD91A00F6478A /* headphoto_defaluted@3x.png */; };
-		CD4F069B1C7AD91A00F6478A /* hint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06241C7AD91A00F6478A /* hint@2x.png */; };
-		CD4F069C1C7AD91A00F6478A /* hint@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06251C7AD91A00F6478A /* hint@3x.png */; };
-		CD4F069D1C7AD91A00F6478A /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06261C7AD91A00F6478A /* line@2x.png */; };
-		CD4F069E1C7AD91A00F6478A /* line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06271C7AD91A00F6478A /* line@3x.png */; };
-		CD4F069F1C7AD91A00F6478A /* nodata@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06281C7AD91A00F6478A /* nodata@2x.png */; };
-		CD4F06A01C7AD91A00F6478A /* nodata@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06291C7AD91A00F6478A /* nodata@3x.png */; };
-		CD4F06A11C7AD91A00F6478A /* push_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F062A1C7AD91A00F6478A /* push_arrow@2x.png */; };
-		CD4F06A21C7AD91A00F6478A /* push_arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F062B1C7AD91A00F6478A /* push_arrow@3x.png */; };
-		CD4F06A31C7AD91A00F6478A /* title_back_unpressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F062C1C7AD91A00F6478A /* title_back_unpressed@2x.png */; };
-		CD4F06A41C7AD91A00F6478A /* title_back_unpressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F062D1C7AD91A00F6478A /* title_back_unpressed@3x.png */; };
-		CD4F06A51C7AD91A00F6478A /* welcome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F062E1C7AD91A00F6478A /* welcome@2x.png */; };
-		CD4F06A61C7AD91A00F6478A /* welcome@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F062F1C7AD91A00F6478A /* welcome@3x.png */; };
 		CD4F06A71C7AD91A00F6478A /* activity_space_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06311C7AD91A00F6478A /* activity_space_pressed@2x.png */; };
 		CD4F06A81C7AD91A00F6478A /* activity_space_pressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06321C7AD91A00F6478A /* activity_space_pressed@3x.png */; };
 		CD4F06A91C7AD91A00F6478A /* activity_space_unpressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD4F06331C7AD91A00F6478A /* activity_space_unpressed@2x.png */; };
@@ -300,26 +280,6 @@
 		CD4F06181C7AD91A00F6478A /* register_password@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "register_password@3x.png"; sourceTree = "<group>"; };
 		CD4F06191C7AD91A00F6478A /* users_textfield_clicked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "users_textfield_clicked@3x.png"; sourceTree = "<group>"; };
 		CD4F061A1C7AD91A00F6478A /* users_textfield_unclicked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "users_textfield_unclicked@3x.png"; sourceTree = "<group>"; };
-		CD4F061C1C7AD91A00F6478A /* banner_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner_logo@2x.png"; sourceTree = "<group>"; };
-		CD4F061D1C7AD91A00F6478A /* banner_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banner_logo@3x.png"; sourceTree = "<group>"; };
-		CD4F061E1C7AD91A00F6478A /* bottom_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom_line@2x.png"; sourceTree = "<group>"; };
-		CD4F061F1C7AD91A00F6478A /* bottom_line@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom_line@3x.png"; sourceTree = "<group>"; };
-		CD4F06201C7AD91A00F6478A /* community_introduce_but_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "community_introduce_but_phone@2x.png"; sourceTree = "<group>"; };
-		CD4F06211C7AD91A00F6478A /* community_introduce_but_phone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "community_introduce_but_phone@3x.png"; sourceTree = "<group>"; };
-		CD4F06221C7AD91A00F6478A /* headphoto_defaluted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headphoto_defaluted@2x.png"; sourceTree = "<group>"; };
-		CD4F06231C7AD91A00F6478A /* headphoto_defaluted@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headphoto_defaluted@3x.png"; sourceTree = "<group>"; };
-		CD4F06241C7AD91A00F6478A /* hint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hint@2x.png"; sourceTree = "<group>"; };
-		CD4F06251C7AD91A00F6478A /* hint@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hint@3x.png"; sourceTree = "<group>"; };
-		CD4F06261C7AD91A00F6478A /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line@2x.png"; sourceTree = "<group>"; };
-		CD4F06271C7AD91A00F6478A /* line@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line@3x.png"; sourceTree = "<group>"; };
-		CD4F06281C7AD91A00F6478A /* nodata@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nodata@2x.png"; sourceTree = "<group>"; };
-		CD4F06291C7AD91A00F6478A /* nodata@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nodata@3x.png"; sourceTree = "<group>"; };
-		CD4F062A1C7AD91A00F6478A /* push_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "push_arrow@2x.png"; sourceTree = "<group>"; };
-		CD4F062B1C7AD91A00F6478A /* push_arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "push_arrow@3x.png"; sourceTree = "<group>"; };
-		CD4F062C1C7AD91A00F6478A /* title_back_unpressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title_back_unpressed@2x.png"; sourceTree = "<group>"; };
-		CD4F062D1C7AD91A00F6478A /* title_back_unpressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title_back_unpressed@3x.png"; sourceTree = "<group>"; };
-		CD4F062E1C7AD91A00F6478A /* welcome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "welcome@2x.png"; sourceTree = "<group>"; };
-		CD4F062F1C7AD91A00F6478A /* welcome@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "welcome@3x.png"; sourceTree = "<group>"; };
 		CD4F06311C7AD91A00F6478A /* activity_space_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity_space_pressed@2x.png"; sourceTree = "<group>"; };
 		CD4F06321C7AD91A00F6478A /* activity_space_pressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity_space_pressed@3x.png"; sourceTree = "<group>"; };
 		CD4F06331C7AD91A00F6478A /* activity_space_unpressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "activity_space_unpressed@2x.png"; sourceTree = "<group>"; };
@@ -529,7 +489,6 @@
 				CD4F05E41C7AD91900F6478A /* 快递 */,
 				CD4F05F71C7AD91A00F6478A /* 我的 */,
 				CD4F06131C7AD91A00F6478A /* 注册与登录 */,
-				CD4F061B1C7AD91A00F6478A /* 通用 */,
 				CD4F06301C7AD91A00F6478A /* 首页 */,
 			);
 			path = images;
@@ -642,33 +601,6 @@
 				CD4F061A1C7AD91A00F6478A /* users_textfield_unclicked@3x.png */,
 			);
 			path = "注册与登录";
-			sourceTree = "<group>";
-		};
-		CD4F061B1C7AD91A00F6478A /* 通用 */ = {
-			isa = PBXGroup;
-			children = (
-				CD4F061C1C7AD91A00F6478A /* banner_logo@2x.png */,
-				CD4F061D1C7AD91A00F6478A /* banner_logo@3x.png */,
-				CD4F061E1C7AD91A00F6478A /* bottom_line@2x.png */,
-				CD4F061F1C7AD91A00F6478A /* bottom_line@3x.png */,
-				CD4F06201C7AD91A00F6478A /* community_introduce_but_phone@2x.png */,
-				CD4F06211C7AD91A00F6478A /* community_introduce_but_phone@3x.png */,
-				CD4F06221C7AD91A00F6478A /* headphoto_defaluted@2x.png */,
-				CD4F06231C7AD91A00F6478A /* headphoto_defaluted@3x.png */,
-				CD4F06241C7AD91A00F6478A /* hint@2x.png */,
-				CD4F06251C7AD91A00F6478A /* hint@3x.png */,
-				CD4F06261C7AD91A00F6478A /* line@2x.png */,
-				CD4F06271C7AD91A00F6478A /* line@3x.png */,
-				CD4F06281C7AD91A00F6478A /* nodata@2x.png */,
-				CD4F06291C7AD91A00F6478A /* nodata@3x.png */,
-				CD4F062A1C7AD91A00F6478A /* push_arrow@2x.png */,
-				CD4F062B1C7AD91A00F6478A /* push_arrow@3x.png */,
-				CD4F062C1C7AD91A00F6478A /* title_back_unpressed@2x.png */,
-				CD4F062D1C7AD91A00F6478A /* title_back_unpressed@3x.png */,
-				CD4F062E1C7AD91A00F6478A /* welcome@2x.png */,
-				CD4F062F1C7AD91A00F6478A /* welcome@3x.png */,
-			);
-			path = "通用";
 			sourceTree = "<group>";
 		};
 		CD4F06301C7AD91A00F6478A /* 首页 */ = {
@@ -917,7 +849,6 @@
 				CD4F06BD1C7AD91A00F6478A /* office_community_unpressed@2x.png in Resources */,
 				CD4F066C1C7AD91A00F6478A /* 申通快递@3x.png in Resources */,
 				CD6944EF1C75BDE500E04081 /* ZZSpaceRecommendCellTableViewCell.xib in Resources */,
-				CD4F069B1C7AD91A00F6478A /* hint@2x.png in Resources */,
 				CD4F06841C7AD91A00F6478A /* mine_resume@2x.png in Resources */,
 				CD4F06581C7AD91A00F6478A /* 滴滴出行@3x.png in Resources */,
 				CD4F06721C7AD91A00F6478A /* mine_account_number@3x.png in Resources */,
@@ -925,7 +856,6 @@
 				CD4F06731C7AD91A00F6478A /* mine_appointment_visit.png in Resources */,
 				CD4F066D1C7AD91A00F6478A /* 韵达快递@2x.png in Resources */,
 				CD4F06761C7AD91A00F6478A /* mine_bg@3x.png in Resources */,
-				CD4F06A11C7AD91A00F6478A /* push_arrow@2x.png in Resources */,
 				CD4F06781C7AD91A00F6478A /* mine_card@3x.png in Resources */,
 				CD4F06641C7AD91A00F6478A /* 中通快递@3x.png in Resources */,
 				CD4F068A1C7AD91A00F6478A /* mine_set_up@2x.png in Resources */,
@@ -936,7 +866,6 @@
 				CD4F06591C7AD91A00F6478A /* 环境监测@2x.png in Resources */,
 				CD1D57311C71BDB700BB30AC /* Assets.xcassets in Resources */,
 				CD4F06671C7AD91A00F6478A /* 天天快递@2x.png in Resources */,
-				CD4F06A41C7AD91A00F6478A /* title_back_unpressed@3x.png in Resources */,
 				CD4F06AD1C7AD91A00F6478A /* enterprise_-service_unpressed@2x.png in Resources */,
 				CD4F06831C7AD91A00F6478A /* mine_pay@3x.png in Resources */,
 				CD4F06861C7AD91A00F6478A /* mine_review@2x.png in Resources */,
@@ -944,10 +873,8 @@
 				CD4F06521C7AD91A00F6478A /* 发快递@3x.png in Resources */,
 				CD4F067D1C7AD91A00F6478A /* mine_headphoto_example.png in Resources */,
 				CD4F06701C7AD91A00F6478A /* 顺丰速运@3x.png in Resources */,
-				CD4F06991C7AD91A00F6478A /* headphoto_defaluted@2x.png in Resources */,
 				CD4F06B31C7AD91A00F6478A /* member_pressed@2x.png in Resources */,
 				CD4F065C1C7AD91A00F6478A /* company_detail_icon@3x.png in Resources */,
-				CD4F06961C7AD91A00F6478A /* bottom_line@3x.png in Resources */,
 				CD4F06801C7AD91A00F6478A /* mine_online_orientation@2x.png in Resources */,
 				CD4F06B01C7AD91A00F6478A /* home_pressed@3x.png in Resources */,
 				CD4F06BB1C7AD91A00F6478A /* office_community_pressed@2x.png in Resources */,
@@ -957,10 +884,7 @@
 				CD4F06751C7AD91A00F6478A /* mine_bg@2x.png in Resources */,
 				65B419651C75C25200FA817B /* PBCollectionCell.xib in Resources */,
 				CD4F06B71C7AD91A00F6478A /* mine_pressed@2x.png in Resources */,
-				CD4F06A61C7AD91A00F6478A /* welcome@3x.png in Resources */,
-				CD4F06981C7AD91A00F6478A /* community_introduce_but_phone@3x.png in Resources */,
 				CD4F06551C7AD91A00F6478A /* 快递查询@2x.png in Resources */,
-				CD4F06941C7AD91A00F6478A /* banner_logo@3x.png in Resources */,
 				CD4F064C1C7AD91A00F6478A /* service_mine_organization@3x.png in Resources */,
 				CD4F06741C7AD91A00F6478A /* mine_appointment_visit@2x.png in Resources */,
 				CD4F064B1C7AD91A00F6478A /* service_mine_organization@2x.png in Resources */,
@@ -969,14 +893,11 @@
 				CD4F06A91C7AD91A00F6478A /* activity_space_unpressed@2x.png in Resources */,
 				CD4F06AB1C7AD91A00F6478A /* enterprise_-service_pressed@2x.png in Resources */,
 				CD4F06BA1C7AD91A00F6478A /* mine_unpressed@3x.png in Resources */,
-				CD4F069F1C7AD91A00F6478A /* nodata@2x.png in Resources */,
 				CD4F06891C7AD91A00F6478A /* mine_service@3x.png in Resources */,
 				CD4F067A1C7AD91A00F6478A /* mine_coffice@3x.png in Resources */,
-				CD4F06A31C7AD91A00F6478A /* title_back_unpressed@2x.png in Resources */,
 				CD4F065F1C7AD91A00F6478A /* but_phone@2x.png in Resources */,
 				CD4F06531C7AD91A00F6478A /* 开门@2x.png in Resources */,
 				CD4F06571C7AD91A00F6478A /* 滴滴出行@2x.png in Resources */,
-				CD4F069D1C7AD91A00F6478A /* line@2x.png in Resources */,
 				CD4F06B11C7AD91A00F6478A /* home_unpressed@2x.png in Resources */,
 				CD4F06B41C7AD91A00F6478A /* member_pressed@3x.png in Resources */,
 				CD4F06611C7AD91A00F6478A /* inquiry express@3x.png in Resources */,
@@ -986,12 +907,10 @@
 				CD4F067F1C7AD91A00F6478A /* mine_help@3x.png in Resources */,
 				CD4F06661C7AD91A00F6478A /* 圆通速递@3x.png in Resources */,
 				CD6944FE1C75C89600E04081 /* PBDoubleTableViewCell.xib in Resources */,
-				CD4F06A21C7AD91A00F6478A /* push_arrow@3x.png in Resources */,
 				CD4F06B21C7AD91A00F6478A /* home_unpressed@3x.png in Resources */,
 				CD4F06871C7AD91A00F6478A /* mine_review@3x.png in Resources */,
 				CD4F06561C7AD91A00F6478A /* 快递查询@3x.png in Resources */,
 				CD4F06AE1C7AD91A00F6478A /* enterprise_-service_unpressed@3x.png in Resources */,
-				CD4F069C1C7AD91A00F6478A /* hint@3x.png in Resources */,
 				CD4F06A81C7AD91A00F6478A /* activity_space_pressed@3x.png in Resources */,
 				CD4F06791C7AD91A00F6478A /* mine_coffice@2x.png in Resources */,
 				CD4F06A71C7AD91A00F6478A /* activity_space_pressed@2x.png in Resources */,
@@ -999,12 +918,10 @@
 				CD4F06501C7AD91A00F6478A /* 会议室@3x.png in Resources */,
 				CD4F068D1C7AD91A00F6478A /* register_button_bg_unpressed@3x.png in Resources */,
 				CD4F068E1C7AD91A00F6478A /* register_cellphone@3x.png in Resources */,
-				CD4F06931C7AD91A00F6478A /* banner_logo@2x.png in Resources */,
 				CD4F066E1C7AD91A00F6478A /* 韵达快递@3x.png in Resources */,
 				CD4F06AC1C7AD91A00F6478A /* enterprise_-service_pressed@3x.png in Resources */,
 				CD4F06491C7AD91A00F6478A /* service_coffee@2x.png in Resources */,
 				CD4F068C1C7AD91A00F6478A /* logo@3x.png in Resources */,
-				CD4F069E1C7AD91A00F6478A /* line@3x.png in Resources */,
 				CD6945001C75C89600E04081 /* PBMineTableViewHeadCellTableViewCell.xib in Resources */,
 				CD4F06921C7AD91A00F6478A /* users_textfield_unclicked@3x.png in Resources */,
 				CD6945021C75C89600E04081 /* PBMineTableViewSecondCell.xib in Resources */,
@@ -1013,27 +930,22 @@
 				CD4F065D1C7AD91A00F6478A /* company_detail_phone_icon@2x.png in Resources */,
 				CD4F06691C7AD91A00F6478A /* 宅急送@2x.png in Resources */,
 				CD4F064F1C7AD91A00F6478A /* 会议室@2x.png in Resources */,
-				CD4F06971C7AD91A00F6478A /* community_introduce_but_phone@2x.png in Resources */,
 				CD6944ED1C75BDE500E04081 /* PBButtonChooseCell.xib in Resources */,
 				CD4F06631C7AD91A00F6478A /* 中通快递@2x.png in Resources */,
 				CD4F06771C7AD91A00F6478A /* mine_card@2x.png in Resources */,
 				CD4F065E1C7AD91A00F6478A /* company_detail_phone_icon@3x.png in Resources */,
-				CD4F069A1C7AD91A00F6478A /* headphoto_defaluted@3x.png in Resources */,
 				CD4F068F1C7AD91A00F6478A /* register_content_bg@3x.png in Resources */,
 				CD4F06651C7AD91A00F6478A /* 圆通速递@2x.png in Resources */,
 				CD4F06AA1C7AD91A00F6478A /* activity_space_unpressed@3x.png in Resources */,
 				CD4F067B1C7AD91A00F6478A /* mine_customer_service_center@2x.png in Resources */,
 				CD4F06851C7AD91A00F6478A /* mine_resume@3x.png in Resources */,
 				CD6944EB1C75BDE500E04081 /* PBADBannerCellTableViewCell.xib in Resources */,
-				CD4F06A51C7AD91A00F6478A /* welcome@2x.png in Resources */,
 				CD4F06621C7AD91A00F6478A /* key@3x.png in Resources */,
-				CD4F06951C7AD91A00F6478A /* bottom_line@2x.png in Resources */,
 				65B419751C75D1BF00FA817B /* PBCompanyListTableViewCell.xib in Resources */,
 				CD4F06B91C7AD91A00F6478A /* mine_unpressed@2x.png in Resources */,
 				CD4F066B1C7AD91A00F6478A /* 申通快递@2x.png in Resources */,
 				CD4F06541C7AD91A00F6478A /* 开门@3x.png in Resources */,
 				CD4F066F1C7AD91A00F6478A /* 顺丰速运@2x.png in Resources */,
-				CD4F06A01C7AD91A00F6478A /* nodata@3x.png in Resources */,
 				CD4F066A1C7AD91A00F6478A /* 宅急送@3x.png in Resources */,
 				CD4F06AF1C7AD91A00F6478A /* home_pressed@2x.png in Resources */,
 			);
