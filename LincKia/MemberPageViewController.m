@@ -8,6 +8,7 @@
 #import "MemberPageViewController.h"
 #import "LoginViewController.h"
 #import "MemberCollectionViewCell.h"
+#import "PBSendExpressViewController.h"
 
 @interface MemberPageViewController () <UICollectionViewDataSource,UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collection;
@@ -37,5 +38,10 @@
     cell.image.image = [UIImage imageNamed:_cellNameArray[indexPath.row]];
     return cell;
 }
-
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row == 0){
+        [self performSegueWithIdentifier:@"MemberToSendExpress" sender:self];
+    }
+}
 @end
