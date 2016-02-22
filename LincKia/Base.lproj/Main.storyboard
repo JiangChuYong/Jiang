@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -73,6 +73,7 @@
             </objects>
             <point key="canvasLocation" x="752" y="-132"/>
         </scene>
+        <!--企业服务-->
         <!--Activity Space List View Controller-->
         <scene sceneID="a5m-ta-K9v">
             <objects>
@@ -464,7 +465,7 @@
         <!--Industry View Controller-->
         <scene sceneID="ffO-HD-tnt">
             <objects>
-                <viewController id="PIS-Ma-x6V" customClass="PBIndustryViewController" sceneMemberID="viewController">
+                <viewController id="PIS-Ma-x6V" userLabel="企业服务" customClass="PBIndustryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ycs-D1-wdj"/>
                         <viewControllerLayoutGuide type="bottom" id="zVc-bw-omc"/>
@@ -538,10 +539,10 @@
             </objects>
             <point key="canvasLocation" x="1237" y="-657"/>
         </scene>
-        <!--Company List View Controller-->
+        <!--公司列表-->
         <scene sceneID="mpo-XF-l3j">
             <objects>
-                <viewController id="S8O-95-gV7" customClass="PBCompanyListViewController" sceneMemberID="viewController">
+                <viewController id="S8O-95-gV7" userLabel="公司列表" customClass="PBCompanyListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pOV-DO-hLr"/>
                         <viewControllerLayoutGuide type="bottom" id="a6O-KR-qtJ"/>
@@ -640,10 +641,10 @@
             </objects>
             <point key="canvasLocation" x="1684" y="-649"/>
         </scene>
-        <!--Company Detail View Controller-->
+        <!--公司详情-->
         <scene sceneID="3mp-7c-wn6">
             <objects>
-                <viewController id="c2c-mf-CMA" customClass="PBCompanyDetailViewController" sceneMemberID="viewController">
+                <viewController id="c2c-mf-CMA" userLabel="公司详情" customClass="PBCompanyDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KQy-TB-H8i"/>
                         <viewControllerLayoutGuide type="bottom" id="vvY-ZJ-29W"/>
@@ -1021,7 +1022,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m54-Lb-PlR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="906"/>
+            <point key="canvasLocation" x="1215" y="1009"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -1049,7 +1050,7 @@
             <objects>
                 <navigationController id="gvl-CL-yeW" userLabel="会员" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="会员" image="member_unpressed" selectedImage="member_pressed" id="7FO-66-eNh"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oF4-bG-Ai5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="oF4-bG-Ai5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.2666666667" green="0.59607843140000005" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1143,11 +1144,121 @@
                     <connections>
                         <outlet property="collection" destination="EfS-vT-H7N" id="ZEY-QM-jn1"/>
                         <segue destination="3PK-Ra-LPo" kind="modal" identifier="MemberToLogin" id="gUA-3g-ppz"/>
+                        <segue destination="xfP-fB-kum" kind="push" identifier="MemberToSendExpress" id="dcF-7F-b40"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8d-1m-6XU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752" y="532"/>
+            <point key="canvasLocation" x="783" y="591"/>
+        </scene>
+        <!--发快递-->
+        <scene sceneID="rw6-fg-XmE">
+            <objects>
+                <viewController id="xfP-fB-kum" userLabel="发快递" customClass="PBSendExpressViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GDf-D7-UC2"/>
+                        <viewControllerLayoutGuide type="bottom" id="FeN-5q-p9i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ID9-6w-LdP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ldr-hc-TAk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="AGu-Xa-hOD" customClass="ExpressTableViewCell">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AGu-Xa-hOD" id="5Yk-zd-UjW">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CUx-sN-QiN" userLabel="LOGO">
+                                                    <rect key="frame" x="15" y="10" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Syt-yg-Dzz"/>
+                                                        <constraint firstAttribute="width" constant="40" id="gIV-BY-zBM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="顺丰速运" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fw-WQ-8Xm">
+                                                    <rect key="frame" x="65" y="10" width="56" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="95338" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9C7-7z-gOH">
+                                                    <rect key="frame" x="65" y="34" width="41" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.1764705882" green="0.4431372549" blue="0.73725490199999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="but_phone.png" translatesAutoresizingMaskIntoConstraints="NO" id="3na-x4-Thc" userLabel="电话">
+                                                    <rect key="frame" x="275" y="15" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="MCO-eT-qZ4"/>
+                                                        <constraint firstAttribute="height" constant="30" id="exx-rL-Idj"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t8b-sV-jan" userLabel="分割线">
+                                                    <rect key="frame" x="0.0" y="59" width="320" height="1"/>
+                                                    <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="jfm-7a-N9b"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5fw-WQ-8Xm" firstAttribute="top" secondItem="CUx-sN-QiN" secondAttribute="top" id="CFE-z8-b6q"/>
+                                                <constraint firstAttribute="bottom" secondItem="t8b-sV-jan" secondAttribute="bottom" id="CLy-05-YkK"/>
+                                                <constraint firstItem="CUx-sN-QiN" firstAttribute="centerY" secondItem="5Yk-zd-UjW" secondAttribute="centerY" id="Ozd-QS-ufb"/>
+                                                <constraint firstItem="3na-x4-Thc" firstAttribute="centerY" secondItem="5Yk-zd-UjW" secondAttribute="centerY" id="URb-5i-cfO"/>
+                                                <constraint firstItem="9C7-7z-gOH" firstAttribute="bottom" secondItem="CUx-sN-QiN" secondAttribute="bottom" id="Wyg-Pt-6Op"/>
+                                                <constraint firstAttribute="trailing" secondItem="3na-x4-Thc" secondAttribute="trailing" constant="15" id="Xvw-nQ-IqL"/>
+                                                <constraint firstItem="9C7-7z-gOH" firstAttribute="leading" secondItem="5fw-WQ-8Xm" secondAttribute="leading" id="cpc-Qz-w65"/>
+                                                <constraint firstItem="t8b-sV-jan" firstAttribute="leading" secondItem="5Yk-zd-UjW" secondAttribute="leading" id="dBr-Z7-OnQ"/>
+                                                <constraint firstItem="5fw-WQ-8Xm" firstAttribute="leading" secondItem="CUx-sN-QiN" secondAttribute="trailing" constant="10" id="dNs-Lk-b5S"/>
+                                                <constraint firstItem="CUx-sN-QiN" firstAttribute="leading" secondItem="5Yk-zd-UjW" secondAttribute="leading" constant="15" id="dym-rn-8mL"/>
+                                                <constraint firstAttribute="trailing" secondItem="t8b-sV-jan" secondAttribute="trailing" id="ewe-IY-rM0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leftIcon" destination="CUx-sN-QiN" id="cMa-ah-XVl"/>
+                                            <outlet property="name" destination="5fw-WQ-8Xm" id="U7W-sZ-DmR"/>
+                                            <outlet property="phoneNum" destination="9C7-7z-gOH" id="9Xd-MD-B9m"/>
+                                            <outlet property="rightIcon" destination="3na-x4-Thc" id="7T0-fJ-91a"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xfP-fB-kum" id="Zcp-aU-qmg"/>
+                                    <outlet property="delegate" destination="xfP-fB-kum" id="oMt-gD-jvc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ldr-hc-TAk" secondAttribute="trailing" id="JX3-nB-LYG"/>
+                            <constraint firstItem="FeN-5q-p9i" firstAttribute="top" secondItem="Ldr-hc-TAk" secondAttribute="bottom" id="Jj2-d5-8lf"/>
+                            <constraint firstItem="Ldr-hc-TAk" firstAttribute="top" secondItem="ID9-6w-LdP" secondAttribute="top" id="PWG-QT-Pja"/>
+                            <constraint firstItem="Ldr-hc-TAk" firstAttribute="leading" secondItem="ID9-6w-LdP" secondAttribute="leading" id="mJ3-ev-NWr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="发快递" id="qks-fa-le3">
+                        <barButtonItem key="leftBarButtonItem" image="title_back_unpressed.png" id="xjK-nc-uSQ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backItem" destination="xjK-nc-uSQ" id="jFS-9v-ClG"/>
+                        <outlet property="table" destination="Ldr-hc-TAk" id="Uky-gq-Eh7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gwx-fg-bCU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223" y="402"/>
         </scene>
         <!--我的-->
         <scene sceneID="3eN-tq-d2e">
@@ -1212,6 +1323,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="but_phone.png" width="25" height="25"/>
         <image name="bottom_line.png" width="320" height="4"/>
         <image name="community_introduce_camer.png" width="18" height="13"/>
         <image name="company_detail_icon.png" width="22" height="22"/>
@@ -1232,6 +1344,6 @@
         <image name="users_textfield_unclicked.png" width="292" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="huh-qE-qeJ"/>
+        <segue reference="gUA-3g-ppz"/>
     </inferredMetricsTieBreakers>
 </document>
