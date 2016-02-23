@@ -74,6 +74,9 @@ typedef enum {
 #define CommonBackgroundColor_gray  RGBA(182,182,182,1)
 //常用淡灰色背景
 #define CommonBackgroundColor_lightGray  RGBA(214,214,214,1)
+//分割线的颜色
+#define SparaLineColor  RGBA(235,235,235,1)
+
 //首页中办工作类型、我的收藏、我的支付、提交订单中的输入框中的字体颜色
 #define CommonColor_Blue   RGBA(21,98,175,1)
 //常见的黑色字体

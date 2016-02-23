@@ -24,5 +24,6 @@ SingletonH(CommonUtil);
 + (BOOL)stringContainsSpacing:(NSString *)string;//是否含有空格
 + (BOOL)stringContainsIllegalContent:(NSString *)string;//包含以上三个任何一个返回NO
 + (BOOL) isBlankString:(NSString *)string ;
++ (NSString *)networkingStatesFromStatebar ;
 
 @end

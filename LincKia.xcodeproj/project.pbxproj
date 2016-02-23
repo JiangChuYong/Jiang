@@ -169,6 +169,13 @@
 		CD29E9281C7B00E600871F69 /* 韵达快递@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9181C7B00E600871F69 /* 韵达快递@3x.png */; };
 		CD29E9291C7B00E600871F69 /* 顺丰速运@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9191C7B00E600871F69 /* 顺丰速运@2x.png */; };
 		CD29E92A1C7B00E600871F69 /* 顺丰速运@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E91A1C7B00E600871F69 /* 顺丰速运@3x.png */; };
+		CD29E92E1C7B02F400871F69 /* PBEnvironmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD29E92D1C7B02F400871F69 /* PBEnvironmentViewController.m */; };
+		CD29E9361C7B087500871F69 /* environment_circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9301C7B087500871F69 /* environment_circle@2x.png */; };
+		CD29E9371C7B087500871F69 /* environment_circle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9311C7B087500871F69 /* environment_circle@3x.png */; };
+		CD29E9381C7B087500871F69 /* environment_shollow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9321C7B087500871F69 /* environment_shollow@2x.png */; };
+		CD29E9391C7B087500871F69 /* environment_shollow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9331C7B087500871F69 /* environment_shollow@3x.png */; };
+		CD29E93A1C7B087500871F69 /* environment_update@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9341C7B087500871F69 /* environment_update@2x.png */; };
+		CD29E93B1C7B087500871F69 /* environment_update@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD29E9351C7B087500871F69 /* environment_update@3x.png */; };
 		CD45EDE61C76F8DF0042E9A2 /* PBAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = CD45EDE51C76F8DF0042E9A2 /* PBAlert.m */; };
 		CD4F06C11C7ADA6B00F6478A /* ExpressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD4F06C01C7ADA6B00F6478A /* ExpressTableViewCell.m */; };
 		CD5CD00C1C71E10F00B6A34B /* AFRquest.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5CD00B1C71E10F00B6A34B /* AFRquest.m */; };
@@ -398,6 +405,14 @@
 		CD29E9181C7B00E600871F69 /* 韵达快递@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "韵达快递@3x.png"; sourceTree = "<group>"; };
 		CD29E9191C7B00E600871F69 /* 顺丰速运@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "顺丰速运@2x.png"; sourceTree = "<group>"; };
 		CD29E91A1C7B00E600871F69 /* 顺丰速运@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "顺丰速运@3x.png"; sourceTree = "<group>"; };
+		CD29E92C1C7B02F400871F69 /* PBEnvironmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBEnvironmentViewController.h; sourceTree = "<group>"; };
+		CD29E92D1C7B02F400871F69 /* PBEnvironmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBEnvironmentViewController.m; sourceTree = "<group>"; };
+		CD29E9301C7B087500871F69 /* environment_circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "environment_circle@2x.png"; sourceTree = "<group>"; };
+		CD29E9311C7B087500871F69 /* environment_circle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "environment_circle@3x.png"; sourceTree = "<group>"; };
+		CD29E9321C7B087500871F69 /* environment_shollow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "environment_shollow@2x.png"; sourceTree = "<group>"; };
+		CD29E9331C7B087500871F69 /* environment_shollow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "environment_shollow@3x.png"; sourceTree = "<group>"; };
+		CD29E9341C7B087500871F69 /* environment_update@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "environment_update@2x.png"; sourceTree = "<group>"; };
+		CD29E9351C7B087500871F69 /* environment_update@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "environment_update@3x.png"; sourceTree = "<group>"; };
 		CD45EDE41C76F8DF0042E9A2 /* PBAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBAlert.h; sourceTree = "<group>"; };
 		CD45EDE51C76F8DF0042E9A2 /* PBAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBAlert.m; sourceTree = "<group>"; };
 		CD4F06BF1C7ADA6B00F6478A /* ExpressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressTableViewCell.h; sourceTree = "<group>"; };
@@ -547,6 +562,7 @@
 		CD1D57201C71BDB700BB30AC /* LincKia */ = {
 			isa = PBXGroup;
 			children = (
+				CD29E92B1C7B02C700871F69 /* Environment */,
 				CDCE9F391C7AA4A60026950F /* SendExpress */,
 				6530F8201C771CD4005BD7C1 /* ActivitySpace */,
 				65B419401C756B7700FA817B /* IndustryList */,
@@ -598,6 +614,7 @@
 		CD29E7CF1C7AFE3500871F69 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				CD29E92F1C7B087500871F69 /* 环境监测 */,
 				CD29E90A1C7B00E600871F69 /* 快递 */,
 				CD29E8E11C7AFFD300871F69 /* 通用 */,
 				CD29E7D01C7AFE3500871F69 /* 会员 */,
@@ -802,6 +819,28 @@
 				CD29E91A1C7B00E600871F69 /* 顺丰速运@3x.png */,
 			);
 			path = "快递";
+			sourceTree = "<group>";
+		};
+		CD29E92B1C7B02C700871F69 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				CD29E92C1C7B02F400871F69 /* PBEnvironmentViewController.h */,
+				CD29E92D1C7B02F400871F69 /* PBEnvironmentViewController.m */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		CD29E92F1C7B087500871F69 /* 环境监测 */ = {
+			isa = PBXGroup;
+			children = (
+				CD29E9301C7B087500871F69 /* environment_circle@2x.png */,
+				CD29E9311C7B087500871F69 /* environment_circle@3x.png */,
+				CD29E9321C7B087500871F69 /* environment_shollow@2x.png */,
+				CD29E9331C7B087500871F69 /* environment_shollow@3x.png */,
+				CD29E9341C7B087500871F69 /* environment_update@2x.png */,
+				CD29E9351C7B087500871F69 /* environment_update@3x.png */,
+			);
+			path = "环境监测";
 			sourceTree = "<group>";
 		};
 		CD5CD0091C71E0EC00B6A34B /* AFRequest */ = {
@@ -1071,7 +1110,9 @@
 				CD29E87E1C7AFE3500871F69 /* mine_account_number@2x.png in Resources */,
 				CD29E8811C7AFE3500871F69 /* mine_appointment_visit@2x.png in Resources */,
 				CD29E8901C7AFE3500871F69 /* mine_pay@3x.png in Resources */,
+				CD29E93A1C7B087500871F69 /* environment_update@2x.png in Resources */,
 				65B419651C75C25200FA817B /* PBCollectionCell.xib in Resources */,
+				CD29E9391C7B087500871F69 /* environment_shollow@3x.png in Resources */,
 				CD1D572F1C71BDB700BB30AC /* Main.storyboard in Resources */,
 				CD29E8A81C7AFE3500871F69 /* community_introduce_comment@2x.png in Resources */,
 				CD29E85A1C7AFE3500871F69 /* service_mine_wage@2x.png in Resources */,
@@ -1079,6 +1120,7 @@
 				CD29E85B1C7AFE3500871F69 /* service_mine_wage@3x.png in Resources */,
 				CD29E8F61C7AFFD400871F69 /* banner_logo@2x.png in Resources */,
 				CD29E8CB1C7AFE3500871F69 /* member_unpressed@3x.png in Resources */,
+				CD29E9371C7B087500871F69 /* environment_circle@3x.png in Resources */,
 				CD29E8A61C7AFE3500871F69 /* community_introduce_camer@2x.png in Resources */,
 				CD29E88D1C7AFE3500871F69 /* mine_online_orientation@2x.png in Resources */,
 				CD29E8A71C7AFE3500871F69 /* community_introduce_camer@3x.png in Resources */,
@@ -1089,6 +1131,7 @@
 				CD6944FE1C75C89600E04081 /* PBDoubleTableViewCell.xib in Resources */,
 				CD29E8C91C7AFE3500871F69 /* member_pressed@3x.png in Resources */,
 				CD29E88B1C7AFE3500871F69 /* mine_help@2x.png in Resources */,
+				CD29E9361C7B087500871F69 /* environment_circle@2x.png in Resources */,
 				CD29E89C1C7AFE3500871F69 /* register_content_bg@3x.png in Resources */,
 				CD29E85E1C7AFE3500871F69 /* 发快递@2x.png in Resources */,
 				CD29E8CF1C7AFE3500871F69 /* mine_unpressed@3x.png in Resources */,
@@ -1104,6 +1147,7 @@
 				CD29E8971C7AFE3500871F69 /* mine_set_up@2x.png in Resources */,
 				CD29E91C1C7B00E600871F69 /* but_phone@3x.png in Resources */,
 				CD29E8B21C7AFE3500871F69 /* personal_office@3x.png in Resources */,
+				CD29E9381C7B087500871F69 /* environment_shollow@2x.png in Resources */,
 				CD29E8FD1C7AFFD400871F69 /* headphoto_defaluted@3x.png in Resources */,
 				CD29E8BC1C7AFE3500871F69 /* activity_space_pressed@2x.png in Resources */,
 				CD29E9001C7AFFD400871F69 /* line@2x.png in Resources */,
@@ -1115,6 +1159,7 @@
 				CD29E91B1C7B00E600871F69 /* but_phone@2x.png in Resources */,
 				CD29E8801C7AFE3500871F69 /* mine_appointment_visit.png in Resources */,
 				CD29E8A21C7AFE3500871F69 /* button_reservation_pressed@3x.png in Resources */,
+				CD29E93B1C7B087500871F69 /* environment_update@3x.png in Resources */,
 				CD29E8C01C7AFE3500871F69 /* enterprise_-service_pressed@2x.png in Resources */,
 				CD29E8581C7AFE3500871F69 /* service_mine_organization@2x.png in Resources */,
 				CD29E8671C7AFE3500871F69 /* 环境监测@3x.png in Resources */,
@@ -1257,6 +1302,7 @@
 				CD7360C01C71C9A800E3971C /* UITextField+PlaceHolderSetting.m in Sources */,
 				CD6944FF1C75C89600E04081 /* PBMineTableViewHeadCellTableViewCell.m in Sources */,
 				CD7360BF1C71C9A800E3971C /* CustomTextField.m in Sources */,
+				CD29E92E1C7B02F400871F69 /* PBEnvironmentViewController.m in Sources */,
 				CD6944E91C75BDE500E04081 /* MemberCollectionViewCell.m in Sources */,
 				CD7360BE1C71C9A800E3971C /* CommonUtil.m in Sources */,
 				659EAC861C7ADFC500208837 /* PBActivtySpaceDetailViewController.m in Sources */,

@@ -27,7 +27,7 @@
     [super viewWillAppear:animated];
     [super viewWillAppear:animated];
     UINavigationController * navi = (UINavigationController *)self.parentViewController;
-    navi.tabBarController.tabBar.hidden = YES;
+    navi.tabBarController.tabBar.hidden = NO;
     
 }
 #pragma -- mark CollectionView Delegate
@@ -44,6 +44,10 @@
 {
     if(indexPath.row == 0){
         [self performSegueWithIdentifier:@"MemberToSendExpress" sender:self];
+    }
+    
+    if (indexPath.row == 3) {
+        [self performSegueWithIdentifier:@"MemberToEnvironment" sender:self];
     }
 }
 @end
