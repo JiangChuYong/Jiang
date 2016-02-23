@@ -45,6 +45,10 @@
         [self performSegueWithIdentifier:@"MemberToSendExpress" sender:self];
     }
     
+    if (indexPath.row == 1) {
+        [self performSegueWithIdentifier:@"MemberToDiDi" sender:self];
+    }
+    
     if (indexPath.row == 3) {
         [self performSegueWithIdentifier:@"MemberToEnvironment" sender:self];
     }

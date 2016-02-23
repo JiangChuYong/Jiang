@@ -206,6 +206,7 @@
 		CD7360BF1C71C9A800E3971C /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7360BA1C71C9A800E3971C /* CustomTextField.m */; };
 		CD7360C01C71C9A800E3971C /* UITextField+PlaceHolderSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7360BD1C71C9A800E3971C /* UITextField+PlaceHolderSetting.m */; };
 		CDC026D21C7C4B5700663B26 /* SendExpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC026D11C7C4B5700663B26 /* SendExpressViewController.m */; };
+		CDC954B81C7C684800D2D7D1 /* PBDiDiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC954B71C7C684800D2D7D1 /* PBDiDiViewController.m */; };
 		DF6E82A5586B81344BCBA4C6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A87F89A1AD34DBE85390708 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -474,6 +475,8 @@
 		CD7360C21C71CA5200E3971C /* PBSingleTon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSingleTon.h; sourceTree = "<group>"; };
 		CDC026D01C7C4B5700663B26 /* SendExpressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendExpressViewController.h; sourceTree = "<group>"; };
 		CDC026D11C7C4B5700663B26 /* SendExpressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendExpressViewController.m; sourceTree = "<group>"; };
+		CDC954B61C7C684800D2D7D1 /* PBDiDiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBDiDiViewController.h; sourceTree = "<group>"; };
+		CDC954B71C7C684800D2D7D1 /* PBDiDiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBDiDiViewController.m; sourceTree = "<group>"; };
 		D7EBCBAFE4522676A54C0904 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -594,6 +597,7 @@
 		CD1D57201C71BDB700BB30AC /* LincKia */ = {
 			isa = PBXGroup;
 			children = (
+				CDC954B51C7C683400D2D7D1 /* DiDi */,
 				CD29E92B1C7B02C700871F69 /* Environment */,
 				CDCE9F391C7AA4A60026950F /* SendExpress */,
 				6530F8201C771CD4005BD7C1 /* ActivitySpace */,
@@ -952,6 +956,15 @@
 				CD45EDE51C76F8DF0042E9A2 /* PBAlert.m */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		CDC954B51C7C683400D2D7D1 /* DiDi */ = {
+			isa = PBXGroup;
+			children = (
+				CDC954B61C7C684800D2D7D1 /* PBDiDiViewController.h */,
+				CDC954B71C7C684800D2D7D1 /* PBDiDiViewController.m */,
+			);
+			path = DiDi;
 			sourceTree = "<group>";
 		};
 		CDCE9F391C7AA4A60026950F /* SendExpress */ = {
@@ -1344,6 +1357,7 @@
 				CD6944E91C75BDE500E04081 /* MemberCollectionViewCell.m in Sources */,
 				CD7360BE1C71C9A800E3971C /* CommonUtil.m in Sources */,
 				659EAC861C7ADFC500208837 /* PBActivtySpaceDetailViewController.m in Sources */,
+				CDC954B81C7C684800D2D7D1 /* PBDiDiViewController.m in Sources */,
 				659EAC6B1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m in Sources */,
 				CD1D57231C71BDB700BB30AC /* main.m in Sources */,
 				6530F8241C771CD4005BD7C1 /* PBActivitySpaceListViewController.m in Sources */,
