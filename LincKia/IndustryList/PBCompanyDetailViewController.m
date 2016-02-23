@@ -33,7 +33,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)backButtonPressed:(UIButton *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 -(void)viewWillAppear:(BOOL)animated
 {

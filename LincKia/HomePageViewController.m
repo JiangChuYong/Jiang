@@ -34,15 +34,18 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     [_listTableView registerNib:[UINib nibWithNibName:@"PBButtonChooseCell" bundle:nil] forCellReuseIdentifier:ChooseCellIDKey];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    
+    UINavigationController * navi = (UINavigationController *)self.parentViewController;
+    navi.tabBarController.tabBar.hidden = NO;
+    navi.navigationBar.hidden = YES;
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    UINavigationController * navi = (UINavigationController *)self.parentViewController;
-    navi.navigationBarHidden = YES;
-    
-    
-    
-    
     
     [self registCell];
     _adsArr =[NSMutableArray array];
@@ -143,18 +146,12 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
 //跳转至 企业服务页面
 - (void)pushToIndustryListPage:(UIButton *)sender
 {
-//    PBIndustryViewController * industryVC = [[PBIndustryViewController alloc]init];
-//    //[self.navigationController pushViewController:industryVC animated:YES];
-//    [self presentViewController:industryVC animated:YES completion:nil];
-    
     [self performSegueWithIdentifier:@"HomeToIndustry" sender:self];
 }
 
 //跳转至 活动空间页面
 - (void)activitySpaceButtonPressed:(UIButton *)sender
 {
-   
-    
     [self performSegueWithIdentifier:@"HomeToActivity" sender:self];
 }
 

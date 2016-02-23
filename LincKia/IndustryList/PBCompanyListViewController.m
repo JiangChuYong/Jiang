@@ -84,7 +84,7 @@ static NSString *identifier=@"PBCompanyListTableViewCell";
 }
 - (IBAction)backButtonPressed:(UIButton *)sender {
 
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma -- mark TABLEVIEW PART
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

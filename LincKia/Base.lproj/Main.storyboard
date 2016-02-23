@@ -14,6 +14,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LR3-8t-srI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.26666666666666666" green="0.59607843137254901" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="LIR-vI-amI" kind="relationship" relationship="rootViewController" id="EYf-aE-5Dj"/>
@@ -43,7 +44,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="koK-Xz-E85">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="LIR-vI-amI" id="zeu-C5-KAH"/>
@@ -63,20 +64,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Vc-P0-FE1"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="listTableView" destination="koK-Xz-E85" id="fzG-lr-OoZ"/>
-                        <segue destination="PIS-Ma-x6V" kind="modal" identifier="HomeToIndustry" id="fOh-sK-6N3"/>
-                        <segue destination="c8T-90-O2X" kind="modal" identifier="HomeToActivity" id="PKi-kr-N3g"/>
+                        <segue destination="PIS-Ma-x6V" kind="push" identifier="HomeToIndustry" id="fOh-sK-6N3"/>
+                        <segue destination="c8T-90-O2X" kind="push" identifier="HomeToActivity" id="PKi-kr-N3g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BHQ-IY-rL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="752" y="-132"/>
         </scene>
-        <!--Activity Space List View Controller-->
+        <!--活动介绍-->
         <scene sceneID="a5m-ta-K9v">
             <objects>
-                <viewController id="c8T-90-O2X" customClass="PBActivitySpaceListViewController" sceneMemberID="viewController">
+                <viewController id="c8T-90-O2X" userLabel="活动介绍" customClass="PBActivitySpaceListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t9a-zs-ZfE"/>
                         <viewControllerLayoutGuide type="bottom" id="03c-Rw-PF2"/>
@@ -152,20 +154,22 @@
                             <constraint firstItem="R8G-tb-9wR" firstAttribute="top" secondItem="F9g-Rs-mGv" secondAttribute="top" id="xiC-AD-KNC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="beP-Jt-LR9"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="nodataView" destination="ARk-Zd-LM1" id="GZe-Wh-Kuc"/>
                         <outlet property="spacesListTableview" destination="nE2-rP-Bl4" id="Gc6-sN-uLa"/>
-                        <segue destination="TMG-BN-yqv" kind="modal" identifier="ActivityToIntroduce" id="j2f-RA-4Cm"/>
+                        <segue destination="TMG-BN-yqv" kind="push" identifier="ActivityToIntroduce" id="j2f-RA-4Cm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wez-tF-tMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1237" y="-13"/>
+            <point key="canvasLocation" x="1297" y="-1017"/>
         </scene>
-        <!--Activty Space Detail View Controller-->
+        <!--社区简介-->
         <scene sceneID="SbD-7m-QqT">
             <objects>
-                <viewController id="TMG-BN-yqv" customClass="PBActivtySpaceDetailViewController" sceneMemberID="viewController">
+                <viewController id="TMG-BN-yqv" userLabel="社区简介" customClass="PBActivtySpaceDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r69-f3-nMB"/>
                         <viewControllerLayoutGuide type="bottom" id="que-I0-g0F"/>
@@ -261,22 +265,24 @@
                             <constraint firstItem="eNL-zq-leo" firstAttribute="top" secondItem="xbi-zf-tpP" secondAttribute="bottom" id="xgA-W4-UW2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="O7V-Dq-dKI"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bottomView" destination="gtJ-vY-mnt" id="Gzg-09-FEd"/>
                         <outlet property="confirmBtn" destination="O9y-2A-dfE" id="J7V-af-Vao"/>
                         <outlet property="tableView" destination="xbi-zf-tpP" id="e2d-3Z-XQM"/>
-                        <segue destination="qnD-u2-qVL" kind="modal" identifier="IntroduceToInfo" id="aB6-nA-ZwF"/>
-                        <segue destination="btX-Nf-qRQ" kind="modal" identifier="IntroduceToHard" id="0Jz-QI-DBn"/>
+                        <segue destination="qnD-u2-qVL" kind="push" identifier="IntroduceToInfo" id="aB6-nA-ZwF"/>
+                        <segue destination="btX-Nf-qRQ" kind="push" identifier="IntroduceToHard" id="0Jz-QI-DBn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSv-cJ-Wn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1623" y="-13"/>
+            <point key="canvasLocation" x="1703" y="-1017"/>
         </scene>
-        <!--Space Introduce View Controller-->
+        <!--社区介绍-->
         <scene sceneID="Szr-cX-X16">
             <objects>
-                <viewController id="qnD-u2-qVL" customClass="ZZSpaceIntroduceViewController" sceneMemberID="viewController">
+                <viewController id="qnD-u2-qVL" userLabel="社区介绍" customClass="ZZSpaceIntroduceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hl7-9b-hbX"/>
                         <viewControllerLayoutGuide type="bottom" id="tlZ-ia-W3z"/>
@@ -372,6 +378,8 @@
                             <constraint firstItem="tlZ-ia-W3z" firstAttribute="top" secondItem="bFs-U1-mA1" secondAttribute="bottom" constant="15" id="wXW-vA-5S5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QPM-od-AN9"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backBtn" destination="T1F-2b-cG9" id="TJ6-f1-5Wf"/>
                         <outlet property="introduceContent" destination="bFs-U1-mA1" id="SL0-kG-2eE"/>
@@ -383,12 +391,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vo6-MD-7Vy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2155" y="-289"/>
+            <point key="canvasLocation" x="2491" y="-1333"/>
         </scene>
-        <!--Hardware Facilities View Controller-->
+        <!--空间设施-->
         <scene sceneID="DNi-mc-AcJ">
             <objects>
-                <viewController id="btX-Nf-qRQ" customClass="PBHardwareFacilitiesViewController" sceneMemberID="viewController">
+                <viewController id="btX-Nf-qRQ" userLabel="空间设施" customClass="PBHardwareFacilitiesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PFd-2l-7lS"/>
                         <viewControllerLayoutGuide type="bottom" id="ry1-Bj-b6V"/>
@@ -453,13 +461,15 @@
                             <constraint firstItem="eT7-wi-Fov" firstAttribute="top" secondItem="X3G-u1-g7T" secondAttribute="top" id="isQ-5U-Bkt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="D69-5Q-rmZ"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="xEy-sG-yHe" id="Q22-hK-rxt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZu-gT-DFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2160" y="375"/>
+            <point key="canvasLocation" x="2476" y="-701"/>
         </scene>
         <!--企业服务-->
         <scene sceneID="ffO-HD-tnt">
@@ -529,14 +539,16 @@
                             <constraint firstItem="Jq7-rZ-lQd" firstAttribute="leading" secondItem="O99-2a-27x" secondAttribute="leading" id="zLv-Wa-wbd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="JBQ-5E-3RS"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="ebE-fX-fTu" id="ZJP-Qp-3jZ"/>
-                        <segue destination="S8O-95-gV7" kind="modal" identifier="IndustryToCompany" id="h2n-e3-pFK"/>
+                        <segue destination="S8O-95-gV7" kind="push" identifier="IndustryToCompany" id="h2n-e3-pFK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooB-E4-74e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1237" y="-657"/>
+            <point key="canvasLocation" x="1297" y="-1725"/>
         </scene>
         <!--公司列表-->
         <scene sceneID="mpo-XF-l3j">
@@ -629,16 +641,18 @@
                             <constraint firstAttribute="trailing" secondItem="oan-mp-Ngq" secondAttribute="trailing" id="w7O-SE-F9f"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0Fm-Z6-HPx"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="companyTableView" destination="jZO-xu-UFQ" id="2Cn-gF-Zuj"/>
                         <outlet property="nodataView" destination="oan-mp-Ngq" id="5M3-7J-HPC"/>
                         <outlet property="titleLabel" destination="SBy-l8-T9e" id="MRm-NZ-MQf"/>
-                        <segue destination="c2c-mf-CMA" kind="modal" identifier="CompanyToDetail" id="zD5-AV-Fe0"/>
+                        <segue destination="c2c-mf-CMA" kind="push" identifier="CompanyToDetail" id="zD5-AV-Fe0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LWi-eX-A2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1684" y="-649"/>
+            <point key="canvasLocation" x="1696" y="-1725"/>
         </scene>
         <!--公司详情-->
         <scene sceneID="3mp-7c-wn6">
@@ -822,6 +836,8 @@
                             <constraint firstAttribute="trailing" secondItem="8nP-DN-tjr" secondAttribute="trailing" id="yXz-aF-Swr"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cbO-vL-DBc"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bannerScrollView" destination="LAQ-Da-URC" id="39k-D5-SR9"/>
                         <outlet property="companyDescribe" destination="Els-Yp-chf" id="QSW-U0-HJf"/>
@@ -834,7 +850,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sa-Xr-SPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2112" y="-973"/>
+            <point key="canvasLocation" x="2096" y="-1725"/>
         </scene>
         <!--登录-->
         <scene sceneID="zcW-5q-CEW">
@@ -1023,7 +1039,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m54-Lb-PlR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771" y="1685"/>
+            <point key="canvasLocation" x="1191" y="853"/>
         </scene>
         <!--环境监测-->
         <scene sceneID="tJd-DH-z9t">
@@ -1305,7 +1321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0v-oC-Rgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1364" y="1278"/>
+            <point key="canvasLocation" x="1823" y="-178"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -1326,7 +1342,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-168" y="642"/>
+            <point key="canvasLocation" x="-364" y="532"/>
         </scene>
         <!--会员-->
         <scene sceneID="1Rh-js-tHD">
@@ -1348,7 +1364,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhY-Wq-ATY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="350" y="532"/>
+            <point key="canvasLocation" x="350" y="476"/>
         </scene>
         <!--会员-->
         <scene sceneID="LX4-8s-kAn">
@@ -1434,7 +1450,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8d-1m-6XU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="795" y="835"/>
+            <point key="canvasLocation" x="752" y="476"/>
         </scene>
         <!--发快递-->
         <scene sceneID="rw6-fg-XmE">
@@ -1545,7 +1561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gwx-fg-bCU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1379" y="602"/>
+            <point key="canvasLocation" x="1411" y="-338"/>
         </scene>
         <!--我的-->
         <scene sceneID="3eN-tq-d2e">
@@ -1567,7 +1583,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XbN-wG-ukE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="336" y="1240"/>
+            <point key="canvasLocation" x="350" y="1096"/>
         </scene>
         <!--我的-->
         <scene sceneID="HPF-MK-wjw">
@@ -1606,7 +1622,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgo-Zy-dIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="336" y="2002"/>
+            <point key="canvasLocation" x="764" y="1096"/>
         </scene>
     </scenes>
     <resources>

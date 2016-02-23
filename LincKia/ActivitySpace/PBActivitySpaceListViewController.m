@@ -28,6 +28,12 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
+    
+    UINavigationController * navi = (UINavigationController *)self.parentViewController;
+    navi.tabBarController.tabBar.hidden = YES;
+    navi.navigationBar.hidden = YES;
+    
+    
     _currentTableViewPage = 1;
     START_OBSERVE_CONNECTION
     [self requestData];
@@ -43,7 +49,9 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)backButtonPressed:(UIButton *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+    [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 //- (IBAction)searchButtonPress:(UIButton *)sender {

@@ -25,19 +25,24 @@
     [super viewWillDisappear:animated];
     STOP_OBSERVE_CONNECTION
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    UINavigationController * navi = (UINavigationController *)self.parentViewController;
+    navi.tabBarController.tabBar.hidden = YES;
+    navi.navigationBar.hidden = YES;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-        START_OBSERVE_CONNECTION
-        AFRquest * af = [AFRquest sharedInstance];
-        af.subURLString = @"api/Industry/GetIndustryList?userToken=""&deviceType=ios";
-         af.parameters = @{@"Page":@1,@"Rows":@10,@"SortProperty":@"Name",@"SortDirection":@"asc"};
-        af.requestFlag = GetIndustryList;
-        af.style = GET;
-        [af requestDataFromServer];
-
     
+    START_OBSERVE_CONNECTION
+    AFRquest * af = [AFRquest sharedInstance];
+    af.subURLString = @"api/Industry/GetIndustryList?userToken=""&deviceType=ios";
+     af.parameters = @{@"Page":@1,@"Rows":@10,@"SortProperty":@"Name",@"SortDirection":@"asc"};
+    af.requestFlag = GetIndustryList;
+    af.style = GET;
+    [af requestDataFromServer];
+
     [self.collectionView registerClass:[PBCollectionCell class] forCellWithReuseIdentifier:@"CollectionCell"];
    
 }
@@ -59,8 +64,7 @@
 
 
 - (IBAction)backButtonPressed:(UIButton *)sender {
-    //[self.navigationController popViewControllerAnimated:YES];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

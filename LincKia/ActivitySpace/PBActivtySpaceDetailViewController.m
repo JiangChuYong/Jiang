@@ -240,7 +240,9 @@ static NSString *bannerCellIDKey = @"PBADBannerCellTableViewCell";
 }
 #pragma -- mark ACTION PART
 - (IBAction)backButtonPressed:(UIButton *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 #pragma -- mark SCROLLVIEW DELEGATE
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
