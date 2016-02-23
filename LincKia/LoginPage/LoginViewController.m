@@ -18,6 +18,15 @@
 
 
 @implementation LoginViewController
+
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    UINavigationController * navi = (UINavigationController *)self.navigationController;
+    navi.tabBarController.tabBar.hidden = YES;
+    navi.navigationBar.hidden = YES;
+}
+
+
 #pragma -- mark Private Methods
 -(BOOL)isRightPhoneNum{
     if ([CommonUtil isValidateMobile:_phone.text]) {
@@ -54,7 +63,7 @@
     if ([AFRquest sharedInstance].requestFlag == UsersLogin) {
         NSNumber * code = userInfo[@"Code"];
         if ([code intValue] == 0) {
-            [self dismissViewControllerAnimated:YES completion:^{}];
+            [self.navigationController popViewControllerAnimated:YES];
             NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
             [user setValue:_phone.text forKey:USERNAME];
             [user setValue:_password.text forKey:PASSWORD];
@@ -69,7 +78,7 @@
 #pragma -- mark Button Action
 
 - (IBAction)backToLastPage:(UIButton *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {

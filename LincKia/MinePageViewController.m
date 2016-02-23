@@ -28,6 +28,10 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    UINavigationController * navi = (UINavigationController *)self.navigationController;
+    navi.tabBarController.tabBar.hidden = NO;
+    navi.navigationBar.hidden = NO;
     [self cheakLoginStatus];
 }
 - (void)viewDidLoad {

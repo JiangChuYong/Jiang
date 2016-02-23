@@ -8,7 +8,6 @@
 #import "MemberPageViewController.h"
 #import "LoginViewController.h"
 #import "MemberCollectionViewCell.h"
-#import "PBSendExpressViewController.h"
 
 @interface MemberPageViewController () <UICollectionViewDataSource,UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collection;
