@@ -311,20 +311,23 @@ static NSString *bannerCellIDKey = @"PBADBannerCellTableViewCell";
 {
     
 //    PBHardwareFacilitiesViewController * facilitiesVC = [[PBHardwareFacilitiesViewController alloc]init];
-//    [ZZGlobalModel sharedInstance].activeSpaceInfo=_spaceInfo;
-//    facilitiesVC.isActivitySpace=YES;
+    [JCYGlobalData sharedInstance].activeSpaceInfo=_responseDataOfIndexDict;
+    [JCYGlobalData sharedInstance].isActiveSpace=YES;
 //    [self.navigationController pushViewController:facilitiesVC animated:YES];
+    [self performSegueWithIdentifier:@"IntroduceToHard" sender:self];
     NSLog(@"aaaa");
 }
 
 //空间介绍页面
 -(void)pushToSpaceIntroducePage:(UIButton *)sender
 {
-//    [ZZGlobalModel sharedInstance].activeSpaceInfo = _spaceInfo;
+    [JCYGlobalData sharedInstance].activeSpaceInfo = _responseDataOfIndexDict;
 //    ZZSpaceIntroduceViewController *viewController = [[ZZSpaceIntroduceViewController alloc] init];
 //    viewController.isActiveSpace=YES;
 //    [self.navigationController pushViewController:viewController animated:YES];
-    NSLog(@"aaaa");
+//    NSLog(@"aaaa");
+    [JCYGlobalData sharedInstance].isActiveSpace=YES;
+    [self performSegueWithIdentifier:@"IntroduceToInfo" sender:self];
 
 }
 
@@ -344,53 +347,6 @@ static NSString *bannerCellIDKey = @"PBADBannerCellTableViewCell";
 }
 
 
-///** *校验数据开始，如果没有通过校验，则返回校验提示*/
-//-(void)validateFailed:(int)tag validateInfo:(NSString *)validateInfo{
-//    NSLog(@"validateFailed");
-//}
-///** *获取数据开始*/
-//-(void)gainDataStart:(int)tag{
-//    
-//}
-////获取数据成功
-//-(void)gainDataSuccess:(int)tag responseObj:(id)responseObj{
-//    [[AlertUtils sharedInstance]stopHUD];
-//    NSLog(@"%@",responseObj);
-//    ResponseDataOfActiveSpaceViewInfoModel * response = [responseObj jsonToModel:ResponseDataOfActiveSpaceViewInfoModel.class];
-//    if (response.Code == SERVER_SUCCESS) {
-//        class_copyPropertyList([ActiveSpaceViewInfoModel class],&_numOfRow);
-//        [self dealRecievedData:response];
-//    }else{
-//        [[AlertUtils sharedInstance] showWithText:response.Description inView:self.view lastTime:2.0];
-//    }
-//    
-//}
-//-(void)gainDataFailed:(int)tag errorInfo:(NSString *)errorInfo{
-//    [[AlertUtils sharedInstance]stopHUD];
-//    [[AlertUtils sharedInstance] showWithText:errorInfo inView:self.view lastTime:2.0];
-//}
-//
-//-(void)dealRecievedData:(ResponseDataOfActiveSpaceViewInfoModel *)respone
-//{
-//    
-//    /*获取数据*/
-//    _spaceInfo = respone.Data;
-//    /*获取数据*/
-//    _spaceInfo = respone.Data;
-//    //判断是否提供硬件设施，是则加载cell,否责不加载
-//    if (_spaceInfo.facilities.count >0) {
-//        _hasFacility = YES;
-//    }else{
-//        _hasFacility = NO;
-//    }
-//    
-//    if ([_spaceInfo.descriptions isEqualToString:@""]) {
-//        _hasIntroString = NO;
-//    }else{
-//        _hasIntroString = YES;
-//    }
-//    [_tableView reloadData];
-//}
 /*
  #pragma mark - Navigation
  

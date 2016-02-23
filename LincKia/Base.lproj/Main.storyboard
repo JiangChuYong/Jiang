@@ -265,6 +265,8 @@
                         <outlet property="bottomView" destination="gtJ-vY-mnt" id="Gzg-09-FEd"/>
                         <outlet property="confirmBtn" destination="O9y-2A-dfE" id="J7V-af-Vao"/>
                         <outlet property="tableView" destination="xbi-zf-tpP" id="e2d-3Z-XQM"/>
+                        <segue destination="qnD-u2-qVL" kind="modal" identifier="IntroduceToInfo" id="aB6-nA-ZwF"/>
+                        <segue destination="btX-Nf-qRQ" kind="modal" identifier="IntroduceToHard" id="0Jz-QI-DBn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSv-cJ-Wn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -644,7 +646,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sa-Xr-SPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2124" y="-649"/>
+            <point key="canvasLocation" x="2112" y="-973"/>
         </scene>
         <!--登录-->
         <scene sceneID="zcW-5q-CEW">
