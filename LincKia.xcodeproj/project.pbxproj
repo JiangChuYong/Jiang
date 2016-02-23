@@ -23,6 +23,10 @@
 		65B4196F1C75D18600FA817B /* PBCompanyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B4196D1C75D18600FA817B /* PBCompanyListViewController.m */; };
 		65B419741C75D1BF00FA817B /* PBCompanyListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B419721C75D1BF00FA817B /* PBCompanyListTableViewCell.m */; };
 		65B419751C75D1BF00FA817B /* PBCompanyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B419731C75D1BF00FA817B /* PBCompanyListTableViewCell.xib */; };
+		CD0178B91C7C5A2F00B9DEC9 /* choiced_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0178B41C7C5A2F00B9DEC9 /* choiced_line@2x.png */; };
+		CD0178BA1C7C5A2F00B9DEC9 /* choiced_line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0178B51C7C5A2F00B9DEC9 /* choiced_line@3x.png */; };
+		CD0178BB1C7C5A2F00B9DEC9 /* ico_make.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0178B61C7C5A2F00B9DEC9 /* ico_make.png */; };
+		CD0178BC1C7C5A2F00B9DEC9 /* JSDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0178B81C7C5A2F00B9DEC9 /* JSDropDownMenu.m */; };
 		CD1D57231C71BDB700BB30AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57221C71BDB700BB30AC /* main.m */; };
 		CD1D57261C71BDB700BB30AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57251C71BDB700BB30AC /* AppDelegate.m */; };
 		CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57281C71BDB700BB30AC /* HomePageViewController.m */; };
@@ -253,6 +257,11 @@
 		65B419711C75D1BF00FA817B /* PBCompanyListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCompanyListTableViewCell.h; sourceTree = "<group>"; };
 		65B419721C75D1BF00FA817B /* PBCompanyListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCompanyListTableViewCell.m; sourceTree = "<group>"; };
 		65B419731C75D1BF00FA817B /* PBCompanyListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBCompanyListTableViewCell.xib; sourceTree = "<group>"; };
+		CD0178B41C7C5A2F00B9DEC9 /* choiced_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "choiced_line@2x.png"; sourceTree = "<group>"; };
+		CD0178B51C7C5A2F00B9DEC9 /* choiced_line@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "choiced_line@3x.png"; sourceTree = "<group>"; };
+		CD0178B61C7C5A2F00B9DEC9 /* ico_make.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_make.png; sourceTree = "<group>"; };
+		CD0178B71C7C5A2F00B9DEC9 /* JSDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDropDownMenu.h; sourceTree = "<group>"; };
+		CD0178B81C7C5A2F00B9DEC9 /* JSDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDropDownMenu.m; sourceTree = "<group>"; };
 		CD1D571E1C71BDB700BB30AC /* LincKia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LincKia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1D57221C71BDB700BB30AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD1D57241C71BDB700BB30AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -543,11 +552,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CD0178B31C7C5A2F00B9DEC9 /* JSDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CD0178B41C7C5A2F00B9DEC9 /* choiced_line@2x.png */,
+				CD0178B51C7C5A2F00B9DEC9 /* choiced_line@3x.png */,
+				CD0178B61C7C5A2F00B9DEC9 /* ico_make.png */,
+				CD0178B71C7C5A2F00B9DEC9 /* JSDropDownMenu.h */,
+				CD0178B81C7C5A2F00B9DEC9 /* JSDropDownMenu.m */,
+			);
+			path = JSDropDownMenu;
+			sourceTree = "<group>";
+		};
 		CD1D57151C71BDB700BB30AC = {
 			isa = PBXGroup;
 			children = (
 				CD1D57301C71BDB700BB30AC /* Assets.xcassets */,
 				CD29E7CF1C7AFE3500871F69 /* images */,
+				CD0178B31C7C5A2F00B9DEC9 /* JSDropDownMenu */,
 				CD5CD0091C71E0EC00B6A34B /* AFRequest */,
 				CD7360B51C71C9A800E3971C /* Config */,
 				CD1D57201C71BDB700BB30AC /* LincKia */,
@@ -1072,6 +1094,7 @@
 				CD29E8F91C7AFFD400871F69 /* bottom_line@3x.png in Resources */,
 				CD29E8691C7AFE3500871F69 /* company_detail_icon@3x.png in Resources */,
 				CD29E9091C7AFFD400871F69 /* welcome@3x.png in Resources */,
+				CD0178B91C7C5A2F00B9DEC9 /* choiced_line@2x.png in Resources */,
 				CD29E8CE1C7AFE3500871F69 /* mine_unpressed@2x.png in Resources */,
 				CD29E8C11C7AFE3500871F69 /* enterprise_-service_pressed@3x.png in Resources */,
 				CD29E9271C7B00E600871F69 /* 韵达快递@2x.png in Resources */,
@@ -1108,6 +1131,7 @@
 				CD29E8931C7AFE3500871F69 /* mine_review@2x.png in Resources */,
 				CD1D57311C71BDB700BB30AC /* Assets.xcassets in Resources */,
 				CD29E8B51C7AFE3500871F69 /* star_half@3x.png in Resources */,
+				CD0178BB1C7C5A2F00B9DEC9 /* ico_make.png in Resources */,
 				CD29E8FE1C7AFFD400871F69 /* hint@2x.png in Resources */,
 				CD29E8841C7AFE3500871F69 /* mine_card@2x.png in Resources */,
 				CD29E8611C7AFE3500871F69 /* 开门@3x.png in Resources */,
@@ -1191,6 +1215,7 @@
 				CD29E8B01C7AFE3500871F69 /* open_desk@3x.png in Resources */,
 				CD29E9201C7B00E600871F69 /* 圆通速递@3x.png in Resources */,
 				CD29E9291C7B00E600871F69 /* 顺丰速运@2x.png in Resources */,
+				CD0178BA1C7C5A2F00B9DEC9 /* choiced_line@3x.png in Resources */,
 				CD29E8FF1C7AFFD400871F69 /* hint@3x.png in Resources */,
 				CD29E8881C7AFE3500871F69 /* mine_customer_service_center@2x.png in Resources */,
 				CD29E8681C7AFE3500871F69 /* company_detail_icon@2x.png in Resources */,
@@ -1309,6 +1334,7 @@
 				CD45EDE61C76F8DF0042E9A2 /* PBAlert.m in Sources */,
 				CD6944FD1C75C89600E04081 /* PBDoubleTableViewCell.m in Sources */,
 				65B419441C756B7700FA817B /* PBIndustryViewController.m in Sources */,
+				CD0178BC1C7C5A2F00B9DEC9 /* JSDropDownMenu.m in Sources */,
 				CD69448D1C75AD9D00E04081 /* LoginViewController.m in Sources */,
 				659EACB71C7AEB6A00208837 /* ZZSpaceIntroduceViewController.m in Sources */,
 				CD7360C01C71C9A800E3971C /* UITextField+PlaceHolderSetting.m in Sources */,
