@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-
+#import "HomePageViewController.h"
 
 @interface LoginViewController () <UITextFieldDelegate>
 
@@ -78,7 +78,8 @@
 #pragma -- mark Button Action
 
 - (IBAction)backToLastPage:(UIButton *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {

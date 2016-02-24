@@ -19,7 +19,7 @@ typedef enum{
     GetUserInfo=2,
     //首页
     GetIndex=3,
-    //企业服务
+    //企业服=
     GetIndustryList=4,
     //获取海星伙伴列表
     GetLinckiaPartnerList=5,
@@ -29,7 +29,8 @@ typedef enum{
     GetActiveSpaceList=7,
     //活动空间详情
     ActiveSpaceGetOne=8,
-    
+    //检查是否有未支付订单
+    CheckUnpaidOrder=9,
 }RequestFlag;
 
 #endif /* RequestFlag_h */

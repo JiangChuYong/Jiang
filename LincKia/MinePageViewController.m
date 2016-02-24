@@ -13,8 +13,11 @@
 #import "PBMineTableViewSingleLineCell.h"
 
 @interface MinePageViewController () <UITableViewDataSource,UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property (strong,nonatomic) NSMutableArray * dataSource;
+@property (strong,nonatomic) NSDictionary * userInfoDic;
+@property (assign,nonatomic) BOOL HasUnpayOrder;
 
 @end
 
@@ -32,12 +35,16 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     UINavigationController * navi = (UINavigationController *)self.navigationController;
     navi.tabBarController.tabBar.hidden = NO;
     navi.navigationBar.hidden = NO;
-    [self cheakLoginStatus];
+    
+    [self checkLoginStatus];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _HasUnpayOrder = NO;
+
     [self registerTableViewCells];
     [self initMineViewDataSource];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,6 +82,10 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     }
     else if(indexPath.row == 1){
         PBMineTableViewSecondCell * secondCell = [_table dequeueReusableCellWithIdentifier:secondCellIDKey];
+        if (_userInfoDic) {
+            [self checkUnpayOrder];
+        }
+        
         return secondCell.frame.size.height;
     }
     else{
@@ -88,11 +99,22 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     
     
     if (indexPath.row == 0) {
+        
         PBMineTableViewHeadCellTableViewCell * headCell = [_table dequeueReusableCellWithIdentifier:headCellIDKey];
+        headCell.phoneNumLab.text = _userInfoDic[@"Mobile"];
+        
+        NSNumber * starFish = _userInfoDic[@"Starfish"];
+        headCell.LincKiaCoinNum.text = [NSString stringWithFormat:@"%@",starFish];
+        
         return headCell;
     }
     else if(indexPath.row == 1){
         PBMineTableViewSecondCell * secondCell = [_table dequeueReusableCellWithIdentifier:secondCellIDKey];
+        
+        if (_userInfoDic) {
+            [self checkUnpayOrder];
+        }
+        
         return secondCell;
     }
     else{
@@ -109,8 +131,8 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     
 }
 
-#pragma -- mark CHEAK USER INFO
--(void)cheakLoginStatus{
+#pragma -- mark CHECK USER INFO
+-(void)checkLoginStatus{
     NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
     NSString * userName = [userInfo valueForKey:USERNAME];
     NSString * passWord = [userInfo valueForKey:PASSWORD];
@@ -118,7 +140,57 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     NSLog(@"%@",passWord);
     if (!userName||!passWord) {
         [self performSegueWithIdentifier:@"MineToLogin" sender:self];
+    }else{
+        START_OBSERVE_CONNECTION
+        AFRquest * af = [AFRquest sharedInstance];
+        af.subURLString = @"api/Users/Login?deviceType=ios";
+        af.parameters = @{@"Account":userName,@"Password":passWord};
+        af.requestFlag = UsersLogin;
+        af.style = POST;
+        [af requestDataFromServer];
     }
+}
+
+
+
+-(void)dataReceived:(NSNotification *)notif{
+        
+    NSDictionary * response = [notif object];
+    
+    NSLog(@"%@",response);
+
+    if ([AFRquest sharedInstance].requestFlag == UsersLogin) {
+
+        _userInfoDic = response[@"Data"];
+        
+        NSString * userToken = _userInfoDic[@"UserToken"];
+        
+        NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+        
+        [userInfo setValue:userToken forKey:USERTOKEN];
+        
+        [_table reloadData];
+        
+    }
+
+    if ([AFRquest sharedInstance].requestFlag == CheckUnpaidOrder) {
+        
+        if ([response[@"Code"] intValue]==0) {
+//            _HasUnpayOrder = [response[@"Data"] intValue];
+//            NSLog(@"%i",_HasUnpayOrder);
+        }
+    }
+}
+
+
+-(void)checkUnpayOrder{
+    NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+    NSString * userToken = [userInfo valueForKey:USERTOKEN];
+    AFRquest * af = [AFRquest sharedInstance];
+    af.subURLString =[NSString stringWithFormat:@"api/Orders/CheckUnpaidOrder?userToken=%@&deviceType=ios",userToken];
+    af.requestFlag = CheckUnpaidOrder;
+    af.style = POST;
+    [af requestDataFromServer];
 }
 /*
 #pragma mark - Navigation

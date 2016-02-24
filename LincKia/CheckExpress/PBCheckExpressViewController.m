@@ -21,8 +21,6 @@
     
     UINavigationController * navi = (UINavigationController *)self.navigationController;
     navi.tabBarController.tabBar.hidden = YES;
-    
-    
     //加载页面
     NSString * urlString = [NSString stringWithFormat:@"http://m.kuaidi100.com/index_all.html"];
     //NSString * urlString = [NSString stringWithFormat:@"http://www.kuaidi100.com/"];
@@ -37,6 +35,7 @@
 
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)back:(UIBarButtonItem *)sender {
     
     if ([self.expressCheckView canGoBack]) {
