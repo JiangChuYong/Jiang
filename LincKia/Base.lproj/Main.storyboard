@@ -1336,9 +1336,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" scalesPageToFit="YES" suppressesIncrementalRendering="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hah-oS-CZm">
+                            <webView opaque="NO" contentMode="scaleToFill" scalesPageToFit="YES" suppressesIncrementalRendering="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hah-oS-CZm">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="618"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="w0L-59-WsV" id="olQ-YA-f0o"/>
@@ -1368,7 +1368,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RH3-4B-xLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2240" y="-42"/>
+            <point key="canvasLocation" x="2260" y="46"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -1494,6 +1494,7 @@
                         <segue destination="xfP-fB-kum" kind="push" identifier="MemberToSendExpress" id="dcF-7F-b40"/>
                         <segue destination="pHQ-fU-FWS" kind="push" identifier="MemberToEnvironment" id="i2O-e8-GGQ"/>
                         <segue destination="w0L-59-WsV" kind="push" identifier="MemberToDiDi" id="yiF-nm-spy"/>
+                        <segue destination="W9d-YI-7zu" kind="push" identifier="MemberToExpressCheck" id="X91-yY-r6Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8d-1m-6XU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1671,6 +1672,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgo-Zy-dIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="764" y="1096"/>
+        </scene>
+        <!--快递查询-->
+        <scene sceneID="uXj-wq-HeJ">
+            <objects>
+                <viewController id="W9d-YI-7zu" userLabel="快递查询" customClass="PBCheckExpressViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vYG-n7-Yb4"/>
+                        <viewControllerLayoutGuide type="bottom" id="rrZ-Zn-lxR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JCf-gg-Lwy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView opaque="NO" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AEn-Hd-erS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="668"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="W9d-YI-7zu" id="T6T-uk-4eZ"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AEn-Hd-erS" firstAttribute="top" secondItem="JCf-gg-Lwy" secondAttribute="top" id="0SL-Bi-EOY"/>
+                            <constraint firstAttribute="trailing" secondItem="AEn-Hd-erS" secondAttribute="trailing" id="bZx-sd-Yin"/>
+                            <constraint firstItem="AEn-Hd-erS" firstAttribute="leading" secondItem="JCf-gg-Lwy" secondAttribute="leading" id="eeb-UR-64l"/>
+                            <constraint firstAttribute="bottom" secondItem="AEn-Hd-erS" secondAttribute="bottom" constant="-100" id="mYn-ob-tns"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="快递查询" id="uvI-Qv-awn">
+                        <barButtonItem key="leftBarButtonItem" image="title_back_unpressed.png" id="pds-pk-gNd">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="back:" destination="W9d-YI-7zu" id="fZL-fA-qau"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="expressCheckView" destination="AEn-Hd-erS" id="iJb-hY-aCL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aws-gE-n0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892" y="458"/>
         </scene>
     </scenes>
     <resources>

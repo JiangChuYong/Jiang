@@ -27,6 +27,7 @@
 		CD0178BA1C7C5A2F00B9DEC9 /* choiced_line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0178B51C7C5A2F00B9DEC9 /* choiced_line@3x.png */; };
 		CD0178BB1C7C5A2F00B9DEC9 /* ico_make.png in Resources */ = {isa = PBXBuildFile; fileRef = CD0178B61C7C5A2F00B9DEC9 /* ico_make.png */; };
 		CD0178BC1C7C5A2F00B9DEC9 /* JSDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0178B81C7C5A2F00B9DEC9 /* JSDropDownMenu.m */; };
+		CD0F15A81C7D7FF500AE74FB /* PBCheckExpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0F15A71C7D7FF500AE74FB /* PBCheckExpressViewController.m */; };
 		CD1D57231C71BDB700BB30AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57221C71BDB700BB30AC /* main.m */; };
 		CD1D57261C71BDB700BB30AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57251C71BDB700BB30AC /* AppDelegate.m */; };
 		CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1D57281C71BDB700BB30AC /* HomePageViewController.m */; };
@@ -264,6 +265,8 @@
 		CD0178B61C7C5A2F00B9DEC9 /* ico_make.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_make.png; sourceTree = "<group>"; };
 		CD0178B71C7C5A2F00B9DEC9 /* JSDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDropDownMenu.h; sourceTree = "<group>"; };
 		CD0178B81C7C5A2F00B9DEC9 /* JSDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDropDownMenu.m; sourceTree = "<group>"; };
+		CD0F15A61C7D7FF500AE74FB /* PBCheckExpressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCheckExpressViewController.h; sourceTree = "<group>"; };
+		CD0F15A71C7D7FF500AE74FB /* PBCheckExpressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCheckExpressViewController.m; sourceTree = "<group>"; };
 		CD1D571E1C71BDB700BB30AC /* LincKia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LincKia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1D57221C71BDB700BB30AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD1D57241C71BDB700BB30AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -570,6 +573,15 @@
 			path = JSDropDownMenu;
 			sourceTree = "<group>";
 		};
+		CD0F15A51C7D7FD500AE74FB /* CheckExpress */ = {
+			isa = PBXGroup;
+			children = (
+				CD0F15A61C7D7FF500AE74FB /* PBCheckExpressViewController.h */,
+				CD0F15A71C7D7FF500AE74FB /* PBCheckExpressViewController.m */,
+			);
+			path = CheckExpress;
+			sourceTree = "<group>";
+		};
 		CD1D57151C71BDB700BB30AC = {
 			isa = PBXGroup;
 			children = (
@@ -600,6 +612,7 @@
 		CD1D57201C71BDB700BB30AC /* LincKia */ = {
 			isa = PBXGroup;
 			children = (
+				CD0F15A51C7D7FD500AE74FB /* CheckExpress */,
 				CDC954B51C7C683400D2D7D1 /* DiDi */,
 				CD29E92B1C7B02C700871F69 /* Environment */,
 				CDCE9F391C7AA4A60026950F /* SendExpress */,
@@ -1335,6 +1348,7 @@
 				65B419741C75D1BF00FA817B /* PBCompanyListTableViewCell.m in Sources */,
 				65B4196F1C75D18600FA817B /* PBCompanyListViewController.m in Sources */,
 				CD6945031C75C89600E04081 /* PBMineTableViewSingleLineCell.m in Sources */,
+				CD0F15A81C7D7FF500AE74FB /* PBCheckExpressViewController.m in Sources */,
 				CD6944EC1C75BDE500E04081 /* PBButtonChooseCell.m in Sources */,
 				65B419641C75C25200FA817B /* PBCollectionCell.m in Sources */,
 				CD6944EE1C75BDE500E04081 /* ZZSpaceRecommendCellTableViewCell.m in Sources */,

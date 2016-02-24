@@ -62,7 +62,12 @@ typedef enum{
     _currentaAQType = PM;
     [self interfaceOptimization];
     [self setButtonUIAndDisplayLabForChanging];
-    [self AQTypeBtnPressed:_PMBtn];
+    
+    dispatch_queue_t highLevelQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+    dispatch_async(highLevelQueue, ^{
+        [self AQTypeBtnPressed:_PMBtn];
+    }); 
+    
 }
 
 #pragma -- mark  按钮的响应事件
