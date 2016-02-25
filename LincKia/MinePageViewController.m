@@ -43,6 +43,7 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     }else{
         _HasUnpayOrder = NO;
         [self checkUnpayOrder];
+        [self getUserInfoData];
     }
 }
 - (void)viewDidLoad {
@@ -132,47 +133,6 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     
 }
 
-#pragma -- mark CHECK USER INFO
-
-
--(void)dataReceived:(NSNotification *)notif{
-//    if ([flag intValue] == UsersLogin) {
-//        
-//        NSDictionary * response = _Login.resultDict;
-//
-//        _userInfoDic = response[@"Data"];
-//
-//        NSString * userToken = _userInfoDic[@"UserToken"];
-//
-//        NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
-//
-//        [userInfo setValue:userToken forKey:USERTOKEN];
-//        
-//        [_table reloadData];
-//
-//    }
-//    
-//    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",UsersLogin] object:nil];
-    
-//    NSDictionary * response = [notif object];
-//    
-//    NSLog(@"%@",response);
-//
-//    if (_Login) {
-//
-
-//        
-//    }
-//
-//    if (_CheckUnpaidOrder) {
-//        
-//        if ([response[@"Code"] intValue]==0) {
-//        
-//            NSLog(@"%@",_CheckUnpaidOrder.resultDict);
-//        }
-//    }
-}
-
 #pragma -- mark CheckUnpayOrder Request
 
 -(void)checkUnpayOrder{
@@ -192,7 +152,8 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     NSLog(@"%@",_CheckUnpaidOrder.resultDict);
     int result = [_CheckUnpaidOrder.resultDict[@"Code"] intValue];;
     if (result == SUCCESS) {
-        _HasUnpayOrder = [_CheckUnpaidOrder.resultDict[@"Data"] boolValue];
+        NSNumber * unpay = _CheckUnpaidOrder.resultDict[@"Data"];
+        _HasUnpayOrder = [unpay intValue];
     }
     [_table reloadData];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",CheckUnpaidOrder] object:nil];
@@ -202,6 +163,19 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
 
 -(void)getUserInfoData{
     
+    NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+    NSString * userToken = [userInfo valueForKey:USERTOKEN];
+    _GetUserInfo = [[AFRquest alloc]init];
+    _GetUserInfo.subURLString =[NSString stringWithFormat:@"api/Users/GetUserInfo?userToken=%@&deviceType=ios",userToken];
+    _GetUserInfo.style = GET;
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(userInfoDataReceived:) name:[NSString stringWithFormat:@"%i",GetUserInfo] object:nil];
+    [_GetUserInfo requestDataFromWithFlag:GetUserInfo];
+}
+
+-(void)userInfoDataReceived:(NSNotification *)notif{
+    NSLog(@"%@",_GetUserInfo.resultDict);
+    _userInfoDic = _GetUserInfo.resultDict[@"Data"];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetUserInfo] object:nil];
 }
 
 /*
