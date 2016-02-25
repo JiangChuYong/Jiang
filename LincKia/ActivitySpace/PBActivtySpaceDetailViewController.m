@@ -130,7 +130,9 @@ static NSString *bannerCellIDKey = @"PBADBannerCellTableViewCell";
 //    
 //    [self.navigationController pushViewController:VC animated:YES];
     
-    
+    [JCYGlobalData sharedInstance].activeSpaceInfo=_responseDataOfIndexDict;
+
+    [self performSegueWithIdentifier:@"IntroduceToOrdBooking" sender:self];
 }
 - (void)phoneButtonPressed:(UIButton *)sender {
     NSString * phoneNum = [NSString stringWithFormat:@"telprompt://%@",_responseDataOfIndexDict[@"Data"][@"phoneNum"]];

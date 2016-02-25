@@ -121,6 +121,9 @@
 //清除背景色
 #define CLEARCOLOR [UIColor clearColor]
 
+///半透明黑色
+#define HalfClearColor [UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.8]
+
 //----------------------颜色类--------------------------
 
 

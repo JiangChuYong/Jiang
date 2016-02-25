@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -83,7 +83,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="83L-yq-m77" userLabel="locationICON">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map.png" translatesAutoresizingMaskIntoConstraints="NO" id="83L-yq-m77" userLabel="locationICON">
                                 <rect key="frame" x="15" y="16" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="22" id="QrX-g0-F8c"/>
@@ -148,6 +148,6 @@
     <resources>
         <image name="arrow.png" width="15" height="40"/>
         <image name="line.png" width="319" height="13"/>
-        <image name="map@3x.png" width="86" height="86"/>
+        <image name="map.png" width="28" height="28"/>
     </resources>
 </document>

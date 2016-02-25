@@ -92,7 +92,8 @@
 #pragma mark -- ACTION PART
 //返回
 - (IBAction)backBtnPress:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    UINavigationController *navi=(UINavigationController *)self.parentViewController;
+    [navi popViewControllerAnimated:YES];
 }
 
 @end

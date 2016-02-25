@@ -28,5 +28,9 @@ SingletonH(JCYGlobalData)
 @property (strong,nonatomic) NSDictionary *spaceDetailInfo;
 //登陆状态判断
 @property (assign,nonatomic) BOOL LoginStatus;
+//日历可选日期控制
+@property (assign, nonatomic) int validDays;
 
+//时间大小遍历
++(NSMutableArray *)filterTimeArray:(NSMutableArray *)timeArray;
 @end

@@ -31,6 +31,8 @@ typedef enum{
     ActiveSpaceGetOne=8,
     //检查是否有未支付订单
     CheckUnpaidOrder=9,
+    //活动空间预约参观
+    VisitActiveSpace=10,
 }RequestFlag;
 
 #endif /* RequestFlag_h */

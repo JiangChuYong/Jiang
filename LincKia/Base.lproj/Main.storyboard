@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -273,6 +273,7 @@
                         <outlet property="tableView" destination="xbi-zf-tpP" id="e2d-3Z-XQM"/>
                         <segue destination="qnD-u2-qVL" kind="push" identifier="IntroduceToInfo" id="aB6-nA-ZwF"/>
                         <segue destination="btX-Nf-qRQ" kind="push" identifier="IntroduceToHard" id="0Jz-QI-DBn"/>
+                        <segue destination="WVa-i6-Wg7" kind="push" identifier="IntroduceToOrdBooking" id="R22-XI-u3Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSv-cJ-Wn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -391,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vo6-MD-7Vy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2491" y="-1333"/>
+            <point key="canvasLocation" x="2847" y="-1857"/>
         </scene>
         <!--空间设施-->
         <scene sceneID="DNi-mc-AcJ">
@@ -469,7 +470,202 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZu-gT-DFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2476" y="-701"/>
+            <point key="canvasLocation" x="2847" y="-1217"/>
+        </scene>
+        <!--预约参观-->
+        <scene sceneID="T3S-AC-yQ2">
+            <objects>
+                <viewController title="预约参观" id="WVa-i6-Wg7" customClass="PBActiveSpaceBookingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CDt-eu-e7a"/>
+                        <viewControllerLayoutGuide type="bottom" id="sg9-WK-WgN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CTz-gP-LLL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFI-bd-Uta">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itl-N4-sox" customClass="PBButton">
+                                        <rect key="frame" x="15" y="31" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="ZZI-Wn-wy0"/>
+                                            <constraint firstAttribute="width" constant="22" id="dK1-kh-58r"/>
+                                        </constraints>
+                                        <state key="normal" image="title_back_unpressed.png"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="WVa-i6-Wg7" eventType="touchUpInside" id="e0S-a2-Q2o"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="预约参观" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7f-au-Pbw">
+                                        <rect key="frame" x="126" y="32" width="68" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.26666666666666666" green="0.59607843137254901" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="s7f-au-Pbw" firstAttribute="centerY" secondItem="itl-N4-sox" secondAttribute="centerY" id="MJg-Eu-cgV"/>
+                                    <constraint firstAttribute="height" constant="64" id="XQj-UY-arB"/>
+                                    <constraint firstItem="s7f-au-Pbw" firstAttribute="centerX" secondItem="sFI-bd-Uta" secondAttribute="centerX" id="jsb-N5-sPX"/>
+                                    <constraint firstItem="itl-N4-sox" firstAttribute="top" secondItem="sFI-bd-Uta" secondAttribute="top" constant="31" id="nfc-7K-IIS"/>
+                                    <constraint firstItem="itl-N4-sox" firstAttribute="leading" secondItem="sFI-bd-Uta" secondAttribute="leading" constant="15" id="x9f-qP-AXJ"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottom_line.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ns0-KD-dK1">
+                                <rect key="frame" x="0.0" y="493" width="320" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="TFT-ca-29G"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D9b-Y8-RfX" userLabel="footerview">
+                                <rect key="frame" x="0.0" y="498" width="320" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyb-dt-G8n">
+                                        <rect key="frame" x="15" y="10" width="290" height="50"/>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.71372549019999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="立即预约">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="bookingButtonPressed:" destination="WVa-i6-Wg7" eventType="touchUpInside" id="pey-Sg-XGp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Pyb-dt-G8n" firstAttribute="top" secondItem="D9b-Y8-RfX" secondAttribute="top" constant="10" id="1sU-mT-C30"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pyb-dt-G8n" secondAttribute="bottom" constant="10" id="3aL-hP-RPI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pyb-dt-G8n" secondAttribute="trailing" constant="15" id="8FK-1M-jTQ"/>
+                                    <constraint firstAttribute="height" constant="70" id="VGr-iU-ZOH"/>
+                                    <constraint firstItem="Pyb-dt-G8n" firstAttribute="leading" secondItem="D9b-Y8-RfX" secondAttribute="leading" constant="15" id="pWE-63-xmg"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="42" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kae-qB-Kw1">
+                                <rect key="frame" x="0.0" y="64" width="320" height="429"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="WVa-i6-Wg7" id="lhM-W8-2du"/>
+                                    <outlet property="delegate" destination="WVa-i6-Wg7" id="940-Xe-IrD"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFs-7F-fjF" userLabel="picker view">
+                                <rect key="frame" x="0.0" y="588" width="320" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MJf-Cx-M6c">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tEi-yq-1Gc">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                                <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="d5I-E2-GWn"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9A-Pi-mV7" customClass="PBButton">
+                                                <rect key="frame" x="261" y="1" width="44" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="KKd-5t-fWg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="确定">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="confirmOrCancelButtonPressed:" destination="WVa-i6-Wg7" eventType="touchUpInside" id="tdk-De-XbU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jii-RI-Cn1" customClass="PBButton">
+                                                <rect key="frame" x="15" y="0.0" width="44" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="kPa-4Z-bQ3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="取消">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="confirmOrCancelButtonPressed:" destination="WVa-i6-Wg7" eventType="touchUpInside" id="xWt-PY-hcp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="h9A-Pi-mV7" secondAttribute="bottom" id="H2Y-rY-ymx"/>
+                                            <constraint firstItem="tEi-yq-1Gc" firstAttribute="leading" secondItem="MJf-Cx-M6c" secondAttribute="leading" id="JVn-nZ-RJ4"/>
+                                            <constraint firstAttribute="trailing" secondItem="tEi-yq-1Gc" secondAttribute="trailing" id="eyH-nn-Nr4"/>
+                                            <constraint firstItem="jii-RI-Cn1" firstAttribute="top" secondItem="MJf-Cx-M6c" secondAttribute="top" id="f9I-am-Re6"/>
+                                            <constraint firstItem="tEi-yq-1Gc" firstAttribute="top" secondItem="MJf-Cx-M6c" secondAttribute="top" id="kOj-e0-cZd"/>
+                                            <constraint firstAttribute="bottom" secondItem="jii-RI-Cn1" secondAttribute="bottom" id="mk2-bc-Jpy"/>
+                                            <constraint firstItem="jii-RI-Cn1" firstAttribute="leading" secondItem="MJf-Cx-M6c" secondAttribute="leading" constant="15" id="rXv-EF-xBc"/>
+                                            <constraint firstAttribute="height" constant="35" id="syx-re-WDG"/>
+                                            <constraint firstItem="h9A-Pi-mV7" firstAttribute="top" secondItem="tEi-yq-1Gc" secondAttribute="bottom" id="tX6-nG-vJQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="h9A-Pi-mV7" secondAttribute="trailing" constant="15" id="y05-ml-MqM"/>
+                                        </constraints>
+                                    </view>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fie-38-hwx">
+                                        <rect key="frame" x="0.0" y="35" width="320" height="165"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="WVa-i6-Wg7" id="wvg-9c-qa9"/>
+                                            <outlet property="delegate" destination="WVa-i6-Wg7" id="sBa-77-ElB"/>
+                                        </connections>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Fie-38-hwx" secondAttribute="bottom" id="7SW-qq-Ne0"/>
+                                    <constraint firstItem="MJf-Cx-M6c" firstAttribute="top" secondItem="MFs-7F-fjF" secondAttribute="top" id="NlI-th-rGk"/>
+                                    <constraint firstItem="MJf-Cx-M6c" firstAttribute="leading" secondItem="MFs-7F-fjF" secondAttribute="leading" id="S4a-Os-kSR"/>
+                                    <constraint firstAttribute="height" constant="200" id="YCK-kH-XYB"/>
+                                    <constraint firstItem="Fie-38-hwx" firstAttribute="leading" secondItem="MFs-7F-fjF" secondAttribute="leading" id="ZeB-Mz-FvW"/>
+                                    <constraint firstAttribute="trailing" secondItem="MJf-Cx-M6c" secondAttribute="trailing" id="oLm-4R-cvk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fie-38-hwx" secondAttribute="trailing" id="ui1-OX-Ofb"/>
+                                    <constraint firstItem="Fie-38-hwx" firstAttribute="top" secondItem="MJf-Cx-M6c" secondAttribute="bottom" id="v5e-qP-J6j"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sFI-bd-Uta" firstAttribute="top" secondItem="CTz-gP-LLL" secondAttribute="top" id="0xM-j4-B8C"/>
+                            <constraint firstItem="sFI-bd-Uta" firstAttribute="leading" secondItem="CTz-gP-LLL" secondAttribute="leading" id="1Jc-Xi-SuZ"/>
+                            <constraint firstItem="MFs-7F-fjF" firstAttribute="leading" secondItem="CTz-gP-LLL" secondAttribute="leading" id="2da-01-tIw"/>
+                            <constraint firstAttribute="trailing" secondItem="sFI-bd-Uta" secondAttribute="trailing" id="4wy-10-oix"/>
+                            <constraint firstAttribute="trailing" secondItem="Ns0-KD-dK1" secondAttribute="trailing" id="6E1-uj-MZu"/>
+                            <constraint firstItem="kae-qB-Kw1" firstAttribute="top" secondItem="sFI-bd-Uta" secondAttribute="bottom" id="7Pc-HQ-HCZ"/>
+                            <constraint firstAttribute="trailing" secondItem="D9b-Y8-RfX" secondAttribute="trailing" id="OZH-rP-W78"/>
+                            <constraint firstItem="Ns0-KD-dK1" firstAttribute="top" secondItem="kae-qB-Kw1" secondAttribute="bottom" id="adW-8b-xO2"/>
+                            <constraint firstAttribute="trailing" secondItem="MFs-7F-fjF" secondAttribute="trailing" id="bzz-sj-ywg"/>
+                            <constraint firstItem="MFs-7F-fjF" firstAttribute="top" secondItem="D9b-Y8-RfX" secondAttribute="bottom" constant="20" id="cxZ-zy-rW1"/>
+                            <constraint firstItem="kae-qB-Kw1" firstAttribute="leading" secondItem="CTz-gP-LLL" secondAttribute="leading" id="dPv-4b-pnn"/>
+                            <constraint firstAttribute="trailing" secondItem="kae-qB-Kw1" secondAttribute="trailing" id="hO0-EY-2s8"/>
+                            <constraint firstItem="sg9-WK-WgN" firstAttribute="top" secondItem="D9b-Y8-RfX" secondAttribute="bottom" id="j4D-R0-w7n"/>
+                            <constraint firstItem="D9b-Y8-RfX" firstAttribute="top" secondItem="Ns0-KD-dK1" secondAttribute="bottom" id="kx9-tn-9lV"/>
+                            <constraint firstItem="Ns0-KD-dK1" firstAttribute="leading" secondItem="CTz-gP-LLL" secondAttribute="leading" id="vdf-Og-bWx"/>
+                            <constraint firstItem="D9b-Y8-RfX" firstAttribute="leading" secondItem="CTz-gP-LLL" secondAttribute="leading" id="xBZ-Xh-3Ep"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="U3E-rU-9Dn"/>
+                    <connections>
+                        <outlet property="headview" destination="sFI-bd-Uta" id="cCJ-OU-AsJ"/>
+                        <outlet property="picker" destination="Fie-38-hwx" id="BPK-54-9lL"/>
+                        <outlet property="pickerCancel" destination="jii-RI-Cn1" id="cbp-yk-jIP"/>
+                        <outlet property="pickerSure" destination="h9A-Pi-mV7" id="jRl-Rd-lDe"/>
+                        <outlet property="pickerView" destination="MFs-7F-fjF" id="Plw-hq-2bb"/>
+                        <outlet property="tableView" destination="kae-qB-Kw1" id="bdc-pa-99I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="taW-s3-pfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2847" y="-572"/>
         </scene>
         <!--企业服务-->
         <scene sceneID="ffO-HD-tnt">
@@ -1304,6 +1500,7 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="AQNumLab" destination="0eG-tf-ith" id="kad-w4-vOI"/>
                         <outlet property="EPABtn" destination="5Ep-fi-NN4" id="TSG-Cx-0XX"/>
@@ -1426,7 +1623,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EfS-vT-H7N">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="5St-Ob-qhh">
                                     <size key="itemSize" width="75" height="105"/>
@@ -1487,7 +1684,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="会员" id="OPY-U0-G5G"/>
-                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collection" destination="EfS-vT-H7N" id="ZEY-QM-jn1"/>
                         <segue destination="3PK-Ra-LPo" kind="push" identifier="MemberToLogin" id="gUA-3g-ppz"/>

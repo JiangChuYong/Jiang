@@ -114,6 +114,7 @@
 */
 
 - (IBAction)bactToLastPage:(UIButton *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    UINavigationController *navi=(UINavigationController *)self.parentViewController;
+    [navi popViewControllerAnimated:YES];
 }
 @end
