@@ -17,20 +17,16 @@ typedef enum{
     GET,
 }CONNECT_STYLE;
 
-#define SERVER_IP @"http://112.74.75.66/OfficeAPI/"
-#define CONNECTED @"connected"
+/**
+ *请求结果
+ */
+#define SUCCESS 0
+#define FAILURE 1
 
-//网络加载通知控制
-#define START_OBSERVE_CONNECTION     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:CONNECTED object:nil];
-#define STOP_OBSERVE_CONNECTION         [[NSNotificationCenter defaultCenter]removeObserver:self name:CONNECTED object:nil];
-#define POST_NOTIFICATION         [[NSNotificationCenter defaultCenter]postNotificationName:CONNECTED object:_resultDict];
+#define SERVER_IP @"http://112.74.75.66/OfficeAPI/"
 //提示框控制
 #define SHOW_LOADING  [[PBAlert sharedInstance]showProgressDialogText:@"加载中..." inView:self.view];
 #define STOP_LOADING  [[PBAlert sharedInstance]stopHud];
-
-
-
-
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking.h>
@@ -38,7 +34,6 @@ typedef enum{
 #import "RequestFlag.h"
 
 @interface AFRquest : NSObject
-SingletonH(AFRquest);
 
 @property (strong,nonatomic) AppDelegate * appDelegate;
 @property (strong,nonatomic) NSString * IPADRESS;
@@ -49,12 +44,11 @@ SingletonH(AFRquest);
 @property (assign,nonatomic) CONNECT_STYLE style;
 @property (strong,nonatomic) NSDictionary *parameters;
 @property (strong,nonatomic) NSString * subURLString;
-@property (assign,nonatomic) RequestFlag requestFlag;
 /**
  *以下为接收结果的属性
  */
 @property (strong,nonatomic) NSDictionary * resultDict;
 
--(void)requestDataFromServer;
+-(void)requestDataFromWithFlag:(int)flag;
 
 @end

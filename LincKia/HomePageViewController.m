@@ -6,11 +6,13 @@
 //  Copyright © 2016年 Phoebe. All rights reserved.
 //
 
+#import "LoginViewController.h"
 #import "HomePageViewController.h"
 #import "ZZSpaceRecommendCellTableViewCell.h"
 #import "PBADBannerCellTableViewCell.h"
 #import "PBButtonChooseCell.h"
 #import "PBIndustryViewController.h"
+
 @interface HomePageViewController ()
 
 @property (strong, nonatomic) IBOutlet UITableView *listTableView;
@@ -19,10 +21,15 @@
 @property (strong, nonatomic) NSMutableArray * spaceSummaryInfoArr;
 @property (strong, nonatomic) PBADBannerCellTableViewCell *adcell;
 
+@property (strong,nonatomic) AFRquest * SpacesGetIndex;
+
+@property (strong,nonatomic) AFRquest * Login;
+
 
 @end
 
 @implementation HomePageViewController
+
 static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
 static NSString *ADCellIDKey = @"PBADBannerCellTableViewCell";
 static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
@@ -41,7 +48,9 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     UINavigationController * navi = (UINavigationController *)self.parentViewController;
     navi.tabBarController.tabBar.hidden = NO;
     navi.navigationBar.hidden = YES;
+    navi.tabBarController.delegate = self;
     
+    [self checkLoginStatus];
 }
 
 - (void)viewDidLoad {
@@ -50,37 +59,22 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     [self registCell];
     _adsArr =[NSMutableArray array];
     _spaceSummaryInfoArr=[NSMutableArray array];
-    START_OBSERVE_CONNECTION
-    AFRquest * af = [AFRquest sharedInstance];
-    af.subURLString = @"api/Spaces/GetIndex?deviceType=ios&userToken=""";
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",GetIndex] object:nil];
+    _SpacesGetIndex = [[AFRquest alloc]init];;
+    _SpacesGetIndex.subURLString = @"api/Spaces/GetIndex?deviceType=ios&userToken=""";
     // af.parameters = @{@"Account":@"18602515155",@"Password":@"aaa111"};
-    af.requestFlag = GetIndex;
-    af.style = GET;
-    [af requestDataFromServer];
+    _SpacesGetIndex.style = GET;
+    [_SpacesGetIndex requestDataFromWithFlag:GetIndex];
 }
-
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    STOP_OBSERVE_CONNECTION
-}
-
-
 
 -(void)dataReceived:(NSNotification *)notif{
     
-    _responseDataOfIndexDict = [notif object];
-    if ([AFRquest sharedInstance].requestFlag == GetIndex) {
-        NSLog(@"flag == %i",[AFRquest sharedInstance].requestFlag);
-        NSLog(@"%@",_responseDataOfIndexDict);
-        
-        _adsArr=_responseDataOfIndexDict[@"Data"][@"ADs"];
-        
-        _spaceSummaryInfoArr=_responseDataOfIndexDict[@"Data"][@"Spaces"];
-        [_listTableView reloadData];
-    }
-    
+    _responseDataOfIndexDict = _SpacesGetIndex.resultDict;
+    _adsArr=_responseDataOfIndexDict[@"Data"][@"ADs"];
+    _spaceSummaryInfoArr=_responseDataOfIndexDict[@"Data"][@"Spaces"];
+    [_listTableView reloadData];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetIndex] object:nil];
 }
-
 
 #pragma -- mark UITABLEVIEW DELEGATE
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -101,9 +95,7 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"dfsf");
-    
+{    
     if (indexPath.row == 0) {
         
         PBADBannerCellTableViewCell * ADCell = [_listTableView dequeueReusableCellWithIdentifier:ADCellIDKey];
@@ -144,14 +136,14 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
 }
 
 //跳转至 企业服务页面
-- (void)pushToIndustryListPage:(UIButton *)sender
-{
+- (void)pushToIndustryListPage:(UIButton *)sender{
+    
     [self performSegueWithIdentifier:@"HomeToIndustry" sender:self];
 }
 
 //跳转至 活动空间页面
-- (void)activitySpaceButtonPressed:(UIButton *)sender
-{
+- (void)activitySpaceButtonPressed:(UIButton *)sender{
+    
     [self performSegueWithIdentifier:@"HomeToActivity" sender:self];
 }
 
@@ -170,5 +162,43 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)checkLoginStatus{
+    
+    NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+    NSString * userName = [userInfo valueForKey:USERNAME];
+    NSString * passWord = [userInfo valueForKey:PASSWORD];
+    NSLog(@"%@",userName);
+    NSLog(@"%@",passWord);
+    
+    if (userName && passWord) {
+        
+        [self autoLoginWith:userName andPassWord:passWord];
+        
+        [JCYGlobalData sharedInstance].LoginStatus = YES;
+    }else{
+        [JCYGlobalData sharedInstance].LoginStatus = NO;
+    }
+}
+
+
+-(void)autoLoginWith:(NSString *)account andPassWord:(NSString *)password{
+    
+    _Login = [[AFRquest alloc]init];
+    _Login.subURLString = @"api/Users/Login?deviceType=ios";
+    _Login.parameters = @{@"Account":account,@"Password":password};
+    _Login.style = POST;
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(userInfoDataReceived:) name:[NSString stringWithFormat:@"%i",UsersLogin] object:nil];
+    [_Login requestDataFromWithFlag:UsersLogin];
+ 
+
+}
+
+-(void)userInfoDataReceived:(NSNotification *)notif{
+ 
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",UsersLogin] object:nil];
+    NSLog(@"%@",_Login.resultDict);
+}
 
 @end

@@ -23,11 +23,17 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
+    
+    
     [super viewWillAppear:animated];
     UINavigationController * navi = (UINavigationController *)self.parentViewController;
     navi.tabBarController.tabBar.hidden = NO;
     
+    if (![JCYGlobalData sharedInstance].LoginStatus) {
+        [self performSegueWithIdentifier:@"MemberToLogin" sender:self];
+    }
+    
+
 }
 #pragma -- mark CollectionView Delegate
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{

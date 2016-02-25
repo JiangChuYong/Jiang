@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIView *nodataView;
 @property (strong ,nonatomic) NSDictionary *responseDataOfIndexDict;
 
+@property (strong,nonatomic) AFRquest * GetLinckiaPartnerList;
+
 @end
 
 @implementation PBCompanyListViewController
@@ -26,27 +28,19 @@ static NSString *identifier=@"PBCompanyListTableViewCell";
     [super viewDidLoad];
 }
 
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    STOP_OBSERVE_CONNECTION
-}
-
 -(void)viewWillAppear:(BOOL)animated
 {
     _titleLabel.text = [JCYGlobalData sharedInstance].industryName;
 //    [[ZZAllService sharedInstance] serviceQueryByObj:@{@"Page":@1,@"Rows":@10,@"SortProperty":@"Name",@"SortDirection":@"asc",@"industryId":[ZZGlobalModel sharedInstance].industryId} delegate:self httpTag:HTTPHelperTag_Spaces_GetLinckiaPartnerList];
     
     [self.companyTableView registerNib:[UINib nibWithNibName:@"PBCompanyListTableViewCell" bundle:nil] forCellReuseIdentifier:identifier];
-    START_OBSERVE_CONNECTION
-    AFRquest * af = [AFRquest sharedInstance];
-    af.subURLString = @"api/Industry/GetLinckiaPartnerList?userToken=""&deviceType=ios";
-    af.parameters = @{@"Page":@1,@"Rows":@10,@"SortProperty":@"Name",@"SortDirection":@"asc",@"industryId":[JCYGlobalData sharedInstance].industryId};
-    af.requestFlag = GetLinckiaPartnerList;
-    af.style = GET;
-    [af requestDataFromServer];
-    
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetLinckiaPartnerList] object:nil];
 
-    
+    _GetLinckiaPartnerList = [[AFRquest alloc]init];
+    _GetLinckiaPartnerList.subURLString = @"api/Industry/GetLinckiaPartnerList?userToken=""&deviceType=ios";
+    _GetLinckiaPartnerList.parameters = @{@"Page":@1,@"Rows":@10,@"SortProperty":@"Name",@"SortDirection":@"asc",@"industryId":[JCYGlobalData sharedInstance].industryId};
+    _GetLinckiaPartnerList.style = GET;
+    [_GetLinckiaPartnerList requestDataFromWithFlag:GetLinckiaPartnerList];
     
 }
 
@@ -54,8 +48,7 @@ static NSString *identifier=@"PBCompanyListTableViewCell";
 -(void)dataReceived:(NSNotification *)notif{
     
     _responseDataOfIndexDict = [notif object];
-    if ([AFRquest sharedInstance].requestFlag == GetLinckiaPartnerList) {
-        NSLog(@"flag == %i",[AFRquest sharedInstance].requestFlag);
+    if (_GetLinckiaPartnerList) {
         NSLog(@"%@",_responseDataOfIndexDict);
         
         _companyListArray=_responseDataOfIndexDict[@"Data"][@"Data"];
@@ -69,7 +62,8 @@ static NSString *identifier=@"PBCompanyListTableViewCell";
         }
 
     }
-    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",GetLinckiaPartnerList] object:nil];
+
 }
 
 

@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *phone;
 @property (weak, nonatomic) IBOutlet UITextField *password;
 
+@property (strong,nonatomic) AFRquest * Login;
+
 @end
 
 
@@ -41,39 +43,39 @@
     if (_password.text.length < 6) {
         return NO;
     }
-    
     return YES;
 }
 -(void)requestData{
-    START_OBSERVE_CONNECTION
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",UsersLogin] object:nil];
     SHOW_LOADING
-    AFRquest * af = [AFRquest sharedInstance];
-    af.subURLString = @"api/Users/Login?deviceType=ios";
-    af.parameters = @{@"Account":_phone.text,@"Password":_password.text};
-    af.requestFlag = UsersLogin;
-    af.style = POST;
-    [af requestDataFromServer];
+    _Login = [[AFRquest alloc]init];
+    _Login.subURLString = @"api/Users/Login?deviceType=ios";
+    _Login.parameters = @{@"Account":_phone.text,@"Password":_password.text};
+    _Login.style = POST;
+    [_Login requestDataFromWithFlag:UsersLogin];
 }
 
 -(void)dataReceived:(NSNotification *)notif{
-    NSLog(@"%@",[notif object]);
+    
     STOP_LOADING
-    NSDictionary * userInfo = [notif object];
+    NSDictionary * userInfo = _Login.resultDict;
     NSDictionary * data = userInfo[@"Data"];
-    if ([AFRquest sharedInstance].requestFlag == UsersLogin) {
-        NSNumber * code = userInfo[@"Code"];
-        if ([code intValue] == 0) {
-            [self.navigationController popViewControllerAnimated:YES];
-            NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
-            [user setValue:_phone.text forKey:USERNAME];
-            [user setValue:_password.text forKey:PASSWORD];
-            [user setValue:data[@"UserToken"] forKey:USERTOKEN];
-            [user synchronize];
-        }else{
-            NSString * errorInfo = userInfo[@"Description"];
-            [[PBAlert sharedInstance]showText:errorInfo inView:self.view withTime:2.0];
-        }
+    NSNumber * code = userInfo[@"Code"];
+    if ([code intValue] == 0) {
+        NSUserDefaults * user = [NSUserDefaults standardUserDefaults];
+        [user setValue:_phone.text forKey:USERNAME];
+        [user setValue:_password.text forKey:PASSWORD];
+        [user setValue:data[@"UserToken"] forKey:USERTOKEN];
+        [user synchronize];
+        [JCYGlobalData sharedInstance].LoginStatus = YES;
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        NSString * errorInfo = userInfo[@"Description"];
+        [[PBAlert sharedInstance]showText:errorInfo inView:self.view withTime:2.0];
     }
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",UsersLogin] object:nil];
+
 }
 #pragma -- mark Button Action
 

@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *phoneButton;
 @property (strong, nonatomic) NSDictionary *responseDataOfIndexDict;
 
+@property (strong,nonatomic) AFRquest * GetLinckiaPartnerInfo;
+
 @end
 
 @implementation PBCompanyDetailViewController
@@ -38,13 +40,12 @@
 -(void)viewWillAppear:(BOOL)animated
 {
 
-    START_OBSERVE_CONNECTION
-    AFRquest * af = [AFRquest sharedInstance];
-    af.subURLString = @"api/LinckiaPartner/GetLinckiaPartnerInfo?userToken""&deviceType=ios";
-    af.parameters = @{@"linckiaPartnerId":[JCYGlobalData sharedInstance].companyID};
-    af.requestFlag = GetLinckiaPartnerInfo;
-    af.style = GET;
-    [af requestDataFromServer];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",GetLinckiaPartnerInfo] object:nil];
+    _GetLinckiaPartnerInfo = [[AFRquest alloc]init];
+    _GetLinckiaPartnerInfo.subURLString = @"api/LinckiaPartner/GetLinckiaPartnerInfo?userToken""&deviceType=ios";
+    _GetLinckiaPartnerInfo.parameters = @{@"linckiaPartnerId":[JCYGlobalData sharedInstance].companyID};
+    _GetLinckiaPartnerInfo.style = GET;
+    [_GetLinckiaPartnerInfo requestDataFromWithFlag:GetLinckiaPartnerInfo];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -54,22 +55,10 @@
 -(void)dataReceived:(NSNotification *)notif{
     
     _responseDataOfIndexDict = [notif object];
-    if ([AFRquest sharedInstance].requestFlag == GetLinckiaPartnerInfo) {
-        NSLog(@"flag == %i",[AFRquest sharedInstance].requestFlag);
-        NSLog(@"33333%@",_responseDataOfIndexDict);
-        
-        
-        [self dealWithPartnerInfo:_responseDataOfIndexDict[@"Data"]];
-        
-    }
-    
+    [self dealWithPartnerInfo:_responseDataOfIndexDict[@"Data"]];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetLinckiaPartnerInfo] object:nil];
 }
 
-
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    STOP_OBSERVE_CONNECTION
-}
 
 #pragma -- mark SCROLLVIEW DELEGATE
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView

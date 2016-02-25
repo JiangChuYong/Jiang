@@ -16,15 +16,12 @@
 @interface PBIndustryViewController ()
 @property (strong,nonatomic) NSMutableArray * industryArray;
 @property (strong,nonatomic) NSDictionary *responseDataOfIndexDict;
+@property (strong,nonatomic) AFRquest * GetIndustryList;
 
 @end
 
 @implementation PBIndustryViewController
 
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    STOP_OBSERVE_CONNECTION
-}
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     UINavigationController * navi = (UINavigationController *)self.parentViewController;
@@ -35,13 +32,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    START_OBSERVE_CONNECTION
-    AFRquest * af = [AFRquest sharedInstance];
-    af.subURLString = @"api/Industry/GetIndustryList?userToken=""&deviceType=ios";
-     af.parameters = @{@"Page":@1,@"Rows":@10,@"SortProperty":@"Name",@"SortDirection":@"asc"};
-    af.requestFlag = GetIndustryList;
-    af.style = GET;
-    [af requestDataFromServer];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetIndustryList] object:nil];
+    _GetIndustryList = [[AFRquest alloc]init];
+    _GetIndustryList.subURLString = @"api/Industry/GetIndustryList?userToken=""&deviceType=ios";
+     _GetIndustryList.parameters = @{@"Page":@1,@"Rows":@10,@"SortProperty":@"Name",@"SortDirection":@"asc"};
+    _GetIndustryList.style = GET;
+    [_GetIndustryList requestDataFromWithFlag:GetIndustryList];
 
     [self.collectionView registerClass:[PBCollectionCell class] forCellWithReuseIdentifier:@"CollectionCell"];
    
@@ -50,16 +46,15 @@
 
 -(void)dataReceived:(NSNotification *)notif{
     
-        _responseDataOfIndexDict = [notif object];
-        if ([AFRquest sharedInstance].requestFlag == GetIndustryList) {
-            NSLog(@"flag == %i",[AFRquest sharedInstance].requestFlag);
-            NSLog(@"%@",_responseDataOfIndexDict);
+    _responseDataOfIndexDict = _GetIndustryList.resultDict;
     
-            _industryArray=_responseDataOfIndexDict[@"Data"][@"Data"];
+    NSLog(@"%@",_responseDataOfIndexDict);
+
+    _industryArray=_responseDataOfIndexDict[@"Data"][@"Data"];
+
+    [_collectionView reloadData];
     
-            [_collectionView reloadData];
-        }
-    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",GetIndustryList] object:nil];
 }
 
 

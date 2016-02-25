@@ -19,6 +19,8 @@
 @property (assign,nonatomic) int focusTag;
 @property (strong,nonatomic) NSDictionary *responseDataOfIndexDict;
 
+@property (strong,nonatomic) AFRquest *GetActiveSpaceList;
+
 @end
 
 @implementation PBActivitySpaceListViewController
@@ -35,7 +37,6 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
     
     
     _currentTableViewPage = 1;
-    START_OBSERVE_CONNECTION
     [self requestData];
 }
 
@@ -65,42 +66,24 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
 #pragma -- mark REQUEST PART
 -(void)requestData
 {
-
-    
-    AFRquest * af = [AFRquest sharedInstance];
-    af.subURLString = @"api/ActiveSpace/GetActiveSpaceList?userToken=""&deviceType=ios";
-     af.parameters = @{@"p.Page":[NSNumber numberWithInt:_currentTableViewPage],@"p.Rows":[NSNumber numberWithInt:10],@"p.SortProperty":@"Name",@"p.SortDirection":@"asc"};
-    af.requestFlag = GetActiveSpaceList;
-    af.style = GET;
-    [af requestDataFromServer];
-    
+    _GetActiveSpaceList = [[AFRquest alloc]init];
+    _GetActiveSpaceList.subURLString = @"api/ActiveSpace/GetActiveSpaceList?userToken=""&deviceType=ios";
+     _GetActiveSpaceList.parameters = @{@"p.Page":[NSNumber numberWithInt:_currentTableViewPage],@"p.Rows":[NSNumber numberWithInt:10],@"p.SortProperty":@"Name",@"p.SortDirection":@"asc"};
+    _GetActiveSpaceList.style = GET;
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",GetActiveSpaceList] object:nil];
+    [_GetActiveSpaceList requestDataFromWithFlag:GetActiveSpaceList];
 }
-
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    STOP_OBSERVE_CONNECTION
-}
-
 
 
 -(void)dataReceived:(NSNotification *)notif{
     
-    _responseDataOfIndexDict = [notif object];
-    if ([AFRquest sharedInstance].requestFlag == GetActiveSpaceList) {
-        NSLog(@"flag == %i",[AFRquest sharedInstance].requestFlag);
-        NSLog(@"%@",_responseDataOfIndexDict);
-       // _currentDataArray=_responseDataOfIndexDict[@"Data"][@"Data"];
-
-        
-        [self dealResposeResult:_responseDataOfIndexDict[@"Data"][@"Data"]];
-        
-
-
-//
-//        _spaceSummaryInfoArr=_responseDataOfIndexDict[@"Data"][@"Spaces"];
-//        [_listTableView reloadData];
-    }
     
+    STOP_LOADING
+    _responseDataOfIndexDict = _GetActiveSpaceList.resultDict;
+    
+    [self dealResposeResult:_responseDataOfIndexDict[@"Data"][@"Data"]];
+
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetActiveSpaceList] object:nil];
 }
 
 

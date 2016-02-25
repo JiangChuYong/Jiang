@@ -28,6 +28,8 @@
 @property (strong,nonatomic) NSMutableArray *adsArr;
 @property (strong,nonatomic) NSMutableArray *facilitiesArr;
 
+@property (strong,nonatomic) AFRquest * ActiveSpace;
+
 @end
 
 @implementation PBActivtySpaceDetailViewController
@@ -259,51 +261,39 @@ static NSString *bannerCellIDKey = @"PBADBannerCellTableViewCell";
 {
     NSString * spaceId = [JCYGlobalData sharedInstance].ActivitySpaceId;
     NSLog(@"%@",spaceId);
-    START_OBSERVE_CONNECTION
-    AFRquest * af = [AFRquest sharedInstance];
-    af.subURLString = @"api/ActiveSpace/GetOne?userToken=""&deviceType=ios";
-    af.parameters = @{@"activeSpaceId":spaceId,@"language":@"cn"};
-    af.requestFlag = ActiveSpaceGetOne;
-    af.style = GET;
-    [af requestDataFromServer];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",ActiveSpaceGetOne] object:nil];
+    _ActiveSpace = [[AFRquest alloc]init];
+    _ActiveSpace.subURLString = @"api/ActiveSpace/GetOne?userToken=""&deviceType=ios";
+    _ActiveSpace.parameters = @{@"activeSpaceId":spaceId,@"language":@"cn"};
+    _ActiveSpace.style = GET;
+    [_ActiveSpace requestDataFromWithFlag:ActiveSpaceGetOne];
 }
 
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
-    STOP_OBSERVE_CONNECTION
-}
 
 
 
 -(void)dataReceived:(NSNotification *)notif{
     
-    _responseDataOfIndexDict = [notif object];
-    if ([AFRquest sharedInstance].requestFlag == ActiveSpaceGetOne) {
-        NSLog(@"flag == %i",[AFRquest sharedInstance].requestFlag);
-        NSLog(@"%@",_responseDataOfIndexDict);
-        // _currentDataArray=_responseDataOfIndexDict[@"Data"][@"Data"];
-        
-        
-        _adsArr=_responseDataOfIndexDict[@"Data"][@"pictures"];
-        _facilitiesArr=_responseDataOfIndexDict[@"Data"][@"facilities"];
-        
-        //判断是否提供硬件设施，是则加载cell,否责不加载
-        if (_facilitiesArr.count >0) {
-            _hasFacility = YES;
-        }else{
-            _hasFacility = NO;
-        }
-        
-        if ([_responseDataOfIndexDict[@"Data"][@"descriptions"] isEqualToString:@""]) {
-            _hasIntroString = NO;
-        }else{
-            _hasIntroString = YES;
-        }
-        [_tableView reloadData];
-        
-        
+    _responseDataOfIndexDict = _ActiveSpace.resultDict;
+
+    _adsArr=_responseDataOfIndexDict[@"Data"][@"pictures"];
+    _facilitiesArr=_responseDataOfIndexDict[@"Data"][@"facilities"];
+    
+    //判断是否提供硬件设施，是则加载cell,否责不加载
+    if (_facilitiesArr.count >0) {
+        _hasFacility = YES;
+    }else{
+        _hasFacility = NO;
     }
     
+    if ([_responseDataOfIndexDict[@"Data"][@"descriptions"] isEqualToString:@""]) {
+        _hasIntroString = NO;
+    }else{
+        _hasIntroString = YES;
+    }
+    [_tableView reloadData];
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",ActiveSpaceGetOne] object:nil];
 }
 
 

@@ -26,6 +26,7 @@ SingletonH(JCYGlobalData)
 @property (assign,nonatomic) BOOL isActiveSpace;
 //社区简介详细信息
 @property (strong,nonatomic) NSDictionary *spaceDetailInfo;
-
+//登陆状态判断
+@property (assign,nonatomic) BOOL LoginStatus;
 
 @end
