@@ -45,6 +45,7 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
         [self checkUnpayOrder];
         [self getUserInfoData];
     }
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
