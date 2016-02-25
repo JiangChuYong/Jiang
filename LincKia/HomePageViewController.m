@@ -191,12 +191,14 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(userInfoDataReceived:) name:[NSString stringWithFormat:@"%i",UsersLogin] object:nil];
     [_Login requestDataFromWithFlag:UsersLogin];
- 
 
 }
 
 -(void)userInfoDataReceived:(NSNotification *)notif{
- 
+    
+    NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+    NSDictionary * dict = _Login.resultDict[@"Data"];
+    [userInfo setValue:dict[@"UserToken"] forKey:USERTOKEN];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",UsersLogin] object:nil];
     NSLog(@"%@",_Login.resultDict);
 }
