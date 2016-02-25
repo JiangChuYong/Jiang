@@ -121,6 +121,10 @@ static NSString * lastCellIdKey = @"PBBookingTableViewSugestionCell";
 -(void)showCalendarView:(int)row
 {
     //日历弹出
+    //当要求不可选中xx天后的日历
+    //  [JCYGlobalData sharedInstance].validDays = 3;
+    //  viewController.hideAfterValidDay = YES;
+
     ZZCalendarViewController * viewController = [ZZCalendarViewController shareCalendarVC];
     viewController.hideBeforeToday = YES;
     [viewController.selectDayView cancleClickDayViewStyle];
