@@ -21,13 +21,16 @@
 
 @implementation LoginViewController
 
--(void)viewDidLoad{
-    [super viewDidLoad];
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     UINavigationController * navi = (UINavigationController *)self.navigationController;
     navi.tabBarController.tabBar.hidden = YES;
     navi.navigationBar.hidden = YES;
 }
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+}
 
 #pragma -- mark Private Methods
 -(BOOL)isRightPhoneNum{
@@ -46,7 +49,6 @@
     return YES;
 }
 -(void)requestData{
-    
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",UsersLogin] object:nil];
     SHOW_LOADING
     _Login = [[AFRquest alloc]init];
@@ -78,10 +80,11 @@
 
 }
 #pragma -- mark Button Action
-
-- (IBAction)backToLastPage:(UIButton *)sender {
+- (IBAction)backButtonPressed:(UIButton *)sender {
     
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    HomePageViewController * homeVC =[[HomePageViewController alloc]init];
+    [self.navigationController popToViewController:homeVC animated:YES];
+    
 }
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {

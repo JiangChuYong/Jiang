@@ -973,7 +973,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="title_back_unpressed.png"/>
                                 <connections>
-                                    <action selector="backToLastPage:" destination="3PK-Ra-LPo" eventType="touchUpInside" id="cXF-xg-9Mc"/>
+                                    <action selector="backButtonPressed:" destination="3PK-Ra-LPo" eventType="touchUpInside" id="Sqk-Wg-LX6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUS-cW-Pvz">
@@ -1745,6 +1745,6 @@
         <image name="users_textfield_unclicked.png" width="292" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gUA-3g-ppz"/>
+        <segue reference="huh-qE-qeJ"/>
     </inferredMetricsTieBreakers>
 </document>

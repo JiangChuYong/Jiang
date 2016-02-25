@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HomePageViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,13 @@
     // Override point for customization after application launch.
     self.manager = [AFHTTPRequestOperationManager manager];
     self.manager.responseSerializer = [[AFHTTPResponseSerializer alloc]init];
+    
+    
+    
+   // self.window.rootViewController = [[HomePageViewController alloc]init];
+    
+    NSLog(@"%@",self.window.rootViewController.class);
+
     return YES;
 }
 
