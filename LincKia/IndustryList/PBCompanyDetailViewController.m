@@ -7,13 +7,11 @@
 //
 
 #import "PBCompanyDetailViewController.h"
-//#import "LinckiaPartnerInfo.h"
-//#import "ResponseDataOfLinckiaPartnerInfo.h"
-//#import "CompanyContacts.h"
+
 
 @interface PBCompanyDetailViewController ()
 
-//@property (nonatomic,strong) ResponseDataOfLinckiaPartnerInfo * partnerInfo;
+
 
 @property (weak, nonatomic) IBOutlet UIPageControl *pagecontrol;
 @property (weak, nonatomic) IBOutlet UIScrollView *bannerScrollView;
@@ -54,7 +52,7 @@
 
 -(void)dataReceived:(NSNotification *)notif{
     
-    _responseDataOfIndexDict = [notif object];
+    _responseDataOfIndexDict = _GetLinckiaPartnerInfo.resultDict;
     [self dealWithPartnerInfo:_responseDataOfIndexDict[@"Data"]];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetLinckiaPartnerInfo] object:nil];
 }
@@ -66,24 +64,6 @@
     _pagecontrol.currentPage = scrollView.contentOffset.x/Main_Screen_Width;
 }
 
-
-
-///** *获取数据开始*/
-//-(void)gainDataStart:(int)tag{
-//    [[AlertUtils sharedInstance]showWithText:LOAD_Start_TEXT inView:self.view];
-//}
-////获取数据成功
-//-(void)gainDataSuccess:(int)tag responseObj:(id)responseObj{
-//    LinckiaPartnerInfo * response = [responseObj jsonToModel:LinckiaPartnerInfo.class];
-//    if (response.Code == SERVER_SUCCESS) {
-//        [self dealWithPartnerInfo:response.Data];
-//    }
-//    [[AlertUtils sharedInstance]stopHUD];
-//}
-//-(void)gainDataFailed:(int)tag errorInfo:(NSString *)errorInfo{
-//    [[AlertUtils sharedInstance]stopHUD];
-//    [[AlertUtils sharedInstance] showWithText:errorInfo inView:self.view lastTime:2.0];
-//}
 -(void)dealWithPartnerInfo:(NSDictionary *)info
 {
     //公司名

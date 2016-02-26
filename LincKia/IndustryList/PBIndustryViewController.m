@@ -32,7 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetIndustryList] object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",GetIndustryList] object:nil];
+    
     _GetIndustryList = [[AFRquest alloc]init];
     _GetIndustryList.subURLString = @"api/Industry/GetIndustryList?userToken=""&deviceType=ios";
      _GetIndustryList.parameters = @{@"Page":@1,@"Rows":@10,@"SortProperty":@"Name",@"SortDirection":@"asc"};
@@ -54,7 +55,7 @@
 
     [_collectionView reloadData];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",GetIndustryList] object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetIndustryList] object:nil];
 }
 
 
