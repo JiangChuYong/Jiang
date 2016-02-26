@@ -227,11 +227,14 @@ static NSString * lastCellIdKey = @"PBBookingTableViewSugestionCell";
     //其他补充
     _suggest=_suggestion.text;
 
-
+    NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+    NSString * userToken = [userInfo valueForKey:USERTOKEN];
     
     _visitActiveSpace = [[AFRquest alloc]init];
-    _visitActiveSpace.subURLString = @"api/ActiveSpace/VisitActiveSpace?userToken=0346f03a-e63d-4691-9ea7-d22959bcb83a&deviceType=ios";
+    _visitActiveSpace.subURLString = [NSString stringWithFormat:@"api/ActiveSpace/VisitActiveSpace?userToken=%@&deviceType=ios",userToken];
     _visitActiveSpace.parameters = @{@"activeSpaceName":_activeSpaceInfoDict[@"Data"][@"activeSpaceName"],@"name":_customerName,@"phoneNum":_phoneNum,@"startTime":startTime,@"endTime":endTime,@"peopleNum":_peopleNum,@"content":_suggest};
+    [JCYGlobalData sharedInstance].activeSpaceBookingInfo=_visitActiveSpace.parameters;
+    NSLog(@"%@",[JCYGlobalData sharedInstance].activeSpaceBookingInfo);
     _visitActiveSpace.style = POST;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",VisitActiveSpace] object:nil];
     [_visitActiveSpace requestDataFromWithFlag:VisitActiveSpace];
@@ -245,9 +248,18 @@ static NSString * lastCellIdKey = @"PBBookingTableViewSugestionCell";
     
     _responseDataOfIndexDict = _visitActiveSpace.resultDict;
     
+   
+    
     NSLog(@"%@",_responseDataOfIndexDict);
     
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetActiveSpaceList] object:nil];
+    if ([_responseDataOfIndexDict[@"Code"] isEqualToNumber:[NSNumber numberWithInt:0]]) {
+        [JCYGlobalData sharedInstance].isActiveSpace=YES;
+        [JCYGlobalData sharedInstance].sucessFromPage=ActiveSpaceOrderDetail;
+        [self performSegueWithIdentifier:@"BookingToOrder" sender:self];
+    }else{
+        [[PBAlert sharedInstance]showText:_responseDataOfIndexDict[@"Message"] inView:self.view withTime:2.0];
+    }
 }
 
 

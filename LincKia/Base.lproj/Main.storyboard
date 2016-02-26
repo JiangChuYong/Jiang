@@ -661,11 +661,126 @@
                         <outlet property="pickerSure" destination="h9A-Pi-mV7" id="jRl-Rd-lDe"/>
                         <outlet property="pickerView" destination="MFs-7F-fjF" id="Plw-hq-2bb"/>
                         <outlet property="tableView" destination="kae-qB-Kw1" id="bdc-pa-99I"/>
+                        <segue destination="GoQ-eV-O4E" kind="push" identifier="BookingToOrder" id="XDv-3a-DOa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="taW-s3-pfK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2847" y="-572"/>
+            <point key="canvasLocation" x="2918" y="-546"/>
+        </scene>
+        <!--Inish Order View Controller-->
+        <scene sceneID="cgJ-PY-jnk">
+            <objects>
+                <viewController id="GoQ-eV-O4E" customClass="ZZFInishOrderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y73-UI-nbq"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Wh-TQ-TGn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f2a-YQ-xsm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yMY-qF-oXm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付完成" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aq5-Fv-p6u">
+                                        <rect key="frame" x="126" y="32" width="68" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYW-Uu-Uqt">
+                                        <rect key="frame" x="15" y="31" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="9zz-qB-Pdh"/>
+                                            <constraint firstAttribute="width" constant="22" id="bFg-Ma-lrr"/>
+                                        </constraints>
+                                        <state key="normal" image="title_firstpage_unpressed.png"/>
+                                        <connections>
+                                            <action selector="backToHome:" destination="GoQ-eV-O4E" eventType="touchUpInside" id="gqm-Jy-FPg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.26666666666666666" green="0.59607843137254901" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Do7-Oq-GfO"/>
+                                    <constraint firstItem="Aq5-Fv-p6u" firstAttribute="centerY" secondItem="YYW-Uu-Uqt" secondAttribute="centerY" id="GSc-mL-o5x"/>
+                                    <constraint firstItem="Aq5-Fv-p6u" firstAttribute="centerX" secondItem="yMY-qF-oXm" secondAttribute="centerX" id="YIu-p9-qXG"/>
+                                    <constraint firstItem="YYW-Uu-Uqt" firstAttribute="leading" secondItem="yMY-qF-oXm" secondAttribute="leading" constant="15" id="pJN-cp-rFd"/>
+                                    <constraint firstItem="YYW-Uu-Uqt" firstAttribute="top" secondItem="yMY-qF-oXm" secondAttribute="top" constant="31" id="sir-c1-xhf"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="根据您的预订我们会将订单的详细信息通过短信发送到您的手机：" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhW-mo-CYA">
+                                <rect key="frame" x="40" y="212" width="240" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0039215686269999999" green="0.047058823530000002" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sucessful_payment.png" translatesAutoresizingMaskIntoConstraints="NO" id="kyG-yS-EOM">
+                                <rect key="frame" x="130" y="132" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="cYx-6Q-Jis"/>
+                                    <constraint firstAttribute="width" constant="60" id="xIj-gj-xAe"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18012221678" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wr-ps-ajP">
+                                <rect key="frame" x="116" y="263" width="87" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0039215686269999999" green="0.047058823530000002" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您的订单已支付成功" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3f-LB-bw9">
+                                <rect key="frame" x="92" y="94" width="135" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0039215686269999999" green="0.047058823530000002" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIO-pp-zbN">
+                                <rect key="frame" x="15" y="300.5" width="290" height="44"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.71372549019999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4HI-uc-uVy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="查看订单详情">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushToMyOrderDetailPage:" destination="GoQ-eV-O4E" eventType="touchUpInside" id="f21-H4-Wuk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yIO-pp-zbN" secondAttribute="trailing" constant="15" id="5Cb-9c-kZb"/>
+                            <constraint firstItem="JhW-mo-CYA" firstAttribute="leading" secondItem="f2a-YQ-xsm" secondAttribute="leading" constant="40" id="6lN-01-S75"/>
+                            <constraint firstItem="yIO-pp-zbN" firstAttribute="leading" secondItem="f2a-YQ-xsm" secondAttribute="leading" constant="15" id="6no-qE-JSG"/>
+                            <constraint firstAttribute="trailing" secondItem="yMY-qF-oXm" secondAttribute="trailing" id="7F7-kh-CYZ"/>
+                            <constraint firstItem="5Wr-ps-ajP" firstAttribute="centerX" secondItem="f2a-YQ-xsm" secondAttribute="centerX" id="7Qf-j6-Mid"/>
+                            <constraint firstItem="yIO-pp-zbN" firstAttribute="top" secondItem="5Wr-ps-ajP" secondAttribute="bottom" constant="20" id="7YX-EV-bLG"/>
+                            <constraint firstItem="JhW-mo-CYA" firstAttribute="top" secondItem="kyG-yS-EOM" secondAttribute="bottom" constant="20" id="8VD-Da-2Pg"/>
+                            <constraint firstItem="kyG-yS-EOM" firstAttribute="centerX" secondItem="f2a-YQ-xsm" secondAttribute="centerX" id="Dz0-nE-1l0"/>
+                            <constraint firstItem="yMY-qF-oXm" firstAttribute="leading" secondItem="f2a-YQ-xsm" secondAttribute="leading" id="OJn-sB-0lF"/>
+                            <constraint firstAttribute="trailing" secondItem="JhW-mo-CYA" secondAttribute="trailing" constant="40" id="ZQ3-cb-LQM"/>
+                            <constraint firstItem="y3f-LB-bw9" firstAttribute="centerX" secondItem="f2a-YQ-xsm" secondAttribute="centerX" id="ea2-lD-Akp"/>
+                            <constraint firstItem="y3f-LB-bw9" firstAttribute="top" secondItem="yMY-qF-oXm" secondAttribute="bottom" constant="30" id="m2g-xr-Tnf"/>
+                            <constraint firstItem="kyG-yS-EOM" firstAttribute="top" secondItem="y3f-LB-bw9" secondAttribute="bottom" constant="20" id="oQk-QN-c0n"/>
+                            <constraint firstItem="yMY-qF-oXm" firstAttribute="top" secondItem="f2a-YQ-xsm" secondAttribute="top" id="rEC-vf-faL"/>
+                            <constraint firstItem="5Wr-ps-ajP" firstAttribute="top" secondItem="JhW-mo-CYA" secondAttribute="bottom" constant="20" id="tuv-T5-1n8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ars-BR-XCh"/>
+                    <connections>
+                        <outlet property="labelMobileNote" destination="JhW-mo-CYA" id="ohj-Sn-B7s"/>
+                        <outlet property="labelPaySuccessNote" destination="y3f-LB-bw9" id="TvB-kF-xdh"/>
+                        <outlet property="labelTitle" destination="Aq5-Fv-p6u" id="zEB-bW-32x"/>
+                        <outlet property="mobile" destination="5Wr-ps-ajP" id="0fQ-2w-quh"/>
+                        <outlet property="myOrderDetailBtn" destination="yIO-pp-zbN" id="y2X-xK-6AJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ce7-Vy-g3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3365" y="-571"/>
         </scene>
         <!--企业服务-->
         <scene sceneID="ffO-HD-tnt">
@@ -1937,7 +2052,9 @@
         <image name="register_cellphone.png" width="28" height="28"/>
         <image name="register_content_bg.png" width="414" height="736"/>
         <image name="register_password.png" width="28" height="28"/>
+        <image name="sucessful_payment.png" width="66" height="66"/>
         <image name="title_back_unpressed.png" width="22" height="22"/>
+        <image name="title_firstpage_unpressed.png" width="28" height="28"/>
         <image name="users_textfield_unclicked.png" width="292" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
