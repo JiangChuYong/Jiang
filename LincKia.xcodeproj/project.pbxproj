@@ -298,6 +298,7 @@
 		CDC026D21C7C4B5700663B26 /* SendExpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC026D11C7C4B5700663B26 /* SendExpressViewController.m */; };
 		CDC954B81C7C684800D2D7D1 /* PBDiDiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC954B71C7C684800D2D7D1 /* PBDiDiViewController.m */; };
 		CDE8C5881C7D528900718C38 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8C5871C7D528900718C38 /* CoreLocation.framework */; };
+		CDF754531C8028660038622E /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF754521C8028660038622E /* UITabBar+badge.m */; };
 		DF6E82A5586B81344BCBA4C6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A87F89A1AD34DBE85390708 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -678,6 +679,8 @@
 		CDC954B61C7C684800D2D7D1 /* PBDiDiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBDiDiViewController.h; sourceTree = "<group>"; };
 		CDC954B71C7C684800D2D7D1 /* PBDiDiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBDiDiViewController.m; sourceTree = "<group>"; };
 		CDE8C5871C7D528900718C38 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CDF754511C8028660038622E /* UITabBar+badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+badge.h"; sourceTree = "<group>"; };
+		CDF754521C8028660038622E /* UITabBar+badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+badge.m"; sourceTree = "<group>"; };
 		D7EBCBAFE4522676A54C0904 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1401,6 +1404,8 @@
 				65B4196A1C75D06B00FA817B /* JCYGlobalData.m */,
 				CD45EDE41C76F8DF0042E9A2 /* PBAlert.h */,
 				CD45EDE51C76F8DF0042E9A2 /* PBAlert.m */,
+				CDF754511C8028660038622E /* UITabBar+badge.h */,
+				CDF754521C8028660038622E /* UITabBar+badge.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -1872,6 +1877,7 @@
 				CD6944EA1C75BDE500E04081 /* PBADBannerCellTableViewCell.m in Sources */,
 				6562F6161C7EE7A0005F5B68 /* ZLDayLayoutView.m in Sources */,
 				CD6945011C75C89600E04081 /* PBMineTableViewSecondCell.m in Sources */,
+				CDF754531C8028660038622E /* UITabBar+badge.m in Sources */,
 				CD4F06C11C7ADA6B00F6478A /* ExpressTableViewCell.m in Sources */,
 				CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */,
 				6562F6121C7EE7A0005F5B68 /* ZLNSDate+Logic.m in Sources */,

@@ -685,7 +685,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付完成" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aq5-Fv-p6u">
-                                        <rect key="frame" x="126" y="32" width="68" height="20.5"/>
+                                        <rect key="frame" x="126" y="32" width="68" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -712,7 +712,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="根据您的预订我们会将订单的详细信息通过短信发送到您的手机：" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhW-mo-CYA">
-                                <rect key="frame" x="40" y="212" width="240" height="31.5"/>
+                                <rect key="frame" x="40" y="212" width="240" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.0039215686269999999" green="0.047058823530000002" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -737,7 +737,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIO-pp-zbN">
-                                <rect key="frame" x="15" y="300.5" width="290" height="44"/>
+                                <rect key="frame" x="15" y="301" width="290" height="44"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.71372549019999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="4HI-uc-uVy"/>
@@ -1693,6 +1693,7 @@
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="6Ia-Am-zfq" kind="relationship" relationship="viewControllers" id="V5S-zg-TMZ"/>
@@ -1708,7 +1709,7 @@
         <scene sceneID="1Rh-js-tHD">
             <objects>
                 <navigationController id="gvl-CL-yeW" userLabel="会员" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="会员" image="member_unpressed" selectedImage="member_pressed" id="7FO-66-eNh"/>
+                    <tabBarItem key="tabBarItem" title="会员" image="member_unpressed.png" selectedImage="member_pressed.png" id="7FO-66-eNh"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="oF4-bG-Ai5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1927,7 +1928,7 @@
         <scene sceneID="3eN-tq-d2e">
             <objects>
                 <navigationController id="Y8H-fZ-iRr" userLabel="我的" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" image="mine_unpressed" selectedImage="mine_pressed" id="Ttp-Af-zNH"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="mine_unpressed.png" selectedImage="mine_pressed.png" id="Ttp-Af-zNH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tpJ-e0-yGE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2042,10 +2043,10 @@
         <image name="home_pressed" width="24" height="24"/>
         <image name="home_unpressed.png" width="24" height="24"/>
         <image name="logo.png" width="239" height="109"/>
-        <image name="member_pressed" width="24" height="24"/>
-        <image name="member_unpressed" width="24" height="24"/>
-        <image name="mine_pressed" width="24" height="24"/>
-        <image name="mine_unpressed" width="24" height="24"/>
+        <image name="member_pressed.png" width="24" height="24"/>
+        <image name="member_unpressed.png" width="24" height="24"/>
+        <image name="mine_pressed.png" width="24" height="24"/>
+        <image name="mine_unpressed.png" width="27" height="27"/>
         <image name="nodata.png" width="83" height="83"/>
         <image name="register_button_bg_unpressed.png" width="298" height="75"/>
         <image name="register_cellphone.png" width="28" height="28"/>

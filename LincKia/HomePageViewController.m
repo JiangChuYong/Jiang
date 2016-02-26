@@ -12,6 +12,7 @@
 #import "PBADBannerCellTableViewCell.h"
 #import "PBButtonChooseCell.h"
 #import "PBIndustryViewController.h"
+#import "UITabBar+badge.h"
 
 @interface HomePageViewController ()
 
@@ -25,6 +26,7 @@
 
 @property (strong,nonatomic) AFRquest * Login;
 
+@property (strong,nonatomic) AFRquest * CheckUnpaidOrder;
 
 @end
 
@@ -34,28 +36,24 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
 static NSString *ADCellIDKey = @"PBADBannerCellTableViewCell";
 static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
 
-//注册cell
--(void)registCell{
-    [_listTableView registerNib:[UINib nibWithNibName:@"ZZSpaceRecommendCellTableViewCell" bundle:nil] forCellReuseIdentifier:spaceListTableViewCell];
-    [_listTableView registerNib:[UINib nibWithNibName:@"PBADBannerCellTableViewCell" bundle:nil] forCellReuseIdentifier:ADCellIDKey];
-    [_listTableView registerNib:[UINib nibWithNibName:@"PBButtonChooseCell" bundle:nil] forCellReuseIdentifier:ChooseCellIDKey];
-}
+
 
 -(void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
+    
+    [self checkUnpayOrderFromServer];
     
     UINavigationController * navi = (UINavigationController *)self.parentViewController;
     navi.tabBarController.tabBar.hidden = NO;
     navi.navigationBar.hidden = YES;
     navi.tabBarController.delegate = self;
     
-    [self checkLoginStatus];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self checkLoginStatus];
     [self registCell];
     _adsArr =[NSMutableArray array];
     _spaceSummaryInfoArr=[NSMutableArray array];
@@ -75,7 +73,12 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     [_listTableView reloadData];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetIndex] object:nil];
 }
-
+//注册cell
+-(void)registCell{
+    [_listTableView registerNib:[UINib nibWithNibName:@"ZZSpaceRecommendCellTableViewCell" bundle:nil] forCellReuseIdentifier:spaceListTableViewCell];
+    [_listTableView registerNib:[UINib nibWithNibName:@"PBADBannerCellTableViewCell" bundle:nil] forCellReuseIdentifier:ADCellIDKey];
+    [_listTableView registerNib:[UINib nibWithNibName:@"PBButtonChooseCell" bundle:nil] forCellReuseIdentifier:ChooseCellIDKey];
+}
 
 #pragma -- mark TABBARCONTROLLER DELEGEATE
 
@@ -95,29 +98,6 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
 #pragma -- mark TODO
     
 }
-
-//
-////这里我判断的是当前点击的tabBarItem的标题
-//if ([viewController.tabBarItem.title isEqualToString:@"个人"]) {
-//    //如果用户ID存在的话，说明已登陆
-//    if (USER_ID) {
-//        return YES;
-//    }
-//    else
-//    {
-//        //跳到登录页面
-//        HPLoginViewController *login = [[HPLoginViewController alloc] init];
-//        //隐藏tabbar
-//        login.hidesBottomBarWhenPushed = YES;
-//        [((UINavigationController *)tabBarController.selectedViewController) pushViewController:login animated:YES];
-//        
-//        return NO;
-//    }
-//}
-//else
-//return YES;
-//}
-//
 
 
 #pragma -- mark UITABLEVIEW DELEGATE
@@ -222,6 +202,8 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     }
 }
 
+#pragma -- mark UserLogin Request
+
 
 -(void)autoLoginWith:(NSString *)account andPassWord:(NSString *)password{
     
@@ -244,11 +226,43 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     NSString * userToken = [userInfo valueForKey:USERTOKEN];
     if (userToken) {
         [JCYGlobalData sharedInstance].LoginStatus = YES;
+        [self checkUnpayOrderFromServer];
         NSLog(@"自动登录成功");
     }
     
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",UsersLogin] object:nil];
     NSLog(@"%@",_Login.resultDict);
 }
+
+
+#pragma -- mark CheckUnpayOrder Request
+
+-(void)checkUnpayOrderFromServer{
+    
+    if ([JCYGlobalData sharedInstance].LoginStatus) {
+        NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+        NSString * userToken = [userInfo valueForKey:USERTOKEN];
+        _CheckUnpaidOrder = [[AFRquest alloc]init];
+        _CheckUnpaidOrder.subURLString =[NSString stringWithFormat:@"api/Orders/CheckUnpaidOrder?userToken=%@&deviceType=ios",userToken];
+        _CheckUnpaidOrder.style = POST;
+
+        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(checkUnpayDataReceived:) name:[NSString stringWithFormat:@"%i",CheckUnpaidOrder] object:nil];
+        [_CheckUnpaidOrder requestDataFromWithFlag:CheckUnpaidOrder];
+    }
+    
+}
+-(void)checkUnpayDataReceived:(NSNotification *)notif{
+    NSLog(@"%@",_CheckUnpaidOrder.resultDict);
+    int result = [_CheckUnpaidOrder.resultDict[@"Code"] intValue];;
+    if (result == SUCCESS) {
+        NSNumber * unpay = _CheckUnpaidOrder.resultDict[@"Data"];
+        if ([unpay intValue]) {
+            UINavigationController * navi = (UINavigationController *)self.parentViewController;
+            [navi.tabBarController.tabBar showBadgeOnItemIndex:2];
+        }
+    }
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",CheckUnpaidOrder] object:nil];
+}
+
 
 @end
