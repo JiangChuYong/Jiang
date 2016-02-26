@@ -27,15 +27,11 @@
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        CGRect myFram=self.bounds;
-        self.frame=CGRectMake(myFram.origin.x, Main_Screen_Height - myFram.size.height + 20, Main_Screen_Width, Main_Screen_Height/3*2);
-//        self.width = Main_Screen_Width;
-//        self.height = Main_Screen_Height/3*2;
-//        self.y = Main_Screen_Height - self.height + 20;
+        CGFloat height = Main_Screen_Height/3*2;
+        self.frame=CGRectMake(0,Main_Screen_Height-height+20, Main_Screen_Width,height);
         [self initWeekView];
         [self initMonthModel];
     }
-    
     return self;
 }
 
@@ -43,11 +39,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        CGRect myFram=self.bounds;
-        self.frame=CGRectMake(myFram.origin.x, Main_Screen_Height - myFram.size.height + 20, Main_Screen_Width, Main_Screen_Height/3*2);
-//        self.width = Main_Screen_Width;
-//        self.height = Main_Screen_Height/3*2;
-//        self.y = Main_Screen_Height - self.height + 20;
+        CGFloat height = Main_Screen_Height/3*2;
+        self.frame=CGRectMake(0,Main_Screen_Height-height+20, Main_Screen_Width,height);
         [self initWeekView];
         [self initMonthModel];
     }
