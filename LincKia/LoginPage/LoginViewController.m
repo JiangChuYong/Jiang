@@ -71,19 +71,17 @@
         [user setValue:data[@"UserToken"] forKey:USERTOKEN];
         [user synchronize];
         [JCYGlobalData sharedInstance].LoginStatus = YES;
-        [self.navigationController popViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }else{
         NSString * errorInfo = userInfo[@"Description"];
         [[PBAlert sharedInstance]showText:errorInfo inView:self.view withTime:2.0];
     }
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",UsersLogin] object:nil];
-
 }
 #pragma -- mark Button Action
 - (IBAction)backButtonPressed:(UIButton *)sender {
     
-    HomePageViewController * homeVC =[[HomePageViewController alloc]init];
-    [self.navigationController popToViewController:homeVC animated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 

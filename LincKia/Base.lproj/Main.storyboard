@@ -69,6 +69,7 @@
                         <outlet property="listTableView" destination="koK-Xz-E85" id="fzG-lr-OoZ"/>
                         <segue destination="PIS-Ma-x6V" kind="push" identifier="HomeToIndustry" id="fOh-sK-6N3"/>
                         <segue destination="c8T-90-O2X" kind="push" identifier="HomeToActivity" id="PKi-kr-N3g"/>
+                        <segue destination="3PK-Ra-LPo" kind="modal" identifier="ShowLoginView" id="mb2-0G-wr8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BHQ-IY-rL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,7 +103,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动空间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9i-sI-fo5">
-                                        <rect key="frame" x="126" y="32" width="68" height="20.5"/>
+                                        <rect key="frame" x="126" y="32" width="68" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -121,7 +122,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nodata.png" translatesAutoresizingMaskIntoConstraints="NO" id="db5-0C-Reg">
-                                        <rect key="frame" x="118.5" y="146.5" width="83" height="83"/>
+                                        <rect key="frame" x="119" y="147" width="83" height="83"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -193,7 +194,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="空间介绍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAl-fP-O9p">
-                                        <rect key="frame" x="126" y="31" width="68" height="20.5"/>
+                                        <rect key="frame" x="126" y="31" width="68" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -307,7 +308,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="社区简介" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2q-2s-Ilw">
-                                        <rect key="frame" x="126" y="32" width="68" height="20.5"/>
+                                        <rect key="frame" x="126" y="32" width="68" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -332,7 +333,7 @@
                                 </connections>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="community_introduce_camer.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZtZ-qd-dgu">
-                                <rect key="frame" x="45" y="210.5" width="30" height="20"/>
+                                <rect key="frame" x="45" y="211" width="30" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="WlQ-dz-3fd"/>
                                     <constraint firstAttribute="height" constant="20" id="plk-4g-gz9"/>
@@ -345,13 +346,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无类容" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eH6-CW-fkz">
-                                <rect key="frame" x="15" y="252" width="290" height="20.5"/>
+                                <rect key="frame" x="15" y="252" width="290" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.08235294118" green="0.38431372549999998" blue="0.68627450980000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="暂无内容" translatesAutoresizingMaskIntoConstraints="NO" id="bFs-U1-mA1">
-                                <rect key="frame" x="15" y="277" width="290" height="275.5"/>
+                                <rect key="frame" x="15" y="277" width="290" height="276"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.47843137250000001" green="0.4823529412" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -420,8 +421,8 @@
                                             <action selector="backBtnPress:" destination="btX-Nf-qRQ" eventType="touchUpInside" id="XgL-80-JRe"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="空间设施" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L24-9u-146">
-                                        <rect key="frame" x="126" y="32.5" width="68" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="空间设施" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L24-9u-146">
+                                        <rect key="frame" x="126" y="33" width="68" height="20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -499,7 +500,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="预约参观" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7f-au-Pbw">
-                                        <rect key="frame" x="126" y="32" width="68" height="20.5"/>
+                                        <rect key="frame" x="126" y="32" width="68" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -694,7 +695,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="企业服务" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHH-32-g1X">
-                                        <rect key="frame" x="126" y="32" width="68" height="20.5"/>
+                                        <rect key="frame" x="126" y="32" width="68" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -773,7 +774,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loarding…" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBy-l8-T9e">
-                                        <rect key="frame" x="63" y="32" width="195" height="20.5"/>
+                                        <rect key="frame" x="63" y="32" width="195" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="GN5-X1-D5p"/>
                                             <constraint firstAttribute="width" constant="195" id="XGF-Iu-d1w"/>
@@ -806,8 +807,8 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nodata.png" translatesAutoresizingMaskIntoConstraints="NO" id="uyt-e9-LdP">
                                         <rect key="frame" x="118" y="146" width="83" height="83"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未搜索到相关数据" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAT-CZ-9YR">
-                                        <rect key="frame" x="91.5" y="249.5" width="136" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="未搜索到相关数据" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAT-CZ-9YR">
+                                        <rect key="frame" x="92" y="250" width="136" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.86666666670000003" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -877,7 +878,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公司详情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQG-Mp-QJi">
-                                        <rect key="frame" x="126" y="32" width="68" height="20.5"/>
+                                        <rect key="frame" x="126" y="32" width="68" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -1236,7 +1237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m54-Lb-PlR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1191" y="853"/>
+            <point key="canvasLocation" x="-247" y="-281"/>
         </scene>
         <!--环境监测-->
         <scene sceneID="tJd-DH-z9t">
@@ -1254,7 +1255,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhY-WD-lnQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="PM 2.5">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -1265,7 +1266,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1v7-Sl-PU7">
-                                        <rect key="frame" x="213" y="0.0" width="106.5" height="33"/>
+                                        <rect key="frame" x="213" y="0.0" width="107" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="MEP AQI">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -1276,7 +1277,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ep-fi-NN4">
-                                        <rect key="frame" x="106" y="0.0" width="106.5" height="33"/>
+                                        <rect key="frame" x="106" y="0.0" width="107" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="EPA AQI">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -1323,7 +1324,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="μg/m³" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irk-k6-K2l">
-                                        <rect key="frame" x="173" y="138" width="32" height="13.5"/>
+                                        <rect key="frame" x="173" y="138" width="32" height="14"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1353,7 +1354,7 @@
                                             <constraint firstAttribute="height" constant="5" id="daD-t4-HCX"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eG-tf-ith">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="45" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eG-tf-ith">
                                         <rect key="frame" x="121" y="110" width="47" height="48"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
                                         <nil key="highlightedColor"/>
@@ -1393,14 +1394,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJN-Uw-Ca6" userLabel="室外背景">
                                 <rect key="frame" x="0.0" y="415" width="320" height="153"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrU-wr-flE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="150" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrU-wr-flE">
                                         <rect key="frame" x="113" y="32" width="55" height="42"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="μg/m³" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4K-Tq-zrI">
-                                        <rect key="frame" x="173" y="54" width="32" height="13.5"/>
+                                        <rect key="frame" x="173" y="54" width="32" height="14"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -1686,7 +1687,6 @@
                     <navigationItem key="navigationItem" title="会员" id="OPY-U0-G5G"/>
                     <connections>
                         <outlet property="collection" destination="EfS-vT-H7N" id="ZEY-QM-jn1"/>
-                        <segue destination="3PK-Ra-LPo" kind="push" identifier="MemberToLogin" id="gUA-3g-ppz"/>
                         <segue destination="xfP-fB-kum" kind="push" identifier="MemberToSendExpress" id="dcF-7F-b40"/>
                         <segue destination="pHQ-fU-FWS" kind="push" identifier="MemberToEnvironment" id="i2O-e8-GGQ"/>
                         <segue destination="w0L-59-WsV" kind="push" identifier="MemberToDiDi" id="yiF-nm-spy"/>
@@ -1862,7 +1862,6 @@
                     <navigationItem key="navigationItem" title="我的" id="3Hh-zb-VDl"/>
                     <connections>
                         <outlet property="table" destination="Sq8-wg-V2s" id="s37-Ye-jfx"/>
-                        <segue destination="3PK-Ra-LPo" kind="push" identifier="MineToLogin" id="huh-qE-qeJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgo-Zy-dIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1940,7 +1939,4 @@
         <image name="title_back_unpressed.png" width="22" height="22"/>
         <image name="users_textfield_unclicked.png" width="292" height="52"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="huh-qE-qeJ"/>
-    </inferredMetricsTieBreakers>
 </document>

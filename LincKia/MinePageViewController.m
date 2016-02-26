@@ -38,14 +38,10 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     navi.tabBarController.tabBar.hidden = NO;
     navi.navigationBar.hidden = NO;
     
-    if (![JCYGlobalData sharedInstance].LoginStatus) {
-        [self performSegueWithIdentifier:@"MineToLogin" sender:self];
-    }else{
-        _HasUnpayOrder = NO;
-        [self checkUnpayOrder];
-        [self getUserInfoData];
-    }
-    
+    _HasUnpayOrder = NO;
+    [self checkUnpayOrder];
+    [self getUserInfoData];
+
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

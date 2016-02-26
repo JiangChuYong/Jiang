@@ -18,23 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UINavigationController * navi = (UINavigationController *)self.parentViewController;
+    navi.tabBarController.tabBar.hidden = NO;
     // Do any additional setup after loading the view, typically from a nib.
     _cellNameArray = [NSArray arrayWithObjects:@"发快递",@"滴滴出行",@"快递查询",@"环境监测",@"会议室", nil];
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    
-    
-    [super viewWillAppear:animated];
-    UINavigationController * navi = (UINavigationController *)self.parentViewController;
-    navi.tabBarController.tabBar.hidden = NO;
-    
-    if (![JCYGlobalData sharedInstance].LoginStatus) {
-        [self performSegueWithIdentifier:@"MemberToLogin" sender:self];
-    }
-    
 
-}
 #pragma -- mark CollectionView Delegate
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return _cellNameArray.count;

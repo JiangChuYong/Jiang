@@ -76,6 +76,50 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetIndex] object:nil];
 }
 
+
+#pragma -- mark TABBARCONTROLLER DELEGEATE
+
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
+    
+    if ([JCYGlobalData sharedInstance].LoginStatus) {
+        return YES;
+    }else{
+        
+        [self performSegueWithIdentifier:@"ShowLoginView" sender:self];
+        return NO;
+    }
+    
+    //检查订单的有效期 判断是否有会员资格
+    
+#pragma -- mark TODO
+    
+}
+
+//
+////这里我判断的是当前点击的tabBarItem的标题
+//if ([viewController.tabBarItem.title isEqualToString:@"个人"]) {
+//    //如果用户ID存在的话，说明已登陆
+//    if (USER_ID) {
+//        return YES;
+//    }
+//    else
+//    {
+//        //跳到登录页面
+//        HPLoginViewController *login = [[HPLoginViewController alloc] init];
+//        //隐藏tabbar
+//        login.hidesBottomBarWhenPushed = YES;
+//        [((UINavigationController *)tabBarController.selectedViewController) pushViewController:login animated:YES];
+//        
+//        return NO;
+//    }
+//}
+//else
+//return YES;
+//}
+//
+
+
 #pragma -- mark UITABLEVIEW DELEGATE
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row == 0) {
@@ -172,10 +216,7 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     NSLog(@"%@",passWord);
     
     if (userName && passWord) {
-        
         [self autoLoginWith:userName andPassWord:passWord];
-        
-        [JCYGlobalData sharedInstance].LoginStatus = YES;
     }else{
         [JCYGlobalData sharedInstance].LoginStatus = NO;
     }
@@ -199,6 +240,13 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
     NSDictionary * dict = _Login.resultDict[@"Data"];
     [userInfo setValue:dict[@"UserToken"] forKey:USERTOKEN];
+  
+    NSString * userToken = [userInfo valueForKey:USERTOKEN];
+    if (userToken) {
+        [JCYGlobalData sharedInstance].LoginStatus = YES;
+        NSLog(@"自动登录成功");
+    }
+    
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",UsersLogin] object:nil];
     NSLog(@"%@",_Login.resultDict);
 }
