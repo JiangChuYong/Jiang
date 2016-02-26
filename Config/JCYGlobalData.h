@@ -10,6 +10,12 @@
 
 @interface JCYGlobalData : NSObject
 SingletonH(JCYGlobalData)
+typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
+    MyOrderDetail,
+    MyOnlineBooking,
+    ActiveSpaceOrderDetail,
+    MeetingRoomPage
+};
 
 
 //选中行业分类的ID
@@ -30,6 +36,15 @@ SingletonH(JCYGlobalData)
 @property (assign,nonatomic) BOOL LoginStatus;
 //日历可选日期控制
 @property (assign, nonatomic) int validDays;
+
+//从哪个页面过来的订单
+@property (assign, nonatomic) OrderDetailStyle sucessFromPage;
+
+//用户信息
+@property (strong,nonatomic) NSDictionary *userInfo;
+//活动空间预约信息
+@property (strong,nonatomic) NSDictionary *activeSpaceBookingInfo;
+
 
 //时间大小遍历
 +(NSMutableArray *)filterTimeArray:(NSMutableArray *)timeArray;
