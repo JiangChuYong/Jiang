@@ -11,7 +11,6 @@
 
 @implementation UITabBar (badge)
 
-
 //显示小红点
 - (void)showBadgeOnItemIndex:(int)index{
     //移除之前的小红点

@@ -36,19 +36,15 @@ SingletonM(AFRquest);
     if (!_parameters) {
         _parameters = nil;
     }
-    
     [_appDelegate.manager POST:_IPADRESS parameters:_parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         NSData * response = [NSData dataWithData:responseObject];
         _resultDict = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingAllowFragments error:nil];
         [[NSNotificationCenter defaultCenter]postNotificationName:flag object:nil];
-        
     }failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         NSLog(@"POST服务器未响应");
         _resultDict = @{@"Code":@1};
         [[NSNotificationCenter defaultCenter]postNotificationName:flag object:nil];
     }];
-
-    
 }
 
 -(void)ConnectServerViaGetStyleWithFlag:(NSString *)flag{
@@ -56,9 +52,7 @@ SingletonM(AFRquest);
     [_appDelegate.manager GET:_IPADRESS parameters:_parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         NSData * response = [NSData dataWithData:responseObject];
         _resultDict = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingAllowFragments error:nil];
-        
         [[NSNotificationCenter defaultCenter]postNotificationName:flag object:nil];
-        
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         NSLog(@"GET服务器未响应");
         _resultDict = @{@"Code":@1};

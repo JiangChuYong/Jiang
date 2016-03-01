@@ -33,6 +33,11 @@ typedef enum{
     CheckUnpaidOrder=9,
     //活动空间预约参观
     VisitActiveSpace=10,
+    //获取有会议室的空间列表
+    GetSpaceNameList,
+    //获取会议室列表
+    GetMeetingSpaceCell,
+    
 }RequestFlag;
 
 #endif /* RequestFlag_h */

@@ -1703,7 +1703,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-364" y="532"/>
+            <point key="canvasLocation" x="-444" y="536"/>
         </scene>
         <!--会员-->
         <scene sceneID="1Rh-js-tHD">
@@ -1807,6 +1807,7 @@
                         <segue destination="pHQ-fU-FWS" kind="push" identifier="MemberToEnvironment" id="i2O-e8-GGQ"/>
                         <segue destination="w0L-59-WsV" kind="push" identifier="MemberToDiDi" id="yiF-nm-spy"/>
                         <segue destination="W9d-YI-7zu" kind="push" identifier="MemberToExpressCheck" id="X91-yY-r6Q"/>
+                        <segue destination="PBO-Z6-cPU" kind="push" identifier="MemberToMeetingRoom" id="hGM-gY-ByY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8d-1m-6XU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1984,6 +1985,114 @@
             </objects>
             <point key="canvasLocation" x="764" y="1096"/>
         </scene>
+        <!--会议室预订-->
+        <scene sceneID="ONZ-vR-YnC">
+            <objects>
+                <viewController id="PBO-Z6-cPU" userLabel="会议室预订" customClass="PBMeetingRoomBookingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="crd-Fa-f9Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wmv-BJ-X5t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wZQ-Am-mhG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" scrollEnabled="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="52" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aWV-Vj-px4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="bJf-Rr-mtS"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="PBO-Z6-cPU" id="O9v-Er-mtc"/>
+                                    <outlet property="delegate" destination="PBO-Z6-cPU" id="bGM-qG-LmR"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vqh-ZR-HpU">
+                                <rect key="frame" x="0.0" y="496" width="320" height="72"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FN5-OD-77a">
+                                        <rect key="frame" x="15" y="10" width="290" height="52"/>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.71372549019999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="立即预订">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="bookingBtnPressed:" destination="PBO-Z6-cPU" eventType="touchUpInside" id="ArH-ac-ZAU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="FN5-OD-77a" firstAttribute="top" secondItem="Vqh-ZR-HpU" secondAttribute="top" constant="10" id="dz6-O4-BJN"/>
+                                    <constraint firstItem="FN5-OD-77a" firstAttribute="leading" secondItem="Vqh-ZR-HpU" secondAttribute="leading" constant="15" id="g71-AE-qvr"/>
+                                    <constraint firstAttribute="height" constant="72" id="hsY-qN-EDn"/>
+                                    <constraint firstAttribute="trailing" secondItem="FN5-OD-77a" secondAttribute="trailing" constant="15" id="k6Q-Rs-Cvv"/>
+                                    <constraint firstAttribute="bottom" secondItem="FN5-OD-77a" secondAttribute="bottom" constant="10" id="l6b-Xw-3h1"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="gNp-Uf-AhB">
+                                <rect key="frame" x="0.0" y="280" width="320" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PBO-Z6-cPU" id="bH9-iX-xSd"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MKA-58-Yq4">
+                                <rect key="frame" x="0.0" y="270" width="320" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="MBw-vt-PMt"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottom_line.png" translatesAutoresizingMaskIntoConstraints="NO" id="rCs-E3-4aq">
+                                <rect key="frame" x="0.0" y="491" width="320" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="Efy-QL-V9T"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aWV-Vj-px4" secondAttribute="trailing" id="Cka-5I-7uj"/>
+                            <constraint firstItem="MKA-58-Yq4" firstAttribute="top" secondItem="aWV-Vj-px4" secondAttribute="bottom" id="Ded-bT-ukw"/>
+                            <constraint firstItem="Vqh-ZR-HpU" firstAttribute="leading" secondItem="wZQ-Am-mhG" secondAttribute="leading" id="Eze-CT-063"/>
+                            <constraint firstAttribute="trailing" secondItem="MKA-58-Yq4" secondAttribute="trailing" id="FHo-EL-sfL"/>
+                            <constraint firstItem="Vqh-ZR-HpU" firstAttribute="top" secondItem="gNp-Uf-AhB" secondAttribute="bottom" id="KrM-rS-9Gf"/>
+                            <constraint firstItem="MKA-58-Yq4" firstAttribute="leading" secondItem="wZQ-Am-mhG" secondAttribute="leading" id="Rbm-CL-nbm"/>
+                            <constraint firstItem="rCs-E3-4aq" firstAttribute="bottom" secondItem="gNp-Uf-AhB" secondAttribute="bottom" id="aVx-ox-QRF"/>
+                            <constraint firstAttribute="trailing" secondItem="Vqh-ZR-HpU" secondAttribute="trailing" id="cPa-Xd-YAq"/>
+                            <constraint firstAttribute="trailing" secondItem="gNp-Uf-AhB" secondAttribute="trailing" id="cYg-tf-Wj0"/>
+                            <constraint firstItem="gNp-Uf-AhB" firstAttribute="top" secondItem="MKA-58-Yq4" secondAttribute="bottom" id="fC6-x7-cqf"/>
+                            <constraint firstItem="aWV-Vj-px4" firstAttribute="leading" secondItem="wZQ-Am-mhG" secondAttribute="leading" id="iGa-iV-jLL"/>
+                            <constraint firstItem="rCs-E3-4aq" firstAttribute="leading" secondItem="gNp-Uf-AhB" secondAttribute="leading" id="msQ-rd-ADj"/>
+                            <constraint firstItem="gNp-Uf-AhB" firstAttribute="leading" secondItem="wZQ-Am-mhG" secondAttribute="leading" id="p8Y-B6-Mw5"/>
+                            <constraint firstItem="aWV-Vj-px4" firstAttribute="top" secondItem="wZQ-Am-mhG" secondAttribute="top" id="w9E-G9-lNL"/>
+                            <constraint firstItem="rCs-E3-4aq" firstAttribute="trailing" secondItem="gNp-Uf-AhB" secondAttribute="trailing" id="yKI-LD-16E"/>
+                            <constraint firstItem="Wmv-BJ-X5t" firstAttribute="top" secondItem="Vqh-ZR-HpU" secondAttribute="bottom" id="ySb-Jo-arw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="会议室预订" id="QCg-RE-guQ">
+                        <barButtonItem key="leftBarButtonItem" image="title_back_unpressed.png" id="9tP-Ub-V6C">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="back:" destination="PBO-Z6-cPU" id="cWH-gL-9vU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bookingBtn" destination="FN5-OD-77a" id="e0U-hL-MKc"/>
+                        <outlet property="bottomTable" destination="gNp-Uf-AhB" id="cCt-4T-JK7"/>
+                        <outlet property="cuttingLine" destination="MKA-58-Yq4" id="NXK-pt-blc"/>
+                        <outlet property="topTable" destination="aWV-Vj-px4" id="R7t-bu-wDi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xla-bY-EBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1432" y="870"/>
+        </scene>
         <!--快递查询-->
         <scene sceneID="uXj-wq-HeJ">
             <objects>
@@ -1997,7 +2106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView opaque="NO" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AEn-Hd-erS">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="668"/>
+                                <rect key="frame" x="0.0" y="-69" width="320" height="737"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                                 <connections>
@@ -2007,7 +2116,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AEn-Hd-erS" firstAttribute="top" secondItem="JCf-gg-Lwy" secondAttribute="top" id="0SL-Bi-EOY"/>
+                            <constraint firstItem="AEn-Hd-erS" firstAttribute="top" secondItem="JCf-gg-Lwy" secondAttribute="top" constant="-69" id="0SL-Bi-EOY"/>
                             <constraint firstAttribute="trailing" secondItem="AEn-Hd-erS" secondAttribute="trailing" id="bZx-sd-Yin"/>
                             <constraint firstItem="AEn-Hd-erS" firstAttribute="leading" secondItem="JCf-gg-Lwy" secondAttribute="leading" id="eeb-UR-64l"/>
                             <constraint firstAttribute="bottom" secondItem="AEn-Hd-erS" secondAttribute="bottom" constant="-100" id="mYn-ob-tns"/>
@@ -2046,7 +2155,7 @@
         <image name="member_pressed.png" width="24" height="24"/>
         <image name="member_unpressed.png" width="24" height="24"/>
         <image name="mine_pressed.png" width="24" height="24"/>
-        <image name="mine_unpressed.png" width="27" height="27"/>
+        <image name="mine_unpressed.png" width="24" height="24"/>
         <image name="nodata.png" width="83" height="83"/>
         <image name="register_button_bg_unpressed.png" width="298" height="75"/>
         <image name="register_cellphone.png" width="28" height="28"/>

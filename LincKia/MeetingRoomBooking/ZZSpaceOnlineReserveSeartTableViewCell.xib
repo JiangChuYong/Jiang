@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ZZSpaceOnlineReserveSeartTableViewCell" rowHeight="83" id="KGk-i7-Jjw" customClass="ZZSpaceOnlineReserveSeartTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R-001" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KtN-7P-Wbk">
+                        <rect key="frame" x="60" y="4" width="51" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥160" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQK-sX-NVy">
+                        <rect key="frame" x="262" y="4" width="43" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.96078431372549022" green="0.71372549019607845" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKr-NI-gvR">
+                        <rect key="frame" x="15" y="15" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="6fV-X7-V6F"/>
+                            <constraint firstAttribute="height" constant="22" id="WUd-h1-z5q"/>
+                        </constraints>
+                        <state key="normal" image="multichoicebox_unchecked@3x.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" image="multichoicebox_checked@3x.png"/>
+                        <connections>
+                            <action selector="clickCheckBox:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6GR-F9-lPY"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aj3-Gu-TfB">
+                        <rect key="frame" x="0.0" y="50" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="eBS-OO-TEB"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prU-08-J2V" userLabel="4人间">
+                        <rect key="frame" x="185" y="5" width="11" height="20"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="独立办公室" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXj-s7-8BL">
+                        <rect key="frame" x="60" y="29" width="65" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gD4-G9-gUC">
+                        <rect key="frame" x="177" y="29" width="26" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/月" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pPY-FG-zZI">
+                        <rect key="frame" x="263" y="29" width="43" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pYN-VV-wgW">
+                        <rect key="frame" x="60" y="25" width="260" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="luw-e2-KXh"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gD4-G9-gUC" firstAttribute="centerY" secondItem="BXj-s7-8BL" secondAttribute="centerY" id="1EX-6t-wTI"/>
+                    <constraint firstItem="KtN-7P-Wbk" firstAttribute="centerY" secondItem="prU-08-J2V" secondAttribute="centerY" id="2Rs-zA-l6k"/>
+                    <constraint firstItem="gD4-G9-gUC" firstAttribute="centerX" secondItem="prU-08-J2V" secondAttribute="centerX" id="3x4-Bc-z2i"/>
+                    <constraint firstAttribute="bottom" secondItem="aj3-Gu-TfB" secondAttribute="bottom" id="CIW-da-woy"/>
+                    <constraint firstItem="TKr-NI-gvR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Faj-DW-7Fk"/>
+                    <constraint firstAttribute="centerY" secondItem="TKr-NI-gvR" secondAttribute="centerY" id="Fc5-vJ-TaU"/>
+                    <constraint firstItem="KtN-7P-Wbk" firstAttribute="leading" secondItem="pYN-VV-wgW" secondAttribute="leading" id="Ir8-7a-o9u"/>
+                    <constraint firstAttribute="trailing" secondItem="aj3-Gu-TfB" secondAttribute="trailing" id="Jpx-CS-3YR"/>
+                    <constraint firstItem="aj3-Gu-TfB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KR7-Ak-EO1"/>
+                    <constraint firstItem="ZQK-sX-NVy" firstAttribute="width" secondItem="pPY-FG-zZI" secondAttribute="width" id="MxX-Zj-4Yy"/>
+                    <constraint firstItem="pYN-VV-wgW" firstAttribute="leading" secondItem="TKr-NI-gvR" secondAttribute="trailing" constant="23" id="UqG-uT-7DF"/>
+                    <constraint firstItem="pYN-VV-wgW" firstAttribute="leading" secondItem="BXj-s7-8BL" secondAttribute="leading" id="cr5-hX-Os0"/>
+                    <constraint firstAttribute="trailing" secondItem="ZQK-sX-NVy" secondAttribute="trailing" constant="15" id="epr-da-cdO"/>
+                    <constraint firstItem="BXj-s7-8BL" firstAttribute="top" secondItem="pYN-VV-wgW" secondAttribute="bottom" constant="3" id="hzt-Ps-mNK"/>
+                    <constraint firstItem="pYN-VV-wgW" firstAttribute="centerX" secondItem="prU-08-J2V" secondAttribute="centerX" id="l5N-fK-EL9"/>
+                    <constraint firstAttribute="trailing" secondItem="pYN-VV-wgW" secondAttribute="trailing" id="mHl-bz-KNv"/>
+                    <constraint firstItem="pYN-VV-wgW" firstAttribute="top" secondItem="KtN-7P-Wbk" secondAttribute="bottom" id="oq7-Vf-E8v"/>
+                    <constraint firstItem="ZQK-sX-NVy" firstAttribute="centerX" secondItem="pPY-FG-zZI" secondAttribute="centerX" id="u1i-DT-hXK"/>
+                    <constraint firstAttribute="centerY" secondItem="pYN-VV-wgW" secondAttribute="centerY" id="uDq-tV-P0V"/>
+                    <constraint firstItem="gD4-G9-gUC" firstAttribute="centerY" secondItem="pPY-FG-zZI" secondAttribute="centerY" id="x9N-Lk-Rdl"/>
+                    <constraint firstItem="prU-08-J2V" firstAttribute="centerY" secondItem="ZQK-sX-NVy" secondAttribute="centerY" id="xw3-Pg-mdN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnCheckBox" destination="TKr-NI-gvR" id="nOB-7O-tpa"/>
+                <outlet property="labelPeopleNum" destination="prU-08-J2V" id="o2l-Mk-uoO"/>
+                <outlet property="labelPriceNum" destination="ZQK-sX-NVy" id="R0C-cG-qvN"/>
+                <outlet property="labelRoomNum" destination="KtN-7P-Wbk" id="MLS-CV-N06"/>
+                <outlet property="officePersonNum" destination="gD4-G9-gUC" id="5Qm-e8-Ijv"/>
+                <outlet property="officeTypeLabel" destination="BXj-s7-8BL" id="dQV-Aa-dLI"/>
+                <outlet property="separateLine" destination="aj3-Gu-TfB" id="YIf-SS-S73"/>
+                <outlet property="spaceLineIV" destination="aj3-Gu-TfB" id="TDR-1y-cCB"/>
+                <outlet property="unitLabel" destination="pPY-FG-zZI" id="VKl-ku-pCE"/>
+            </connections>
+            <point key="canvasLocation" x="349" y="116"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="multichoicebox_checked@3x.png" width="84" height="84"/>
+        <image name="multichoicebox_unchecked@3x.png" width="84" height="84"/>
+    </resources>
+</document>

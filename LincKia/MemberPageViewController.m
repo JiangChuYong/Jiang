@@ -16,10 +16,13 @@
 
 @implementation MemberPageViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+-(void)viewWillAppear:(BOOL)animated{
     UINavigationController * navi = (UINavigationController *)self.parentViewController;
     navi.tabBarController.tabBar.hidden = NO;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     _cellNameArray = [NSArray arrayWithObjects:@"发快递",@"滴滴出行",@"快递查询",@"环境监测",@"会议室", nil];
 }
@@ -52,5 +55,10 @@
     if (indexPath.row == 3) {
         [self performSegueWithIdentifier:@"MemberToEnvironment" sender:self];
     }
+    
+    if (indexPath.row == 4) {
+        [self performSegueWithIdentifier:@"MemberToMeetingRoom" sender:self];
+    }
+    
 }
 @end

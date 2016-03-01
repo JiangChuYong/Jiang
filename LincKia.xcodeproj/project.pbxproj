@@ -295,10 +295,21 @@
 		CD7360BE1C71C9A800E3971C /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7360B81C71C9A800E3971C /* CommonUtil.m */; };
 		CD7360BF1C71C9A800E3971C /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7360BA1C71C9A800E3971C /* CustomTextField.m */; };
 		CD7360C01C71C9A800E3971C /* UITextField+PlaceHolderSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7360BD1C71C9A800E3971C /* UITextField+PlaceHolderSetting.m */; };
+		CD9C3A031C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9C3A011C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.m */; };
+		CD9C3A041C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD9C3A021C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.xib */; };
+		CD9C3A071C84186900071D60 /* multichoicebox_checked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD9C3A051C84186900071D60 /* multichoicebox_checked@3x.png */; };
+		CD9C3A081C84186900071D60 /* multichoicebox_unchecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD9C3A061C84186900071D60 /* multichoicebox_unchecked@3x.png */; };
+		CDA991961C842608000C2AB2 /* multichoicebox_checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA991941C842608000C2AB2 /* multichoicebox_checked@2x.png */; };
+		CDA991971C842608000C2AB2 /* multichoicebox_unchecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA991951C842608000C2AB2 /* multichoicebox_unchecked@2x.png */; };
+		CDA9919A1C8426C6000C2AB2 /* single_line_bottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA991981C8426C6000C2AB2 /* single_line_bottom@2x.png */; };
+		CDA9919B1C8426C6000C2AB2 /* single_line_bottom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA991991C8426C6000C2AB2 /* single_line_bottom@3x.png */; };
 		CDC026D21C7C4B5700663B26 /* SendExpressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC026D11C7C4B5700663B26 /* SendExpressViewController.m */; };
 		CDC954B81C7C684800D2D7D1 /* PBDiDiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC954B71C7C684800D2D7D1 /* PBDiDiViewController.m */; };
 		CDE8C5881C7D528900718C38 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE8C5871C7D528900718C38 /* CoreLocation.framework */; };
 		CDF754531C8028660038622E /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF754521C8028660038622E /* UITabBar+badge.m */; };
+		CDF7545A1C8034B80038622E /* PBMeetingRoomBookingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF754591C8034B80038622E /* PBMeetingRoomBookingViewController.m */; };
+		CDF7545E1C80361D0038622E /* PBMeetingRoomTableTopViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF7545C1C80361D0038622E /* PBMeetingRoomTableTopViewCell.m */; };
+		CDF7545F1C80361D0038622E /* PBMeetingRoomTableTopViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDF7545D1C80361D0038622E /* PBMeetingRoomTableTopViewCell.xib */; };
 		DF6E82A5586B81344BCBA4C6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A87F89A1AD34DBE85390708 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -674,6 +685,15 @@
 		CD7360BC1C71C9A800E3971C /* UITextField+PlaceHolderSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+PlaceHolderSetting.h"; sourceTree = "<group>"; };
 		CD7360BD1C71C9A800E3971C /* UITextField+PlaceHolderSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PlaceHolderSetting.m"; sourceTree = "<group>"; };
 		CD7360C21C71CA5200E3971C /* PBSingleTon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBSingleTon.h; sourceTree = "<group>"; };
+		CD9C3A001C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZSpaceOnlineReserveSeartTableViewCell.h; sourceTree = "<group>"; };
+		CD9C3A011C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZSpaceOnlineReserveSeartTableViewCell.m; sourceTree = "<group>"; };
+		CD9C3A021C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZSpaceOnlineReserveSeartTableViewCell.xib; sourceTree = "<group>"; };
+		CD9C3A051C84186900071D60 /* multichoicebox_checked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multichoicebox_checked@3x.png"; sourceTree = "<group>"; };
+		CD9C3A061C84186900071D60 /* multichoicebox_unchecked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multichoicebox_unchecked@3x.png"; sourceTree = "<group>"; };
+		CDA991941C842608000C2AB2 /* multichoicebox_checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multichoicebox_checked@2x.png"; sourceTree = "<group>"; };
+		CDA991951C842608000C2AB2 /* multichoicebox_unchecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "multichoicebox_unchecked@2x.png"; sourceTree = "<group>"; };
+		CDA991981C8426C6000C2AB2 /* single_line_bottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "single_line_bottom@2x.png"; sourceTree = "<group>"; };
+		CDA991991C8426C6000C2AB2 /* single_line_bottom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "single_line_bottom@3x.png"; sourceTree = "<group>"; };
 		CDC026D01C7C4B5700663B26 /* SendExpressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendExpressViewController.h; sourceTree = "<group>"; };
 		CDC026D11C7C4B5700663B26 /* SendExpressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendExpressViewController.m; sourceTree = "<group>"; };
 		CDC954B61C7C684800D2D7D1 /* PBDiDiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBDiDiViewController.h; sourceTree = "<group>"; };
@@ -681,6 +701,11 @@
 		CDE8C5871C7D528900718C38 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CDF754511C8028660038622E /* UITabBar+badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+badge.h"; sourceTree = "<group>"; };
 		CDF754521C8028660038622E /* UITabBar+badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+badge.m"; sourceTree = "<group>"; };
+		CDF754581C8034B80038622E /* PBMeetingRoomBookingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMeetingRoomBookingViewController.h; sourceTree = "<group>"; };
+		CDF754591C8034B80038622E /* PBMeetingRoomBookingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMeetingRoomBookingViewController.m; sourceTree = "<group>"; };
+		CDF7545B1C80361D0038622E /* PBMeetingRoomTableTopViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMeetingRoomTableTopViewCell.h; sourceTree = "<group>"; };
+		CDF7545C1C80361D0038622E /* PBMeetingRoomTableTopViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMeetingRoomTableTopViewCell.m; sourceTree = "<group>"; };
+		CDF7545D1C80361D0038622E /* PBMeetingRoomTableTopViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBMeetingRoomTableTopViewCell.xib; sourceTree = "<group>"; };
 		D7EBCBAFE4522676A54C0904 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1043,6 +1068,7 @@
 		CD1D57201C71BDB700BB30AC /* LincKia */ = {
 			isa = PBXGroup;
 			children = (
+				CDF754541C8033C00038622E /* MeetingRoomBooking */,
 				CD0F15A51C7D7FD500AE74FB /* CheckExpress */,
 				CDC954B51C7C683400D2D7D1 /* DiDi */,
 				CD29E92B1C7B02C700871F69 /* Environment */,
@@ -1258,6 +1284,12 @@
 		CD29E8E11C7AFFD300871F69 /* 通用 */ = {
 			isa = PBXGroup;
 			children = (
+				CDA991981C8426C6000C2AB2 /* single_line_bottom@2x.png */,
+				CDA991991C8426C6000C2AB2 /* single_line_bottom@3x.png */,
+				CDA991941C842608000C2AB2 /* multichoicebox_checked@2x.png */,
+				CDA991951C842608000C2AB2 /* multichoicebox_unchecked@2x.png */,
+				CD9C3A051C84186900071D60 /* multichoicebox_checked@3x.png */,
+				CD9C3A061C84186900071D60 /* multichoicebox_unchecked@3x.png */,
 				65FAE9B71C7EFFC500743D97 /* sucessful_payment@3x.png */,
 				65FAE9B51C7EFF7400743D97 /* title_firstpage_unpressed@3x.png */,
 				CD29E8E21C7AFFD300871F69 /* banner_logo@2x.png */,
@@ -1430,6 +1462,21 @@
 			path = SendExpress;
 			sourceTree = "<group>";
 		};
+		CDF754541C8033C00038622E /* MeetingRoomBooking */ = {
+			isa = PBXGroup;
+			children = (
+				CD9C3A001C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.h */,
+				CD9C3A011C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.m */,
+				CD9C3A021C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.xib */,
+				CDF7545B1C80361D0038622E /* PBMeetingRoomTableTopViewCell.h */,
+				CDF7545C1C80361D0038622E /* PBMeetingRoomTableTopViewCell.m */,
+				CDF7545D1C80361D0038622E /* PBMeetingRoomTableTopViewCell.xib */,
+				CDF754581C8034B80038622E /* PBMeetingRoomBookingViewController.h */,
+				CDF754591C8034B80038622E /* PBMeetingRoomBookingViewController.m */,
+			);
+			path = MeetingRoomBooking;
+			sourceTree = "<group>";
+		};
 		F81859BCEED719930C5348E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1552,6 +1599,7 @@
 				6562F68E1C7EEB2B005F5B68 /* button_reservation_bg_pressed@3x.png in Resources */,
 				CD29E8C21C7AFE3500871F69 /* enterprise_-service_unpressed@2x.png in Resources */,
 				CD29E86B1C7AFE3500871F69 /* company_detail_phone_icon@3x.png in Resources */,
+				CDA991961C842608000C2AB2 /* multichoicebox_checked@2x.png in Resources */,
 				6562F6831C7EEB2B005F5B68 /* community_introduce_hardware_facility@3x.png in Resources */,
 				CD29E8591C7AFE3500871F69 /* service_mine_organization@3x.png in Resources */,
 				6562F6871C7EEB2B005F5B68 /* open_desk@2x.png in Resources */,
@@ -1633,6 +1681,7 @@
 				6562F6701C7EEB2B005F5B68 /* sina_weibo_pressed@3x.png in Resources */,
 				CD29E87E1C7AFE3500871F69 /* mine_account_number@2x.png in Resources */,
 				CD29E8811C7AFE3500871F69 /* mine_appointment_visit@2x.png in Resources */,
+				CDA991971C842608000C2AB2 /* multichoicebox_unchecked@2x.png in Resources */,
 				CD29E8901C7AFE3500871F69 /* mine_pay@3x.png in Resources */,
 				CD29E93A1C7B087500871F69 /* environment_update@2x.png in Resources */,
 				65B419651C75C25200FA817B /* PBCollectionCell.xib in Resources */,
@@ -1641,6 +1690,8 @@
 				CD1D572F1C71BDB700BB30AC /* Main.storyboard in Resources */,
 				CD29E8A81C7AFE3500871F69 /* community_introduce_comment@2x.png in Resources */,
 				CD29E85A1C7AFE3500871F69 /* service_mine_wage@2x.png in Resources */,
+				CDF7545F1C80361D0038622E /* PBMeetingRoomTableTopViewCell.xib in Resources */,
+				CDA9919A1C8426C6000C2AB2 /* single_line_bottom@2x.png in Resources */,
 				CD29E8FA1C7AFFD400871F69 /* community_introduce_but_phone@2x.png in Resources */,
 				CD29E85B1C7AFE3500871F69 /* service_mine_wage@3x.png in Resources */,
 				CD29E8F61C7AFFD400871F69 /* banner_logo@2x.png in Resources */,
@@ -1659,6 +1710,7 @@
 				6562F6881C7EEB2B005F5B68 /* open_desk@3x.png in Resources */,
 				CD29E8631C7AFE3500871F69 /* 快递查询@3x.png in Resources */,
 				6562F6891C7EEB2B005F5B68 /* personal_office@2x.png in Resources */,
+				CDA9919B1C8426C6000C2AB2 /* single_line_bottom@3x.png in Resources */,
 				CD29E8D01C7AFE3500871F69 /* office_community_pressed@2x.png in Resources */,
 				CD6944FE1C75C89600E04081 /* PBDoubleTableViewCell.xib in Resources */,
 				CD29E8C91C7AFE3500871F69 /* member_pressed@3x.png in Resources */,
@@ -1706,6 +1758,8 @@
 				6562F6731C7EEB2B005F5B68 /* wechat_friends_circle_unpressed@3x.png in Resources */,
 				CD29E91E1C7B00E600871F69 /* 中通快递@3x.png in Resources */,
 				65FAE9B81C7EFFC500743D97 /* sucessful_payment@3x.png in Resources */,
+				CD9C3A081C84186900071D60 /* multichoicebox_unchecked@3x.png in Resources */,
+				CD9C3A041C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.xib in Resources */,
 				CD29E8B11C7AFE3500871F69 /* personal_office@2x.png in Resources */,
 				CD29E85D1C7AFE3500871F69 /* 会议室@3x.png in Resources */,
 				CD29E9041C7AFFD400871F69 /* push_arrow@2x.png in Resources */,
@@ -1771,6 +1825,7 @@
 				6562F68D1C7EEB2B005F5B68 /* star_half@3x.png in Resources */,
 				CD29E89A1C7AFE3500871F69 /* register_button_bg_unpressed@3x.png in Resources */,
 				CD29E8961C7AFE3500871F69 /* mine_service@3x.png in Resources */,
+				CD9C3A071C84186900071D60 /* multichoicebox_checked@3x.png in Resources */,
 				CD29E9051C7AFFD400871F69 /* push_arrow@3x.png in Resources */,
 				CD29E8BD1C7AFE3500871F69 /* activity_space_pressed@3x.png in Resources */,
 				CD29E8AC1C7AFE3500871F69 /* horizonal_line@3x.png in Resources */,
@@ -1869,6 +1924,7 @@
 				CDC026D21C7C4B5700663B26 /* SendExpressViewController.m in Sources */,
 				659EAC761C7AD0A000208837 /* SpaceTableFacilitiesCell.m in Sources */,
 				659EACBC1C7AF7DA00208837 /* PBHardwareFacilitiesViewController.m in Sources */,
+				CDF7545A1C8034B80038622E /* PBMeetingRoomBookingViewController.m in Sources */,
 				CD25C7631C74570F00F228E0 /* PBButton.m in Sources */,
 				6562F60E1C7EE7A0005F5B68 /* ZZCalendarViewController.m in Sources */,
 				6562F6151C7EE7A0005F5B68 /* ZLCalendarView.m in Sources */,
@@ -1879,11 +1935,13 @@
 				CD6945011C75C89600E04081 /* PBMineTableViewSecondCell.m in Sources */,
 				CDF754531C8028660038622E /* UITabBar+badge.m in Sources */,
 				CD4F06C11C7ADA6B00F6478A /* ExpressTableViewCell.m in Sources */,
+				CDF7545E1C80361D0038622E /* PBMeetingRoomTableTopViewCell.m in Sources */,
 				CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */,
 				6562F6121C7EE7A0005F5B68 /* ZLNSDate+Logic.m in Sources */,
 				CD45EDE61C76F8DF0042E9A2 /* PBAlert.m in Sources */,
 				CD6944FD1C75C89600E04081 /* PBDoubleTableViewCell.m in Sources */,
 				65B419441C756B7700FA817B /* PBIndustryViewController.m in Sources */,
+				CD9C3A031C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.m in Sources */,
 				6562F6091C7EE7A0005F5B68 /* ZLCalendarDataSource.m in Sources */,
 				CD0178BC1C7C5A2F00B9DEC9 /* JSDropDownMenu.m in Sources */,
 				CD69448D1C75AD9D00E04081 /* LoginViewController.m in Sources */,
