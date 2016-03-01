@@ -33,6 +33,24 @@ typedef enum{
     CheckUnpaidOrder=9,
     //活动空间预约参观
     VisitActiveSpace=10,
+    
+    /** *行政区划列表*/
+    GetAreas=11,
+    /** *城市列表*/
+    GetCities=12,
+    /** *地铁列表*/
+    GetSubways=13,
+    /** *商圈列表*/
+    GetTradeAreas=14,
+    /** *支付账户列表*/
+    GetPayAccounts=15,
+    /** *获取协议信息*/
+    GetProtocol=16,
+    /** *客户端App更新*/
+    SysUpdate=17,
+    //获取所有海星客空间
+    GetAllSpaceList=18,
+
 }RequestFlag;
 
 #endif /* RequestFlag_h */

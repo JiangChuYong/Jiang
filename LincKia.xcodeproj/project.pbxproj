@@ -95,6 +95,8 @@
 		6562F69F1C7EEB2B005F5B68 /* team@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6562F65D1C7EEB2B005F5B68 /* team@3x.png */; };
 		6562F6A01C7EEB2B005F5B68 /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6562F65E1C7EEB2B005F5B68 /* time@2x.png */; };
 		6562F6A11C7EEB2B005F5B68 /* time@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6562F65F1C7EEB2B005F5B68 /* time@3x.png */; };
+		658AA7F51C801A5A00ACB94B /* PBLincKiaSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */; };
+		6597AB281C83E1F000E2705F /* LinckiaSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597AB271C83E1F000E2705F /* LinckiaSpace.m */; };
 		659EAC6B1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EAC661C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m */; };
 		659EAC6C1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 659EAC671C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.xib */; };
 		659EAC761C7AD0A000208837 /* SpaceTableFacilitiesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EAC741C7AD0A000208837 /* SpaceTableFacilitiesCell.m */; };
@@ -428,6 +430,10 @@
 		6562F65D1C7EEB2B005F5B68 /* team@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team@3x.png"; sourceTree = "<group>"; };
 		6562F65E1C7EEB2B005F5B68 /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@2x.png"; sourceTree = "<group>"; };
 		6562F65F1C7EEB2B005F5B68 /* time@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@3x.png"; sourceTree = "<group>"; };
+		658AA7F21C801A5A00ACB94B /* PBLincKiaSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBLincKiaSpaceViewController.h; sourceTree = "<group>"; };
+		658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBLincKiaSpaceViewController.m; sourceTree = "<group>"; };
+		6597AB261C83E1F000E2705F /* LinckiaSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinckiaSpace.h; sourceTree = "<group>"; };
+		6597AB271C83E1F000E2705F /* LinckiaSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinckiaSpace.m; sourceTree = "<group>"; };
 		659EAC651C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYActivitySpaceInfoCellTableViewCell.h; sourceTree = "<group>"; };
 		659EAC661C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYActivitySpaceInfoCellTableViewCell.m; sourceTree = "<group>"; };
 		659EAC671C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCYActivitySpaceInfoCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -950,6 +956,17 @@
 			path = "预约参观";
 			sourceTree = "<group>";
 		};
+		658AA7F11C801A5A00ACB94B /* LinckiaSpace */ = {
+			isa = PBXGroup;
+			children = (
+				658AA7F21C801A5A00ACB94B /* PBLincKiaSpaceViewController.h */,
+				658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */,
+				6597AB261C83E1F000E2705F /* LinckiaSpace.h */,
+				6597AB271C83E1F000E2705F /* LinckiaSpace.m */,
+			);
+			path = LinckiaSpace;
+			sourceTree = "<group>";
+		};
 		65B419401C756B7700FA817B /* IndustryList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1045,6 +1062,7 @@
 				CD29E92B1C7B02C700871F69 /* Environment */,
 				CDCE9F391C7AA4A60026950F /* SendExpress */,
 				6530F8201C771CD4005BD7C1 /* ActivitySpace */,
+				658AA7F11C801A5A00ACB94B /* LinckiaSpace */,
 				65B419401C756B7700FA817B /* IndustryList */,
 				CD6944DD1C75BDE500E04081 /* ViewCells */,
 				CD69448A1C75AD9D00E04081 /* LoginPage */,
@@ -1870,8 +1888,10 @@
 				652BFEAE1C76F3CE000D4EEA /* PBCompanyDetailViewController.m in Sources */,
 				6562F5E01C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.m in Sources */,
 				CD6944EA1C75BDE500E04081 /* PBADBannerCellTableViewCell.m in Sources */,
+				658AA7F51C801A5A00ACB94B /* PBLincKiaSpaceViewController.m in Sources */,
 				6562F6161C7EE7A0005F5B68 /* ZLDayLayoutView.m in Sources */,
 				CD6945011C75C89600E04081 /* PBMineTableViewSecondCell.m in Sources */,
+				6597AB281C83E1F000E2705F /* LinckiaSpace.m in Sources */,
 				CD4F06C11C7ADA6B00F6478A /* ExpressTableViewCell.m in Sources */,
 				CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */,
 				6562F6121C7EE7A0005F5B68 /* ZLNSDate+Logic.m in Sources */,
