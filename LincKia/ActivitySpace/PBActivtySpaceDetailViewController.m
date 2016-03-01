@@ -124,12 +124,6 @@ static NSString *bannerCellIDKey = @"PBADBannerCellTableViewCell";
 }
 - (IBAction)confirmBtnPressed:(UIButton *)sender {
     
-    
-//    [ZZGlobalModel sharedInstance].activeSpaceInfo = _spaceInfo;
-//    PBActiveSpaceBookingViewController * VC = [[PBActiveSpaceBookingViewController alloc]initWithNibName:@"PBActiveSpaceBookingViewController" bundle:nil];
-//    
-//    [self.navigationController pushViewController:VC animated:YES];
-    
     [JCYGlobalData sharedInstance].activeSpaceInfo=_responseDataOfIndexDict;
 
     [self performSegueWithIdentifier:@"IntroduceToOrdBooking" sender:self];
@@ -303,11 +297,9 @@ static NSString *bannerCellIDKey = @"PBADBannerCellTableViewCell";
 //空间设施页面
 -(void)pushToFacilitiesPage:(UIButton *)sender
 {
-    
-//    PBHardwareFacilitiesViewController * facilitiesVC = [[PBHardwareFacilitiesViewController alloc]init];
     [JCYGlobalData sharedInstance].activeSpaceInfo=_responseDataOfIndexDict;
     [JCYGlobalData sharedInstance].isActiveSpace=YES;
-//    [self.navigationController pushViewController:facilitiesVC animated:YES];
+
     [self performSegueWithIdentifier:@"IntroduceToHard" sender:self];
     NSLog(@"aaaa");
 }
@@ -316,10 +308,7 @@ static NSString *bannerCellIDKey = @"PBADBannerCellTableViewCell";
 -(void)pushToSpaceIntroducePage:(UIButton *)sender
 {
     [JCYGlobalData sharedInstance].activeSpaceInfo = _responseDataOfIndexDict;
-//    ZZSpaceIntroduceViewController *viewController = [[ZZSpaceIntroduceViewController alloc] init];
-//    viewController.isActiveSpace=YES;
-//    [self.navigationController pushViewController:viewController animated:YES];
-//    NSLog(@"aaaa");
+
     [JCYGlobalData sharedInstance].isActiveSpace=YES;
     [self performSegueWithIdentifier:@"IntroduceToInfo" sender:self];
 

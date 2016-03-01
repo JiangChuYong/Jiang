@@ -295,10 +295,12 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
 //选中空间
 -(void)selectRecommond:(UIImageView *)sender
 {
-    //    SpaceSummaryInfo *spaceSummaryInfo= _currentDataArray[sender.tag - 5000];
-    //    [ZZGlobalModel sharedInstance].SpaceId=spaceSummaryInfo.SpaceId;
-    //    PBSpaceViewController * spaceVC = [[PBSpaceViewController alloc]init];
-    //    [self.navigationController pushViewController:spaceVC animated:YES];
+    
+    
+    NSDictionary *spaceSummaryInfoDict=_currentDataArray[sender.tag-5000];
+    [JCYGlobalData sharedInstance].SpaceId=spaceSummaryInfoDict[@"SpaceId"];
+    [self performSegueWithIdentifier:@"LinckiaSpaceToLinckiaSpaceInfo" sender:self];
+    
 }
 -(void)requestDataFromServer
 {
@@ -494,13 +496,15 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
     int result = [_GetTradeAreas.resultDict[@"Code"] intValue];;
     if (result == SUCCESS) {
         [self dealResposeResult:_allSpaceListDict[@"Data"][@"Data"]];
-        [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetAllSpaceList] object:nil];
-        return;
+       
+        
     }else{
         
         [[PBAlert sharedInstance]showText:_allSpaceListDict
          [@"Description"]inView:self.view withTime:2.0];
     }
+    
+     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetAllSpaceList] object:nil];
     
 }
 /** *处理请求返回后的结果*/

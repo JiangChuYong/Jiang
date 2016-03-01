@@ -50,6 +50,10 @@ typedef enum{
     SysUpdate=17,
     //获取所有海星客空间
     GetAllSpaceList=18,
+    //社区详情
+    LinckiaSpaceGetOne=19,
+    //获取空间评价
+    GetSpaceComment=20,
 
 }RequestFlag;
 

@@ -37,16 +37,16 @@
 
 -(void)setFontAndSizeForintroduceContent
 {
-//    self.introduceContent.text = _spaceDetailInfo.Description;
-//    self.titleLable.text=_spaceDetailInfo.Name;
-//    //获取空间图片信息
-//    NSMutableArray <SpacePicModel>* imageIntroArray = _spaceDetailInfo.IntroPictures;
-//    NSMutableArray * imageStringArray = [NSMutableArray array];
-//    for (SpacePicModel * spacePic in imageIntroArray) {
-//        NSString * urlstring = spacePic.PicUrl;
-//        [imageStringArray addObject:urlstring];
-//    }
-//    [self setSpaceImageWithImageArr:imageStringArray];
+    self.introduceContent.text = _spaceDetailInfo[@"Data"][@"Description"];
+    self.titleLable.text=_spaceDetailInfo[@"Data"][@"Name"];
+    //获取空间图片信息
+    NSMutableArray * imageIntroArray = _spaceDetailInfo[@"Data"][@"IntroPictures"];
+    NSMutableArray * imageStringArray = [NSMutableArray array];
+    for (NSDictionary * spacePic in imageIntroArray) {
+        NSString * urlstring = spacePic[@"PicUrl"];
+        [imageStringArray addObject:urlstring];
+    }
+    [self setSpaceImageWithImageArr:imageStringArray];
 
     
     
