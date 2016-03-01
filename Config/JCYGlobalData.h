@@ -32,6 +32,8 @@ typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
 @property (assign,nonatomic) BOOL isActiveSpace;
 //社区简介详细信息
 @property (strong,nonatomic) NSDictionary *spaceDetailInfo;
+//社区ID
+@property (strong,nonatomic) NSString *SpaceId;
 //登陆状态判断
 @property (assign,nonatomic) BOOL LoginStatus;
 //日历可选日期控制
@@ -44,7 +46,6 @@ typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
 @property (strong,nonatomic) NSDictionary *userInfo;
 //活动空间预约信息
 @property (strong,nonatomic) NSDictionary *activeSpaceBookingInfo;
-
 
 //时间大小遍历
 +(NSMutableArray *)filterTimeArray:(NSMutableArray *)timeArray;
