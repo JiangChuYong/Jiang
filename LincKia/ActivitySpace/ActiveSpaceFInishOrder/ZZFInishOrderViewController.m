@@ -48,7 +48,8 @@
         [self.myOrderDetailBtn setTitle:@"查看我的预约" forState:UIControlStateNormal];
         
         if (![JCYGlobalData sharedInstance].isActiveSpace) {
-            //self.mobile.text=[JCYGlobalData sharedInstance].spaceDetailInfo;
+            NSLog(@"%@",[JCYGlobalData sharedInstance].spaceVisitDict);
+            self.mobile.text=[JCYGlobalData sharedInstance].spaceVisitDict[@"TelPhone"];
             
             
         }else{

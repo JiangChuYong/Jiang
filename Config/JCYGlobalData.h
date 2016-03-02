@@ -46,6 +46,9 @@ typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
 @property (strong,nonatomic) NSDictionary *userInfo;
 //活动空间预约信息
 @property (strong,nonatomic) NSDictionary *activeSpaceBookingInfo;
+//社区空间预约信息
+@property (strong,nonatomic) NSDictionary *spaceVisitDict;
+
 
 //时间大小遍历
 +(NSMutableArray *)filterTimeArray:(NSMutableArray *)timeArray;

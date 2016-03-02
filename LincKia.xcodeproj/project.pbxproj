@@ -107,6 +107,9 @@
 		6562F69F1C7EEB2B005F5B68 /* team@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6562F65D1C7EEB2B005F5B68 /* team@3x.png */; };
 		6562F6A01C7EEB2B005F5B68 /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6562F65E1C7EEB2B005F5B68 /* time@2x.png */; };
 		6562F6A11C7EEB2B005F5B68 /* time@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6562F65F1C7EEB2B005F5B68 /* time@3x.png */; };
+		6572BE741C86B5E300F495D1 /* JCYBookingSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572BE731C86B5E300F495D1 /* JCYBookingSpaceViewController.m */; };
+		6572BE761C86B7AF00F495D1 /* single2_bottom_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */; };
+		6572BE791C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572BE781C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m */; };
 		658AA7F51C801A5A00ACB94B /* PBLincKiaSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */; };
 		6597AB281C83E1F000E2705F /* LinckiaSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597AB271C83E1F000E2705F /* LinckiaSpace.m */; };
 		659EAC6B1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EAC661C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m */; };
@@ -473,6 +476,11 @@
 		6562F65D1C7EEB2B005F5B68 /* team@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team@3x.png"; sourceTree = "<group>"; };
 		6562F65E1C7EEB2B005F5B68 /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@2x.png"; sourceTree = "<group>"; };
 		6562F65F1C7EEB2B005F5B68 /* time@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@3x.png"; sourceTree = "<group>"; };
+		6572BE721C86B5E300F495D1 /* JCYBookingSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYBookingSpaceViewController.h; sourceTree = "<group>"; };
+		6572BE731C86B5E300F495D1 /* JCYBookingSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYBookingSpaceViewController.m; sourceTree = "<group>"; };
+		6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "single2_bottom_line@2x.png"; sourceTree = "<group>"; };
+		6572BE771C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYSpaceOnlineReserveViewControllerViewController.h; sourceTree = "<group>"; };
+		6572BE781C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYSpaceOnlineReserveViewControllerViewController.m; sourceTree = "<group>"; };
 		658AA7F21C801A5A00ACB94B /* PBLincKiaSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBLincKiaSpaceViewController.h; sourceTree = "<group>"; };
 		658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBLincKiaSpaceViewController.m; sourceTree = "<group>"; };
 		6597AB261C83E1F000E2705F /* LinckiaSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinckiaSpace.h; sourceTree = "<group>"; };
@@ -1063,6 +1071,10 @@
 				6560FE511C852DD6006A6A3B /* JCYSpaceViewController.m */,
 				654B70461C855575004B64B0 /* TQStarRatingView.h */,
 				654B70471C855575004B64B0 /* TQStarRatingView.m */,
+				6572BE721C86B5E300F495D1 /* JCYBookingSpaceViewController.h */,
+				6572BE731C86B5E300F495D1 /* JCYBookingSpaceViewController.m */,
+				6572BE771C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.h */,
+				6572BE781C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m */,
 				654B70491C856091004B64B0 /* EvaluteList */,
 				655915281C853FDC002FC3FD /* SpaceTableCell */,
 			);
@@ -1376,6 +1388,7 @@
 		CD29E8E11C7AFFD300871F69 /* 通用 */ = {
 			isa = PBXGroup;
 			children = (
+				6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */,
 				CDA991981C8426C6000C2AB2 /* single_line_bottom@2x.png */,
 				CDA991991C8426C6000C2AB2 /* single_line_bottom@3x.png */,
 				CDA991941C842608000C2AB2 /* multichoicebox_checked@2x.png */,
@@ -1695,6 +1708,7 @@
 				6562F6831C7EEB2B005F5B68 /* community_introduce_hardware_facility@3x.png in Resources */,
 				CD29E8591C7AFE3500871F69 /* service_mine_organization@3x.png in Resources */,
 				6562F6871C7EEB2B005F5B68 /* open_desk@2x.png in Resources */,
+				6572BE761C86B7AF00F495D1 /* single2_bottom_line@2x.png in Resources */,
 				6562F69C1C7EEB2B005F5B68 /* supplementary@2x.png in Resources */,
 				CD29E89E1C7AFE3500871F69 /* users_textfield_clicked@3x.png in Resources */,
 				CD29E8AD1C7AFE3500871F69 /* map@3x.png in Resources */,
@@ -2009,6 +2023,8 @@
 				65B4196B1C75D06B00FA817B /* JCYGlobalData.m in Sources */,
 				CD1D572C1C71BDB700BB30AC /* MemberPageViewController.m in Sources */,
 				65B419741C75D1BF00FA817B /* PBCompanyListTableViewCell.m in Sources */,
+				6572BE791C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m in Sources */,
+				6572BE741C86B5E300F495D1 /* JCYBookingSpaceViewController.m in Sources */,
 				65B4196F1C75D18600FA817B /* PBCompanyListViewController.m in Sources */,
 				CD6945031C75C89600E04081 /* PBMineTableViewSingleLineCell.m in Sources */,
 				CD0F15A81C7D7FF500AE74FB /* PBCheckExpressViewController.m in Sources */,

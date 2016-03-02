@@ -151,13 +151,22 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
         //添加用户交互图片
         UIButton *UITouchBtn =[spacesListTableViewCell valueForKey:@"UITouchBtn"];
         UITouchBtn.tag = 5000+indexPath.row;
-        //            [UITouchBtn addTarget:self action:@selector(selectRecommond:) forControlEvents:UIControlEventTouchUpInside];
+        [UITouchBtn addTarget:self action:@selector(selectRecommond:) forControlEvents:UIControlEventTouchUpInside];
         
         return spacesListTableViewCell;
     }
     
     
 }
+
+//选中空间
+-(void)selectRecommond:(UIImageView *)sender
+{
+    NSDictionary *spaceSummaryInfoDict=_spaceSummaryInfoArr[sender.tag-5002];
+    [JCYGlobalData sharedInstance].SpaceId=spaceSummaryInfoDict[@"SpaceId"];
+    [self performSegueWithIdentifier:@"HomeToLinckiaSpaceInfo" sender:self];
+}
+
 
 //跳转至 企业服务页面
 - (void)pushToIndustryListPage:(UIButton *)sender{

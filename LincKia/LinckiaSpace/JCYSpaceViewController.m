@@ -7,25 +7,16 @@
 //
 
 #import "JCYSpaceViewController.h"
-//#import "ZZSpaceOnlineReserveViewController.h"
 #import "PBHardwareFacilitiesViewController.h"
-//#import "ZZSpaceEvaluateListViewController.h"
-//#import "PBSpaceViewController.h"
-//#import "SpaceIdModel.h"
-//#import "ResponseDataOfSpaceViewInfo.h"
-//#import "SpaceViewInfo.h"
 #import "PBSpaceTableAdressCell.h"
 #import "TQStarRatingView.h"
-//#import "ZZSpaceIntroduceViewController.h"
 #import "PBTableSpaceTypeCell.h"
-//#import "SpaceCellsGroup.h"
 #import "SpaceTableFacilitiesCell.h"
 #import "CommentCell.h"
 //#import <ShareSDK/ShareSDK.h>
-//#import "PBBookingSpaceViewController.h"
-//#import "PBActiveSpaceBookingViewController.h"
 #import "Masonry.h"
 #import "PBADBannerCellTableViewCell.h"
+#import "LoginViewController.h"
 @interface JCYSpaceViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *table;
@@ -112,10 +103,6 @@ static NSString *commentCellIdentifier = @"CommentCell";
     }
     
     _pageLabel = [[UILabel alloc]init];
-//    _pageLabel.x = 15;
-//    _pageLabel.y = ADVIEW_HEIGHT-35;
-//    _pageLabel.width = Main_Screen_Width;
-//    _pageLabel.height = 20;
     _pageLabel.frame=CGRectMake(15, ADVIEW_HEIGHT-35, Main_Screen_Width, 20);
     
     _pageLabel.font = [UIFont systemFontOfSize:fontSize];
@@ -124,10 +111,6 @@ static NSString *commentCellIdentifier = @"CommentCell";
     [_table addSubview:_pageLabel];
     
     UIImageView * camera = [[UIImageView alloc]init];
-//    camera.x = 30;
-//    camera.y = 0;
-//    camera.width = 30;
-//    camera.height = 20;
     camera.frame=CGRectMake(30, 0, 30, 20);
     camera.image = [UIImage imageNamed:@"community_introduce_camer.png"];
     [_pageLabel addSubview:camera];
@@ -164,6 +147,7 @@ static NSString *commentCellIdentifier = @"CommentCell";
 }
 -(void)requestDataFromServer
 {
+    _hasValidSpace = NO;
     NSString * spaceId = [JCYGlobalData sharedInstance].SpaceId;
     NSLog(@"%@",spaceId);
     
@@ -181,7 +165,6 @@ static NSString *commentCellIdentifier = @"CommentCell";
 
 -(void)dataReceived:(NSNotification *)notif{
     
-    //_responseDataOfIndexDict = _ActiveSpace.resultDict;
     _spaceInfoDict=_LinckiaSpaceInfo.resultDict;
     
     NSLog(@"%@",_LinckiaSpaceInfo.resultDict);
@@ -253,30 +236,28 @@ static NSString *commentCellIdentifier = @"CommentCell";
 }
 - (IBAction)pushToBookingPage:(UIButton *)sender {
     
-//    if (![ZZGlobalModel sharedInstance].userInfoViewModel) {
-//        LoginViewController *loginViewController = [[LoginViewController alloc] init];
-//        loginViewController.isClickBookingButton=YES;
-//        loginViewController.isClickUpdatePsd=NO;
-//        [self.navigationController pushViewController:loginViewController animated:YES];
-//        
-//    }else{
-//        PBBookingSpaceViewController *viewController = [[PBBookingSpaceViewController alloc] init];
-//        [self.navigationController pushViewController:viewController animated:YES];
-//    }
+    if (![JCYGlobalData sharedInstance].LoginStatus) {
+        
+        [self performSegueWithIdentifier:@"LinckiaSpaceInfoToLogin" sender:self];
+        
+    }else{
+        
+        [JCYGlobalData sharedInstance].spaceDetailInfo = _spaceInfoDict;
+        [self performSegueWithIdentifier:@"LinckiaSpaceInfoToBooking" sender:self];
+    }
     
 }
 - (IBAction)pushToShoppingPage:(UIButton *)sender {
     
-//    if (![ZZGlobalModel sharedInstance].userInfoViewModel) {
-//        LoginViewController *loginViewController = [[LoginViewController alloc] init];
-//        loginViewController.isClickBookingButton=YES;
-//        loginViewController.isClickUpdatePsd=NO;
-//        [self.navigationController pushViewController:loginViewController animated:YES];
-//        
-//    }else{
+    if (![JCYGlobalData sharedInstance].LoginStatus) {
+        [self performSegueWithIdentifier:@"LinckiaSpaceInfoToLogin" sender:self];
+        
+    }else{
+        
 //        ZZSpaceOnlineReserveViewController *viewController = [[ZZSpaceOnlineReserveViewController alloc] init];
+//        
 //        [self.navigationController pushViewController:viewController animated:YES];
-//    }
+    }
     
     
 }
@@ -588,7 +569,7 @@ static NSString *commentCellIdentifier = @"CommentCell";
     //空间介绍页面传值
     [JCYGlobalData sharedInstance].spaceDetailInfo = dict;
     //在线预订按钮和立即预约按钮的控制
-    if (!dict[@"IsLinckia"]) {
+    if (![dict[@"IsLinckia"] boolValue]) {
         //非linckia空间在线订位功能灰掉
         [self hiddenShoppingOnlineButton];
     }else{
@@ -598,7 +579,7 @@ static NSString *commentCellIdentifier = @"CommentCell";
         }else{
             //判断剩余数量
             for (NSDictionary * cell in dict[@"SpaceCell"]) {
-                if (cell[@"SpaceCellRemainderNumber"]) {
+                if ([cell[@"SpaceCellRemainderNumber"] intValue]) {
                     _hasValidSpace = YES;
                 }
             }

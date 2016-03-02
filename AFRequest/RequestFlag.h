@@ -33,10 +33,25 @@ typedef enum{
     CheckUnpaidOrder=9,
     //活动空间预约参观
     VisitActiveSpace=10,
+    /** *行政区划列表*/
+    GetAreas=11,
+    /** *地铁列表*/
+    GetSubways=12,
+    /** *商圈列表*/
+    GetTradeAreas=13,
+    //获取所有海星客空间
+    GetAllSpaceList=14,
+    //社区详情
+    LinckiaSpaceGetOne=15,
+    //获取空间评价
+    GetSpaceComment=16,
     //获取有会议室的空间列表
     GetSpaceNameList,
     //获取会议室列表
     GetMeetingSpaceCell,
+    //社区预约参观
+    AddCustomOfficeInfo,
+    
     
 }RequestFlag;
 
