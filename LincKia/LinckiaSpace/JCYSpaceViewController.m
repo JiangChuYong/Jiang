@@ -254,9 +254,10 @@ static NSString *commentCellIdentifier = @"CommentCell";
         
     }else{
         
-//        ZZSpaceOnlineReserveViewController *viewController = [[ZZSpaceOnlineReserveViewController alloc] init];
-//        
-//        [self.navigationController pushViewController:viewController animated:YES];
+        
+         [JCYGlobalData sharedInstance].spaceDetailInfo=_spaceInfoDict;
+        [self performSegueWithIdentifier:@"LinckiaSpaceInfoToOnline" sender:self];
+        
     }
     
     

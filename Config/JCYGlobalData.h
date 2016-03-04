@@ -52,4 +52,8 @@ typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
 
 //时间大小遍历
 +(NSMutableArray *)filterTimeArray:(NSMutableArray *)timeArray;
+/*  从某日期往后推几月后的日期
+*/
++(NSDate *)jcyDateByAddingMonths:(NSInteger)months From:(NSString *)dataStr;
+#pragma mark - 从某日期往前推几月后的日期
 @end

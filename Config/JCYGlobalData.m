@@ -48,4 +48,33 @@ SingletonM(JCYGlobalData)
 }
 
 
+
++(NSDate *)jcyDateByAddingMonths:(NSInteger)months From:(NSString *)dataStr
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSDate *startDate = [dateFormatter dateFromString:dataStr];
+    
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    NSDateComponents *comps = nil;
+    
+    comps = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:startDate];
+    
+    NSDateComponents *adcomps = [[NSDateComponents alloc] init];
+    
+    [adcomps setYear:0];
+    
+    [adcomps setMonth:months];
+    
+    [adcomps setDay:0];
+    
+    NSDate *newdate = [calendar dateByAddingComponents:adcomps toDate:startDate options:0];
+    
+    return newdate;
+}
+
+
+
 @end

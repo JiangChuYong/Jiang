@@ -122,6 +122,7 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
     if (row == 0) {
         
         [self alertDropDownView:_spaceList tag:sender];
+        
         //日历选择
     }else if (row == 1){
         ZZCalendarViewController *viewController = [ZZCalendarViewController shareCalendarVC];

@@ -15,7 +15,10 @@
 }
 - (IBAction)clickCheckBox:(id)sender {
     [self.btnCheckBox setSelected:(!self.btnCheckBox.selected)];
+    
 }
+
+
 
 //初始化属性
 - (void)initCellProperty:(NSMutableArray *)cellModels index:(NSInteger)index name:(NSString *)name

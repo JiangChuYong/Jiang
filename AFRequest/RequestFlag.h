@@ -51,6 +51,8 @@ typedef enum{
     GetMeetingSpaceCell,
     //社区预约参观
     AddCustomOfficeInfo,
+    //获取社区可租用空间列表
+    GetSpaceCell,
     
     
 }RequestFlag;

@@ -110,6 +110,7 @@
 		6572BE741C86B5E300F495D1 /* JCYBookingSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572BE731C86B5E300F495D1 /* JCYBookingSpaceViewController.m */; };
 		6572BE761C86B7AF00F495D1 /* single2_bottom_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */; };
 		6572BE791C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572BE781C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m */; };
+		65734D281C87E3ED008B5CAB /* photo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65734D271C87E3ED008B5CAB /* photo@3x.png */; };
 		658AA7F51C801A5A00ACB94B /* PBLincKiaSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */; };
 		6597AB281C83E1F000E2705F /* LinckiaSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597AB271C83E1F000E2705F /* LinckiaSpace.m */; };
 		659EAC6B1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EAC661C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m */; };
@@ -481,6 +482,7 @@
 		6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "single2_bottom_line@2x.png"; sourceTree = "<group>"; };
 		6572BE771C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYSpaceOnlineReserveViewControllerViewController.h; sourceTree = "<group>"; };
 		6572BE781C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYSpaceOnlineReserveViewControllerViewController.m; sourceTree = "<group>"; };
+		65734D271C87E3ED008B5CAB /* photo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo@3x.png"; sourceTree = "<group>"; };
 		658AA7F21C801A5A00ACB94B /* PBLincKiaSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBLincKiaSpaceViewController.h; sourceTree = "<group>"; };
 		658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBLincKiaSpaceViewController.m; sourceTree = "<group>"; };
 		6597AB261C83E1F000E2705F /* LinckiaSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinckiaSpace.h; sourceTree = "<group>"; };
@@ -1036,6 +1038,7 @@
 		6562F64B1C7EEB2B005F5B68 /* 预约参观 */ = {
 			isa = PBXGroup;
 			children = (
+				65734D271C87E3ED008B5CAB /* photo@3x.png */,
 				6562F64C1C7EEB2B005F5B68 /* button_reservation_bg_pressed@3x.png */,
 				6562F64D1C7EEB2B005F5B68 /* button_reservation_bg_unpressed@3x.png */,
 				6562F64E1C7EEB2B005F5B68 /* cellphone_number@3x.png */,
@@ -1853,6 +1856,7 @@
 				CD29E8C71C7AFE3500871F69 /* home_unpressed@3x.png in Resources */,
 				CD29E8A01C7AFE3500871F69 /* arrow@2x.png in Resources */,
 				CD29E8D11C7AFE3500871F69 /* office_community_pressed@3x.png in Resources */,
+				65734D281C87E3ED008B5CAB /* photo@3x.png in Resources */,
 				CD29E91B1C7B00E600871F69 /* but_phone@2x.png in Resources */,
 				CD29E8801C7AFE3500871F69 /* mine_appointment_visit.png in Resources */,
 				CD29E8A21C7AFE3500871F69 /* button_reservation_pressed@3x.png in Resources */,
