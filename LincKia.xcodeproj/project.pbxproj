@@ -107,6 +107,11 @@
 		6562F69F1C7EEB2B005F5B68 /* team@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6562F65D1C7EEB2B005F5B68 /* team@3x.png */; };
 		6562F6A01C7EEB2B005F5B68 /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6562F65E1C7EEB2B005F5B68 /* time@2x.png */; };
 		6562F6A11C7EEB2B005F5B68 /* time@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6562F65F1C7EEB2B005F5B68 /* time@3x.png */; };
+		65651EC61C894A86004E38B0 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65651EC51C894A86004E38B0 /* MyAccountViewController.m */; };
+		65651ECA1C895470004E38B0 /* PBChangeHeadPicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65651EC81C895470004E38B0 /* PBChangeHeadPicTableViewCell.m */; };
+		65651ECB1C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65651EC91C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib */; };
+		65651ED21C8989EB004E38B0 /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 65651ECE1C8989EB004E38B0 /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		65651ED31C8989EB004E38B0 /* LGTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 65651ED11C8989EB004E38B0 /* LGTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6572BE741C86B5E300F495D1 /* JCYBookingSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572BE731C86B5E300F495D1 /* JCYBookingSpaceViewController.m */; };
 		6572BE761C86B7AF00F495D1 /* single2_bottom_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */; };
 		6572BE791C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572BE781C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m */; };
@@ -477,6 +482,16 @@
 		6562F65D1C7EEB2B005F5B68 /* team@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team@3x.png"; sourceTree = "<group>"; };
 		6562F65E1C7EEB2B005F5B68 /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@2x.png"; sourceTree = "<group>"; };
 		6562F65F1C7EEB2B005F5B68 /* time@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@3x.png"; sourceTree = "<group>"; };
+		65651EC41C894A86004E38B0 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
+		65651EC51C894A86004E38B0 /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
+		65651EC71C895470004E38B0 /* PBChangeHeadPicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBChangeHeadPicTableViewCell.h; sourceTree = "<group>"; };
+		65651EC81C895470004E38B0 /* PBChangeHeadPicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBChangeHeadPicTableViewCell.m; sourceTree = "<group>"; };
+		65651EC91C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBChangeHeadPicTableViewCell.xib; sourceTree = "<group>"; };
+		65651ECD1C8989EB004E38B0 /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		65651ECE1C8989EB004E38B0 /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		65651ECF1C8989EB004E38B0 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		65651ED01C8989EB004E38B0 /* LGTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGTMBase64.h; sourceTree = "<group>"; };
+		65651ED11C8989EB004E38B0 /* LGTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGTMBase64.m; sourceTree = "<group>"; };
 		6572BE721C86B5E300F495D1 /* JCYBookingSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYBookingSpaceViewController.h; sourceTree = "<group>"; };
 		6572BE731C86B5E300F495D1 /* JCYBookingSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYBookingSpaceViewController.m; sourceTree = "<group>"; };
 		6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "single2_bottom_line@2x.png"; sourceTree = "<group>"; };
@@ -1063,6 +1078,30 @@
 			path = "预约参观";
 			sourceTree = "<group>";
 		};
+		65651EC31C894A69004E38B0 /* MyAccount */ = {
+			isa = PBXGroup;
+			children = (
+				65651EC41C894A86004E38B0 /* MyAccountViewController.h */,
+				65651EC51C894A86004E38B0 /* MyAccountViewController.m */,
+				65651EC71C895470004E38B0 /* PBChangeHeadPicTableViewCell.h */,
+				65651EC81C895470004E38B0 /* PBChangeHeadPicTableViewCell.m */,
+				65651EC91C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib */,
+			);
+			path = MyAccount;
+			sourceTree = "<group>";
+		};
+		65651ECC1C8989EB004E38B0 /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				65651ECD1C8989EB004E38B0 /* GTMBase64.h */,
+				65651ECE1C8989EB004E38B0 /* GTMBase64.m */,
+				65651ECF1C8989EB004E38B0 /* GTMDefines.h */,
+				65651ED01C8989EB004E38B0 /* LGTMBase64.h */,
+				65651ED11C8989EB004E38B0 /* LGTMBase64.m */,
+			);
+			path = GTMBase64;
+			sourceTree = "<group>";
+		};
 		658AA7F11C801A5A00ACB94B /* LinckiaSpace */ = {
 			isa = PBXGroup;
 			children = (
@@ -1148,6 +1187,7 @@
 				CD1D57301C71BDB700BB30AC /* Assets.xcassets */,
 				CD29E7CF1C7AFE3500871F69 /* images */,
 				CD0178B31C7C5A2F00B9DEC9 /* JSDropDownMenu */,
+				65651ECC1C8989EB004E38B0 /* GTMBase64 */,
 				6562F5E51C7EE7A0005F5B68 /* NIDropDown */,
 				6562F5E81C7EE7A0005F5B68 /* ZLCalendar */,
 				CD5CD0091C71E0EC00B6A34B /* AFRequest */,
@@ -1182,6 +1222,7 @@
 				6530F8201C771CD4005BD7C1 /* ActivitySpace */,
 				658AA7F11C801A5A00ACB94B /* LinckiaSpace */,
 				65B419401C756B7700FA817B /* IndustryList */,
+				65651EC31C894A69004E38B0 /* MyAccount */,
 				CD6944DD1C75BDE500E04081 /* ViewCells */,
 				CD69448A1C75AD9D00E04081 /* LoginPage */,
 				CD1D57241C71BDB700BB30AC /* AppDelegate.h */,
@@ -1739,6 +1780,7 @@
 				CD29E8B41C7AFE3500871F69 /* star_full@3x.png in Resources */,
 				6562F69B1C7EEB2B005F5B68 /* phone@3x.png in Resources */,
 				CD29E9221C7B00E600871F69 /* 天天快递@3x.png in Resources */,
+				65651ECB1C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib in Resources */,
 				CD29E8BE1C7AFE3500871F69 /* activity_space_unpressed@2x.png in Resources */,
 				CD1D57341C71BDB700BB30AC /* LaunchScreen.storyboard in Resources */,
 				6562F6851C7EEB2B005F5B68 /* map@3x.png in Resources */,
@@ -2063,6 +2105,7 @@
 				CD45EDE61C76F8DF0042E9A2 /* PBAlert.m in Sources */,
 				CD6944FD1C75C89600E04081 /* PBDoubleTableViewCell.m in Sources */,
 				65B419441C756B7700FA817B /* PBIndustryViewController.m in Sources */,
+				65651ED21C8989EB004E38B0 /* GTMBase64.m in Sources */,
 				CD9C3A031C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.m in Sources */,
 				6562F6091C7EE7A0005F5B68 /* ZLCalendarDataSource.m in Sources */,
 				CD0178BC1C7C5A2F00B9DEC9 /* JSDropDownMenu.m in Sources */,
@@ -2080,11 +2123,14 @@
 				CD7360BE1C71C9A800E3971C /* CommonUtil.m in Sources */,
 				659EAC861C7ADFC500208837 /* PBActivtySpaceDetailViewController.m in Sources */,
 				6562F6101C7EE7A0005F5B68 /* ZLCalendarUtil.m in Sources */,
+				65651EC61C894A86004E38B0 /* MyAccountViewController.m in Sources */,
 				CDC954B81C7C684800D2D7D1 /* PBDiDiViewController.m in Sources */,
 				659EAC6B1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m in Sources */,
 				6562F60B1C7EE7A0005F5B68 /* ZLCalendarDayModel.m in Sources */,
 				CD1D57231C71BDB700BB30AC /* main.m in Sources */,
 				6530F8241C771CD4005BD7C1 /* PBActivitySpaceListViewController.m in Sources */,
+				65651ECA1C895470004E38B0 /* PBChangeHeadPicTableViewCell.m in Sources */,
+				65651ED31C8989EB004E38B0 /* LGTMBase64.m in Sources */,
 				CD5CD00C1C71E10F00B6A34B /* AFRquest.m in Sources */,
 				654B70481C855575004B64B0 /* TQStarRatingView.m in Sources */,
 				6562F6141C7EE7A0005F5B68 /* ZLCalendarMonthPage.m in Sources */,

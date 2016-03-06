@@ -236,6 +236,7 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     
     NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
     NSDictionary * dict = _Login.resultDict[@"Data"];
+    [JCYGlobalData sharedInstance].userInfo=_Login.resultDict[@"Data"];
     [userInfo setValue:dict[@"UserToken"] forKey:USERTOKEN];
   
     NSString * userToken = [userInfo valueForKey:USERTOKEN];

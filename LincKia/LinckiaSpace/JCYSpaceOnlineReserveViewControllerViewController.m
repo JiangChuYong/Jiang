@@ -173,7 +173,8 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
         //日历选择
     }else if (row == 1){
         ZZCalendarViewController *viewController = [ZZCalendarViewController shareCalendarVC];
-        viewController.hideBeforeToday = YES;
+        [JCYGlobalData sharedInstance].validDays = 365;
+        viewController.hideAfterValidDay = YES;
         [viewController.selectDayView cancleClickDayViewStyle];
         viewController.view.backgroundColor = [UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.7];
         [self.view addSubview:viewController.view];

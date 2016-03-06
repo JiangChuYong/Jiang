@@ -53,6 +53,8 @@ typedef enum{
     AddCustomOfficeInfo,
     //获取社区可租用空间列表
     GetSpaceCell,
+    //上传头像
+    UploadAvatar,
     
     
 }RequestFlag;

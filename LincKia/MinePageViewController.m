@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property (strong,nonatomic) NSMutableArray * dataSource;
 @property (strong,nonatomic) NSDictionary * userInfoDic;
-
+@property (strong, nonatomic)  UIImageView *headPicView;
 @property (assign,nonatomic) BOOL HasUnpayOrder;
 @property (strong,nonatomic) AFRquest * CheckUnpaidOrder;
 @property (strong,nonatomic) AFRquest * GetUserInfo;
@@ -47,8 +47,13 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     [super viewDidLoad];
     [self registerTableViewCells];
     [self initMineViewDataSource];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePhoto) name:PhotoUpload_Succeed object:nil];
 }
-
+-(void)updatePhoto{
+    //头像照片名
+    [[SDImageCache sharedImageCache]removeImageForKey:[JCYGlobalData sharedInstance].userInfo[@"AvatarUrl"]];
+    [_headPicView sd_setImageWithURL:[NSURL URLWithString:[JCYGlobalData sharedInstance].userInfo[@"AvatarUrl"]] placeholderImage:[UIImage imageNamed:Space_DetailFacilities_Default_Image]];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -99,9 +104,15 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     if (indexPath.row == 0) {
         
         PBMineTableViewHeadCellTableViewCell * headCell = [_table dequeueReusableCellWithIdentifier:headCellIDKey];
+        
+        _headPicView=headCell.headPic;
+        [headCell.headPic sd_setImageWithURL:[NSURL URLWithString:_userInfoDic[@"AvatarUrl"]] placeholderImage:[UIImage imageNamed:Space_DetailFacilities_Default_Image]];
+        
         headCell.phoneNumLab.text = _userInfoDic[@"Mobile"];
         NSNumber * starFish = _userInfoDic[@"Starfish"];
         headCell.LincKiaCoinNum.text = [NSString stringWithFormat:@"%@",starFish];
+        
+        [headCell.headBtn addTarget:self action:@selector(myAccountButtonPressed:) forControlEvents:UIControlEventTouchDown];
         
         return headCell;
     }
@@ -130,6 +141,10 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     
 }
 
+- (void)myAccountButtonPressed:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"MineToUserInfo" sender:self];
+}
+
 #pragma -- mark CheckUnpayOrder Request
 
 -(void)checkUnpayOrder{
@@ -142,6 +157,7 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
         _CheckUnpaidOrder.style = POST;
         [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(checkUnpayDataReceived:) name:[NSString stringWithFormat:@"%i",CheckUnpaidOrder] object:nil];
         [_CheckUnpaidOrder requestDataFromWithFlag:CheckUnpaidOrder];
+        
     }
     
 }
