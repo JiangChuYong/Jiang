@@ -125,6 +125,12 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
             secondCell.hintImg.hidden = YES;
         }
         
+        //跳转待支付页面
+        [secondCell.unpaidBtn addTarget:self action:@selector(unpayButtonPressed:) forControlEvents:UIControlEventTouchDown];
+        //跳转待点评页面
+        [secondCell.uncommentBtn addTarget:self action:@selector(uncommentButtonPressed:) forControlEvents:UIControlEventTouchDown];
+        
+        
         return secondCell;
     }
     else{
@@ -144,6 +150,19 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
 - (void)myAccountButtonPressed:(UIButton *)sender {
     [self performSegueWithIdentifier:@"MineToUserInfo" sender:self];
 }
+
+
+-(void)unpayButtonPressed:(UIButton *)sender
+{
+    [self performSegueWithIdentifier:@"MineToUnpayOrderList" sender:self];
+}
+-(void)uncommentButtonPressed:(UIButton *)sender
+{
+    
+    [self performSegueWithIdentifier:@"MineToComment" sender:self];
+    
+}
+
 
 #pragma -- mark CheckUnpayOrder Request
 

@@ -55,6 +55,13 @@ typedef enum{
     GetSpaceCell,
     //上传头像
     UploadAvatar,
+    //获取为支付列表
+    GetUnpayOrderList,
+    //获取为会议室待支付列表
+    GetMeetingList,
+    //获取带点评列表
+    GetNotCommentedList,
+    
     
     
 }RequestFlag;
