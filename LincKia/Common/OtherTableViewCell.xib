@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="otherTableViewCell" rowHeight="50" id="KGk-i7-Jjw" customClass="OtherTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Aab-iB-hBc">
+                        <rect key="frame" x="0.0" y="49" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="XHb-wG-7UA"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="消息推送" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wG-WL-4ZG">
+                        <rect key="frame" x="15" y="16" width="60" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="owc-Is-LKf">
+                        <rect key="frame" x="285" y="14" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="CCq-bn-Wiu"/>
+                            <constraint firstAttribute="height" constant="20" id="qXJ-UB-Dcn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdW-SI-r39">
+                        <rect key="frame" x="80" y="16" width="16" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="owc-Is-LKf" secondAttribute="trailing" constant="15" id="BW2-xi-lTU"/>
+                    <constraint firstItem="7wG-WL-4ZG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="GMM-kj-R1g"/>
+                    <constraint firstItem="NdW-SI-r39" firstAttribute="leading" secondItem="7wG-WL-4ZG" secondAttribute="trailing" constant="5" id="Pu1-Z7-JhZ"/>
+                    <constraint firstAttribute="centerY" secondItem="7wG-WL-4ZG" secondAttribute="centerY" id="Xmp-Ha-Xt7"/>
+                    <constraint firstItem="7wG-WL-4ZG" firstAttribute="centerY" secondItem="NdW-SI-r39" secondAttribute="centerY" id="oil-aY-nl4"/>
+                    <constraint firstAttribute="bottom" secondItem="Aab-iB-hBc" secondAttribute="bottom" id="sQd-by-Yfy"/>
+                    <constraint firstAttribute="centerY" secondItem="owc-Is-LKf" secondAttribute="centerY" id="vOW-l7-9fA"/>
+                    <constraint firstAttribute="trailing" secondItem="Aab-iB-hBc" secondAttribute="trailing" id="vet-Zt-ZZW"/>
+                    <constraint firstItem="Aab-iB-hBc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yvM-D1-LGR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cacheNumLab" destination="NdW-SI-r39" id="a9i-aK-rWt"/>
+                <outlet property="labelSetInfo" destination="7wG-WL-4ZG" id="6Gh-em-Znp"/>
+                <outlet property="separateLineImageView" destination="Aab-iB-hBc" id="1yN-s1-I1b"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow.png" width="15" height="40"/>
+    </resources>
+</document>

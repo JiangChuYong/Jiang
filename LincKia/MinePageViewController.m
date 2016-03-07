@@ -147,14 +147,27 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     //跳转至我的预约参观
     if (indexPath.row == 2) {
         [self goMybookingOrderListView];
-//    }else if (indexPath.row == 3) {
-//        [self onlineOrdersListButtonPressed];
-//    }else if (indexPath.row == 4){
-//        [self pushToHelpAndFeedbackPage];
-//    }else if (indexPath.row == 5){
-//        [self pushToSettingPage];
+    }else if (indexPath.row == 3) {
+       // [self onlineOrdersListButtonPressed];
+    }else if (indexPath.row == 4){
+        [self pushToHelpAndFeedbackPage];
+    }else if (indexPath.row == 5){
+        //[self pushToSettingPage];
     }
 
+}
+
+//跳转至帮组与反馈
+-(void)pushToHelpAndFeedbackPage
+{
+    NSString * titleString = @"帮助与反馈";
+    NSArray * array = [NSArray arrayWithObjects:@"客服中心",@"意见反馈", nil];
+    NSMutableDictionary * dataSource = [NSMutableDictionary dictionary];
+    [dataSource setValue:titleString forKey:@"title"];
+    [dataSource setValue:array forKey:@"data"];
+    [JCYGlobalData sharedInstance].commonViewData=dataSource;
+    [self performSegueWithIdentifier:@"MineToCommon" sender:self];
+    
 }
 
  //跳转至我的预约参观

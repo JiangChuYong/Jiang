@@ -17,7 +17,8 @@ typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
     MeetingRoomPage
 };
 
-
+//通用页面数据
+@property (nonatomic, strong) NSMutableDictionary *commonViewData;
 //选中行业分类的ID
 @property (nonatomic, strong) NSString *industryId;
 //选中行业分类的名称

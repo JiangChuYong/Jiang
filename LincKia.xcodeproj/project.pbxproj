@@ -121,6 +121,12 @@
 		656A16771C8D7E3D00E29F8F /* JCYMyBookingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656A16761C8D7E3D00E29F8F /* JCYMyBookingListViewController.m */; };
 		656A167B1C8D801500E29F8F /* PBMyBookingListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 656A16791C8D801500E29F8F /* PBMyBookingListTableViewCell.m */; };
 		656A167C1C8D801500E29F8F /* PBMyBookingListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656A167A1C8D801500E29F8F /* PBMyBookingListTableViewCell.xib */; };
+		656A16801C8D8E0300E29F8F /* JCYCommonUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656A167F1C8D8E0300E29F8F /* JCYCommonUseViewController.m */; };
+		656A16841C8D8E8A00E29F8F /* OtherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 656A16821C8D8E8A00E29F8F /* OtherTableViewCell.m */; };
+		656A16851C8D8E8A00E29F8F /* OtherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656A16831C8D8E8A00E29F8F /* OtherTableViewCell.xib */; };
+		656A16891C8D945A00E29F8F /* JCYCustomerServiceCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656A16881C8D945A00E29F8F /* JCYCustomerServiceCenterViewController.m */; };
+		656A168D1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 656A168B1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.m */; };
+		656A168E1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656A168C1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.xib */; };
 		6572BE741C86B5E300F495D1 /* JCYBookingSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572BE731C86B5E300F495D1 /* JCYBookingSpaceViewController.m */; };
 		6572BE761C86B7AF00F495D1 /* single2_bottom_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */; };
 		6572BE791C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572BE781C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m */; };
@@ -516,6 +522,16 @@
 		656A16781C8D801500E29F8F /* PBMyBookingListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMyBookingListTableViewCell.h; sourceTree = "<group>"; };
 		656A16791C8D801500E29F8F /* PBMyBookingListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMyBookingListTableViewCell.m; sourceTree = "<group>"; };
 		656A167A1C8D801500E29F8F /* PBMyBookingListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBMyBookingListTableViewCell.xib; sourceTree = "<group>"; };
+		656A167E1C8D8E0300E29F8F /* JCYCommonUseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYCommonUseViewController.h; sourceTree = "<group>"; };
+		656A167F1C8D8E0300E29F8F /* JCYCommonUseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYCommonUseViewController.m; sourceTree = "<group>"; };
+		656A16811C8D8E8A00E29F8F /* OtherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherTableViewCell.h; sourceTree = "<group>"; };
+		656A16821C8D8E8A00E29F8F /* OtherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherTableViewCell.m; sourceTree = "<group>"; };
+		656A16831C8D8E8A00E29F8F /* OtherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherTableViewCell.xib; sourceTree = "<group>"; };
+		656A16871C8D945A00E29F8F /* JCYCustomerServiceCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYCustomerServiceCenterViewController.h; sourceTree = "<group>"; };
+		656A16881C8D945A00E29F8F /* JCYCustomerServiceCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYCustomerServiceCenterViewController.m; sourceTree = "<group>"; };
+		656A168A1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYCustomerServiceCenterTableViewCell.h; sourceTree = "<group>"; };
+		656A168B1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYCustomerServiceCenterTableViewCell.m; sourceTree = "<group>"; };
+		656A168C1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCYCustomerServiceCenterTableViewCell.xib; sourceTree = "<group>"; };
 		6572BE721C86B5E300F495D1 /* JCYBookingSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYBookingSpaceViewController.h; sourceTree = "<group>"; };
 		6572BE731C86B5E300F495D1 /* JCYBookingSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYBookingSpaceViewController.m; sourceTree = "<group>"; };
 		6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "single2_bottom_line@2x.png"; sourceTree = "<group>"; };
@@ -1170,6 +1186,30 @@
 			path = Mybookings;
 			sourceTree = "<group>";
 		};
+		656A167D1C8D8DEF00E29F8F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				656A167E1C8D8E0300E29F8F /* JCYCommonUseViewController.h */,
+				656A167F1C8D8E0300E29F8F /* JCYCommonUseViewController.m */,
+				656A16811C8D8E8A00E29F8F /* OtherTableViewCell.h */,
+				656A16821C8D8E8A00E29F8F /* OtherTableViewCell.m */,
+				656A16831C8D8E8A00E29F8F /* OtherTableViewCell.xib */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		656A16861C8D944100E29F8F /* Helpand Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				656A16871C8D945A00E29F8F /* JCYCustomerServiceCenterViewController.h */,
+				656A16881C8D945A00E29F8F /* JCYCustomerServiceCenterViewController.m */,
+				656A168A1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.h */,
+				656A168B1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.m */,
+				656A168C1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.xib */,
+			);
+			path = "Helpand Feedback";
+			sourceTree = "<group>";
+		};
 		658AA7F11C801A5A00ACB94B /* LinckiaSpace */ = {
 			isa = PBXGroup;
 			children = (
@@ -1294,7 +1334,9 @@
 				CD6944DD1C75BDE500E04081 /* ViewCells */,
 				CD69448A1C75AD9D00E04081 /* LoginPage */,
 				656A16611C8D595300E29F8F /* UnpayOrderList */,
+				656A16861C8D944100E29F8F /* Helpand Feedback */,
 				656A16741C8D7E1E00E29F8F /* Mybookings */,
+				656A167D1C8D8DEF00E29F8F /* Common */,
 				656A166A1C8D6CFF00E29F8F /* MyComment */,
 				CD1D57241C71BDB700BB30AC /* AppDelegate.h */,
 				CD1D57251C71BDB700BB30AC /* AppDelegate.m */,
@@ -1927,6 +1969,7 @@
 				CD29E9371C7B087500871F69 /* environment_circle@3x.png in Resources */,
 				CD29E8A61C7AFE3500871F69 /* community_introduce_camer@2x.png in Resources */,
 				CD29E88D1C7AFE3500871F69 /* mine_online_orientation@2x.png in Resources */,
+				656A168E1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.xib in Resources */,
 				6562F6821C7EEB2B005F5B68 /* community_introduce_hardware_facility@2x.png in Resources */,
 				CD29E8A71C7AFE3500871F69 /* community_introduce_camer@3x.png in Resources */,
 				CD29E8C51C7AFE3500871F69 /* home_pressed@3x.png in Resources */,
@@ -1993,6 +2036,7 @@
 				CD29E85D1C7AFE3500871F69 /* 会议室@3x.png in Resources */,
 				CD29E9041C7AFFD400871F69 /* push_arrow@2x.png in Resources */,
 				CD29E8AF1C7AFE3500871F69 /* open_desk@2x.png in Resources */,
+				656A16851C8D8E8A00E29F8F /* OtherTableViewCell.xib in Resources */,
 				6562F6991C7EEB2B005F5B68 /* office_position@3x.png in Resources */,
 				CD29E8CD1C7AFE3500871F69 /* mine_pressed@3x.png in Resources */,
 				6562F60F1C7EE7A0005F5B68 /* ZZCalendarViewController.xib in Resources */,
@@ -2158,6 +2202,7 @@
 				6562F60A1C7EE7A0005F5B68 /* ZLCalendaData.m in Sources */,
 				CDC026D21C7C4B5700663B26 /* SendExpressViewController.m in Sources */,
 				659EAC761C7AD0A000208837 /* SpaceTableFacilitiesCell.m in Sources */,
+				656A16841C8D8E8A00E29F8F /* OtherTableViewCell.m in Sources */,
 				659EACBC1C7AF7DA00208837 /* PBHardwareFacilitiesViewController.m in Sources */,
 				CDF7545A1C8034B80038622E /* PBMeetingRoomBookingViewController.m in Sources */,
 				CD25C7631C74570F00F228E0 /* PBButton.m in Sources */,
@@ -2179,6 +2224,7 @@
 				CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */,
 				6562F6121C7EE7A0005F5B68 /* ZLNSDate+Logic.m in Sources */,
 				CD45EDE61C76F8DF0042E9A2 /* PBAlert.m in Sources */,
+				656A16891C8D945A00E29F8F /* JCYCustomerServiceCenterViewController.m in Sources */,
 				CD6944FD1C75C89600E04081 /* PBDoubleTableViewCell.m in Sources */,
 				65B419441C756B7700FA817B /* PBIndustryViewController.m in Sources */,
 				65651ED21C8989EB004E38B0 /* GTMBase64.m in Sources */,
@@ -2197,6 +2243,7 @@
 				656A16681C8D5AD300E29F8F /* AllOrderListViewCell.m in Sources */,
 				CD6944E91C75BDE500E04081 /* MemberCollectionViewCell.m in Sources */,
 				6562F6131C7EE7A0005F5B68 /* ZLCalendarDayView.m in Sources */,
+				656A168D1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.m in Sources */,
 				656A16771C8D7E3D00E29F8F /* JCYMyBookingListViewController.m in Sources */,
 				CD7360BE1C71C9A800E3971C /* CommonUtil.m in Sources */,
 				659EAC861C7ADFC500208837 /* PBActivtySpaceDetailViewController.m in Sources */,
@@ -2215,6 +2262,7 @@
 				654B70481C855575004B64B0 /* TQStarRatingView.m in Sources */,
 				6562F6141C7EE7A0005F5B68 /* ZLCalendarMonthPage.m in Sources */,
 				65FAE9B31C7EFE8300743D97 /* ZZFInishOrderViewController.m in Sources */,
+				656A16801C8D8E0300E29F8F /* JCYCommonUseViewController.m in Sources */,
 				654B70531C856091004B64B0 /* ZZSpaceEvaluateListTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
