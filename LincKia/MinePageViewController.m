@@ -144,23 +144,41 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
  
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    //跳转至我的预约参观
+    if (indexPath.row == 2) {
+        [self goMybookingOrderListView];
+//    }else if (indexPath.row == 3) {
+//        [self onlineOrdersListButtonPressed];
+//    }else if (indexPath.row == 4){
+//        [self pushToHelpAndFeedbackPage];
+//    }else if (indexPath.row == 5){
+//        [self pushToSettingPage];
+    }
+
 }
 
+ //跳转至我的预约参观
+-(void)goMybookingOrderListView
+{
+    [self performSegueWithIdentifier:@"MineToMyBookingVisit" sender:self];
+}
+
+//跳转至个人信息
 - (void)myAccountButtonPressed:(UIButton *)sender {
     [self performSegueWithIdentifier:@"MineToUserInfo" sender:self];
 }
 
-
+//跳转至待支付
 -(void)unpayButtonPressed:(UIButton *)sender
 {
     [self performSegueWithIdentifier:@"MineToUnpayOrderList" sender:self];
 }
+//跳转至待点评
 -(void)uncommentButtonPressed:(UIButton *)sender
 {
     
     [self performSegueWithIdentifier:@"MineToComment" sender:self];
-    
+   
 }
 
 

@@ -118,6 +118,9 @@
 		656A166F1C8D6CFF00E29F8F /* MyCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 656A166D1C8D6CFF00E29F8F /* MyCommentTableViewCell.m */; };
 		656A16701C8D6CFF00E29F8F /* MyCommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656A166E1C8D6CFF00E29F8F /* MyCommentTableViewCell.xib */; };
 		656A16731C8D6D1300E29F8F /* JCYCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656A16721C8D6D1300E29F8F /* JCYCommentViewController.m */; };
+		656A16771C8D7E3D00E29F8F /* JCYMyBookingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656A16761C8D7E3D00E29F8F /* JCYMyBookingListViewController.m */; };
+		656A167B1C8D801500E29F8F /* PBMyBookingListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 656A16791C8D801500E29F8F /* PBMyBookingListTableViewCell.m */; };
+		656A167C1C8D801500E29F8F /* PBMyBookingListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656A167A1C8D801500E29F8F /* PBMyBookingListTableViewCell.xib */; };
 		6572BE741C86B5E300F495D1 /* JCYBookingSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572BE731C86B5E300F495D1 /* JCYBookingSpaceViewController.m */; };
 		6572BE761C86B7AF00F495D1 /* single2_bottom_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */; };
 		6572BE791C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572BE781C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m */; };
@@ -508,6 +511,11 @@
 		656A166E1C8D6CFF00E29F8F /* MyCommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCommentTableViewCell.xib; sourceTree = "<group>"; };
 		656A16711C8D6D1300E29F8F /* JCYCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYCommentViewController.h; sourceTree = "<group>"; };
 		656A16721C8D6D1300E29F8F /* JCYCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYCommentViewController.m; sourceTree = "<group>"; };
+		656A16751C8D7E3D00E29F8F /* JCYMyBookingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYMyBookingListViewController.h; sourceTree = "<group>"; };
+		656A16761C8D7E3D00E29F8F /* JCYMyBookingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYMyBookingListViewController.m; sourceTree = "<group>"; };
+		656A16781C8D801500E29F8F /* PBMyBookingListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBMyBookingListTableViewCell.h; sourceTree = "<group>"; };
+		656A16791C8D801500E29F8F /* PBMyBookingListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBMyBookingListTableViewCell.m; sourceTree = "<group>"; };
+		656A167A1C8D801500E29F8F /* PBMyBookingListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBMyBookingListTableViewCell.xib; sourceTree = "<group>"; };
 		6572BE721C86B5E300F495D1 /* JCYBookingSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYBookingSpaceViewController.h; sourceTree = "<group>"; };
 		6572BE731C86B5E300F495D1 /* JCYBookingSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYBookingSpaceViewController.m; sourceTree = "<group>"; };
 		6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "single2_bottom_line@2x.png"; sourceTree = "<group>"; };
@@ -1150,6 +1158,18 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		656A16741C8D7E1E00E29F8F /* Mybookings */ = {
+			isa = PBXGroup;
+			children = (
+				656A16751C8D7E3D00E29F8F /* JCYMyBookingListViewController.h */,
+				656A16761C8D7E3D00E29F8F /* JCYMyBookingListViewController.m */,
+				656A16781C8D801500E29F8F /* PBMyBookingListTableViewCell.h */,
+				656A16791C8D801500E29F8F /* PBMyBookingListTableViewCell.m */,
+				656A167A1C8D801500E29F8F /* PBMyBookingListTableViewCell.xib */,
+			);
+			path = Mybookings;
+			sourceTree = "<group>";
+		};
 		658AA7F11C801A5A00ACB94B /* LinckiaSpace */ = {
 			isa = PBXGroup;
 			children = (
@@ -1274,6 +1294,7 @@
 				CD6944DD1C75BDE500E04081 /* ViewCells */,
 				CD69448A1C75AD9D00E04081 /* LoginPage */,
 				656A16611C8D595300E29F8F /* UnpayOrderList */,
+				656A16741C8D7E1E00E29F8F /* Mybookings */,
 				656A166A1C8D6CFF00E29F8F /* MyComment */,
 				CD1D57241C71BDB700BB30AC /* AppDelegate.h */,
 				CD1D57251C71BDB700BB30AC /* AppDelegate.m */,
@@ -1865,6 +1886,7 @@
 				CD29E8931C7AFE3500871F69 /* mine_review@2x.png in Resources */,
 				CD1D57311C71BDB700BB30AC /* Assets.xcassets in Resources */,
 				6562F5E31C7EE628005F5B68 /* PBBookingTableViewSugestionCell.xib in Resources */,
+				656A167C1C8D801500E29F8F /* PBMyBookingListTableViewCell.xib in Resources */,
 				CD29E8B51C7AFE3500871F69 /* star_half@3x.png in Resources */,
 				CD0178BB1C7C5A2F00B9DEC9 /* ico_make.png in Resources */,
 				CD29E8FE1C7AFFD400871F69 /* hint@2x.png in Resources */,
@@ -2175,6 +2197,7 @@
 				656A16681C8D5AD300E29F8F /* AllOrderListViewCell.m in Sources */,
 				CD6944E91C75BDE500E04081 /* MemberCollectionViewCell.m in Sources */,
 				6562F6131C7EE7A0005F5B68 /* ZLCalendarDayView.m in Sources */,
+				656A16771C8D7E3D00E29F8F /* JCYMyBookingListViewController.m in Sources */,
 				CD7360BE1C71C9A800E3971C /* CommonUtil.m in Sources */,
 				659EAC861C7ADFC500208837 /* PBActivtySpaceDetailViewController.m in Sources */,
 				6562F6101C7EE7A0005F5B68 /* ZLCalendarUtil.m in Sources */,
@@ -2186,6 +2209,7 @@
 				656A16731C8D6D1300E29F8F /* JCYCommentViewController.m in Sources */,
 				6530F8241C771CD4005BD7C1 /* PBActivitySpaceListViewController.m in Sources */,
 				65651ECA1C895470004E38B0 /* PBChangeHeadPicTableViewCell.m in Sources */,
+				656A167B1C8D801500E29F8F /* PBMyBookingListTableViewCell.m in Sources */,
 				65651ED31C8989EB004E38B0 /* LGTMBase64.m in Sources */,
 				CD5CD00C1C71E10F00B6A34B /* AFRquest.m in Sources */,
 				654B70481C855575004B64B0 /* TQStarRatingView.m in Sources */,

@@ -2673,6 +2673,7 @@
                         <segue destination="COh-8x-Lf7" kind="push" identifier="MineToUserInfo" id="meL-zO-7eN"/>
                         <segue destination="nJW-oK-6Ca" kind="push" identifier="MineToUnpayOrderList" id="GSY-Rn-eSF"/>
                         <segue destination="X4r-ej-SMu" kind="push" identifier="MineToComment" id="jgz-IU-cVN"/>
+                        <segue destination="CZd-6S-DgJ" kind="push" identifier="MineToMyBookingVisit" id="IRi-ES-8uE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgo-Zy-dIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2748,6 +2749,123 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WK6-f9-U0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="12" y="2648"/>
+        </scene>
+        <!--我的预约参观-->
+        <scene sceneID="0U2-qt-fpX">
+            <objects>
+                <viewController id="CZd-6S-DgJ" customClass="JCYMyBookingListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zXc-SQ-GVd"/>
+                        <viewControllerLayoutGuide type="bottom" id="FeW-03-qqB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RCh-lO-1jT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJa-zS-Xyo">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mb7-rq-DNb">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="办公预约">
+                                            <color key="titleColor" red="0.47843137250000001" green="0.4823529412" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="bookingButtonPress:" destination="CZd-6S-DgJ" eventType="touchUpInside" id="kbX-8i-wqY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8V-TL-RAb">
+                                        <rect key="frame" x="160" y="0.0" width="160" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="活动预约">
+                                            <color key="titleColor" red="0.47843137250000001" green="0.4823529412" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="bookingButtonPress:" destination="CZd-6S-DgJ" eventType="touchUpInside" id="myH-cA-8SK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="mb7-rq-DNb" secondAttribute="bottom" id="0bB-6S-bwu"/>
+                                    <constraint firstAttribute="bottom" secondItem="i8V-TL-RAb" secondAttribute="bottom" id="7Ma-g6-bbY"/>
+                                    <constraint firstItem="mb7-rq-DNb" firstAttribute="top" secondItem="AJa-zS-Xyo" secondAttribute="top" id="7jr-F3-C0H"/>
+                                    <constraint firstItem="mb7-rq-DNb" firstAttribute="leading" secondItem="AJa-zS-Xyo" secondAttribute="leading" id="KGR-Qj-ItI"/>
+                                    <constraint firstItem="i8V-TL-RAb" firstAttribute="height" secondItem="mb7-rq-DNb" secondAttribute="height" id="Ubq-wQ-cZm"/>
+                                    <constraint firstItem="i8V-TL-RAb" firstAttribute="leading" secondItem="mb7-rq-DNb" secondAttribute="trailing" id="feB-56-9Ne"/>
+                                    <constraint firstAttribute="trailing" secondItem="i8V-TL-RAb" secondAttribute="trailing" id="qIm-Zt-0Ib"/>
+                                    <constraint firstAttribute="height" constant="44" id="qwD-66-MPx"/>
+                                    <constraint firstItem="i8V-TL-RAb" firstAttribute="width" secondItem="mb7-rq-DNb" secondAttribute="width" id="qwq-0f-Qil"/>
+                                    <constraint firstItem="i8V-TL-RAb" firstAttribute="top" secondItem="AJa-zS-Xyo" secondAttribute="top" id="zis-RM-vcp"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dgy-yT-kaQ">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CZd-6S-DgJ" id="OEa-yZ-TEI"/>
+                                    <outlet property="delegate" destination="CZd-6S-DgJ" id="cFb-dg-GbE"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pH0-MD-27Z">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nodata.png" translatesAutoresizingMaskIntoConstraints="NO" id="OMN-NV-5uG">
+                                        <rect key="frame" x="118" y="124.5" width="83" height="83"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您没有办公预约信息！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPM-aF-pW8">
+                                        <rect key="frame" x="75" y="227.5" width="170" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.86666666670000003" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="OMN-NV-5uG" firstAttribute="centerY" secondItem="pH0-MD-27Z" secondAttribute="centerY" constant="-64" id="C8G-ZP-gTB"/>
+                                    <constraint firstItem="EPM-aF-pW8" firstAttribute="top" secondItem="OMN-NV-5uG" secondAttribute="bottom" constant="20" id="Dfq-3W-WaE"/>
+                                    <constraint firstItem="OMN-NV-5uG" firstAttribute="centerX" secondItem="pH0-MD-27Z" secondAttribute="centerX" id="Q3a-B4-wvR"/>
+                                    <constraint firstItem="EPM-aF-pW8" firstAttribute="centerX" secondItem="pH0-MD-27Z" secondAttribute="centerX" id="Rpd-Ju-pks"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="AJa-zS-Xyo" secondAttribute="trailing" id="6d7-8c-pXc"/>
+                            <constraint firstItem="dgy-yT-kaQ" firstAttribute="leading" secondItem="RCh-lO-1jT" secondAttribute="leading" id="DpE-EP-IPr"/>
+                            <constraint firstAttribute="trailing" secondItem="pH0-MD-27Z" secondAttribute="trailing" id="EPf-mv-B5t"/>
+                            <constraint firstItem="FeW-03-qqB" firstAttribute="top" secondItem="pH0-MD-27Z" secondAttribute="bottom" id="RuP-BV-4b3"/>
+                            <constraint firstItem="AJa-zS-Xyo" firstAttribute="leading" secondItem="RCh-lO-1jT" secondAttribute="leading" id="Wvd-Ak-hGf"/>
+                            <constraint firstAttribute="trailing" secondItem="dgy-yT-kaQ" secondAttribute="trailing" id="chy-qV-rVi"/>
+                            <constraint firstItem="FeW-03-qqB" firstAttribute="top" secondItem="dgy-yT-kaQ" secondAttribute="bottom" id="lH6-kQ-s6b"/>
+                            <constraint firstItem="pH0-MD-27Z" firstAttribute="leading" secondItem="RCh-lO-1jT" secondAttribute="leading" id="lRI-MR-3Jo"/>
+                            <constraint firstItem="dgy-yT-kaQ" firstAttribute="top" secondItem="AJa-zS-Xyo" secondAttribute="bottom" id="nIL-TC-QWo"/>
+                            <constraint firstItem="pH0-MD-27Z" firstAttribute="top" secondItem="AJa-zS-Xyo" secondAttribute="bottom" id="tfA-Ep-zN3"/>
+                            <constraint firstItem="AJa-zS-Xyo" firstAttribute="top" secondItem="zXc-SQ-GVd" secondAttribute="bottom" id="uJX-s7-t4O"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的预约参观" id="ZH4-I9-ToX">
+                        <barButtonItem key="leftBarButtonItem" image="title_back_unpressed.png" id="qcV-Nd-Doy">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="CZd-6S-DgJ" id="bcs-s7-PBe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activeBookingButton" destination="i8V-TL-RAb" id="aQq-A0-MGE"/>
+                        <outlet property="noDataView" destination="pH0-MD-27Z" id="Aal-n4-Mbp"/>
+                        <outlet property="nodataPromptmessage" destination="EPM-aF-pW8" id="gGp-ES-Sly"/>
+                        <outlet property="tableView" destination="dgy-yT-kaQ" id="0dK-0Z-mUc"/>
+                        <outlet property="workBookingButton" destination="mb7-rq-DNb" id="GHo-Jw-3kR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XyH-lu-97m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7" y="3294"/>
         </scene>
         <!--待支付-->
         <scene sceneID="2Yl-76-RNX">
