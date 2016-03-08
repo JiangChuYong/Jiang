@@ -62,8 +62,8 @@ static NSString * cellKey = @"otherTableViewCell";
         
     }
     else if (indexPath.row == 1) {
-//        JCYOpinionFeedbackViewController * VC = [[JCYOpinionFeedbackViewController alloc]init];
-//        [self.navigationController pushViewController:VC animated:YES];
+
+        [self performSegueWithIdentifier:@"CommonToFeedback" sender:self];
     }
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

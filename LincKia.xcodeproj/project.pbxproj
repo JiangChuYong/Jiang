@@ -134,6 +134,7 @@
 		658AA7F51C801A5A00ACB94B /* PBLincKiaSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */; };
 		6596F1871C8EC11B00B12479 /* AllOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6596F1861C8EC11B00B12479 /* AllOrderListViewController.m */; };
 		6596F1901C8EDEC800B12479 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6596F18F1C8EDEC800B12479 /* SettingViewController.m */; };
+		6596F1931C8EE4B000B12479 /* JCYOpinionFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6596F1921C8EE4B000B12479 /* JCYOpinionFeedbackViewController.m */; };
 		6597AB281C83E1F000E2705F /* LinckiaSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597AB271C83E1F000E2705F /* LinckiaSpace.m */; };
 		659EAC6B1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EAC661C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m */; };
 		659EAC6C1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 659EAC671C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.xib */; };
@@ -546,6 +547,8 @@
 		6596F1861C8EC11B00B12479 /* AllOrderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrderListViewController.m; sourceTree = "<group>"; };
 		6596F18E1C8EDEC800B12479 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		6596F18F1C8EDEC800B12479 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		6596F1911C8EE4B000B12479 /* JCYOpinionFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYOpinionFeedbackViewController.h; sourceTree = "<group>"; };
+		6596F1921C8EE4B000B12479 /* JCYOpinionFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYOpinionFeedbackViewController.m; sourceTree = "<group>"; };
 		6597AB261C83E1F000E2705F /* LinckiaSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinckiaSpace.h; sourceTree = "<group>"; };
 		6597AB271C83E1F000E2705F /* LinckiaSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinckiaSpace.m; sourceTree = "<group>"; };
 		659EAC651C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYActivitySpaceInfoCellTableViewCell.h; sourceTree = "<group>"; };
@@ -1212,6 +1215,8 @@
 				656A168A1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.h */,
 				656A168B1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.m */,
 				656A168C1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.xib */,
+				6596F1911C8EE4B000B12479 /* JCYOpinionFeedbackViewController.h */,
+				6596F1921C8EE4B000B12479 /* JCYOpinionFeedbackViewController.m */,
 			);
 			path = "Helpand Feedback";
 			sourceTree = "<group>";
@@ -2270,6 +2275,7 @@
 				CD29E92E1C7B02F400871F69 /* PBEnvironmentViewController.m in Sources */,
 				656A16681C8D5AD300E29F8F /* AllOrderListViewCell.m in Sources */,
 				CD6944E91C75BDE500E04081 /* MemberCollectionViewCell.m in Sources */,
+				6596F1931C8EE4B000B12479 /* JCYOpinionFeedbackViewController.m in Sources */,
 				6562F6131C7EE7A0005F5B68 /* ZLCalendarDayView.m in Sources */,
 				656A168D1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.m in Sources */,
 				656A16771C8D7E3D00E29F8F /* JCYMyBookingListViewController.m in Sources */,

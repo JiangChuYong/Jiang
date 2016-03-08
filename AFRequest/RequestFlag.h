@@ -69,6 +69,8 @@ typedef enum{
     GetOfficeOrdersList,
     //获取会议室预订列表
     GetMeetingOrdersList,
+    //提交意见反馈
+    CommitFeedback,
     
     
     

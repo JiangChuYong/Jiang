@@ -2807,7 +2807,7 @@
             </objects>
             <point key="canvasLocation" x="-428" y="2272"/>
         </scene>
-        <!--带点评-->
+        <!--待点评-->
         <scene sceneID="s18-Yw-yfR">
             <objects>
                 <viewController id="X4r-ej-SMu" customClass="JCYCommentViewController" sceneMemberID="viewController">
@@ -2861,7 +2861,7 @@
                             <constraint firstItem="hub-h1-vRe" firstAttribute="leading" secondItem="Lu6-BO-LdY" secondAttribute="leading" id="nud-vT-yNy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="带点评" id="2Qe-A3-SRv">
+                    <navigationItem key="navigationItem" title="待点评" id="2Qe-A3-SRv">
                         <barButtonItem key="leftBarButtonItem" image="title_back_unpressed.png" id="4hF-gg-8v0">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -3001,11 +3001,116 @@
                     <connections>
                         <outlet property="tableView" destination="GpP-de-X19" id="2st-0A-Nii"/>
                         <segue destination="mvp-Zm-AJr" kind="push" identifier="CommonToCustomerCenter" id="zsE-zj-xN8"/>
+                        <segue destination="cCQ-bM-0ZJ" kind="push" identifier="CommonToFeedback" id="O24-Ea-iFp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5M-BN-WlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-396" y="4160"/>
+        </scene>
+        <!--意见反馈-->
+        <scene sceneID="SxC-26-Zic">
+            <objects>
+                <viewController id="cCQ-bM-0ZJ" customClass="JCYOpinionFeedbackViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qIa-Rg-iIv"/>
+                        <viewControllerLayoutGuide type="bottom" id="LII-eu-hjB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eDf-Ks-NKs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottom_line.png" translatesAutoresizingMaskIntoConstraints="NO" id="mCf-Ki-T4t">
+                                <rect key="frame" x="0.0" y="489" width="320" height="5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="BSk-qL-y47"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wh5-xG-ZiL">
+                                <rect key="frame" x="0.0" y="494" width="320" height="74"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIq-yV-5sG">
+                                        <rect key="frame" x="15" y="10" width="290" height="54"/>
+                                        <color key="backgroundColor" red="0.2666666667" green="0.59607843140000005" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="提交">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="submitButtonPress:" destination="cCQ-bM-0ZJ" eventType="touchUpInside" id="TR8-kL-q1f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="dIq-yV-5sG" firstAttribute="top" secondItem="Wh5-xG-ZiL" secondAttribute="top" constant="10" id="2OQ-SK-WOu"/>
+                                    <constraint firstItem="dIq-yV-5sG" firstAttribute="leading" secondItem="Wh5-xG-ZiL" secondAttribute="leading" constant="15" id="Gqg-PS-5Kq"/>
+                                    <constraint firstAttribute="height" constant="74" id="h24-uE-fnd"/>
+                                    <constraint firstAttribute="bottom" secondItem="dIq-yV-5sG" secondAttribute="bottom" constant="10" id="r7Z-cv-8D1"/>
+                                    <constraint firstAttribute="trailing" secondItem="dIq-yV-5sG" secondAttribute="trailing" constant="15" id="v0H-bz-rq8"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phoneNumber" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JwV-5N-POF">
+                                <rect key="frame" x="15" y="299" width="290" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7Ud-yb-XdO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0039215686269999999" green="0.047058823530000002" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="  请留下您宝贵的意见" translatesAutoresizingMaskIntoConstraints="NO" id="qOc-aG-u9O">
+                                <rect key="frame" x="15" y="79" width="290" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fcy-bQ-1Ds"/>
+                                </constraints>
+                                <color key="textColor" red="0.76078431372549016" green="0.76078431372549016" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cCQ-bM-0ZJ" id="HTo-DG-7Fv"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mCf-Ki-T4t" secondAttribute="trailing" id="3EN-0h-Ktw"/>
+                            <constraint firstItem="JwV-5N-POF" firstAttribute="top" secondItem="qOc-aG-u9O" secondAttribute="bottom" constant="20" id="GmP-T8-fBc"/>
+                            <constraint firstAttribute="trailing" secondItem="Wh5-xG-ZiL" secondAttribute="trailing" id="HWb-UL-6xA"/>
+                            <constraint firstItem="qOc-aG-u9O" firstAttribute="top" secondItem="qIa-Rg-iIv" secondAttribute="bottom" constant="15" id="RNM-6P-gF9"/>
+                            <constraint firstAttribute="trailing" secondItem="JwV-5N-POF" secondAttribute="trailing" constant="15" id="TSI-Il-7we"/>
+                            <constraint firstItem="mCf-Ki-T4t" firstAttribute="leading" secondItem="eDf-Ks-NKs" secondAttribute="leading" id="WRp-hU-ePh"/>
+                            <constraint firstItem="Wh5-xG-ZiL" firstAttribute="top" secondItem="mCf-Ki-T4t" secondAttribute="bottom" id="XTz-mO-whj"/>
+                            <constraint firstItem="JwV-5N-POF" firstAttribute="leading" secondItem="eDf-Ks-NKs" secondAttribute="leading" constant="15" id="YcP-iC-Fix"/>
+                            <constraint firstItem="LII-eu-hjB" firstAttribute="top" secondItem="Wh5-xG-ZiL" secondAttribute="bottom" id="eMy-uC-bXu"/>
+                            <constraint firstItem="qOc-aG-u9O" firstAttribute="leading" secondItem="eDf-Ks-NKs" secondAttribute="leading" constant="15" id="oQR-pn-gO2"/>
+                            <constraint firstItem="Wh5-xG-ZiL" firstAttribute="leading" secondItem="eDf-Ks-NKs" secondAttribute="leading" id="oft-cb-qWM"/>
+                            <constraint firstAttribute="trailing" secondItem="qOc-aG-u9O" secondAttribute="trailing" constant="15" id="xMX-NX-OCR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="意见反馈" id="iXV-bf-DD7">
+                        <barButtonItem key="leftBarButtonItem" image="title_back_unpressed.png" id="4C6-DC-2Gp">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backButtonPress:" destination="cCQ-bM-0ZJ" id="2Id-YK-QFi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="opinionTextView" destination="qOc-aG-u9O" id="zcb-te-Jlh"/>
+                        <outlet property="phoneNumLable" destination="JwV-5N-POF" id="zgZ-GW-nQR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pka-yD-r08" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-380" y="5304"/>
         </scene>
         <!--我的预约参观-->
         <scene sceneID="0U2-qt-fpX">
