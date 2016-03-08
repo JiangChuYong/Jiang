@@ -2637,6 +2637,130 @@
             </objects>
             <point key="canvasLocation" x="-986" y="2168"/>
         </scene>
+        <!--我的在线预订-->
+        <scene sceneID="dn7-kI-JE2">
+            <objects>
+                <viewController id="Wtz-lJ-hng" customClass="AllOrderListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lu2-qQ-TbJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="qBb-ch-yt4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MP9-MC-8pf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uuw-SM-DvS">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Wtz-lJ-hng" id="aU3-HW-wvj"/>
+                                    <outlet property="delegate" destination="Wtz-lJ-hng" id="uYX-8o-ScK"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bve-Ep-VD5" userLabel="ButtonView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6f-De-t8s" userLabel="left">
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="44"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="办公预订">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="spaceTypeButtonSelected:" destination="Wtz-lJ-hng" eventType="touchUpInside" id="ez5-Jy-evh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzW-r4-HSZ" userLabel="right">
+                                        <rect key="frame" x="160" y="0.0" width="160" height="44"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="会议室预订">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="spaceTypeButtonSelected:" destination="Wtz-lJ-hng" eventType="touchUpInside" id="sD5-Xd-MjA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Y6f-De-t8s" firstAttribute="top" secondItem="bve-Ep-VD5" secondAttribute="top" id="0LI-v4-laK"/>
+                                    <constraint firstItem="Y6f-De-t8s" firstAttribute="leading" secondItem="bve-Ep-VD5" secondAttribute="leading" id="4Rb-68-X73"/>
+                                    <constraint firstItem="DzW-r4-HSZ" firstAttribute="width" secondItem="Y6f-De-t8s" secondAttribute="width" id="AAl-LM-0sa"/>
+                                    <constraint firstAttribute="bottom" secondItem="DzW-r4-HSZ" secondAttribute="bottom" id="LiL-HU-2gh"/>
+                                    <constraint firstItem="DzW-r4-HSZ" firstAttribute="top" secondItem="bve-Ep-VD5" secondAttribute="top" id="MeV-hx-skb"/>
+                                    <constraint firstItem="DzW-r4-HSZ" firstAttribute="height" secondItem="Y6f-De-t8s" secondAttribute="height" id="Q9K-yj-7nO"/>
+                                    <constraint firstAttribute="trailing" secondItem="DzW-r4-HSZ" secondAttribute="trailing" id="QUU-6l-v8Y"/>
+                                    <constraint firstItem="DzW-r4-HSZ" firstAttribute="leading" secondItem="Y6f-De-t8s" secondAttribute="trailing" id="U4u-Mi-Slz"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y6f-De-t8s" secondAttribute="bottom" id="UBz-cX-8LR"/>
+                                    <constraint firstAttribute="height" constant="44" id="sK5-2s-wMz"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6T-J7-UVr" userLabel="NoData">
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您没有办公预订信息" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3j4-bX-iSp">
+                                        <rect key="frame" x="92" y="227.5" width="135" height="18"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nodata.png" translatesAutoresizingMaskIntoConstraints="NO" id="fS0-BJ-JRu">
+                                        <rect key="frame" x="118" y="124.5" width="83" height="83"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="3j4-bX-iSp" firstAttribute="top" secondItem="fS0-BJ-JRu" secondAttribute="bottom" constant="20" id="Are-3x-SOw"/>
+                                    <constraint firstItem="fS0-BJ-JRu" firstAttribute="centerX" secondItem="G6T-J7-UVr" secondAttribute="centerX" id="GqV-CZ-WUV"/>
+                                    <constraint firstItem="3j4-bX-iSp" firstAttribute="centerX" secondItem="G6T-J7-UVr" secondAttribute="centerX" id="cIW-sb-bLL"/>
+                                    <constraint firstItem="fS0-BJ-JRu" firstAttribute="centerY" secondItem="G6T-J7-UVr" secondAttribute="centerY" constant="-64" id="wpT-6s-V6T"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="G6T-J7-UVr" secondAttribute="trailing" id="4bj-xf-FOg"/>
+                            <constraint firstAttribute="trailing" secondItem="bve-Ep-VD5" secondAttribute="trailing" id="5K7-K3-hdF"/>
+                            <constraint firstAttribute="bottom" secondItem="G6T-J7-UVr" secondAttribute="bottom" id="63U-b4-CqD"/>
+                            <constraint firstAttribute="trailing" secondItem="Uuw-SM-DvS" secondAttribute="trailing" id="ApA-ff-ZD2"/>
+                            <constraint firstItem="bve-Ep-VD5" firstAttribute="top" secondItem="lu2-qQ-TbJ" secondAttribute="bottom" id="F3j-Tf-Smz"/>
+                            <constraint firstItem="G6T-J7-UVr" firstAttribute="top" secondItem="bve-Ep-VD5" secondAttribute="bottom" id="NGi-R9-30W"/>
+                            <constraint firstItem="bve-Ep-VD5" firstAttribute="leading" secondItem="MP9-MC-8pf" secondAttribute="leading" id="Qvi-Z6-beZ"/>
+                            <constraint firstAttribute="bottom" secondItem="Uuw-SM-DvS" secondAttribute="bottom" id="aHK-E7-4jl"/>
+                            <constraint firstItem="G6T-J7-UVr" firstAttribute="leading" secondItem="MP9-MC-8pf" secondAttribute="leading" id="h10-Qi-rp3"/>
+                            <constraint firstItem="Uuw-SM-DvS" firstAttribute="leading" secondItem="MP9-MC-8pf" secondAttribute="leading" id="tYf-zl-xjw"/>
+                            <constraint firstItem="Uuw-SM-DvS" firstAttribute="top" secondItem="bve-Ep-VD5" secondAttribute="bottom" id="vKO-zK-m1C"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的在线预订" id="4pl-Z0-YJi">
+                        <barButtonItem key="leftBarButtonItem" image="title_back_unpressed.png" id="owC-B9-cXS">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="gobackToMineMainPage:" destination="Wtz-lJ-hng" id="JIH-da-WuF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="allOrderListTableView" destination="Uuw-SM-DvS" id="YLA-U2-1rM"/>
+                        <outlet property="labelEmptyNote" destination="3j4-bX-iSp" id="wy3-w5-0j8"/>
+                        <outlet property="meettingRoomBtn" destination="DzW-r4-HSZ" id="9SS-YE-SSX"/>
+                        <outlet property="nodataView" destination="G6T-J7-UVr" id="D0s-R1-hOv"/>
+                        <outlet property="officeBtn" destination="Y6f-De-t8s" id="nWp-5z-Bkm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LlV-9I-Sj4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-908" y="4160"/>
+        </scene>
         <!--我的-->
         <scene sceneID="HPF-MK-wjw">
             <objects>
@@ -2675,6 +2799,7 @@
                         <segue destination="X4r-ej-SMu" kind="push" identifier="MineToComment" id="jgz-IU-cVN"/>
                         <segue destination="CZd-6S-DgJ" kind="push" identifier="MineToMyBookingVisit" id="IRi-ES-8uE"/>
                         <segue destination="a7t-2g-030" kind="push" identifier="MineToCommon" id="fhs-O7-cbi"/>
+                        <segue destination="Wtz-lJ-hng" kind="push" identifier="MineToOnlineBooking" id="QUs-PN-LnC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgo-Zy-dIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2832,7 +2957,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yuy-4X-h8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-831" y="3279"/>
+            <point key="canvasLocation" x="201" y="4671"/>
         </scene>
         <!-- 标题-->
         <scene sceneID="o67-Nf-OdD">
@@ -2879,7 +3004,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5M-BN-WlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-428" y="3288"/>
+            <point key="canvasLocation" x="-396" y="4160"/>
         </scene>
         <!--我的预约参观-->
         <scene sceneID="0U2-qt-fpX">
@@ -2996,7 +3121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XyH-lu-97m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7" y="3294"/>
+            <point key="canvasLocation" x="183" y="3894"/>
         </scene>
         <!--待支付-->
         <scene sceneID="2Yl-76-RNX">

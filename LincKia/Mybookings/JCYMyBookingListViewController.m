@@ -64,6 +64,8 @@ static NSString * identifier = @"PBMyBookingListTableViewCell";
     _activeSpaceCurrentPage  = 1;
     
     [self bookingButtonPress:_workBookingButton];
+    UINavigationController *navi=(UINavigationController *)self.parentViewController;
+    navi.tabBarController.tabBar.hidden=YES;
 }
 
 -(void)resetSelectedButtonUI:(UIButton *)sender

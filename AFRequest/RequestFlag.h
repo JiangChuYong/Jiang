@@ -65,6 +65,11 @@ typedef enum{
     GetCustomOfficeList,
     //获取活动预约
     GetMyVisitActiveSpace,
+    //获取办公预订列表
+    GetOfficeOrdersList,
+    //获取会议室预订列表
+    GetMeetingOrdersList,
+    
     
     
     

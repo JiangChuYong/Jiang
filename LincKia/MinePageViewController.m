@@ -148,13 +148,20 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     if (indexPath.row == 2) {
         [self goMybookingOrderListView];
     }else if (indexPath.row == 3) {
-       // [self onlineOrdersListButtonPressed];
+        [self onlineOrdersListButtonPressed];
     }else if (indexPath.row == 4){
         [self pushToHelpAndFeedbackPage];
     }else if (indexPath.row == 5){
         //[self pushToSettingPage];
     }
 
+}
+
+//跳转至我的在线预订
+-(void)onlineOrdersListButtonPressed
+{
+    [self performSegueWithIdentifier:@"MineToOnlineBooking" sender:self];
+    
 }
 
 //跳转至帮组与反馈

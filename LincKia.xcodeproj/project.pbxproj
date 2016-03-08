@@ -132,6 +132,7 @@
 		6572BE791C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572BE781C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m */; };
 		65734D281C87E3ED008B5CAB /* photo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65734D271C87E3ED008B5CAB /* photo@3x.png */; };
 		658AA7F51C801A5A00ACB94B /* PBLincKiaSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */; };
+		6596F1871C8EC11B00B12479 /* AllOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6596F1861C8EC11B00B12479 /* AllOrderListViewController.m */; };
 		6597AB281C83E1F000E2705F /* LinckiaSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597AB271C83E1F000E2705F /* LinckiaSpace.m */; };
 		659EAC6B1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EAC661C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m */; };
 		659EAC6C1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 659EAC671C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.xib */; };
@@ -540,6 +541,8 @@
 		65734D271C87E3ED008B5CAB /* photo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo@3x.png"; sourceTree = "<group>"; };
 		658AA7F21C801A5A00ACB94B /* PBLincKiaSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBLincKiaSpaceViewController.h; sourceTree = "<group>"; };
 		658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBLincKiaSpaceViewController.m; sourceTree = "<group>"; };
+		6596F1851C8EC11B00B12479 /* AllOrderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrderListViewController.h; sourceTree = "<group>"; };
+		6596F1861C8EC11B00B12479 /* AllOrderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrderListViewController.m; sourceTree = "<group>"; };
 		6597AB261C83E1F000E2705F /* LinckiaSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinckiaSpace.h; sourceTree = "<group>"; };
 		6597AB271C83E1F000E2705F /* LinckiaSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinckiaSpace.m; sourceTree = "<group>"; };
 		659EAC651C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYActivitySpaceInfoCellTableViewCell.h; sourceTree = "<group>"; };
@@ -1231,6 +1234,15 @@
 			path = LinckiaSpace;
 			sourceTree = "<group>";
 		};
+		6596F1841C8EC0F300B12479 /* MyOnlineBooking */ = {
+			isa = PBXGroup;
+			children = (
+				6596F1851C8EC11B00B12479 /* AllOrderListViewController.h */,
+				6596F1861C8EC11B00B12479 /* AllOrderListViewController.m */,
+			);
+			path = MyOnlineBooking;
+			sourceTree = "<group>";
+		};
 		65B419401C756B7700FA817B /* IndustryList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1337,6 +1349,7 @@
 				656A16861C8D944100E29F8F /* Helpand Feedback */,
 				656A16741C8D7E1E00E29F8F /* Mybookings */,
 				656A167D1C8D8DEF00E29F8F /* Common */,
+				6596F1841C8EC0F300B12479 /* MyOnlineBooking */,
 				656A166A1C8D6CFF00E29F8F /* MyComment */,
 				CD1D57241C71BDB700BB30AC /* AppDelegate.h */,
 				CD1D57251C71BDB700BB30AC /* AppDelegate.m */,
@@ -2201,6 +2214,7 @@
 				6562F60C1C7EE7A0005F5B68 /* ZLCalendarMonthModel.m in Sources */,
 				6562F60A1C7EE7A0005F5B68 /* ZLCalendaData.m in Sources */,
 				CDC026D21C7C4B5700663B26 /* SendExpressViewController.m in Sources */,
+				6596F1871C8EC11B00B12479 /* AllOrderListViewController.m in Sources */,
 				659EAC761C7AD0A000208837 /* SpaceTableFacilitiesCell.m in Sources */,
 				656A16841C8D8E8A00E29F8F /* OtherTableViewCell.m in Sources */,
 				659EACBC1C7AF7DA00208837 /* PBHardwareFacilitiesViewController.m in Sources */,
