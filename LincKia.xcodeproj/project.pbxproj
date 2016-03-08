@@ -133,6 +133,7 @@
 		65734D281C87E3ED008B5CAB /* photo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65734D271C87E3ED008B5CAB /* photo@3x.png */; };
 		658AA7F51C801A5A00ACB94B /* PBLincKiaSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */; };
 		6596F1871C8EC11B00B12479 /* AllOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6596F1861C8EC11B00B12479 /* AllOrderListViewController.m */; };
+		6596F1901C8EDEC800B12479 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6596F18F1C8EDEC800B12479 /* SettingViewController.m */; };
 		6597AB281C83E1F000E2705F /* LinckiaSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 6597AB271C83E1F000E2705F /* LinckiaSpace.m */; };
 		659EAC6B1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 659EAC661C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m */; };
 		659EAC6C1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 659EAC671C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.xib */; };
@@ -543,6 +544,8 @@
 		658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBLincKiaSpaceViewController.m; sourceTree = "<group>"; };
 		6596F1851C8EC11B00B12479 /* AllOrderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrderListViewController.h; sourceTree = "<group>"; };
 		6596F1861C8EC11B00B12479 /* AllOrderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrderListViewController.m; sourceTree = "<group>"; };
+		6596F18E1C8EDEC800B12479 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		6596F18F1C8EDEC800B12479 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		6597AB261C83E1F000E2705F /* LinckiaSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinckiaSpace.h; sourceTree = "<group>"; };
 		6597AB271C83E1F000E2705F /* LinckiaSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinckiaSpace.m; sourceTree = "<group>"; };
 		659EAC651C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYActivitySpaceInfoCellTableViewCell.h; sourceTree = "<group>"; };
@@ -1243,6 +1246,15 @@
 			path = MyOnlineBooking;
 			sourceTree = "<group>";
 		};
+		6596F18D1C8EDEB200B12479 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				6596F18E1C8EDEC800B12479 /* SettingViewController.h */,
+				6596F18F1C8EDEC800B12479 /* SettingViewController.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		65B419401C756B7700FA817B /* IndustryList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1351,6 +1363,7 @@
 				656A167D1C8D8DEF00E29F8F /* Common */,
 				6596F1841C8EC0F300B12479 /* MyOnlineBooking */,
 				656A166A1C8D6CFF00E29F8F /* MyComment */,
+				6596F18D1C8EDEB200B12479 /* Setting */,
 				CD1D57241C71BDB700BB30AC /* AppDelegate.h */,
 				CD1D57251C71BDB700BB30AC /* AppDelegate.m */,
 				CD1D57271C71BDB700BB30AC /* HomePageViewController.h */,
@@ -2210,6 +2223,7 @@
 				65B419641C75C25200FA817B /* PBCollectionCell.m in Sources */,
 				CD6944EE1C75BDE500E04081 /* ZZSpaceRecommendCellTableViewCell.m in Sources */,
 				CD1D57261C71BDB700BB30AC /* AppDelegate.m in Sources */,
+				6596F1901C8EDEC800B12479 /* SettingViewController.m in Sources */,
 				6562F6081C7EE7A0005F5B68 /* NIDropDown.m in Sources */,
 				6562F60C1C7EE7A0005F5B68 /* ZLCalendarMonthModel.m in Sources */,
 				6562F60A1C7EE7A0005F5B68 /* ZLCalendaData.m in Sources */,

@@ -152,9 +152,14 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     }else if (indexPath.row == 4){
         [self pushToHelpAndFeedbackPage];
     }else if (indexPath.row == 5){
-        //[self pushToSettingPage];
+        [self pushToSettingPage];
     }
 
+}
+
+-(void)pushToSettingPage
+{
+    [self performSegueWithIdentifier:@"MineToSetting" sender:self];
 }
 
 //跳转至我的在线预订
