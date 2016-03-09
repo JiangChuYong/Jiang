@@ -112,6 +112,12 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
         NSNumber * starFish = _userInfoDic[@"Starfish"];
         headCell.LincKiaCoinNum.text = [NSString stringWithFormat:@"%@",starFish];
         
+        UITapGestureRecognizer *rechargeRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(rechargeAction:)];
+        rechargeRecognizer.numberOfTapsRequired=1;
+        
+        [headCell.starFishCard addGestureRecognizer:rechargeRecognizer];
+        
+        
         [headCell.headBtn addTarget:self action:@selector(myAccountButtonPressed:) forControlEvents:UIControlEventTouchDown];
         
         return headCell;
@@ -157,6 +163,16 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
 
 }
 
+//跳转至海星币充值页面
+-(void)rechargeAction:(UITapGestureRecognizer *)recognizer;
+{
+   
+    [self performSegueWithIdentifier:@"MineToStarFishCoin" sender:self];
+    
+}
+
+
+//跳转至设置页面
 -(void)pushToSettingPage
 {
     [self performSegueWithIdentifier:@"MineToSetting" sender:self];

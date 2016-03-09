@@ -71,6 +71,8 @@ typedef enum{
     GetMeetingOrdersList,
     //提交意见反馈
     CommitFeedback,
+    //获取海星币折扣
+    GetStarfishDiscountList,
     
     
     

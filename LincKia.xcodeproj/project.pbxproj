@@ -107,6 +107,11 @@
 		6562F69F1C7EEB2B005F5B68 /* team@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6562F65D1C7EEB2B005F5B68 /* team@3x.png */; };
 		6562F6A01C7EEB2B005F5B68 /* time@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6562F65E1C7EEB2B005F5B68 /* time@2x.png */; };
 		6562F6A11C7EEB2B005F5B68 /* time@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6562F65F1C7EEB2B005F5B68 /* time@3x.png */; };
+		6563AE7E1C8FBF9B0024CC90 /* JCYStarfishCoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563AE7D1C8FBF9B0024CC90 /* JCYStarfishCoinViewController.m */; };
+		6563AE821C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563AE801C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.m */; };
+		6563AE831C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE811C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.xib */; };
+		6563AE871C8FC5F90024CC90 /* JCYCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563AE851C8FC5F90024CC90 /* JCYCollectionCell.m */; };
+		6563AE881C8FC5F90024CC90 /* JCYCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE861C8FC5F90024CC90 /* JCYCollectionCell.xib */; };
 		65651EC61C894A86004E38B0 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65651EC51C894A86004E38B0 /* MyAccountViewController.m */; };
 		65651ECA1C895470004E38B0 /* PBChangeHeadPicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65651EC81C895470004E38B0 /* PBChangeHeadPicTableViewCell.m */; };
 		65651ECB1C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65651EC91C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib */; };
@@ -500,6 +505,14 @@
 		6562F65D1C7EEB2B005F5B68 /* team@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team@3x.png"; sourceTree = "<group>"; };
 		6562F65E1C7EEB2B005F5B68 /* time@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@2x.png"; sourceTree = "<group>"; };
 		6562F65F1C7EEB2B005F5B68 /* time@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "time@3x.png"; sourceTree = "<group>"; };
+		6563AE7C1C8FBF9B0024CC90 /* JCYStarfishCoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYStarfishCoinViewController.h; sourceTree = "<group>"; };
+		6563AE7D1C8FBF9B0024CC90 /* JCYStarfishCoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYStarfishCoinViewController.m; sourceTree = "<group>"; };
+		6563AE7F1C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYStarfishCoinRechargeCell.h; sourceTree = "<group>"; };
+		6563AE801C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYStarfishCoinRechargeCell.m; sourceTree = "<group>"; };
+		6563AE811C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCYStarfishCoinRechargeCell.xib; sourceTree = "<group>"; };
+		6563AE841C8FC5F90024CC90 /* JCYCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYCollectionCell.h; sourceTree = "<group>"; };
+		6563AE851C8FC5F90024CC90 /* JCYCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYCollectionCell.m; sourceTree = "<group>"; };
+		6563AE861C8FC5F90024CC90 /* JCYCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCYCollectionCell.xib; sourceTree = "<group>"; };
 		65651EC41C894A86004E38B0 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
 		65651EC51C894A86004E38B0 /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
 		65651EC71C895470004E38B0 /* PBChangeHeadPicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBChangeHeadPicTableViewCell.h; sourceTree = "<group>"; };
@@ -1127,6 +1140,21 @@
 			path = "预约参观";
 			sourceTree = "<group>";
 		};
+		6563AE7B1C8FBF860024CC90 /* StarfishCoin */ = {
+			isa = PBXGroup;
+			children = (
+				6563AE7C1C8FBF9B0024CC90 /* JCYStarfishCoinViewController.h */,
+				6563AE7D1C8FBF9B0024CC90 /* JCYStarfishCoinViewController.m */,
+				6563AE7F1C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.h */,
+				6563AE801C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.m */,
+				6563AE811C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.xib */,
+				6563AE841C8FC5F90024CC90 /* JCYCollectionCell.h */,
+				6563AE851C8FC5F90024CC90 /* JCYCollectionCell.m */,
+				6563AE861C8FC5F90024CC90 /* JCYCollectionCell.xib */,
+			);
+			path = StarfishCoin;
+			sourceTree = "<group>";
+		};
 		65651EC31C894A69004E38B0 /* MyAccount */ = {
 			isa = PBXGroup;
 			children = (
@@ -1365,6 +1393,7 @@
 				656A16611C8D595300E29F8F /* UnpayOrderList */,
 				656A16861C8D944100E29F8F /* Helpand Feedback */,
 				656A16741C8D7E1E00E29F8F /* Mybookings */,
+				6563AE7B1C8FBF860024CC90 /* StarfishCoin */,
 				656A167D1C8D8DEF00E29F8F /* Common */,
 				6596F1841C8EC0F300B12479 /* MyOnlineBooking */,
 				656A166A1C8D6CFF00E29F8F /* MyComment */,
@@ -2133,10 +2162,12 @@
 				CD29E8961C7AFE3500871F69 /* mine_service@3x.png in Resources */,
 				CD9C3A071C84186900071D60 /* multichoicebox_checked@3x.png in Resources */,
 				CD29E9051C7AFFD400871F69 /* push_arrow@3x.png in Resources */,
+				6563AE881C8FC5F90024CC90 /* JCYCollectionCell.xib in Resources */,
 				CD29E8BD1C7AFE3500871F69 /* activity_space_pressed@3x.png in Resources */,
 				CD29E8AC1C7AFE3500871F69 /* horizonal_line@3x.png in Resources */,
 				CD29E8831C7AFE3500871F69 /* mine_bg@3x.png in Resources */,
 				CD29E89D1C7AFE3500871F69 /* register_password@3x.png in Resources */,
+				6563AE831C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.xib in Resources */,
 				CD29E8641C7AFE3500871F69 /* 滴滴出行@2x.png in Resources */,
 				6562F60D1C7EE7A0005F5B68 /* calendarTop.png in Resources */,
 			);
@@ -2248,8 +2279,10 @@
 				654B70591C8566B2004B64B0 /* JCYSpaceEvaluateListViewController.m in Sources */,
 				6562F6161C7EE7A0005F5B68 /* ZLDayLayoutView.m in Sources */,
 				6560FE521C852DD6006A6A3B /* JCYSpaceViewController.m in Sources */,
+				6563AE821C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.m in Sources */,
 				656A16641C8D596F00E29F8F /* JCYUnpayOrderListViewController.m in Sources */,
 				CD6945011C75C89600E04081 /* PBMineTableViewSecondCell.m in Sources */,
+				6563AE871C8FC5F90024CC90 /* JCYCollectionCell.m in Sources */,
 				6597AB281C83E1F000E2705F /* LinckiaSpace.m in Sources */,
 				CDF754531C8028660038622E /* UITabBar+badge.m in Sources */,
 				CD4F06C11C7ADA6B00F6478A /* ExpressTableViewCell.m in Sources */,
@@ -2263,6 +2296,7 @@
 				65651ED21C8989EB004E38B0 /* GTMBase64.m in Sources */,
 				CD9C3A031C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.m in Sources */,
 				6562F6091C7EE7A0005F5B68 /* ZLCalendarDataSource.m in Sources */,
+				6563AE7E1C8FBF9B0024CC90 /* JCYStarfishCoinViewController.m in Sources */,
 				CD0178BC1C7C5A2F00B9DEC9 /* JSDropDownMenu.m in Sources */,
 				CD69448D1C75AD9D00E04081 /* LoginViewController.m in Sources */,
 				655915371C853FDC002FC3FD /* PBSpaceTableAdressCell.m in Sources */,
