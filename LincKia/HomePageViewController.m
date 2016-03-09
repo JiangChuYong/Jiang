@@ -36,8 +36,6 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
 static NSString *ADCellIDKey = @"PBADBannerCellTableViewCell";
 static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
 
-
-
 -(void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
@@ -57,16 +55,29 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     [self registCell];
     _adsArr =[NSMutableArray array];
     _spaceSummaryInfoArr=[NSMutableArray array];
+    //监听退出登录的消息
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reciveExitInfo:) name:@"Exit" object:nil];
+
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",GetIndex] object:nil];
     _SpacesGetIndex = [[AFRquest alloc]init];;
     _SpacesGetIndex.subURLString = @"api/Spaces/GetIndex?deviceType=ios&userToken=""";
     // af.parameters = @{@"Account":@"18602515155",@"Password":@"aaa111"};
     _SpacesGetIndex.style = GET;
     [_SpacesGetIndex requestDataFromWithFlag:GetIndex];
+    
+    [[PBAlert sharedInstance] showProgressDialogText:@"加载中..." inView:self.view];
+    
 }
 
+//退出登录时回到首页的动画
+-(void)reciveExitInfo:(NSNotification *)notif{
+    CATransition *transition = [CATransition animation];
+    [transition setDuration:0.3];
+    [transition setType:@"reveal"];
+    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+}
 -(void)dataReceived:(NSNotification *)notif{
-    
+    [[PBAlert sharedInstance] stopHud];
     _responseDataOfIndexDict = _SpacesGetIndex.resultDict;
     _adsArr=_responseDataOfIndexDict[@"Data"][@"ADs"];
     _spaceSummaryInfoArr=_responseDataOfIndexDict[@"Data"][@"Spaces"];

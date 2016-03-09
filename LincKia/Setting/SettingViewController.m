@@ -8,7 +8,8 @@
 
 #import "SettingViewController.h"
 #import "OtherTableViewCell.h"
-@interface SettingViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
+#import "PBClearCache.h"
+@interface SettingViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate,UITabBarControllerDelegate>
 {
     //自定义cell其他的lable值
     NSMutableArray *otherCellInfoList;
@@ -48,9 +49,8 @@ static NSString *otherTableViewCell = @"otherTableViewCell";
     [self initDataSource];
     [self registerCell];
     /*获取缓存大小*/
-//    _cachePath = [PBClearCache getMyCachePath];
-//    _cacheSize = [PBClearCache folderSizeAtPath:_cachePath];
-    _cacheSize=100000;
+    _cachePath = [PBClearCache getMyCachePath];
+    _cacheSize = [PBClearCache folderSizeAtPath:_cachePath];
     [_setInfoTableView reloadData];
 
 }
@@ -121,8 +121,10 @@ static NSString *otherTableViewCell = @"otherTableViewCell";
 
         
     }else if (indexPath.row == 1){
-        if (_cacheSize > 0) {
+        //浮点数不能直接进行比较，将两个值相减之后在与0.00001比较
+        if (_cacheSize-0> 0.00001) {
             UIAlertView * alert = [[UIAlertView alloc]initWithTitle:nil message:@"是否清除全部缓存数据？"  delegate:self cancelButtonTitle:@"否" otherButtonTitles:@"是", nil];
+            NSLog(@"_cacheSize  %f",_cacheSize);
             alert.tag = AlertClearCacheTag;
             [alert show];
         }else{
@@ -136,7 +138,7 @@ static NSString *otherTableViewCell = @"otherTableViewCell";
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (alertView.tag == AlertClearCacheTag && buttonIndex == 1) {
-        //[self clearCache];
+        [self clearCache];
         NSLog(@"清除缓存");
     }
     
@@ -144,7 +146,7 @@ static NSString *otherTableViewCell = @"otherTableViewCell";
     if(alertView.tag==10001 ){
         
         if (buttonIndex==0) {
-            //[self cleanUserInfo];
+            [self cleanUserInfo];
             NSLog(@"退出登录");
 
         }else{
@@ -158,31 +160,34 @@ static NSString *otherTableViewCell = @"otherTableViewCell";
 //清空缓存
 -(void)clearCache
 {
-//    [PBClearCache clearCache:_cachePath];
-//    _cacheSize = [PBClearCache folderSizeAtPath:_cachePath];
-//    if (!_cacheSize) {
-//        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:nil message:@"清除成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
-//        [alert show];
-//    }
-//    [_setInfoTableView reloadData];
+    [PBClearCache clearCache:_cachePath];
+    _cacheSize = [PBClearCache folderSizeAtPath:_cachePath];
+    if (!_cacheSize) {
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:nil message:@"清除成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alert show];
+    }
+    [_setInfoTableView reloadData];
 }
 
 //清空登录设置
 -(void)cleanUserInfo
 {
-//    [ZZGlobalModel sharedInstance].userInfoViewModel = nil;
-//    [[HttpHelper sharedInstance]setSession:nil];
-//    //清空登录缓存
-//    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-//    [user setObject:nil forKey:kUserName];
-//    [user setObject:nil forKey:kPwd];
-//    [user synchronize];
-//    
-//    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:1] animated:YES];
+    [JCYGlobalData sharedInstance].userInfo = nil;
+    //清空登录缓存
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    [user setObject:nil forKey:USERNAME];
+    [user setObject:nil forKey:PASSWORD];
+    [user synchronize];
+    
+    [JCYGlobalData sharedInstance].LoginStatus=NO;
+    
+    UINavigationController *navi=(UINavigationController *)self.parentViewController;
+    [navi popToRootViewControllerAnimated:YES];
+    navi.tabBarController.selectedIndex=0;
+     [[NSNotificationCenter defaultCenter] postNotificationName:@"Exit" object:nil];
+    
     
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

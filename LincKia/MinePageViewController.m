@@ -37,7 +37,6 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
     UINavigationController * navi = (UINavigationController *)self.navigationController;
     navi.tabBarController.tabBar.hidden = NO;
     navi.navigationBar.hidden = NO;
-    
     _HasUnpayOrder = NO;
     [self checkUnpayOrder];
     [self getUserInfoData];

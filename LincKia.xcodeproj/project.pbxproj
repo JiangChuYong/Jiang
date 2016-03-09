@@ -130,6 +130,7 @@
 		6563AEAE1C8FFEF40024CC90 /* PBAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563AEAD1C8FFEF40024CC90 /* PBAlertViewController.m */; };
 		6563AEB51C9003590024CC90 /* pop-up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AEB31C9003590024CC90 /* pop-up@2x.png */; };
 		6563AEB61C9003590024CC90 /* pop-up@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AEB41C9003590024CC90 /* pop-up@3x.png */; };
+		6563AEB91C901F190024CC90 /* PBClearCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563AEB81C901F190024CC90 /* PBClearCache.m */; };
 		65651EC61C894A86004E38B0 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65651EC51C894A86004E38B0 /* MyAccountViewController.m */; };
 		65651ECA1C895470004E38B0 /* PBChangeHeadPicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65651EC81C895470004E38B0 /* PBChangeHeadPicTableViewCell.m */; };
 		65651ECB1C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65651EC91C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib */; };
@@ -553,6 +554,8 @@
 		6563AEAD1C8FFEF40024CC90 /* PBAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBAlertViewController.m; sourceTree = "<group>"; };
 		6563AEB31C9003590024CC90 /* pop-up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop-up@2x.png"; sourceTree = "<group>"; };
 		6563AEB41C9003590024CC90 /* pop-up@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop-up@3x.png"; sourceTree = "<group>"; };
+		6563AEB71C901F190024CC90 /* PBClearCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBClearCache.h; sourceTree = "<group>"; };
+		6563AEB81C901F190024CC90 /* PBClearCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBClearCache.m; sourceTree = "<group>"; };
 		65651EC41C894A86004E38B0 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
 		65651EC51C894A86004E38B0 /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
 		65651EC71C895470004E38B0 /* PBChangeHeadPicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBChangeHeadPicTableViewCell.h; sourceTree = "<group>"; };
@@ -1356,6 +1359,8 @@
 		6596F18D1C8EDEB200B12479 /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				6563AEB71C901F190024CC90 /* PBClearCache.h */,
+				6563AEB81C901F190024CC90 /* PBClearCache.m */,
 				6596F18E1C8EDEC800B12479 /* SettingViewController.h */,
 				6596F18F1C8EDEC800B12479 /* SettingViewController.m */,
 			);
@@ -2395,6 +2400,7 @@
 				CD69448D1C75AD9D00E04081 /* LoginViewController.m in Sources */,
 				655915371C853FDC002FC3FD /* PBSpaceTableAdressCell.m in Sources */,
 				659EACB71C7AEB6A00208837 /* ZZSpaceIntroduceViewController.m in Sources */,
+				6563AEB91C901F190024CC90 /* PBClearCache.m in Sources */,
 				CD7360C01C71C9A800E3971C /* UITextField+PlaceHolderSetting.m in Sources */,
 				6562F6111C7EE7A0005F5B68 /* ZLCustomScrollerView.m in Sources */,
 				655915351C853FDC002FC3FD /* CommentCell.m in Sources */,
