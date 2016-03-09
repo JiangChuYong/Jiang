@@ -112,6 +112,24 @@
 		6563AE831C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE811C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.xib */; };
 		6563AE871C8FC5F90024CC90 /* JCYCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563AE851C8FC5F90024CC90 /* JCYCollectionCell.m */; };
 		6563AE881C8FC5F90024CC90 /* JCYCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE861C8FC5F90024CC90 /* JCYCollectionCell.xib */; };
+		6563AE8B1C8FF6930024CC90 /* JCYStarfishCoinRechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563AE8A1C8FF6930024CC90 /* JCYStarfishCoinRechargeViewController.m */; };
+		6563AE921C8FF8380024CC90 /* MessageClassifyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563AE8D1C8FF8380024CC90 /* MessageClassifyViewCell.m */; };
+		6563AE931C8FF8380024CC90 /* MessageClassifyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE8E1C8FF8380024CC90 /* MessageClassifyViewCell.xib */; };
+		6563AE941C8FF8380024CC90 /* PaymentsChooseViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563AE901C8FF8380024CC90 /* PaymentsChooseViewCell.m */; };
+		6563AE951C8FF8380024CC90 /* PaymentsChooseViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE911C8FF8380024CC90 /* PaymentsChooseViewCell.xib */; };
+		6563AEA11C8FFAEE0024CC90 /* alipay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE971C8FFAEE0024CC90 /* alipay@3x.png */; };
+		6563AEA21C8FFAEE0024CC90 /* bottom_button_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE981C8FFAEE0024CC90 /* bottom_button_bg@3x.png */; };
+		6563AEA31C8FFAEE0024CC90 /* bottom_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE991C8FFAEE0024CC90 /* bottom_line@2x.png */; };
+		6563AEA41C8FFAEE0024CC90 /* bottom_line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE9A1C8FFAEE0024CC90 /* bottom_line@3x.png */; };
+		6563AEA51C8FFAEE0024CC90 /* coupons_textfield_focused@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE9B1C8FFAEE0024CC90 /* coupons_textfield_focused@3x.png */; };
+		6563AEA61C8FFAEE0024CC90 /* coupons_textfield_unfocused@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE9C1C8FFAEE0024CC90 /* coupons_textfield_unfocused@3x.png */; };
+		6563AEA71C8FFAEE0024CC90 /* submit_orders_unpressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE9D1C8FFAEE0024CC90 /* submit_orders_unpressed@3x.png */; };
+		6563AEA81C8FFAEE0024CC90 /* submit_paper@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE9E1C8FFAEE0024CC90 /* submit_paper@3x.png */; };
+		6563AEA91C8FFAEE0024CC90 /* unionpay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AE9F1C8FFAEE0024CC90 /* unionpay@3x.png */; };
+		6563AEAA1C8FFAEE0024CC90 /* wechat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AEA01C8FFAEE0024CC90 /* wechat@3x.png */; };
+		6563AEAE1C8FFEF40024CC90 /* PBAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563AEAD1C8FFEF40024CC90 /* PBAlertViewController.m */; };
+		6563AEB51C9003590024CC90 /* pop-up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AEB31C9003590024CC90 /* pop-up@2x.png */; };
+		6563AEB61C9003590024CC90 /* pop-up@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AEB41C9003590024CC90 /* pop-up@3x.png */; };
 		65651EC61C894A86004E38B0 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65651EC51C894A86004E38B0 /* MyAccountViewController.m */; };
 		65651ECA1C895470004E38B0 /* PBChangeHeadPicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65651EC81C895470004E38B0 /* PBChangeHeadPicTableViewCell.m */; };
 		65651ECB1C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65651EC91C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib */; };
@@ -513,6 +531,28 @@
 		6563AE841C8FC5F90024CC90 /* JCYCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYCollectionCell.h; sourceTree = "<group>"; };
 		6563AE851C8FC5F90024CC90 /* JCYCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYCollectionCell.m; sourceTree = "<group>"; };
 		6563AE861C8FC5F90024CC90 /* JCYCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCYCollectionCell.xib; sourceTree = "<group>"; };
+		6563AE891C8FF6930024CC90 /* JCYStarfishCoinRechargeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYStarfishCoinRechargeViewController.h; sourceTree = "<group>"; };
+		6563AE8A1C8FF6930024CC90 /* JCYStarfishCoinRechargeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYStarfishCoinRechargeViewController.m; sourceTree = "<group>"; };
+		6563AE8C1C8FF8380024CC90 /* MessageClassifyViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageClassifyViewCell.h; sourceTree = "<group>"; };
+		6563AE8D1C8FF8380024CC90 /* MessageClassifyViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageClassifyViewCell.m; sourceTree = "<group>"; };
+		6563AE8E1C8FF8380024CC90 /* MessageClassifyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageClassifyViewCell.xib; sourceTree = "<group>"; };
+		6563AE8F1C8FF8380024CC90 /* PaymentsChooseViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentsChooseViewCell.h; sourceTree = "<group>"; };
+		6563AE901C8FF8380024CC90 /* PaymentsChooseViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentsChooseViewCell.m; sourceTree = "<group>"; };
+		6563AE911C8FF8380024CC90 /* PaymentsChooseViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentsChooseViewCell.xib; sourceTree = "<group>"; };
+		6563AE971C8FFAEE0024CC90 /* alipay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alipay@3x.png"; sourceTree = "<group>"; };
+		6563AE981C8FFAEE0024CC90 /* bottom_button_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom_button_bg@3x.png"; sourceTree = "<group>"; };
+		6563AE991C8FFAEE0024CC90 /* bottom_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom_line@2x.png"; sourceTree = "<group>"; };
+		6563AE9A1C8FFAEE0024CC90 /* bottom_line@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottom_line@3x.png"; sourceTree = "<group>"; };
+		6563AE9B1C8FFAEE0024CC90 /* coupons_textfield_focused@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coupons_textfield_focused@3x.png"; sourceTree = "<group>"; };
+		6563AE9C1C8FFAEE0024CC90 /* coupons_textfield_unfocused@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coupons_textfield_unfocused@3x.png"; sourceTree = "<group>"; };
+		6563AE9D1C8FFAEE0024CC90 /* submit_orders_unpressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "submit_orders_unpressed@3x.png"; sourceTree = "<group>"; };
+		6563AE9E1C8FFAEE0024CC90 /* submit_paper@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "submit_paper@3x.png"; sourceTree = "<group>"; };
+		6563AE9F1C8FFAEE0024CC90 /* unionpay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unionpay@3x.png"; sourceTree = "<group>"; };
+		6563AEA01C8FFAEE0024CC90 /* wechat@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wechat@3x.png"; sourceTree = "<group>"; };
+		6563AEAC1C8FFEF40024CC90 /* PBAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBAlertViewController.h; sourceTree = "<group>"; };
+		6563AEAD1C8FFEF40024CC90 /* PBAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBAlertViewController.m; sourceTree = "<group>"; };
+		6563AEB31C9003590024CC90 /* pop-up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop-up@2x.png"; sourceTree = "<group>"; };
+		6563AEB41C9003590024CC90 /* pop-up@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop-up@3x.png"; sourceTree = "<group>"; };
 		65651EC41C894A86004E38B0 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
 		65651EC51C894A86004E38B0 /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
 		65651EC71C895470004E38B0 /* PBChangeHeadPicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBChangeHeadPicTableViewCell.h; sourceTree = "<group>"; };
@@ -1151,8 +1191,42 @@
 				6563AE841C8FC5F90024CC90 /* JCYCollectionCell.h */,
 				6563AE851C8FC5F90024CC90 /* JCYCollectionCell.m */,
 				6563AE861C8FC5F90024CC90 /* JCYCollectionCell.xib */,
+				6563AE891C8FF6930024CC90 /* JCYStarfishCoinRechargeViewController.h */,
+				6563AE8A1C8FF6930024CC90 /* JCYStarfishCoinRechargeViewController.m */,
+				6563AE8C1C8FF8380024CC90 /* MessageClassifyViewCell.h */,
+				6563AE8D1C8FF8380024CC90 /* MessageClassifyViewCell.m */,
+				6563AE8E1C8FF8380024CC90 /* MessageClassifyViewCell.xib */,
+				6563AE8F1C8FF8380024CC90 /* PaymentsChooseViewCell.h */,
+				6563AE901C8FF8380024CC90 /* PaymentsChooseViewCell.m */,
+				6563AE911C8FF8380024CC90 /* PaymentsChooseViewCell.xib */,
 			);
 			path = StarfishCoin;
+			sourceTree = "<group>";
+		};
+		6563AE961C8FFAEE0024CC90 /* 支付 */ = {
+			isa = PBXGroup;
+			children = (
+				6563AE971C8FFAEE0024CC90 /* alipay@3x.png */,
+				6563AE981C8FFAEE0024CC90 /* bottom_button_bg@3x.png */,
+				6563AE991C8FFAEE0024CC90 /* bottom_line@2x.png */,
+				6563AE9A1C8FFAEE0024CC90 /* bottom_line@3x.png */,
+				6563AE9B1C8FFAEE0024CC90 /* coupons_textfield_focused@3x.png */,
+				6563AE9C1C8FFAEE0024CC90 /* coupons_textfield_unfocused@3x.png */,
+				6563AE9D1C8FFAEE0024CC90 /* submit_orders_unpressed@3x.png */,
+				6563AE9E1C8FFAEE0024CC90 /* submit_paper@3x.png */,
+				6563AE9F1C8FFAEE0024CC90 /* unionpay@3x.png */,
+				6563AEA01C8FFAEE0024CC90 /* wechat@3x.png */,
+			);
+			path = "支付";
+			sourceTree = "<group>";
+		};
+		6563AEAB1C8FFEF40024CC90 /* PBAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				6563AEAC1C8FFEF40024CC90 /* PBAlertViewController.h */,
+				6563AEAD1C8FFEF40024CC90 /* PBAlertViewController.m */,
+			);
+			path = PBAlertView;
 			sourceTree = "<group>";
 		};
 		65651EC31C894A69004E38B0 /* MyAccount */ = {
@@ -1353,6 +1427,7 @@
 				CD29E7CF1C7AFE3500871F69 /* images */,
 				CD0178B31C7C5A2F00B9DEC9 /* JSDropDownMenu */,
 				65651ECC1C8989EB004E38B0 /* GTMBase64 */,
+				6563AEAB1C8FFEF40024CC90 /* PBAlertView */,
 				6562F5E51C7EE7A0005F5B68 /* NIDropDown */,
 				6562F5E81C7EE7A0005F5B68 /* ZLCalendar */,
 				CD5CD0091C71E0EC00B6A34B /* AFRequest */,
@@ -1451,6 +1526,7 @@
 				CD29E7D01C7AFE3500871F69 /* 会员 */,
 				CD29E7E31C7AFE3500871F69 /* 公司详情 */,
 				CD29E7FB1C7AFE3500871F69 /* 我的 */,
+				6563AE961C8FFAEE0024CC90 /* 支付 */,
 				CD29E8171C7AFE3500871F69 /* 注册与登录 */,
 				CD29E81F1C7AFE3500871F69 /* 空间详情 */,
 				CD29E83D1C7AFE3500871F69 /* 首页 */,
@@ -1605,6 +1681,8 @@
 		CD29E8E11C7AFFD300871F69 /* 通用 */ = {
 			isa = PBXGroup;
 			children = (
+				6563AEB31C9003590024CC90 /* pop-up@2x.png */,
+				6563AEB41C9003590024CC90 /* pop-up@3x.png */,
 				6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */,
 				CDA991981C8426C6000C2AB2 /* single_line_bottom@2x.png */,
 				CDA991991C8426C6000C2AB2 /* single_line_bottom@3x.png */,
@@ -1918,8 +1996,10 @@
 				CD29E9011C7AFFD400871F69 /* line@3x.png in Resources */,
 				CD29E8921C7AFE3500871F69 /* mine_resume@3x.png in Resources */,
 				CD29E9071C7AFFD400871F69 /* title_back_unpressed@3x.png in Resources */,
+				6563AEA91C8FFAEE0024CC90 /* unionpay@3x.png in Resources */,
 				6562F68E1C7EEB2B005F5B68 /* button_reservation_bg_pressed@3x.png in Resources */,
 				CD29E8C21C7AFE3500871F69 /* enterprise_-service_unpressed@2x.png in Resources */,
+				6563AEA81C8FFAEE0024CC90 /* submit_paper@3x.png in Resources */,
 				CD29E86B1C7AFE3500871F69 /* company_detail_phone_icon@3x.png in Resources */,
 				CDA991961C842608000C2AB2 /* multichoicebox_checked@2x.png in Resources */,
 				6562F6831C7EEB2B005F5B68 /* community_introduce_hardware_facility@3x.png in Resources */,
@@ -1956,6 +2036,7 @@
 				CD29E9221C7B00E600871F69 /* 天天快递@3x.png in Resources */,
 				65651ECB1C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib in Resources */,
 				CD29E8BE1C7AFE3500871F69 /* activity_space_unpressed@2x.png in Resources */,
+				6563AEA41C8FFAEE0024CC90 /* bottom_line@3x.png in Resources */,
 				CD1D57341C71BDB700BB30AC /* LaunchScreen.storyboard in Resources */,
 				6562F6851C7EEB2B005F5B68 /* map@3x.png in Resources */,
 				6562F68C1C7EEB2B005F5B68 /* star_full@3x.png in Resources */,
@@ -1968,8 +2049,10 @@
 				CD29E8821C7AFE3500871F69 /* mine_bg@2x.png in Resources */,
 				6562F6681C7EEB2B005F5B68 /* coffee@3x.png in Resources */,
 				CD29E91F1C7B00E600871F69 /* 圆通速递@2x.png in Resources */,
+				6563AE951C8FF8380024CC90 /* PaymentsChooseViewCell.xib in Resources */,
 				CD29E8CC1C7AFE3500871F69 /* mine_pressed@2x.png in Resources */,
 				6562F66E1C7EEB2B005F5B68 /* qq_pressed@3x.png in Resources */,
+				6563AEB61C9003590024CC90 /* pop-up@3x.png in Resources */,
 				CD29E8A51C7AFE3500871F69 /* community_introduce_but_phone@3x.png in Resources */,
 				CD29E8C61C7AFE3500871F69 /* home_unpressed@2x.png in Resources */,
 				CD29E8C41C7AFE3500871F69 /* home_pressed@2x.png in Resources */,
@@ -1981,6 +2064,7 @@
 				CD6945041C75C89600E04081 /* PBMineTableViewSingleLineCell.xib in Resources */,
 				CD29E88A1C7AFE3500871F69 /* mine_headphoto_example.png in Resources */,
 				6562F6931C7EEB2B005F5B68 /* industry@2x.png in Resources */,
+				6563AEAA1C8FFAEE0024CC90 /* wechat@3x.png in Resources */,
 				CD29E8C31C7AFE3500871F69 /* enterprise_-service_unpressed@3x.png in Resources */,
 				65FAE9B61C7EFF7400743D97 /* title_firstpage_unpressed@3x.png in Resources */,
 				CD29E8981C7AFE3500871F69 /* mine_set_up@3x.png in Resources */,
@@ -2007,12 +2091,14 @@
 				6562F5E11C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.xib in Resources */,
 				6562F67F1C7EEB2B005F5B68 /* community_introduce_camer@3x.png in Resources */,
 				6562F6701C7EEB2B005F5B68 /* sina_weibo_pressed@3x.png in Resources */,
+				6563AEA71C8FFAEE0024CC90 /* submit_orders_unpressed@3x.png in Resources */,
 				CD29E87E1C7AFE3500871F69 /* mine_account_number@2x.png in Resources */,
 				CD29E8811C7AFE3500871F69 /* mine_appointment_visit@2x.png in Resources */,
 				CDA991971C842608000C2AB2 /* multichoicebox_unchecked@2x.png in Resources */,
 				CD29E8901C7AFE3500871F69 /* mine_pay@3x.png in Resources */,
 				CD29E93A1C7B087500871F69 /* environment_update@2x.png in Resources */,
 				65B419651C75C25200FA817B /* PBCollectionCell.xib in Resources */,
+				6563AEA11C8FFAEE0024CC90 /* alipay@3x.png in Resources */,
 				6562F6641C7EEB2B005F5B68 /* date_horizonal_line@2x.png in Resources */,
 				CD29E9391C7B087500871F69 /* environment_shollow@3x.png in Resources */,
 				CD1D572F1C71BDB700BB30AC /* Main.storyboard in Resources */,
@@ -2030,6 +2116,7 @@
 				CD29E8A61C7AFE3500871F69 /* community_introduce_camer@2x.png in Resources */,
 				CD29E88D1C7AFE3500871F69 /* mine_online_orientation@2x.png in Resources */,
 				656A168E1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.xib in Resources */,
+				6563AEA31C8FFAEE0024CC90 /* bottom_line@2x.png in Resources */,
 				6562F6821C7EEB2B005F5B68 /* community_introduce_hardware_facility@2x.png in Resources */,
 				CD29E8A71C7AFE3500871F69 /* community_introduce_camer@3x.png in Resources */,
 				CD29E8C51C7AFE3500871F69 /* home_pressed@3x.png in Resources */,
@@ -2070,12 +2157,14 @@
 				CD29E8BC1C7AFE3500871F69 /* activity_space_pressed@2x.png in Resources */,
 				655915361C853FDC002FC3FD /* CommentCell.xib in Resources */,
 				CD29E9001C7AFFD400871F69 /* line@2x.png in Resources */,
+				6563AE931C8FF8380024CC90 /* MessageClassifyViewCell.xib in Resources */,
 				CD29E9241C7B00E600871F69 /* 宅急送@3x.png in Resources */,
 				CD29E8BF1C7AFE3500871F69 /* activity_space_unpressed@3x.png in Resources */,
 				CD29E8C71C7AFE3500871F69 /* home_unpressed@3x.png in Resources */,
 				CD29E8A01C7AFE3500871F69 /* arrow@2x.png in Resources */,
 				CD29E8D11C7AFE3500871F69 /* office_community_pressed@3x.png in Resources */,
 				65734D281C87E3ED008B5CAB /* photo@3x.png in Resources */,
+				6563AEA21C8FFAEE0024CC90 /* bottom_button_bg@3x.png in Resources */,
 				CD29E91B1C7B00E600871F69 /* but_phone@2x.png in Resources */,
 				CD29E8801C7AFE3500871F69 /* mine_appointment_visit.png in Resources */,
 				CD29E8A21C7AFE3500871F69 /* button_reservation_pressed@3x.png in Resources */,
@@ -2092,6 +2181,7 @@
 				65FAE9B81C7EFFC500743D97 /* sucessful_payment@3x.png in Resources */,
 				CD9C3A081C84186900071D60 /* multichoicebox_unchecked@3x.png in Resources */,
 				CD9C3A041C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.xib in Resources */,
+				6563AEB51C9003590024CC90 /* pop-up@2x.png in Resources */,
 				CD29E8B11C7AFE3500871F69 /* personal_office@2x.png in Resources */,
 				CD29E85D1C7AFE3500871F69 /* 会议室@3x.png in Resources */,
 				CD29E9041C7AFFD400871F69 /* push_arrow@2x.png in Resources */,
@@ -2118,6 +2208,7 @@
 				CD29E8B01C7AFE3500871F69 /* open_desk@3x.png in Resources */,
 				CD29E9201C7B00E600871F69 /* 圆通速递@3x.png in Resources */,
 				6562F6661C7EEB2B005F5B68 /* date_title_bg@3x.png in Resources */,
+				6563AEA51C8FFAEE0024CC90 /* coupons_textfield_focused@3x.png in Resources */,
 				CD29E9291C7B00E600871F69 /* 顺丰速运@2x.png in Resources */,
 				CD0178BA1C7C5A2F00B9DEC9 /* choiced_line@3x.png in Resources */,
 				CD29E8FF1C7AFFD400871F69 /* hint@3x.png in Resources */,
@@ -2125,6 +2216,7 @@
 				CD29E8881C7AFE3500871F69 /* mine_customer_service_center@2x.png in Resources */,
 				CD29E8681C7AFE3500871F69 /* company_detail_icon@2x.png in Resources */,
 				CD29E8911C7AFE3500871F69 /* mine_resume@2x.png in Resources */,
+				6563AEA61C8FFAEE0024CC90 /* coupons_textfield_unfocused@3x.png in Resources */,
 				6562F6601C7EEB2B005F5B68 /* date_arrow1_pressed@3x.png in Resources */,
 				6562F6921C7EEB2B005F5B68 /* date@3x.png in Resources */,
 				CD29E85C1C7AFE3500871F69 /* 会议室@2x.png in Resources */,
@@ -2251,6 +2343,7 @@
 				CD1D572C1C71BDB700BB30AC /* MemberPageViewController.m in Sources */,
 				65B419741C75D1BF00FA817B /* PBCompanyListTableViewCell.m in Sources */,
 				6572BE791C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m in Sources */,
+				6563AEAE1C8FFEF40024CC90 /* PBAlertViewController.m in Sources */,
 				6572BE741C86B5E300F495D1 /* JCYBookingSpaceViewController.m in Sources */,
 				65B4196F1C75D18600FA817B /* PBCompanyListViewController.m in Sources */,
 				CD6945031C75C89600E04081 /* PBMineTableViewSingleLineCell.m in Sources */,
@@ -2295,6 +2388,7 @@
 				65B419441C756B7700FA817B /* PBIndustryViewController.m in Sources */,
 				65651ED21C8989EB004E38B0 /* GTMBase64.m in Sources */,
 				CD9C3A031C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.m in Sources */,
+				6563AE8B1C8FF6930024CC90 /* JCYStarfishCoinRechargeViewController.m in Sources */,
 				6562F6091C7EE7A0005F5B68 /* ZLCalendarDataSource.m in Sources */,
 				6563AE7E1C8FBF9B0024CC90 /* JCYStarfishCoinViewController.m in Sources */,
 				CD0178BC1C7C5A2F00B9DEC9 /* JSDropDownMenu.m in Sources */,
@@ -2314,11 +2408,13 @@
 				656A168D1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.m in Sources */,
 				656A16771C8D7E3D00E29F8F /* JCYMyBookingListViewController.m in Sources */,
 				CD7360BE1C71C9A800E3971C /* CommonUtil.m in Sources */,
+				6563AE941C8FF8380024CC90 /* PaymentsChooseViewCell.m in Sources */,
 				659EAC861C7ADFC500208837 /* PBActivtySpaceDetailViewController.m in Sources */,
 				6562F6101C7EE7A0005F5B68 /* ZLCalendarUtil.m in Sources */,
 				65651EC61C894A86004E38B0 /* MyAccountViewController.m in Sources */,
 				CDC954B81C7C684800D2D7D1 /* PBDiDiViewController.m in Sources */,
 				659EAC6B1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m in Sources */,
+				6563AE921C8FF8380024CC90 /* MessageClassifyViewCell.m in Sources */,
 				6562F60B1C7EE7A0005F5B68 /* ZLCalendarDayModel.m in Sources */,
 				CD1D57231C71BDB700BB30AC /* main.m in Sources */,
 				656A16731C8D6D1300E29F8F /* JCYCommentViewController.m in Sources */,

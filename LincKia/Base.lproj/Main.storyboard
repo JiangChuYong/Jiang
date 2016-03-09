@@ -3582,11 +3582,100 @@
                         <outlet property="collectionView" destination="QQX-66-aaT" id="A58-Ka-LjC"/>
                         <outlet property="discountLabel" destination="J3Z-u2-eH7" id="3RN-Av-o4F"/>
                         <outlet property="paymentLabel" destination="zSF-mG-nBL" id="WMp-WG-g3W"/>
+                        <segue destination="9NP-rH-Smi" kind="push" identifier="StarFishCoinToRecharge" id="9Ii-0R-i9D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="urT-Rn-YVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2053" y="4420"/>
+        </scene>
+        <!--充值海星币-->
+        <scene sceneID="w1s-My-Jbc">
+            <objects>
+                <viewController id="9NP-rH-Smi" customClass="JCYStarfishCoinRechargeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="73y-1Z-w2q"/>
+                        <viewControllerLayoutGuide type="bottom" id="udv-2a-1E5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="54a-s0-L0b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jYX-Re-FX6">
+                                <rect key="frame" x="0.0" y="64" width="320" height="430"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9NP-rH-Smi" id="G8p-EY-grx"/>
+                                    <outlet property="delegate" destination="9NP-rH-Smi" id="36l-NG-L97"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNG-gw-aqs">
+                                <rect key="frame" x="0.0" y="494" width="320" height="74"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gW-Ym-RRX">
+                                        <rect key="frame" x="15" y="10" width="290" height="54"/>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.71372549019999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="立即充值">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="instantRechargeButtonPressed:" destination="9NP-rH-Smi" eventType="touchUpInside" id="BIu-M9-zIG"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3PH-N5-plJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                                        <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="zqn-KL-7gh"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="3PH-N5-plJ" firstAttribute="top" secondItem="lNG-gw-aqs" secondAttribute="top" id="BOK-nY-l4R"/>
+                                    <constraint firstAttribute="trailing" secondItem="3PH-N5-plJ" secondAttribute="trailing" id="GnY-D4-gp0"/>
+                                    <constraint firstItem="3PH-N5-plJ" firstAttribute="leading" secondItem="lNG-gw-aqs" secondAttribute="leading" id="KiW-Vg-9sy"/>
+                                    <constraint firstAttribute="bottom" secondItem="8gW-Ym-RRX" secondAttribute="bottom" constant="10" id="MPt-WN-mCC"/>
+                                    <constraint firstAttribute="trailing" secondItem="8gW-Ym-RRX" secondAttribute="trailing" constant="15" id="UBW-vx-cAj"/>
+                                    <constraint firstAttribute="height" constant="74" id="g4H-No-cYp"/>
+                                    <constraint firstItem="8gW-Ym-RRX" firstAttribute="top" secondItem="3PH-N5-plJ" secondAttribute="bottom" constant="9" id="wN7-0B-urH"/>
+                                    <constraint firstItem="8gW-Ym-RRX" firstAttribute="leading" secondItem="lNG-gw-aqs" secondAttribute="leading" constant="15" id="wzi-Un-AGk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="udv-2a-1E5" firstAttribute="top" secondItem="lNG-gw-aqs" secondAttribute="bottom" id="938-WY-Q29"/>
+                            <constraint firstItem="lNG-gw-aqs" firstAttribute="leading" secondItem="54a-s0-L0b" secondAttribute="leading" id="PCS-OV-Jai"/>
+                            <constraint firstAttribute="trailing" secondItem="jYX-Re-FX6" secondAttribute="trailing" id="V2Q-tP-n6a"/>
+                            <constraint firstAttribute="trailing" secondItem="lNG-gw-aqs" secondAttribute="trailing" id="bEf-rq-KSy"/>
+                            <constraint firstItem="lNG-gw-aqs" firstAttribute="top" secondItem="jYX-Re-FX6" secondAttribute="bottom" id="gBK-31-9lq"/>
+                            <constraint firstItem="jYX-Re-FX6" firstAttribute="top" secondItem="73y-1Z-w2q" secondAttribute="bottom" id="ohh-0H-CLt"/>
+                            <constraint firstItem="jYX-Re-FX6" firstAttribute="leading" secondItem="54a-s0-L0b" secondAttribute="leading" id="xEX-QQ-khU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="充值海星币" id="10Q-bd-2xl">
+                        <barButtonItem key="leftBarButtonItem" image="title_back_unpressed.png" id="WeY-ej-Aef">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="goBack:" destination="9NP-rH-Smi" id="Ru7-0N-0cO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="rechargeTableView" destination="jYX-Re-FX6" id="qMr-bA-G5d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HTL-xD-bm8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2487" y="4420"/>
         </scene>
         <!--个人资料-->
         <scene sceneID="gPT-SN-evb">

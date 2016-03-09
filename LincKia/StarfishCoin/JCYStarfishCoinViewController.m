@@ -119,10 +119,13 @@
 //    starfishCoinRechargeVc.starfishPrice=_paymentLabel.text;
 //    [self.navigationController pushViewController:starfishCoinRechargeVc animated:YES];
     
+    NSMutableDictionary *dataSource=[NSMutableDictionary dictionary];
+    [dataSource setValue:[_currentButton.titleLabel.text substringToIndex:_currentButton.titleLabel.text.length-2] forKey:@"StarfishCoin"];
+    [dataSource setValue:_paymentLabel.text forKey:@"StarfishPrice"];
+    [JCYGlobalData sharedInstance].commonViewData=dataSource;
     
+    [self performSegueWithIdentifier:@"StarFishCoinToRecharge" sender:self];
     
-    
-    NSLog(@"页面推送至海星币充值支付页面");
 }
 
 //处理折扣后的价格

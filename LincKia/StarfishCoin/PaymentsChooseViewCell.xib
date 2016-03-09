@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PaymentsChooseViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alipay@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="r4F-Lc-12Y">
+                        <rect key="frame" x="13" y="12" width="60" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="ANj-bp-hSl"/>
+                            <constraint firstAttribute="width" constant="60" id="MwE-We-QVd"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付宝支付" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JG4-t4-Qwr">
+                        <rect key="frame" x="88" y="17" width="65" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lib-6Y-2Rm" customClass="PBButton">
+                        <rect key="frame" x="283" y="14" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="7xp-dE-Zsc"/>
+                            <constraint firstAttribute="height" constant="22" id="N2V-Fb-JVT"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="NTx-nw-Jb6"/>
+                            <constraint firstAttribute="width" constant="22" id="aIF-Mg-MSB"/>
+                        </constraints>
+                        <state key="normal" image="multichoicebox_unchecked.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" image="multichoicebox_checked@3x.png"/>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="STS-j8-3fq">
+                        <rect key="frame" x="0.0" y="48.5" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.83921568627450982" green="0.83921568627450982" blue="0.83921568627450982" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="tYL-6B-Pkp"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="STS-j8-3fq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="9dg-ul-zTS"/>
+                    <constraint firstAttribute="trailing" secondItem="STS-j8-3fq" secondAttribute="trailing" id="9fE-GO-5vm"/>
+                    <constraint firstItem="JG4-t4-Qwr" firstAttribute="centerY" secondItem="r4F-Lc-12Y" secondAttribute="centerY" id="A9G-57-ELM"/>
+                    <constraint firstAttribute="trailing" secondItem="lib-6Y-2Rm" secondAttribute="trailing" constant="15" id="SqB-SB-kbO"/>
+                    <constraint firstItem="JG4-t4-Qwr" firstAttribute="leading" secondItem="r4F-Lc-12Y" secondAttribute="trailing" constant="15" id="XbP-vJ-7MD"/>
+                    <constraint firstAttribute="centerY" secondItem="lib-6Y-2Rm" secondAttribute="centerY" id="Z2V-db-iAU"/>
+                    <constraint firstItem="r4F-Lc-12Y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="nzi-35-Iwc"/>
+                    <constraint firstAttribute="bottom" secondItem="STS-j8-3fq" secondAttribute="bottom" id="tgX-kn-oHg"/>
+                    <constraint firstAttribute="centerY" secondItem="r4F-Lc-12Y" secondAttribute="centerY" id="v4t-Rb-Ydn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="blueLineImageView" destination="STS-j8-3fq" id="1JO-mf-9yy"/>
+                <outlet property="btnPaymentCheckBox" destination="lib-6Y-2Rm" id="BWM-Xc-s1y"/>
+                <outlet property="labelPayment" destination="JG4-t4-Qwr" id="say-56-yDp"/>
+                <outlet property="paymentImageView" destination="r4F-Lc-12Y" id="Y6F-Oe-4Hc"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="alipay@3x.png" width="312" height="118"/>
+        <image name="multichoicebox_checked@3x.png" width="84" height="84"/>
+        <image name="multichoicebox_unchecked.png" width="22" height="22"/>
+    </resources>
+</document>
