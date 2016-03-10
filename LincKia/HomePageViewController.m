@@ -76,6 +76,7 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     [transition setDuration:0.3];
     [transition setType:@"reveal"];
     [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:@"Exit" object:nil];
 }
 -(void)dataReceived:(NSNotification *)notif{
     [[PBAlert sharedInstance] stopHud];

@@ -75,6 +75,10 @@ typedef enum{
     GetStarfishDiscountList,
     //增加空间评论
     AddComment,
+    //获取短信验证码
+    SendValidCode,
+    //重置密码
+    ResetPassword,
     
     
     

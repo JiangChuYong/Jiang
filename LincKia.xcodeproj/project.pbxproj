@@ -21,6 +21,11 @@
 		655915391C853FDC002FC3FD /* PBTableSpaceTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 655915301C853FDC002FC3FD /* PBTableSpaceTypeCell.m */; };
 		6559153A1C853FDC002FC3FD /* PBTableSpaceTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 655915311C853FDC002FC3FD /* PBTableSpaceTypeCell.xib */; };
 		655D0FD11C9170A1008CED32 /* JCYEvaluateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655D0FD01C9170A1008CED32 /* JCYEvaluateViewController.m */; };
+		655D0FD51C917EE1008CED32 /* FindPasswdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655D0FD41C917EE1008CED32 /* FindPasswdViewController.m */; };
+		655D0FD71C91807A008CED32 /* title_cancel_unpressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655D0FD61C91807A008CED32 /* title_cancel_unpressed@3x.png */; };
+		655D0FDA1C9181C1008CED32 /* cellphone_code_clicked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655D0FD81C9181C1008CED32 /* cellphone_code_clicked@3x.png */; };
+		655D0FDB1C9181C1008CED32 /* cellphone_code_unclicked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 655D0FD91C9181C1008CED32 /* cellphone_code_unclicked@3x.png */; };
+		655D0FDF1C9185D5008CED32 /* TimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 655D0FDE1C9185D5008CED32 /* TimerView.m */; };
 		6560FE521C852DD6006A6A3B /* JCYSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560FE511C852DD6006A6A3B /* JCYSpaceViewController.m */; };
 		6562F5E01C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6562F5D81C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.m */; };
 		6562F5E11C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6562F5D91C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.xib */; };
@@ -426,6 +431,13 @@
 		655915311C853FDC002FC3FD /* PBTableSpaceTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBTableSpaceTypeCell.xib; sourceTree = "<group>"; };
 		655D0FCF1C9170A1008CED32 /* JCYEvaluateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYEvaluateViewController.h; sourceTree = "<group>"; };
 		655D0FD01C9170A1008CED32 /* JCYEvaluateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYEvaluateViewController.m; sourceTree = "<group>"; };
+		655D0FD31C917EE1008CED32 /* FindPasswdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswdViewController.h; sourceTree = "<group>"; };
+		655D0FD41C917EE1008CED32 /* FindPasswdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswdViewController.m; sourceTree = "<group>"; };
+		655D0FD61C91807A008CED32 /* title_cancel_unpressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title_cancel_unpressed@3x.png"; sourceTree = "<group>"; };
+		655D0FD81C9181C1008CED32 /* cellphone_code_clicked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellphone_code_clicked@3x.png"; sourceTree = "<group>"; };
+		655D0FD91C9181C1008CED32 /* cellphone_code_unclicked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellphone_code_unclicked@3x.png"; sourceTree = "<group>"; };
+		655D0FDD1C9185D5008CED32 /* TimerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerView.h; sourceTree = "<group>"; };
+		655D0FDE1C9185D5008CED32 /* TimerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerView.m; sourceTree = "<group>"; };
 		6560FE501C852DD6006A6A3B /* JCYSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYSpaceViewController.h; sourceTree = "<group>"; };
 		6560FE511C852DD6006A6A3B /* JCYSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYSpaceViewController.m; sourceTree = "<group>"; };
 		6562F5D71C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBActiveSpaceBookingTableViewCell.h; sourceTree = "<group>"; };
@@ -986,6 +998,24 @@
 			path = Evalute;
 			sourceTree = "<group>";
 		};
+		655D0FD21C917ED4008CED32 /* FindPassword */ = {
+			isa = PBXGroup;
+			children = (
+				655D0FD31C917EE1008CED32 /* FindPasswdViewController.h */,
+				655D0FD41C917EE1008CED32 /* FindPasswdViewController.m */,
+			);
+			path = FindPassword;
+			sourceTree = "<group>";
+		};
+		655D0FDC1C9185D5008CED32 /* TimerView */ = {
+			isa = PBXGroup;
+			children = (
+				655D0FDD1C9185D5008CED32 /* TimerView.h */,
+				655D0FDE1C9185D5008CED32 /* TimerView.m */,
+			);
+			path = TimerView;
+			sourceTree = "<group>";
+		};
 		6562F5D51C7EE628005F5B68 /* ReservationVisit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1498,9 +1528,11 @@
 				656A16741C8D7E1E00E29F8F /* Mybookings */,
 				6563AE7B1C8FBF860024CC90 /* StarfishCoin */,
 				656A167D1C8D8DEF00E29F8F /* Common */,
+				655D0FDC1C9185D5008CED32 /* TimerView */,
 				6596F1841C8EC0F300B12479 /* MyOnlineBooking */,
 				656A166A1C8D6CFF00E29F8F /* MyComment */,
 				655D0FCE1C91708D008CED32 /* Evalute */,
+				655D0FD21C917ED4008CED32 /* FindPassword */,
 				6596F18D1C8EDEB200B12479 /* Setting */,
 				CD1D57241C71BDB700BB30AC /* AppDelegate.h */,
 				CD1D57251C71BDB700BB30AC /* AppDelegate.m */,
@@ -1636,6 +1668,8 @@
 		CD29E8171C7AFE3500871F69 /* 注册与登录 */ = {
 			isa = PBXGroup;
 			children = (
+				655D0FD81C9181C1008CED32 /* cellphone_code_clicked@3x.png */,
+				655D0FD91C9181C1008CED32 /* cellphone_code_unclicked@3x.png */,
 				CD29E8181C7AFE3500871F69 /* logo@3x.png */,
 				CD29E8191C7AFE3500871F69 /* register_button_bg_unpressed@3x.png */,
 				CD29E81A1C7AFE3500871F69 /* register_cellphone@3x.png */,
@@ -1710,6 +1744,7 @@
 		CD29E8E11C7AFFD300871F69 /* 通用 */ = {
 			isa = PBXGroup;
 			children = (
+				655D0FD61C91807A008CED32 /* title_cancel_unpressed@3x.png */,
 				6563AEBF1C902E190024CC90 /* search_bg@2x.png */,
 				6563AEC01C902E190024CC90 /* search_bg@3x.png */,
 				6563AEBA1C902C2E0024CC90 /* title_search_unpressed@3x.png */,
@@ -2118,9 +2153,11 @@
 				6562F6711C7EEB2B005F5B68 /* sina_weibo_unpressed@3x.png in Resources */,
 				CD29E8651C7AFE3500871F69 /* 滴滴出行@3x.png in Resources */,
 				CD29E9061C7AFFD400871F69 /* title_back_unpressed@2x.png in Resources */,
+				655D0FD71C91807A008CED32 /* title_cancel_unpressed@3x.png in Resources */,
 				CD29E8AB1C7AFE3500871F69 /* community_introduce_hardware_facility@3x.png in Resources */,
 				6562F67D1C7EEB2B005F5B68 /* community_introduce_but_phone@3x.png in Resources */,
 				6562F5E11C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.xib in Resources */,
+				655D0FDB1C9181C1008CED32 /* cellphone_code_unclicked@3x.png in Resources */,
 				6562F67F1C7EEB2B005F5B68 /* community_introduce_camer@3x.png in Resources */,
 				6562F6701C7EEB2B005F5B68 /* sina_weibo_pressed@3x.png in Resources */,
 				6563AEA71C8FFAEE0024CC90 /* submit_orders_unpressed@3x.png in Resources */,
@@ -2164,6 +2201,7 @@
 				CDA9919B1C8426C6000C2AB2 /* single_line_bottom@3x.png in Resources */,
 				CD29E8D01C7AFE3500871F69 /* office_community_pressed@2x.png in Resources */,
 				CD6944FE1C75C89600E04081 /* PBDoubleTableViewCell.xib in Resources */,
+				655D0FDA1C9181C1008CED32 /* cellphone_code_clicked@3x.png in Resources */,
 				CD29E8C91C7AFE3500871F69 /* member_pressed@3x.png in Resources */,
 				CD29E88B1C7AFE3500871F69 /* mine_help@2x.png in Resources */,
 				CD29E9361C7B087500871F69 /* environment_circle@2x.png in Resources */,
@@ -2456,11 +2494,13 @@
 				CD1D57231C71BDB700BB30AC /* main.m in Sources */,
 				656A16731C8D6D1300E29F8F /* JCYCommentViewController.m in Sources */,
 				6530F8241C771CD4005BD7C1 /* PBActivitySpaceListViewController.m in Sources */,
+				655D0FD51C917EE1008CED32 /* FindPasswdViewController.m in Sources */,
 				65651ECA1C895470004E38B0 /* PBChangeHeadPicTableViewCell.m in Sources */,
 				656A167B1C8D801500E29F8F /* PBMyBookingListTableViewCell.m in Sources */,
 				65651ED31C8989EB004E38B0 /* LGTMBase64.m in Sources */,
 				CD5CD00C1C71E10F00B6A34B /* AFRquest.m in Sources */,
 				655D0FD11C9170A1008CED32 /* JCYEvaluateViewController.m in Sources */,
+				655D0FDF1C9185D5008CED32 /* TimerView.m in Sources */,
 				654B70481C855575004B64B0 /* TQStarRatingView.m in Sources */,
 				6562F6141C7EE7A0005F5B68 /* ZLCalendarMonthPage.m in Sources */,
 				65FAE9B31C7EFE8300743D97 /* ZZFInishOrderViewController.m in Sources */,

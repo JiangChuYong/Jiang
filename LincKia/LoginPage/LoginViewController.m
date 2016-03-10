@@ -98,11 +98,17 @@
     }
     
 }
-
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [_phone resignFirstResponder];
+    [_password resignFirstResponder];
+}
 - (IBAction)toRegisterPage:(UIButton *)sender {
 }
 
 - (IBAction)toFindPasswordPage:(UIButton *)sender {
+    
+    [self performSegueWithIdentifier:@"LoginToFindPassword" sender:self];
 }
 
 #pragma -- mark TextField Delegate
