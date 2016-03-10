@@ -55,14 +55,20 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
 
 }
 
-//- (IBAction)searchButtonPress:(UIButton *)sender {
-//    
-////    [ZZGlobalModel sharedInstance].orderSubmitFlag = FromActivitySpaceListPage;
-////    PBSearchViewController * searchVC =[[PBSearchViewController alloc] init];
-////    searchVC.isActiveSpace=YES;
-////    [self.navigationController pushViewController:searchVC animated:YES];
-//}
-//
+- (IBAction)searchButtonPress:(UIButton *)sender {
+    
+//    [ZZGlobalModel sharedInstance].orderSubmitFlag = FromActivitySpaceListPage;
+//    PBSearchViewController * searchVC =[[PBSearchViewController alloc] init];
+//    searchVC.isActiveSpace=YES;
+//    [self.navigationController pushViewController:searchVC animated:YES];
+    
+    
+    [JCYGlobalData sharedInstance].orderSubmitFlag=FromActivitySpaceListPage;
+    
+    [self performSegueWithIdentifier:@"ActiveSpaceToSearch" sender:self];
+    
+}
+
 #pragma -- mark REQUEST PART
 -(void)requestData
 {
@@ -72,6 +78,8 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
     _GetActiveSpaceList.style = GET;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",GetActiveSpaceList] object:nil];
     [_GetActiveSpaceList requestDataFromWithFlag:GetActiveSpaceList];
+   
+    
 }
 
 
@@ -80,7 +88,6 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
     
     STOP_LOADING
     _responseDataOfIndexDict = _GetActiveSpaceList.resultDict;
-    
     [self dealResposeResult:_responseDataOfIndexDict[@"Data"][@"Data"]];
 
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetActiveSpaceList] object:nil];

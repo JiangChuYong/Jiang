@@ -50,6 +50,8 @@ typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
 //社区空间预约信息
 @property (strong,nonatomic) NSDictionary *spaceVisitDict;
 
+//从哪个页面跳转到搜索页面，和提交订单的方式
+@property (assign, nonatomic) OrderSubmitFlag orderSubmitFlag;
 
 //时间大小遍历
 +(NSMutableArray *)filterTimeArray:(NSMutableArray *)timeArray;

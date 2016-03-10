@@ -131,6 +131,10 @@
 		6563AEB51C9003590024CC90 /* pop-up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AEB31C9003590024CC90 /* pop-up@2x.png */; };
 		6563AEB61C9003590024CC90 /* pop-up@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AEB41C9003590024CC90 /* pop-up@3x.png */; };
 		6563AEB91C901F190024CC90 /* PBClearCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563AEB81C901F190024CC90 /* PBClearCache.m */; };
+		6563AEBB1C902C2E0024CC90 /* title_search_unpressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AEBA1C902C2E0024CC90 /* title_search_unpressed@3x.png */; };
+		6563AEBE1C902CF60024CC90 /* JCYSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563AEBD1C902CF60024CC90 /* JCYSearchViewController.m */; };
+		6563AEC11C902E190024CC90 /* search_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AEBF1C902E190024CC90 /* search_bg@2x.png */; };
+		6563AEC21C902E190024CC90 /* search_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6563AEC01C902E190024CC90 /* search_bg@3x.png */; };
 		65651EC61C894A86004E38B0 /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65651EC51C894A86004E38B0 /* MyAccountViewController.m */; };
 		65651ECA1C895470004E38B0 /* PBChangeHeadPicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65651EC81C895470004E38B0 /* PBChangeHeadPicTableViewCell.m */; };
 		65651ECB1C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65651EC91C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib */; };
@@ -556,6 +560,11 @@
 		6563AEB41C9003590024CC90 /* pop-up@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop-up@3x.png"; sourceTree = "<group>"; };
 		6563AEB71C901F190024CC90 /* PBClearCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBClearCache.h; sourceTree = "<group>"; };
 		6563AEB81C901F190024CC90 /* PBClearCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBClearCache.m; sourceTree = "<group>"; };
+		6563AEBA1C902C2E0024CC90 /* title_search_unpressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title_search_unpressed@3x.png"; sourceTree = "<group>"; };
+		6563AEBC1C902CF60024CC90 /* JCYSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYSearchViewController.h; sourceTree = "<group>"; };
+		6563AEBD1C902CF60024CC90 /* JCYSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYSearchViewController.m; sourceTree = "<group>"; };
+		6563AEBF1C902E190024CC90 /* search_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_bg@2x.png"; sourceTree = "<group>"; };
+		6563AEC01C902E190024CC90 /* search_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_bg@3x.png"; sourceTree = "<group>"; };
 		65651EC41C894A86004E38B0 /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
 		65651EC51C894A86004E38B0 /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
 		65651EC71C895470004E38B0 /* PBChangeHeadPicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBChangeHeadPicTableViewCell.h; sourceTree = "<group>"; };
@@ -920,6 +929,8 @@
 				659EACB51C7AEB6A00208837 /* ZZSpaceIntroduceViewController.m */,
 				659EACB91C7AF7DA00208837 /* PBHardwareFacilitiesViewController.h */,
 				659EACBA1C7AF7DA00208837 /* PBHardwareFacilitiesViewController.m */,
+				6563AEBC1C902CF60024CC90 /* JCYSearchViewController.h */,
+				6563AEBD1C902CF60024CC90 /* JCYSearchViewController.m */,
 				65FAE9AF1C7EFE8300743D97 /* ActiveSpaceFInishOrder */,
 				6562F5D51C7EE628005F5B68 /* ReservationVisit */,
 			);
@@ -1686,6 +1697,9 @@
 		CD29E8E11C7AFFD300871F69 /* 通用 */ = {
 			isa = PBXGroup;
 			children = (
+				6563AEBF1C902E190024CC90 /* search_bg@2x.png */,
+				6563AEC01C902E190024CC90 /* search_bg@3x.png */,
+				6563AEBA1C902C2E0024CC90 /* title_search_unpressed@3x.png */,
 				6563AEB31C9003590024CC90 /* pop-up@2x.png */,
 				6563AEB41C9003590024CC90 /* pop-up@3x.png */,
 				6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */,
@@ -2118,7 +2132,9 @@
 				6562F6A01C7EEB2B005F5B68 /* time@2x.png in Resources */,
 				CD29E8CB1C7AFE3500871F69 /* member_unpressed@3x.png in Resources */,
 				CD29E9371C7B087500871F69 /* environment_circle@3x.png in Resources */,
+				6563AEBB1C902C2E0024CC90 /* title_search_unpressed@3x.png in Resources */,
 				CD29E8A61C7AFE3500871F69 /* community_introduce_camer@2x.png in Resources */,
+				6563AEC11C902E190024CC90 /* search_bg@2x.png in Resources */,
 				CD29E88D1C7AFE3500871F69 /* mine_online_orientation@2x.png in Resources */,
 				656A168E1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.xib in Resources */,
 				6563AEA31C8FFAEE0024CC90 /* bottom_line@2x.png in Resources */,
@@ -2186,6 +2202,7 @@
 				65FAE9B81C7EFFC500743D97 /* sucessful_payment@3x.png in Resources */,
 				CD9C3A081C84186900071D60 /* multichoicebox_unchecked@3x.png in Resources */,
 				CD9C3A041C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.xib in Resources */,
+				6563AEC21C902E190024CC90 /* search_bg@3x.png in Resources */,
 				6563AEB51C9003590024CC90 /* pop-up@2x.png in Resources */,
 				CD29E8B11C7AFE3500871F69 /* personal_office@2x.png in Resources */,
 				CD29E85D1C7AFE3500871F69 /* 会议室@3x.png in Resources */,
@@ -2386,6 +2403,7 @@
 				CD4F06C11C7ADA6B00F6478A /* ExpressTableViewCell.m in Sources */,
 				CDF7545E1C80361D0038622E /* PBMeetingRoomTableTopViewCell.m in Sources */,
 				CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */,
+				6563AEBE1C902CF60024CC90 /* JCYSearchViewController.m in Sources */,
 				6562F6121C7EE7A0005F5B68 /* ZLNSDate+Logic.m in Sources */,
 				CD45EDE61C76F8DF0042E9A2 /* PBAlert.m in Sources */,
 				656A16891C8D945A00E29F8F /* JCYCustomerServiceCenterViewController.m in Sources */,

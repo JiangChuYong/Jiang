@@ -87,6 +87,12 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
     });
     
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    UINavigationController *navi=(UINavigationController *)self.parentViewController;
+    navi.tabBarController.tabBar.hidden=YES;
+}
 #pragma -- mark UI PART
 -(void)setJsMenuUIAndJSMenuTitle
 {
@@ -546,13 +552,11 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
 - (IBAction)backButtonPressed:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES ];
 }
-//- (IBAction)searchButtonPressed:(UIButton *)sender {
-//
-//    [ZZGlobalModel sharedInstance].orderSubmitFlag = FromOfficeListPage;
-//    PBSearchViewController * searchVC =[[PBSearchViewController alloc] init];
-//    searchVC.isActiveSpace=NO;
-//    [self.navigationController pushViewController:searchVC animated:YES];
-//}
+- (IBAction)searchButtonPressed:(UIButton *)sender {
+
+    [JCYGlobalData sharedInstance].orderSubmitFlag = FromOfficeListPage;
+    [self performSegueWithIdentifier:@"LinckiaSpaceToSearch" sender:self];
+}
 
 /*
  #pragma mark - Navigation
