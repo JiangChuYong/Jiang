@@ -309,48 +309,6 @@ static NSString *orderListCell=@"orderListCell";
 
 #pragma mark -- 请求 代理
 
-///** *校验数据开始，如果没有通过校验，则返回校验提示*/
-//-(void)validateFailed:(int)tag validateInfo:(NSString *)validateInfo{
-//    NSLog(@"validateFailed");
-//}
-///** *获取数据开始*/
-//-(void)gainDataStart:(int)tag{
-//    [[AlertUtils sharedInstance]showWithText:LOAD_Start_TEXT inView:self.view ];
-//}
-///** *获取数据成功*/
-//-(void)gainDataSuccess:(int)tag responseObj:(id)responseObj{
-//    
-//    NSLog(@"responseObj: %@",responseObj);
-//    [[AlertUtils sharedInstance]stopHUD];
-//    switch (tag) {
-//        case HTTPHelperTag_Orders_GetMeetingList:
-//        case HTTPHelperTag_Orders_GetList://我的订单列表
-//        {
-//            ResponseDataOfPagingResultOfIEnumerableOfOrderListInfo * response = [responseObj jsonToModel:ResponseDataOfPagingResultOfIEnumerableOfOrderListInfo.class];
-//            
-//            if(response.Code==SERVER_SUCCESS){//成功返回数据
-//                
-//                [self dealWithResponedDate:response];
-//                
-//            }else{//返回数据异常
-//                [[AlertUtils sharedInstance] showWithText:response.Description inView:self.view lastTime:2.0];
-//            }
-//            NSLog(@"%@ :%@",NSStringFromClass([response class]),[response jsonString]);
-//        }
-//            break;
-//        default:
-//            break;
-//    }
-//    
-//    
-//}
-///** *获取数据失败*/
-//-(void)gainDataFailed:(int)tag errorInfo:(NSString *)errorInfo{
-//    [[AlertUtils sharedInstance]stopHUD];
-//    NSLog(@"Failed");
-//    [[AlertUtils sharedInstance] showWithText:errorInfo inView:self.view lastTime:2.0];
-//}
-
 -(void)dealWithResponedDate:(NSMutableArray *)responseArr
 {
     

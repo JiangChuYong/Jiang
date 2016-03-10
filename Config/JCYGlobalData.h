@@ -53,6 +53,10 @@ typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
 //从哪个页面跳转到搜索页面，和提交订单的方式
 @property (assign, nonatomic) OrderSubmitFlag orderSubmitFlag;
 
+//当前选中的评论空间
+@property (strong, nonatomic) NSDictionary * evaluateSpace;
+
+
 //时间大小遍历
 +(NSMutableArray *)filterTimeArray:(NSMutableArray *)timeArray;
 // 从某日期往后推几月后的日期
@@ -61,4 +65,8 @@ typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
 +(NSDate *)jcyStringConversionDate:(NSString *)dateStr WithFommater:(NSString*)fommater;
 //矫正时区，将当前时间调整为北京时间
 +(NSDate *)getNowDateFromatAnDate:(NSDate *)anyDate;
+
+//将日期转换成字符串"YYYYMMdd"
++(NSString *)jcyDateConversionStr:(NSDate *)date;
+
 @end

@@ -108,6 +108,17 @@ SingletonM(JCYGlobalData)
     return destinationDateNow;
 }
 
++(NSString *)jcyDateConversionStr:(NSDate *)date
+{
+    NSDateFormatter* dateFormat = [[NSDateFormatter alloc] init];//实例化一个NSDateFormatter对象
+    [dateFormat setDateFormat:@"YYYYMMdd"];//设定时间格式,这里可以设置成自己需要的格式
+    //校准时间
+    NSDate *currentDate=[self getNowDateFromatAnDate:date];
+    NSString *dateStr=[dateFormat stringFromDate:currentDate];
+    NSLog(@"CurrentData :%@",dateStr);
+    
+    return dateStr;
+}
 
 
 @end

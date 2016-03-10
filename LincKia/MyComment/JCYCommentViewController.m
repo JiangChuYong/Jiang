@@ -60,14 +60,26 @@ static NSString *cellIdentifier = @"MyCommentTableViewCell";
     return myCommentTableViewCell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //    //向点评页面传值
+    [JCYGlobalData sharedInstance].evaluateSpace = [_commentedListArr objectAtIndex:indexPath.row];
+    
+    
+    [self performSegueWithIdentifier:@"CommentToEvaluate" sender:self];
+    
+    NSLog(@"点评");
+}
+
 #pragma mark --私有方法
 //点评按钮被触发
 -(void)commentBtnPress:(UIButton *)sender{
     
 //    //向点评页面传值
-//    [ZZGlobalModel sharedInstance].evaluateSpace = [self.orderListInfoModel.OrderListArray objectAtIndex:sender.tag];
-//    PBEvaluateViewController * VC = [[PBEvaluateViewController alloc]init];
-//    [self.navigationController pushViewController:VC animated:YES];
+    [JCYGlobalData sharedInstance].evaluateSpace = [_commentedListArr objectAtIndex:sender.tag];
+
+    
+    [self performSegueWithIdentifier:@"CommentToEvaluate" sender:self];
     
     NSLog(@"点评");
     
@@ -117,7 +129,6 @@ static NSString *cellIdentifier = @"MyCommentTableViewCell";
     
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetNotCommentedList] object:nil];
 }
-
 
 #pragma mark -- 请求
 

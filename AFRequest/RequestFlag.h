@@ -73,6 +73,8 @@ typedef enum{
     CommitFeedback,
     //获取海星币折扣
     GetStarfishDiscountList,
+    //增加空间评论
+    AddComment,
     
     
     

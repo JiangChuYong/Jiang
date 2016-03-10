@@ -20,6 +20,7 @@
 		655915381C853FDC002FC3FD /* PBSpaceTableAdressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6559152E1C853FDC002FC3FD /* PBSpaceTableAdressCell.xib */; };
 		655915391C853FDC002FC3FD /* PBTableSpaceTypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 655915301C853FDC002FC3FD /* PBTableSpaceTypeCell.m */; };
 		6559153A1C853FDC002FC3FD /* PBTableSpaceTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 655915311C853FDC002FC3FD /* PBTableSpaceTypeCell.xib */; };
+		655D0FD11C9170A1008CED32 /* JCYEvaluateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 655D0FD01C9170A1008CED32 /* JCYEvaluateViewController.m */; };
 		6560FE521C852DD6006A6A3B /* JCYSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6560FE511C852DD6006A6A3B /* JCYSpaceViewController.m */; };
 		6562F5E01C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6562F5D81C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.m */; };
 		6562F5E11C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6562F5D91C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.xib */; };
@@ -423,6 +424,8 @@
 		6559152F1C853FDC002FC3FD /* PBTableSpaceTypeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBTableSpaceTypeCell.h; sourceTree = "<group>"; };
 		655915301C853FDC002FC3FD /* PBTableSpaceTypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBTableSpaceTypeCell.m; sourceTree = "<group>"; };
 		655915311C853FDC002FC3FD /* PBTableSpaceTypeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBTableSpaceTypeCell.xib; sourceTree = "<group>"; };
+		655D0FCF1C9170A1008CED32 /* JCYEvaluateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYEvaluateViewController.h; sourceTree = "<group>"; };
+		655D0FD01C9170A1008CED32 /* JCYEvaluateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYEvaluateViewController.m; sourceTree = "<group>"; };
 		6560FE501C852DD6006A6A3B /* JCYSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYSpaceViewController.h; sourceTree = "<group>"; };
 		6560FE511C852DD6006A6A3B /* JCYSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYSpaceViewController.m; sourceTree = "<group>"; };
 		6562F5D71C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBActiveSpaceBookingTableViewCell.h; sourceTree = "<group>"; };
@@ -974,6 +977,15 @@
 			path = SpaceTableCell;
 			sourceTree = "<group>";
 		};
+		655D0FCE1C91708D008CED32 /* Evalute */ = {
+			isa = PBXGroup;
+			children = (
+				655D0FCF1C9170A1008CED32 /* JCYEvaluateViewController.h */,
+				655D0FD01C9170A1008CED32 /* JCYEvaluateViewController.m */,
+			);
+			path = Evalute;
+			sourceTree = "<group>";
+		};
 		6562F5D51C7EE628005F5B68 /* ReservationVisit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1488,6 +1500,7 @@
 				656A167D1C8D8DEF00E29F8F /* Common */,
 				6596F1841C8EC0F300B12479 /* MyOnlineBooking */,
 				656A166A1C8D6CFF00E29F8F /* MyComment */,
+				655D0FCE1C91708D008CED32 /* Evalute */,
 				6596F18D1C8EDEB200B12479 /* Setting */,
 				CD1D57241C71BDB700BB30AC /* AppDelegate.h */,
 				CD1D57251C71BDB700BB30AC /* AppDelegate.m */,
@@ -2447,6 +2460,7 @@
 				656A167B1C8D801500E29F8F /* PBMyBookingListTableViewCell.m in Sources */,
 				65651ED31C8989EB004E38B0 /* LGTMBase64.m in Sources */,
 				CD5CD00C1C71E10F00B6A34B /* AFRquest.m in Sources */,
+				655D0FD11C9170A1008CED32 /* JCYEvaluateViewController.m in Sources */,
 				654B70481C855575004B64B0 /* TQStarRatingView.m in Sources */,
 				6562F6141C7EE7A0005F5B68 /* ZLCalendarMonthPage.m in Sources */,
 				65FAE9B31C7EFE8300743D97 /* ZZFInishOrderViewController.m in Sources */,

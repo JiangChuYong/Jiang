@@ -51,6 +51,7 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self checkLoginStatus];
     [self registCell];
     _adsArr =[NSMutableArray array];

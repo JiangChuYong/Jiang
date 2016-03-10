@@ -3029,11 +3029,99 @@
                     </navigationItem>
                     <connections>
                         <outlet property="myCommentTableView" destination="2hB-Go-PD3" id="tvd-1C-WdO"/>
+                        <segue destination="aL4-51-VBX" kind="push" identifier="CommentToEvaluate" id="uk4-JM-hNl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WK6-f9-U0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="12" y="2648"/>
+        </scene>
+        <!--点评-->
+        <scene sceneID="BYN-vi-oYh">
+            <objects>
+                <viewController id="aL4-51-VBX" customClass="JCYEvaluateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Olx-gd-sMc"/>
+                        <viewControllerLayoutGuide type="bottom" id="QCb-KC-mHK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vKV-0G-kuL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请评分：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOI-OZ-7SG">
+                                <rect key="frame" x="15" y="79" width="60" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AUh-1T-qhu">
+                                <rect key="frame" x="85" y="97" width="150" height="25"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="0Kb-dz-lL2"/>
+                                    <constraint firstAttribute="height" constant="25" id="tTz-wf-bw8"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请留下您的宝贵意见" translatesAutoresizingMaskIntoConstraints="NO" id="Ngd-9C-lXI">
+                                <rect key="frame" x="15" y="137" width="290" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="QXL-iV-UGP"/>
+                                </constraints>
+                                <color key="textColor" red="0.67450980390000004" green="0.67450980390000004" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="aL4-51-VBX" id="rmo-Gb-Dqa"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvK-zE-4xg">
+                                <rect key="frame" x="15" y="332" width="290" height="50"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.71372549019999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5QB-Vc-uK8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="发布">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="aL4-51-VBX" eventType="touchUpInside" id="Yr6-7f-VPw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AUh-1T-qhu" firstAttribute="centerX" secondItem="vKV-0G-kuL" secondAttribute="centerX" id="5XC-PM-6Ma"/>
+                            <constraint firstItem="hvK-zE-4xg" firstAttribute="leading" secondItem="vKV-0G-kuL" secondAttribute="leading" constant="15" id="F9A-CR-Tgz"/>
+                            <constraint firstAttribute="trailing" secondItem="hvK-zE-4xg" secondAttribute="trailing" constant="15" id="HvX-Ik-2tq"/>
+                            <constraint firstItem="Ngd-9C-lXI" firstAttribute="leading" secondItem="vKV-0G-kuL" secondAttribute="leading" constant="15" id="Sdv-Qy-2nF"/>
+                            <constraint firstItem="Ngd-9C-lXI" firstAttribute="top" secondItem="AUh-1T-qhu" secondAttribute="bottom" constant="15" id="XWS-3C-dTM"/>
+                            <constraint firstItem="AUh-1T-qhu" firstAttribute="top" secondItem="KOI-OZ-7SG" secondAttribute="bottom" id="YrI-Hp-AaA"/>
+                            <constraint firstItem="hvK-zE-4xg" firstAttribute="top" secondItem="Ngd-9C-lXI" secondAttribute="bottom" constant="15" id="cHV-CH-UvP"/>
+                            <constraint firstItem="KOI-OZ-7SG" firstAttribute="top" secondItem="Olx-gd-sMc" secondAttribute="bottom" constant="15" id="cwq-su-VXC"/>
+                            <constraint firstItem="KOI-OZ-7SG" firstAttribute="leading" secondItem="vKV-0G-kuL" secondAttribute="leading" constant="15" id="wwC-SJ-RPG"/>
+                            <constraint firstAttribute="trailing" secondItem="Ngd-9C-lXI" secondAttribute="trailing" constant="15" id="zMY-LP-qju"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="点评" id="nHs-bH-tXu">
+                        <barButtonItem key="leftBarButtonItem" image="title_back_unpressed.png" id="Ihb-Nr-6WO">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="goback:" destination="aL4-51-VBX" id="IMo-Bd-kPa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="TQStarView" destination="AUh-1T-qhu" id="Gf6-uO-brk"/>
+                        <outlet property="contentTextView" destination="Ngd-9C-lXI" id="wCH-rN-C8Q"/>
+                        <outlet property="submitButton" destination="hvK-zE-4xg" id="UEe-My-jLb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WmJ-pm-gkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="432" y="2648"/>
         </scene>
         <!--客服中心-->
         <scene sceneID="Q7c-AH-veg">
