@@ -28,7 +28,7 @@
 @property (strong, nonatomic) AFRquest *SendValidCode;
 @property (strong, nonatomic) AFRquest *Register;
 @property (strong, nonatomic) AFRquest *GetProtocol;
-@property (strong, nonatomic) NSDictionary *protocolDic;
+//@property (strong, nonatomic) NSDictionary *protocolDic;
 
 @property (weak, nonatomic) IBOutlet UILabel *readUserInfo;
 
@@ -41,7 +41,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setViewFontAndColor];
-    _protocolDic =[NSDictionary dictionary];
+    //_protocolDic =[NSDictionary dictionary];
     self.btnSelectRead.selected=YES;
     [self.btnSelectRead setImage:[UIImage imageNamed:@"choice_selected@3x.png"] forState:UIControlStateNormal];
     [_confirmPasswordTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
@@ -318,44 +318,6 @@
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",SendValidCode] object:nil];
 }
 
-//获取协议信息
--(void)requestFromServerGetProtocol
-{
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getProtocolDataReceived:) name:[NSString stringWithFormat:@"%i",GetProtocol] object:nil];
-    _GetProtocol = [[AFRquest alloc]init];
-    
-    _GetProtocol.subURLString =@"api/Sys/GetProtocol?deviceType=ios";
-    
-    _GetProtocol.parameters = @{@"protocolType":@1};
-    
-    _GetProtocol.style = GET;
-    
-    [_GetProtocol requestDataFromWithFlag:GetProtocol];
-    
-}
-
--(void)getProtocolDataReceived:(NSNotification *)notif{
-    int result = [_GetProtocol.resultDict[@"Code"] intValue];
-    if (result == SUCCESS) {
-        [self dealResposeResultProtocol:_GetProtocol.resultDict[@"Data"]];
-    }else{
-        [[PBAlert sharedInstance] showText:_GetProtocol.resultDict[@"Description"] inView:self.view withTime:2.0];
-    }
-    NSLog(@"%@",_GetProtocol.resultDict);
-    
-    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetProtocol] object:nil];
-}
-
-//处理请求返回后的结果 注册协议
-
--(void)dealResposeResultProtocol:(NSDictionary  *)response{
-    [JCYGlobalData sharedInstance].protocolDic=response;
-    _protocolDic=response;
-    //    RegisterInfoViewController * contractInfoViewController = [[RegisterInfoViewController alloc]initWithNibName:@"RegisterInfoViewController" bundle:nil];
-    //    [self.navigationController pushViewController:contractInfoViewController animated:YES];
-    //    contractInfoViewController.protocolViewModel = self.protocolViewModel;
-}
-
 
 //注册action
 - (IBAction)registPressed:(id)sender {
@@ -364,21 +326,7 @@
 //协议action
 - (IBAction)registProtocol:(id)sender {
     
-    if(!_protocolDic)
-    {
-        [self requestFromServerGetProtocol];
-    }
-    else
-    {
-        [JCYGlobalData sharedInstance].protocolDic=_protocolDic;
-        
-        //        RegisterInfoViewController * contractInfoViewController = [[RegisterInfoViewController alloc]initWithNibName:@"RegisterInfoViewController" bundle:nil];
-        //        [self.navigationController pushViewController:contractInfoViewController animated:YES];
-        //        contractInfoViewController.protocolViewModel = self.protocolViewModel;
-        
-    }
-    
-    
+    [self performSegueWithIdentifier:@"RegistToProtocol" sender:self];
 }
 //勾选协议
 - (IBAction)selectReadDelegate:(id)sender {

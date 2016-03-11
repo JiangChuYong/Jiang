@@ -187,6 +187,7 @@
 		65DB75631C925EA8000B12D1 /* choice_unselected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DB75621C925EA8000B12D1 /* choice_unselected@3x.png */; };
 		65DB75671C926124000B12D1 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DB75661C926124000B12D1 /* RegistViewController.m */; };
 		65DB75691C92642E000B12D1 /* choice_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DB75681C92642E000B12D1 /* choice_selected@3x.png */; };
+		65DB756C1C92A39E000B12D1 /* RegisterInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DB756B1C92A39E000B12D1 /* RegisterInfoViewController.m */; };
 		65FAE9B31C7EFE8300743D97 /* ZZFInishOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FAE9B11C7EFE8300743D97 /* ZZFInishOrderViewController.m */; };
 		65FAE9B61C7EFF7400743D97 /* title_firstpage_unpressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65FAE9B51C7EFF7400743D97 /* title_firstpage_unpressed@3x.png */; };
 		65FAE9B81C7EFFC500743D97 /* sucessful_payment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65FAE9B71C7EFFC500743D97 /* sucessful_payment@3x.png */; };
@@ -662,6 +663,8 @@
 		65DB75651C926124000B12D1 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		65DB75661C926124000B12D1 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
 		65DB75681C92642E000B12D1 /* choice_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "choice_selected@3x.png"; sourceTree = "<group>"; };
+		65DB756A1C92A39E000B12D1 /* RegisterInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterInfoViewController.h; sourceTree = "<group>"; };
+		65DB756B1C92A39E000B12D1 /* RegisterInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterInfoViewController.m; sourceTree = "<group>"; };
 		65FAE9B01C7EFE8300743D97 /* ZZFInishOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZFInishOrderViewController.h; sourceTree = "<group>"; };
 		65FAE9B11C7EFE8300743D97 /* ZZFInishOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZFInishOrderViewController.m; sourceTree = "<group>"; };
 		65FAE9B51C7EFF7400743D97 /* title_firstpage_unpressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title_firstpage_unpressed@3x.png"; sourceTree = "<group>"; };
@@ -1451,6 +1454,8 @@
 			children = (
 				65DB75651C926124000B12D1 /* RegistViewController.h */,
 				65DB75661C926124000B12D1 /* RegistViewController.m */,
+				65DB756A1C92A39E000B12D1 /* RegisterInfoViewController.h */,
+				65DB756B1C92A39E000B12D1 /* RegisterInfoViewController.m */,
 			);
 			path = Regist;
 			sourceTree = "<group>";
@@ -2522,6 +2527,7 @@
 				65651ED31C8989EB004E38B0 /* LGTMBase64.m in Sources */,
 				CD5CD00C1C71E10F00B6A34B /* AFRquest.m in Sources */,
 				655D0FD11C9170A1008CED32 /* JCYEvaluateViewController.m in Sources */,
+				65DB756C1C92A39E000B12D1 /* RegisterInfoViewController.m in Sources */,
 				655D0FDF1C9185D5008CED32 /* TimerView.m in Sources */,
 				654B70481C855575004B64B0 /* TQStarRatingView.m in Sources */,
 				6562F6141C7EE7A0005F5B68 /* ZLCalendarMonthPage.m in Sources */,
