@@ -188,6 +188,7 @@
 		65DB75671C926124000B12D1 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DB75661C926124000B12D1 /* RegistViewController.m */; };
 		65DB75691C92642E000B12D1 /* choice_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DB75681C92642E000B12D1 /* choice_selected@3x.png */; };
 		65DB756C1C92A39E000B12D1 /* RegisterInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DB756B1C92A39E000B12D1 /* RegisterInfoViewController.m */; };
+		65DB756F1C92B7F8000B12D1 /* JCYSpacePositionViewControlle.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DB756E1C92B7F8000B12D1 /* JCYSpacePositionViewControlle.m */; };
 		65FAE9B31C7EFE8300743D97 /* ZZFInishOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FAE9B11C7EFE8300743D97 /* ZZFInishOrderViewController.m */; };
 		65FAE9B61C7EFF7400743D97 /* title_firstpage_unpressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65FAE9B51C7EFF7400743D97 /* title_firstpage_unpressed@3x.png */; };
 		65FAE9B81C7EFFC500743D97 /* sucessful_payment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65FAE9B71C7EFFC500743D97 /* sucessful_payment@3x.png */; };
@@ -665,6 +666,8 @@
 		65DB75681C92642E000B12D1 /* choice_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "choice_selected@3x.png"; sourceTree = "<group>"; };
 		65DB756A1C92A39E000B12D1 /* RegisterInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterInfoViewController.h; sourceTree = "<group>"; };
 		65DB756B1C92A39E000B12D1 /* RegisterInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterInfoViewController.m; sourceTree = "<group>"; };
+		65DB756D1C92B7F8000B12D1 /* JCYSpacePositionViewControlle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYSpacePositionViewControlle.h; sourceTree = "<group>"; };
+		65DB756E1C92B7F8000B12D1 /* JCYSpacePositionViewControlle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYSpacePositionViewControlle.m; sourceTree = "<group>"; };
 		65FAE9B01C7EFE8300743D97 /* ZZFInishOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZFInishOrderViewController.h; sourceTree = "<group>"; };
 		65FAE9B11C7EFE8300743D97 /* ZZFInishOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZFInishOrderViewController.m; sourceTree = "<group>"; };
 		65FAE9B51C7EFF7400743D97 /* title_firstpage_unpressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title_firstpage_unpressed@3x.png"; sourceTree = "<group>"; };
@@ -1404,6 +1407,8 @@
 				6572BE731C86B5E300F495D1 /* JCYBookingSpaceViewController.m */,
 				6572BE771C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.h */,
 				6572BE781C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m */,
+				65DB756D1C92B7F8000B12D1 /* JCYSpacePositionViewControlle.h */,
+				65DB756E1C92B7F8000B12D1 /* JCYSpacePositionViewControlle.m */,
 				654B70491C856091004B64B0 /* EvaluteList */,
 				655915281C853FDC002FC3FD /* SpaceTableCell */,
 			);
@@ -2465,6 +2470,7 @@
 				6562F60E1C7EE7A0005F5B68 /* ZZCalendarViewController.m in Sources */,
 				6562F6151C7EE7A0005F5B68 /* ZLCalendarView.m in Sources */,
 				652BFEAE1C76F3CE000D4EEA /* PBCompanyDetailViewController.m in Sources */,
+				65DB756F1C92B7F8000B12D1 /* JCYSpacePositionViewControlle.m in Sources */,
 				6562F5E01C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.m in Sources */,
 				CD6944EA1C75BDE500E04081 /* PBADBannerCellTableViewCell.m in Sources */,
 				658AA7F51C801A5A00ACB94B /* PBLincKiaSpaceViewController.m in Sources */,

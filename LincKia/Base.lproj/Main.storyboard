@@ -1335,11 +1335,98 @@
                         <outlet property="bottomTable" destination="MUQ-iN-LAw" id="taP-gw-6me"/>
                         <outlet property="cuttingLine" destination="FYi-Vm-m29" id="yiv-Fd-U5t"/>
                         <outlet property="topTable" destination="S5d-kg-gs8" id="db0-Jr-tyl"/>
+                        <segue destination="N4m-eX-4B3" kind="push" identifier="LinckiaSpaceOnlineBookingToSpacePosition" id="2TW-9W-6LO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Szw-Pu-vf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2440" y="-4135"/>
+            <point key="canvasLocation" x="2416" y="-5103"/>
+        </scene>
+        <!--空间位置图-->
+        <scene sceneID="JTT-bP-VJS">
+            <objects>
+                <viewController title="空间位置图" id="N4m-eX-4B3" customClass="JCYSpacePositionViewControlle" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qaq-DW-HjL"/>
+                        <viewControllerLayoutGuide type="bottom" id="MoZ-ou-M6U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Odb-oG-D0n">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2HP-1V-n3e">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="空间位置图" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKN-AU-wd0">
+                                        <rect key="frame" x="117" y="32" width="85" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHP-jI-rnB" customClass="PBButton">
+                                        <rect key="frame" x="15" y="31" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="CW6-PD-KmV"/>
+                                            <constraint firstAttribute="height" constant="22" id="M65-OG-6Xa"/>
+                                        </constraints>
+                                        <state key="normal" image="title_back_unpressed.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backBtnPress:" destination="N4m-eX-4B3" eventType="touchUpInside" id="ypX-c0-5cK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2666666667" green="0.59607843140000005" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="xKN-AU-wd0" firstAttribute="centerY" secondItem="AHP-jI-rnB" secondAttribute="centerY" id="0jd-q7-1gn"/>
+                                    <constraint firstItem="AHP-jI-rnB" firstAttribute="leading" secondItem="2HP-1V-n3e" secondAttribute="leading" constant="15" id="Efh-8W-rim"/>
+                                    <constraint firstItem="AHP-jI-rnB" firstAttribute="top" secondItem="2HP-1V-n3e" secondAttribute="top" constant="31" id="H9A-bL-Vu9"/>
+                                    <constraint firstAttribute="height" constant="64" id="TwH-Ii-HQK"/>
+                                    <constraint firstItem="xKN-AU-wd0" firstAttribute="centerX" secondItem="2HP-1V-n3e" secondAttribute="centerX" id="bfv-fc-d3t"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VsV-Ls-8Zl">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无空间位置图" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeH-eK-bKh">
+                                        <rect key="frame" x="100" y="249" width="119" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.86666666670000003" green="0.88235294119999996" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nodata.png" translatesAutoresizingMaskIntoConstraints="NO" id="uHu-C2-0Te">
+                                        <rect key="frame" x="118" y="146.5" width="83" height="83"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="uHu-C2-0Te" firstAttribute="centerX" secondItem="VsV-Ls-8Zl" secondAttribute="centerX" id="7na-z0-ALu"/>
+                                    <constraint firstItem="uHu-C2-0Te" firstAttribute="centerY" secondItem="VsV-Ls-8Zl" secondAttribute="centerY" constant="-64" id="gpD-V2-Fc2"/>
+                                    <constraint firstItem="LeH-eK-bKh" firstAttribute="top" secondItem="uHu-C2-0Te" secondAttribute="bottom" constant="20" id="hFC-N8-p2J"/>
+                                    <constraint firstItem="LeH-eK-bKh" firstAttribute="centerX" secondItem="VsV-Ls-8Zl" secondAttribute="centerX" id="iV1-MK-BFP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VsV-Ls-8Zl" secondAttribute="trailing" id="2b1-6T-dyX"/>
+                            <constraint firstItem="VsV-Ls-8Zl" firstAttribute="leading" secondItem="Odb-oG-D0n" secondAttribute="leading" id="7sO-vO-xAx"/>
+                            <constraint firstItem="2HP-1V-n3e" firstAttribute="leading" secondItem="Odb-oG-D0n" secondAttribute="leading" id="M1L-eZ-l5C"/>
+                            <constraint firstItem="MoZ-ou-M6U" firstAttribute="top" secondItem="VsV-Ls-8Zl" secondAttribute="bottom" id="bN5-no-dTS"/>
+                            <constraint firstAttribute="trailing" secondItem="2HP-1V-n3e" secondAttribute="trailing" id="guY-Om-1Vw"/>
+                            <constraint firstItem="2HP-1V-n3e" firstAttribute="top" secondItem="Odb-oG-D0n" secondAttribute="top" id="iAE-wD-bam"/>
+                            <constraint firstItem="VsV-Ls-8Zl" firstAttribute="top" secondItem="2HP-1V-n3e" secondAttribute="bottom" id="lCT-Re-AAo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="537-TV-liL"/>
+                    <connections>
+                        <outlet property="nodataView" destination="VsV-Ls-8Zl" id="OBW-G6-9Z1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhf-i0-zck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2847" y="-5113"/>
         </scene>
         <!--社区预约参观-->
         <scene sceneID="eTV-T0-IUS">
@@ -1530,7 +1617,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBV-uV-Cj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2879" y="-3732"/>
+            <point key="canvasLocation" x="2476" y="-3870"/>
         </scene>
         <!--评价-->
         <scene sceneID="I9W-Yb-OXK">
@@ -5082,11 +5169,11 @@
         <image name="users_textfield_unclicked.png" width="292" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0Jz-QI-DBn"/>
-        <segue reference="aB6-nA-ZwF"/>
+        <segue reference="Jsh-Od-wNg"/>
         <segue reference="G8J-kw-eU8"/>
-        <segue reference="iDW-7z-fF2"/>
+        <segue reference="0wp-aC-Pfr"/>
         <segue reference="IAq-8G-SD6"/>
+        <segue reference="Qfv-Fx-Zmo"/>
         <segue reference="XPk-hP-8rb"/>
     </inferredMetricsTieBreakers>
 </document>

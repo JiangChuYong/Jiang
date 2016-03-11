@@ -199,7 +199,9 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
         
         //结束时间
     }else{
-        NSLog(@"lalalalala");
+        NSLog(@"空间位置图");
+        
+        [self performSegueWithIdentifier:@"LinckiaSpaceOnlineBookingToSpacePosition" sender:self];
     }
 }
 
