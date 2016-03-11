@@ -4968,11 +4968,100 @@
                         <outlet property="myHeadPic" destination="X06-5F-tLT" id="umL-aY-saR"/>
                         <outlet property="name" destination="gmD-lm-Ce3" id="SpO-kW-tW5"/>
                         <outlet property="nickName" destination="P4J-x3-dMC" id="l1P-dg-scN"/>
+                        <segue destination="scN-eW-fQX" kind="push" identifier="MyAccountToName" id="ni5-RD-HCR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ssi-dO-RaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="16" y="1380"/>
+        </scene>
+        <!--修改昵称-->
+        <scene sceneID="RGw-ae-h1d">
+            <objects>
+                <viewController id="scN-eW-fQX" customClass="JCYNewNicknameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UOc-hM-8ZT"/>
+                        <viewControllerLayoutGuide type="bottom" id="2c8-CD-oNm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nU3-c5-Xwm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QSP-eY-Bki">
+                                <rect key="frame" x="23" y="94" width="274" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dcL-OS-6n5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textField_line.png" translatesAutoresizingMaskIntoConstraints="NO" id="63F-a0-yhg">
+                                <rect key="frame" x="15" y="104" width="290" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="XUl-ne-d2U"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bkx-mN-8e7">
+                                <rect key="frame" x="0.0" y="494" width="320" height="74"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1v-zh-gQh">
+                                        <rect key="frame" x="15" y="10" width="290" height="54"/>
+                                        <color key="backgroundColor" red="0.96078431369999995" green="0.71372549019999998" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="保存">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="saveInfo:" destination="scN-eW-fQX" eventType="touchUpInside" id="2vZ-7a-pfn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="1xp-uv-kiM"/>
+                                    <constraint firstAttribute="trailing" secondItem="E1v-zh-gQh" secondAttribute="trailing" constant="15" id="McY-UH-8hl"/>
+                                    <constraint firstItem="E1v-zh-gQh" firstAttribute="leading" secondItem="Bkx-mN-8e7" secondAttribute="leading" constant="15" id="N1z-NP-qVq"/>
+                                    <constraint firstItem="E1v-zh-gQh" firstAttribute="top" secondItem="Bkx-mN-8e7" secondAttribute="top" constant="10" id="OIk-wQ-Pqr"/>
+                                    <constraint firstAttribute="bottom" secondItem="E1v-zh-gQh" secondAttribute="bottom" constant="10" id="ZQS-wc-acR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bkx-mN-8e7" secondAttribute="trailing" id="0n3-8K-WRv"/>
+                            <constraint firstItem="63F-a0-yhg" firstAttribute="leading" secondItem="nU3-c5-Xwm" secondAttribute="leading" constant="15" id="8e7-6k-poS"/>
+                            <constraint firstItem="63F-a0-yhg" firstAttribute="top" secondItem="UOc-hM-8ZT" secondAttribute="bottom" constant="40" id="MXn-bU-i2Y"/>
+                            <constraint firstAttribute="trailing" secondItem="QSP-eY-Bki" secondAttribute="trailing" constant="23" id="P8V-Ll-uS4"/>
+                            <constraint firstItem="Bkx-mN-8e7" firstAttribute="leading" secondItem="nU3-c5-Xwm" secondAttribute="leading" id="SpY-Nt-j53"/>
+                            <constraint firstItem="QSP-eY-Bki" firstAttribute="top" secondItem="UOc-hM-8ZT" secondAttribute="bottom" constant="30" id="YOf-ZZ-WLH"/>
+                            <constraint firstAttribute="trailing" secondItem="63F-a0-yhg" secondAttribute="trailing" constant="15" id="YYZ-wx-Uev"/>
+                            <constraint firstItem="QSP-eY-Bki" firstAttribute="leading" secondItem="nU3-c5-Xwm" secondAttribute="leading" constant="23" id="cmv-Ey-9bp"/>
+                            <constraint firstItem="2c8-CD-oNm" firstAttribute="top" secondItem="Bkx-mN-8e7" secondAttribute="bottom" id="mfR-2Y-7nJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="修改昵称" id="VLH-T4-BaI">
+                        <barButtonItem key="leftBarButtonItem" image="title_back_unpressed.png" id="VO7-Xj-10B">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="goBack:" destination="scN-eW-fQX" id="Wkn-d9-Bpy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="QSP-eY-Bki" id="N0u-i4-rJw"/>
+                        <outlet property="saveBtnBackground" destination="Bkx-mN-8e7" id="jRU-Ze-4dA"/>
+                        <outlet property="updateComstraint" destination="mfR-2Y-7nJ" id="anh-Qp-EkR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JGK-lp-qPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1314" y="3854"/>
         </scene>
         <!--会议室预订-->
         <scene sceneID="ONZ-vR-YnC">
@@ -5161,6 +5250,7 @@
         <image name="search_bg.png" width="165" height="22"/>
         <image name="single2_bottom_line.png" width="319" height="6"/>
         <image name="sucessful_payment.png" width="66" height="66"/>
+        <image name="textField_line.png" width="280" height="20"/>
         <image name="title_back_pressed.png" width="22" height="22"/>
         <image name="title_back_unpressed.png" width="22" height="22"/>
         <image name="title_cancel_unpressed.png" width="28" height="28"/>

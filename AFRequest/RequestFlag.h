@@ -83,6 +83,8 @@ typedef enum{
     Register,
     //获取协议信息
     GetProtocol,
+    //修改姓名或者昵称
+    EditUserInfo,
     
     
     

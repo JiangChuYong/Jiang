@@ -48,7 +48,9 @@ typedef enum {
     
     FromActivitySpaceListPage = 4,
     FromOfficeListPage = 5,
-    FromUnpayPage = 6
+    FromUnpayPage = 6,
+    ModifyNickName,
+    ModifyName
 
 }OrderSubmitFlag;
 

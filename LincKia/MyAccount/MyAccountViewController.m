@@ -41,15 +41,14 @@ static NSString *cellIdentifier = @"PBChangeHeadPicTableViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self getDataAndSetUI];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receivedNotif:) name:@"UpdateNickname" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receivedNotif:) name:@"UpdateUserName" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receivedNotif:) name:@"UpdateName" object:nil];
 }
 -(void)receivedNotif:(NSNotification *)notification
 {
-    if ([notification.name isEqualToString:@"UpdateNickname"]) {
+    if ([JCYGlobalData sharedInstance].orderSubmitFlag==ModifyNickName) {
         _nickName.text = notification.object;
     }
-    else if ([notification.name isEqualToString:@"UpdateUserName"]){
+    else if ([JCYGlobalData sharedInstance].orderSubmitFlag==ModifyName){
         _name.text = notification.object;
     }
 }
@@ -260,10 +259,18 @@ static NSString *cellIdentifier = @"PBChangeHeadPicTableViewCell";
 
 
 - (IBAction)changeNickNameClicked:(UIButton *)sender {
-    NSLog(@"sfdfs");
+    
+    [JCYGlobalData sharedInstance].orderSubmitFlag=ModifyNickName;
+    
+    [self performSegueWithIdentifier:@"MyAccountToName" sender:self];
+    NSLog(@"修改昵称");
 }
 - (IBAction)changeNameClicked:(UIButton *)sender {
-    NSLog(@"sfdfs");
+    
+    [JCYGlobalData sharedInstance].orderSubmitFlag=ModifyName;
+    
+    [self performSegueWithIdentifier:@"MyAccountToName" sender:self];
+    NSLog(@"修改姓名");
 
 }
 - (IBAction)changeMobileNumClicked:(UIButton *)sender {
