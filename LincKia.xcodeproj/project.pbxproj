@@ -184,6 +184,9 @@
 		65B4196F1C75D18600FA817B /* PBCompanyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B4196D1C75D18600FA817B /* PBCompanyListViewController.m */; };
 		65B419741C75D1BF00FA817B /* PBCompanyListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B419721C75D1BF00FA817B /* PBCompanyListTableViewCell.m */; };
 		65B419751C75D1BF00FA817B /* PBCompanyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B419731C75D1BF00FA817B /* PBCompanyListTableViewCell.xib */; };
+		65DB75631C925EA8000B12D1 /* choice_unselected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DB75621C925EA8000B12D1 /* choice_unselected@3x.png */; };
+		65DB75671C926124000B12D1 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DB75661C926124000B12D1 /* RegistViewController.m */; };
+		65DB75691C92642E000B12D1 /* choice_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DB75681C92642E000B12D1 /* choice_selected@3x.png */; };
 		65FAE9B31C7EFE8300743D97 /* ZZFInishOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FAE9B11C7EFE8300743D97 /* ZZFInishOrderViewController.m */; };
 		65FAE9B61C7EFF7400743D97 /* title_firstpage_unpressed@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65FAE9B51C7EFF7400743D97 /* title_firstpage_unpressed@3x.png */; };
 		65FAE9B81C7EFFC500743D97 /* sucessful_payment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65FAE9B71C7EFFC500743D97 /* sucessful_payment@3x.png */; };
@@ -655,6 +658,10 @@
 		65B419711C75D1BF00FA817B /* PBCompanyListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCompanyListTableViewCell.h; sourceTree = "<group>"; };
 		65B419721C75D1BF00FA817B /* PBCompanyListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCompanyListTableViewCell.m; sourceTree = "<group>"; };
 		65B419731C75D1BF00FA817B /* PBCompanyListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBCompanyListTableViewCell.xib; sourceTree = "<group>"; };
+		65DB75621C925EA8000B12D1 /* choice_unselected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "choice_unselected@3x.png"; sourceTree = "<group>"; };
+		65DB75651C926124000B12D1 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
+		65DB75661C926124000B12D1 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
+		65DB75681C92642E000B12D1 /* choice_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "choice_selected@3x.png"; sourceTree = "<group>"; };
 		65FAE9B01C7EFE8300743D97 /* ZZFInishOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZFInishOrderViewController.h; sourceTree = "<group>"; };
 		65FAE9B11C7EFE8300743D97 /* ZZFInishOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZFInishOrderViewController.m; sourceTree = "<group>"; };
 		65FAE9B51C7EFF7400743D97 /* title_firstpage_unpressed@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "title_firstpage_unpressed@3x.png"; sourceTree = "<group>"; };
@@ -1439,6 +1446,15 @@
 			path = IndustryList;
 			sourceTree = "<group>";
 		};
+		65DB75641C92610C000B12D1 /* Regist */ = {
+			isa = PBXGroup;
+			children = (
+				65DB75651C926124000B12D1 /* RegistViewController.h */,
+				65DB75661C926124000B12D1 /* RegistViewController.m */,
+			);
+			path = Regist;
+			sourceTree = "<group>";
+		};
 		65FAE9AF1C7EFE8300743D97 /* ActiveSpaceFInishOrder */ = {
 			isa = PBXGroup;
 			children = (
@@ -1528,6 +1544,7 @@
 				656A16741C8D7E1E00E29F8F /* Mybookings */,
 				6563AE7B1C8FBF860024CC90 /* StarfishCoin */,
 				656A167D1C8D8DEF00E29F8F /* Common */,
+				65DB75641C92610C000B12D1 /* Regist */,
 				655D0FDC1C9185D5008CED32 /* TimerView */,
 				6596F1841C8EC0F300B12479 /* MyOnlineBooking */,
 				656A166A1C8D6CFF00E29F8F /* MyComment */,
@@ -1668,6 +1685,8 @@
 		CD29E8171C7AFE3500871F69 /* 注册与登录 */ = {
 			isa = PBXGroup;
 			children = (
+				65DB75681C92642E000B12D1 /* choice_selected@3x.png */,
+				65DB75621C925EA8000B12D1 /* choice_unselected@3x.png */,
 				655D0FD81C9181C1008CED32 /* cellphone_code_clicked@3x.png */,
 				655D0FD91C9181C1008CED32 /* cellphone_code_unclicked@3x.png */,
 				CD29E8181C7AFE3500871F69 /* logo@3x.png */,
@@ -2072,6 +2091,7 @@
 				6562F6831C7EEB2B005F5B68 /* community_introduce_hardware_facility@3x.png in Resources */,
 				CD29E8591C7AFE3500871F69 /* service_mine_organization@3x.png in Resources */,
 				6562F6871C7EEB2B005F5B68 /* open_desk@2x.png in Resources */,
+				65DB75691C92642E000B12D1 /* choice_selected@3x.png in Resources */,
 				6572BE761C86B7AF00F495D1 /* single2_bottom_line@2x.png in Resources */,
 				6562F69C1C7EEB2B005F5B68 /* supplementary@2x.png in Resources */,
 				CD29E89E1C7AFE3500871F69 /* users_textfield_clicked@3x.png in Resources */,
@@ -2273,6 +2293,7 @@
 				6562F6671C7EEB2B005F5B68 /* aircondition@3x.png in Resources */,
 				6562F6721C7EEB2B005F5B68 /* wechat_friends_circle_pressed@3x.png in Resources */,
 				6562F66A1C7EEB2B005F5B68 /* facility_defaluted@3x.png in Resources */,
+				65DB75631C925EA8000B12D1 /* choice_unselected@3x.png in Resources */,
 				CD6944EB1C75BDE500E04081 /* PBADBannerCellTableViewCell.xib in Resources */,
 				6562F68B1C7EEB2B005F5B68 /* star_empty@3x.png in Resources */,
 				CD29E8A11C7AFE3500871F69 /* arrow@3x.png in Resources */,
@@ -2461,6 +2482,7 @@
 				CD6944FD1C75C89600E04081 /* PBDoubleTableViewCell.m in Sources */,
 				65B419441C756B7700FA817B /* PBIndustryViewController.m in Sources */,
 				65651ED21C8989EB004E38B0 /* GTMBase64.m in Sources */,
+				65DB75671C926124000B12D1 /* RegistViewController.m in Sources */,
 				CD9C3A031C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.m in Sources */,
 				6563AE8B1C8FF6930024CC90 /* JCYStarfishCoinRechargeViewController.m in Sources */,
 				6562F6091C7EE7A0005F5B68 /* ZLCalendarDataSource.m in Sources */,

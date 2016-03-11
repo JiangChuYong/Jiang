@@ -49,6 +49,8 @@ typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
 @property (strong,nonatomic) NSDictionary *activeSpaceBookingInfo;
 //社区空间预约信息
 @property (strong,nonatomic) NSDictionary *spaceVisitDict;
+//注册协议信息
+@property (strong,nonatomic) NSDictionary *protocolDic;
 
 //从哪个页面跳转到搜索页面，和提交订单的方式
 @property (assign, nonatomic) OrderSubmitFlag orderSubmitFlag;

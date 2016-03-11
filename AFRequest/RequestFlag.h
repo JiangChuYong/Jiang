@@ -79,6 +79,10 @@ typedef enum{
     SendValidCode,
     //重置密码
     ResetPassword,
+    //用户注册
+    Register,
+    //获取协议信息
+    GetProtocol,
     
     
     

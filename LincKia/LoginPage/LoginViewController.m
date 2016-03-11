@@ -104,6 +104,8 @@
     [_password resignFirstResponder];
 }
 - (IBAction)toRegisterPage:(UIButton *)sender {
+    
+    [self performSegueWithIdentifier:@"LoginToRegist" sender:self];
 }
 
 - (IBAction)toFindPasswordPage:(UIButton *)sender {
