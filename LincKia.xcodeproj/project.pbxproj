@@ -165,6 +165,9 @@
 		6572BE761C86B7AF00F495D1 /* single2_bottom_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */; };
 		6572BE791C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572BE781C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m */; };
 		65734D281C87E3ED008B5CAB /* photo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65734D271C87E3ED008B5CAB /* photo@3x.png */; };
+		658376141C96552500DFE386 /* JCYModifiedPhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658376131C96552500DFE386 /* JCYModifiedPhoneNumberViewController.m */; };
+		658376171C96598B00DFE386 /* JCYChangedPhoneNumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658376161C96598B00DFE386 /* JCYChangedPhoneNumViewController.m */; };
+		6583761A1C968A8700DFE386 /* JCYSetNewPhoneNumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658376191C968A8700DFE386 /* JCYSetNewPhoneNumViewController.m */; };
 		658AA7F51C801A5A00ACB94B /* PBLincKiaSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */; };
 		6596F1871C8EC11B00B12479 /* AllOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6596F1861C8EC11B00B12479 /* AllOrderListViewController.m */; };
 		6596F1901C8EDEC800B12479 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6596F18F1C8EDEC800B12479 /* SettingViewController.m */; };
@@ -634,6 +637,12 @@
 		6572BE771C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYSpaceOnlineReserveViewControllerViewController.h; sourceTree = "<group>"; };
 		6572BE781C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYSpaceOnlineReserveViewControllerViewController.m; sourceTree = "<group>"; };
 		65734D271C87E3ED008B5CAB /* photo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo@3x.png"; sourceTree = "<group>"; };
+		658376121C96552500DFE386 /* JCYModifiedPhoneNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYModifiedPhoneNumberViewController.h; sourceTree = "<group>"; };
+		658376131C96552500DFE386 /* JCYModifiedPhoneNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYModifiedPhoneNumberViewController.m; sourceTree = "<group>"; };
+		658376151C96598B00DFE386 /* JCYChangedPhoneNumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYChangedPhoneNumViewController.h; sourceTree = "<group>"; };
+		658376161C96598B00DFE386 /* JCYChangedPhoneNumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYChangedPhoneNumViewController.m; sourceTree = "<group>"; };
+		658376181C968A8700DFE386 /* JCYSetNewPhoneNumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYSetNewPhoneNumViewController.h; sourceTree = "<group>"; };
+		658376191C968A8700DFE386 /* JCYSetNewPhoneNumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYSetNewPhoneNumViewController.m; sourceTree = "<group>"; };
 		658AA7F21C801A5A00ACB94B /* PBLincKiaSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBLincKiaSpaceViewController.h; sourceTree = "<group>"; };
 		658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBLincKiaSpaceViewController.m; sourceTree = "<group>"; };
 		6596F1851C8EC11B00B12479 /* AllOrderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrderListViewController.h; sourceTree = "<group>"; };
@@ -1325,6 +1334,12 @@
 				65651EC91C895470004E38B0 /* PBChangeHeadPicTableViewCell.xib */,
 				65DB75701C92BD2E000B12D1 /* JCYNewNicknameViewController.h */,
 				65DB75711C92BD2E000B12D1 /* JCYNewNicknameViewController.m */,
+				658376121C96552500DFE386 /* JCYModifiedPhoneNumberViewController.h */,
+				658376131C96552500DFE386 /* JCYModifiedPhoneNumberViewController.m */,
+				658376151C96598B00DFE386 /* JCYChangedPhoneNumViewController.h */,
+				658376161C96598B00DFE386 /* JCYChangedPhoneNumViewController.m */,
+				658376181C968A8700DFE386 /* JCYSetNewPhoneNumViewController.h */,
+				658376191C968A8700DFE386 /* JCYSetNewPhoneNumViewController.m */,
 			);
 			path = MyAccount;
 			sourceTree = "<group>";
@@ -2489,6 +2504,7 @@
 				65B419741C75D1BF00FA817B /* PBCompanyListTableViewCell.m in Sources */,
 				6572BE791C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m in Sources */,
 				6563AEAE1C8FFEF40024CC90 /* PBAlertViewController.m in Sources */,
+				658376141C96552500DFE386 /* JCYModifiedPhoneNumberViewController.m in Sources */,
 				6572BE741C86B5E300F495D1 /* JCYBookingSpaceViewController.m in Sources */,
 				65B4196F1C75D18600FA817B /* PBCompanyListViewController.m in Sources */,
 				CD6945031C75C89600E04081 /* PBMineTableViewSingleLineCell.m in Sources */,
@@ -2563,6 +2579,7 @@
 				6562F6101C7EE7A0005F5B68 /* ZLCalendarUtil.m in Sources */,
 				65651EC61C894A86004E38B0 /* MyAccountViewController.m in Sources */,
 				CDC954B81C7C684800D2D7D1 /* PBDiDiViewController.m in Sources */,
+				658376171C96598B00DFE386 /* JCYChangedPhoneNumViewController.m in Sources */,
 				659EAC6B1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m in Sources */,
 				6563AE921C8FF8380024CC90 /* MessageClassifyViewCell.m in Sources */,
 				6562F60B1C7EE7A0005F5B68 /* ZLCalendarDayModel.m in Sources */,
@@ -2576,6 +2593,7 @@
 				CD5CD00C1C71E10F00B6A34B /* AFRquest.m in Sources */,
 				655D0FD11C9170A1008CED32 /* JCYEvaluateViewController.m in Sources */,
 				65DB756C1C92A39E000B12D1 /* RegisterInfoViewController.m in Sources */,
+				6583761A1C968A8700DFE386 /* JCYSetNewPhoneNumViewController.m in Sources */,
 				655D0FDF1C9185D5008CED32 /* TimerView.m in Sources */,
 				654B70481C855575004B64B0 /* TQStarRatingView.m in Sources */,
 				6562F6141C7EE7A0005F5B68 /* ZLCalendarMonthPage.m in Sources */,

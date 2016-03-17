@@ -51,6 +51,7 @@ typedef enum {
     FromUnpayPage = 6,
     ModifyNickName,
     ModifyName
+    
 
 }OrderSubmitFlag;
 

@@ -71,6 +71,7 @@
         [user setValue:data[@"UserToken"] forKey:USERTOKEN];
         [user synchronize];
         [JCYGlobalData sharedInstance].LoginStatus = YES;
+        [JCYGlobalData sharedInstance].userInfo=data;
         [self dismissViewControllerAnimated:YES completion:nil];
     }else{
         NSString * errorInfo = userInfo[@"Description"];
@@ -80,7 +81,10 @@
 }
 #pragma -- mark Button Action
 - (IBAction)backButtonPressed:(UIButton *)sender {
-    
+    if ([JCYGlobalData sharedInstance].isBackHome) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"cancelLogin" object:nil];
+        [JCYGlobalData sharedInstance].isBackHome=NO;
+    }
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }

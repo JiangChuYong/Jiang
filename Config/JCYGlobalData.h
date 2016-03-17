@@ -54,9 +54,12 @@ typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
 
 //从哪个页面跳转到搜索页面，和提交订单的方式
 @property (assign, nonatomic) OrderSubmitFlag orderSubmitFlag;
-
+//手机号码修改成功之后，不登录跳转到首页
+@property (assign, nonatomic) BOOL isBackHome;
 //当前选中的评论空间
 @property (strong, nonatomic) NSDictionary * evaluateSpace;
+//判断修改手机号页面是否来自短信修改
+@property (assign, nonatomic) BOOL isMotifyViaMessage;
 
 
 //时间大小遍历

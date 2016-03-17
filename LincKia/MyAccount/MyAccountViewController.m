@@ -257,7 +257,7 @@ static NSString *cellIdentifier = @"PBChangeHeadPicTableViewCell";
 
 
 
-
+//修改昵称
 - (IBAction)changeNickNameClicked:(UIButton *)sender {
     
     [JCYGlobalData sharedInstance].orderSubmitFlag=ModifyNickName;
@@ -265,6 +265,7 @@ static NSString *cellIdentifier = @"PBChangeHeadPicTableViewCell";
     [self performSegueWithIdentifier:@"MyAccountToName" sender:self];
     NSLog(@"修改昵称");
 }
+//修改姓名
 - (IBAction)changeNameClicked:(UIButton *)sender {
     
     [JCYGlobalData sharedInstance].orderSubmitFlag=ModifyName;
@@ -273,8 +274,11 @@ static NSString *cellIdentifier = @"PBChangeHeadPicTableViewCell";
     NSLog(@"修改姓名");
 
 }
+//修改手机号
 - (IBAction)changeMobileNumClicked:(UIButton *)sender {
-    NSLog(@"sfdfs");
+    
+    NSLog(@"修改手机号");
+    [self performSegueWithIdentifier:@"MyAccountToModifyPhoneNum" sender:self];
 
 }
 - (IBAction)changePasswordClicked:(id)sender {

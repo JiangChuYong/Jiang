@@ -85,6 +85,10 @@ typedef enum{
     GetProtocol,
     //修改姓名或者昵称
     EditUserInfo,
+    //通过手机验证码验证用户
+    CheckUserByValidCode,
+    //修改手机号
+    SetPhoneNum,
     
     
     
