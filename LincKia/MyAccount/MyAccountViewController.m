@@ -282,6 +282,8 @@ static NSString *cellIdentifier = @"PBChangeHeadPicTableViewCell";
 
 }
 - (IBAction)changePasswordClicked:(id)sender {
+    
+    [self performSegueWithIdentifier:@"MyAccountToMidifyPassword" sender:self];
     NSLog(@"sfdfs");
 
 }

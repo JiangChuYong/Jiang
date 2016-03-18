@@ -89,6 +89,8 @@ typedef enum{
     CheckUserByValidCode,
     //修改手机号
     SetPhoneNum,
+    //修改密码
+    ChangePassword,
     
     
     

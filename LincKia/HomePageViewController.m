@@ -66,7 +66,7 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     _SpacesGetIndex.style = GET;
     [_SpacesGetIndex requestDataFromWithFlag:GetIndex];
     
-    [[PBAlert sharedInstance] showProgressDialogText:@"加载中..." inView:self.view];
+    [[PBAlert sharedInstance] showProgressDialogText:@"加载中，请稍候..." inView:self.view];
     
 }
 

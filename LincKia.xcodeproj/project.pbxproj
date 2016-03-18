@@ -187,6 +187,7 @@
 		65B4196F1C75D18600FA817B /* PBCompanyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B4196D1C75D18600FA817B /* PBCompanyListViewController.m */; };
 		65B419741C75D1BF00FA817B /* PBCompanyListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B419721C75D1BF00FA817B /* PBCompanyListTableViewCell.m */; };
 		65B419751C75D1BF00FA817B /* PBCompanyListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B419731C75D1BF00FA817B /* PBCompanyListTableViewCell.xib */; };
+		65D8EA8A1C9A8E38002564BB /* JCYSetNewPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D8EA891C9A8E38002564BB /* JCYSetNewPasswordViewController.m */; };
 		65DB75631C925EA8000B12D1 /* choice_unselected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DB75621C925EA8000B12D1 /* choice_unselected@3x.png */; };
 		65DB75671C926124000B12D1 /* RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DB75661C926124000B12D1 /* RegistViewController.m */; };
 		65DB75691C92642E000B12D1 /* choice_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DB75681C92642E000B12D1 /* choice_selected@3x.png */; };
@@ -677,6 +678,8 @@
 		65B419711C75D1BF00FA817B /* PBCompanyListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCompanyListTableViewCell.h; sourceTree = "<group>"; };
 		65B419721C75D1BF00FA817B /* PBCompanyListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBCompanyListTableViewCell.m; sourceTree = "<group>"; };
 		65B419731C75D1BF00FA817B /* PBCompanyListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBCompanyListTableViewCell.xib; sourceTree = "<group>"; };
+		65D8EA881C9A8E38002564BB /* JCYSetNewPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYSetNewPasswordViewController.h; sourceTree = "<group>"; };
+		65D8EA891C9A8E38002564BB /* JCYSetNewPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYSetNewPasswordViewController.m; sourceTree = "<group>"; };
 		65DB75621C925EA8000B12D1 /* choice_unselected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "choice_unselected@3x.png"; sourceTree = "<group>"; };
 		65DB75651C926124000B12D1 /* RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistViewController.h; sourceTree = "<group>"; };
 		65DB75661C926124000B12D1 /* RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistViewController.m; sourceTree = "<group>"; };
@@ -1488,6 +1491,15 @@
 			path = IndustryList;
 			sourceTree = "<group>";
 		};
+		65D8EA871C9A8E25002564BB /* SetNewPassword */ = {
+			isa = PBXGroup;
+			children = (
+				65D8EA881C9A8E38002564BB /* JCYSetNewPasswordViewController.h */,
+				65D8EA891C9A8E38002564BB /* JCYSetNewPasswordViewController.m */,
+			);
+			path = SetNewPassword;
+			sourceTree = "<group>";
+		};
 		65DB75641C92610C000B12D1 /* Regist */ = {
 			isa = PBXGroup;
 			children = (
@@ -1595,6 +1607,7 @@
 				658AA7F11C801A5A00ACB94B /* LinckiaSpace */,
 				65B419401C756B7700FA817B /* IndustryList */,
 				65651EC31C894A69004E38B0 /* MyAccount */,
+				65D8EA871C9A8E25002564BB /* SetNewPassword */,
 				CD6944DD1C75BDE500E04081 /* ViewCells */,
 				CD69448A1C75AD9D00E04081 /* LoginPage */,
 				656A16611C8D595300E29F8F /* UnpayOrderList */,
@@ -2543,6 +2556,7 @@
 				CDF754531C8028660038622E /* UITabBar+badge.m in Sources */,
 				CD4F06C11C7ADA6B00F6478A /* ExpressTableViewCell.m in Sources */,
 				CDF7545E1C80361D0038622E /* PBMeetingRoomTableTopViewCell.m in Sources */,
+				65D8EA8A1C9A8E38002564BB /* JCYSetNewPasswordViewController.m in Sources */,
 				CD1D57291C71BDB700BB30AC /* HomePageViewController.m in Sources */,
 				6563AEBE1C902CF60024CC90 /* JCYSearchViewController.m in Sources */,
 				6562F6121C7EE7A0005F5B68 /* ZLNSDate+Logic.m in Sources */,

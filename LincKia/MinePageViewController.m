@@ -265,6 +265,7 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
 -(void)userInfoDataReceived:(NSNotification *)notif{
     NSLog(@"%@",_GetUserInfo.resultDict);
     _userInfoDic = _GetUserInfo.resultDict[@"Data"];
+    [_table reloadData];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetUserInfo] object:nil];
 }
 

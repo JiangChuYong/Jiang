@@ -72,8 +72,11 @@
         [user synchronize];
         [JCYGlobalData sharedInstance].LoginStatus = YES;
         [JCYGlobalData sharedInstance].userInfo=data;
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }else{
+        
+        
+        [self backButtonPressed:nil];
+       
+            }else{
         NSString * errorInfo = userInfo[@"Description"];
         [[PBAlert sharedInstance]showText:errorInfo inView:self.view withTime:2.0];
     }

@@ -46,9 +46,6 @@
     UINavigationController *navi=(UINavigationController *)self.parentViewController;
     [navi popToRootViewControllerAnimated:YES];
     navi.tabBarController.selectedIndex=0;
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"Exit" object:nil];
-    
-    
     [[NSNotificationCenter defaultCenter]removeObserver:self name:@"cancelLogin" object:nil];
 }
 -(void)setUI
@@ -168,24 +165,6 @@
     int result = [_SetPhoneNum.resultDict[@"Code"] intValue];
     if (result == SUCCESS) {
 
-        
-//        [JCYGlobalData sharedInstance].userInfo=nil;
-//        NSLog(@"%@",[JCYGlobalData sharedInstance].userInfo);
-//        
-//        //清空登录缓存
-//        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-//        [user setObject:nil forKey:USERNAME];
-//        [user setObject:nil forKey:PASSWORD];
-//        [user synchronize];
-        [JCYGlobalData sharedInstance].userInfo = nil;
-         NSLog(@"userInfo=%@",[JCYGlobalData sharedInstance].userInfo);
-        //清空登录缓存
-        NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-        [user setObject:nil forKey:USERNAME];
-        [user setObject:nil forKey:PASSWORD];
-        [user synchronize];
-        
-        [JCYGlobalData sharedInstance].LoginStatus=NO;
         UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"提示" message:@"手机号更换成功，请重新登录" delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
         [alert show];
         
@@ -198,9 +177,25 @@
     
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",SetPhoneNum] object:nil];
 }
+
+-(void)clearLoginCache
+{
+    [JCYGlobalData sharedInstance].userInfo = nil;
+    [JCYGlobalData sharedInstance].LoginStatus=NO;
+    NSLog(@"userInfo=%@",[JCYGlobalData sharedInstance].userInfo);
+    //清空登录缓存
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    [user setObject:nil forKey:USERNAME];
+    [user setObject:nil forKey:PASSWORD];
+    [user synchronize];
+    
+
+}
+
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex==0) {
+        [self clearLoginCache];
         [JCYGlobalData sharedInstance].isBackHome=YES;
         [self performSegueWithIdentifier:@"SetPhoneNumToLogin" sender:self];
 
