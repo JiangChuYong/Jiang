@@ -30,7 +30,7 @@
 //    [ZZGlobalModel sharedInstance].isMotifyViaMessage = YES;
 //    PBChangedPhoneNumViewController * VC = [[PBChangedPhoneNumViewController alloc]init];
 //    [self.navigationController pushViewController:VC animated:YES];
-    [JCYGlobalData sharedInstance].isMotifyViaMessage=YES;
+    //[JCYGlobalData sharedInstance].isMotifyViaMessage=YES;
     [self performSegueWithIdentifier:@"ModifyPhoneNumOfMessage" sender:self];
     
 }
@@ -38,6 +38,8 @@
 //    [ZZGlobalModel sharedInstance].isMotifyViaMessage = NO;
 //    PBModifyPhoneNumViaPasswordViewController * VC = [[PBModifyPhoneNumViaPasswordViewController alloc]init];
 //    [self.navigationController pushViewController:VC animated:YES];
+    
+    [self performSegueWithIdentifier:@"ModifyPhoneNumOfLogin" sender:self];
 }
 
 - (void)didReceiveMemoryWarning {
