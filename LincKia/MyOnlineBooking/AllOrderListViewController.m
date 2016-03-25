@@ -27,14 +27,7 @@
 @property (nonatomic, strong) AFRquest *GetOfficeOrdersList;
 @property (nonatomic, strong) AFRquest *GetMeetingOrdersList;
 @property (nonatomic, strong) NSMutableArray *dataArr;
-
-
-
-
-
-
-
-
+@property (nonatomic, strong) UIButton *selectButton;
 @end
 
 @implementation AllOrderListViewController
@@ -109,11 +102,12 @@ static NSString *orderListCell=@"orderListCell";
 }
 //点击cell，跳转到提交订单
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    if ([_selectedButton isEqual:_officeBtn]) {
-//        [self goOfficeOrderDetailView:(int)indexPath.row];
-//    }else{
-//        [self goMeetingRoomOrderDetailView:(int)indexPath.row];
-//    }
+    if ([_selectButton isEqual:_officeBtn]) {
+        [self goOfficeOrderDetailView:(int)indexPath.row];
+    }else{
+       // [self goMeetingRoomOrderDetailView:(int)indexPath.row];
+        NSLog(@"fads");
+    }
 }
 
 #pragma mark - 按钮点击响应事件
@@ -125,7 +119,10 @@ static NSString *orderListCell=@"orderListCell";
 }
 - (IBAction)spaceTypeButtonSelected:(UIButton *)sender {
     [self resetSelectedButtonUI:sender];
-    _pageCount = 1;
+    if (![_selectButton isEqual:sender]) {
+        _pageCount = 1;
+    }
+    _selectButton=sender;
     if ([sender isEqual:_officeBtn]) {
         
         _officeBtn.selected=YES;
@@ -150,12 +147,6 @@ static NSString *orderListCell=@"orderListCell";
         _officeBtn.layer.borderWidth = 1;
     }
 }
-
-
-
-
-
-
 -(void)goMeetingRoomOrderDetailView:(int)index
 {
 //    OrderListInfo *orderInfo=[self.orderListInfoModel.OrderListArray objectAtIndex:index];
@@ -175,21 +166,36 @@ static NSString *orderListCell=@"orderListCell";
 //    }else{
 //        [self goImmediatelyOrderDetailPageWith:orderInfo.OrderId];
 //    }
+    
+    
+    NSDictionary *orderInfoDic=[_dataArr objectAtIndex:index];
+    
+    if ([orderInfoDic[@"Status"] integerValue]==0||[orderInfoDic[@"Status"] integerValue]==4) {
+        [self goImmediatelyPayWithIndex:index];
+    }else{
+        [self goImmediatelyOrderDetailPageWith:orderInfoDic[@"OrderId"]];
+    }
+    
 }
 //点击立即支付
 -(void)goImmediatelyPay:(UIButton *)button{
     //[self goImmediatelyPayWithIndex:(int)button.tag];
 }
-//点击跳转至订单详情页面
+//点击跳转至办公预订订单详情页面
 -(void)goImmediatelyOrderDetailPageWith:(NSString *)orderID{
 //    [ZZGlobalModel sharedInstance].orderID = [NSString stringWithString:orderID];
 //    ZZMyOrderDetailViewController * orderdetailVC= [[ZZMyOrderDetailViewController alloc]initWithNibName:@"ZZMyOrderDetailViewController" bundle:nil];
 //    [self.navigationController pushViewController:orderdetailVC animated:YES];
+    
+    [JCYGlobalData sharedInstance].orderId=orderID;
+    [self performSegueWithIdentifier:@"OnlineBookingToOfficeOrderDetail" sender:self];
+    
 }
 
 #pragma mark --私有方法
 //立即支付,跳转到提交订单页
 -(void)goImmediatelyPayWithIndex:(int)index{
+    NSLog(@"立即支付");
 //    OrderListInfo *orderInfo=[self.orderListInfoModel.OrderListArray objectAtIndex:index];
 //    //数据源处理
 //    [ZZGlobalModel sharedInstance].orderSubmitFlag = OrderSubmitFlag_FromMyOrder;
@@ -240,9 +246,6 @@ static NSString *orderListCell=@"orderListCell";
 
 -(void)officeOrderDataReceived:(NSNotification *)notif{
     
-
-    
-    
     int result = [_GetOfficeOrdersList.resultDict[@"Code"] intValue];
     if (result == SUCCESS) {
         
@@ -263,10 +266,7 @@ static NSString *orderListCell=@"orderListCell";
 
 
 -(void)requestMeetingRoomListFromServer
-{
-
-    
-    
+{    
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(meetingOrderDataReceived:) name:[NSString stringWithFormat:@"%i",GetMeetingOrdersList] object:nil];
     
     NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
@@ -287,13 +287,10 @@ static NSString *orderListCell=@"orderListCell";
 
 -(void)meetingOrderDataReceived:(NSNotification *)notif{
     
-    
-    
     int result = [_GetMeetingOrdersList.resultDict[@"Code"] intValue];
     if (result == SUCCESS) {
         
         NSLog(@"会议室");
-        //[self dealResposeResultForActiveSpace:_GetMyVisitActiveSpace.resultDict[@"Data"][@"Data"] ];
         [self dealWithResponedDate:_GetMeetingOrdersList.resultDict[@"Data"][@"Data"] ];
         
     }else{
@@ -331,13 +328,7 @@ static NSString *orderListCell=@"orderListCell";
         // 添加传统的上拉刷新
         _allOrderListTableView.mj_footer=[MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
             // 进入刷新状态后会自动调用这个block
-           
-            if (_officeBtn.selected) {
-                [self requestOfficeListFromServer];
-            }else{
-                [self requestMeetingRoomListFromServer];
-            }
-
+            [self spaceTypeButtonSelected:_selectButton];
         }];
         
     }

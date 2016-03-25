@@ -61,6 +61,9 @@ typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
 //判断修改手机号页面是否来自短信修改
 @property (assign, nonatomic) BOOL isMotifyViaMessage;
 
+//订单编号
+@property (strong, nonatomic) NSString *orderId;
+
 
 //时间大小遍历
 +(NSMutableArray *)filterTimeArray:(NSMutableArray *)timeArray;
