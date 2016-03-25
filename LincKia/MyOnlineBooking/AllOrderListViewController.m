@@ -40,12 +40,6 @@ static NSString *orderListCell=@"orderListCell";
     self.nodataView.hidden = YES;
     //解决tableview留白
     self.automaticallyAdjustsScrollViewInsets = false;
-
-    
-//    self.orderListInfoModel=[[OrderListInfoModel alloc] init];
-//    self.orderListInfoModel.OrderListArray = [NSMutableArray array];
-    
-  
     _dataArr=[NSMutableArray array];
     [self initUIComponent];
     [self setViewFontAndColor];//设置字体大小和颜色
@@ -105,7 +99,7 @@ static NSString *orderListCell=@"orderListCell";
     if ([_selectButton isEqual:_officeBtn]) {
         [self goOfficeOrderDetailView:(int)indexPath.row];
     }else{
-       // [self goMeetingRoomOrderDetailView:(int)indexPath.row];
+    [self goMeetingRoomOrderDetailView:(int)indexPath.row];
         NSLog(@"fads");
     }
 }
@@ -157,6 +151,19 @@ static NSString *orderListCell=@"orderListCell";
 //        PBMeetingRoomOrderDetailViewController * VC = [[PBMeetingRoomOrderDetailViewController alloc]init];
 //        [self.navigationController pushViewController:VC animated:YES];
 //    }
+    
+    
+    
+    NSDictionary *orderInfoDic=[_dataArr objectAtIndex:index];
+    
+    if ([orderInfoDic[@"Status"] integerValue]==0||[orderInfoDic[@"Status"] integerValue]==4) {
+        [self goImmediatelyPayWithIndex:index];
+    }else{
+        [JCYGlobalData sharedInstance].orderId = orderInfoDic[@"OrderId"];
+        [self performSegueWithIdentifier:@"OnlineBookingToMeetingOrderDetail" sender:self];
+    }
+
+    
 }
 -(void)goOfficeOrderDetailView:(int)index
 {

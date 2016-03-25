@@ -184,6 +184,9 @@
 		65B0A61C1CA4ECEA00CC3AED /* OfficeOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B0A61B1CA4ECEA00CC3AED /* OfficeOrderDetailViewController.m */; };
 		65B0A6201CA4EDD700CC3AED /* ZZMyOderDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B0A61E1CA4EDD700CC3AED /* ZZMyOderDetailTableViewCell.m */; };
 		65B0A6211CA4EDD700CC3AED /* ZZMyOderDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B0A61F1CA4EDD700CC3AED /* ZZMyOderDetailTableViewCell.xib */; };
+		65B0A6241CA52C9900CC3AED /* MeetingOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B0A6231CA52C9900CC3AED /* MeetingOrderDetailViewController.m */; };
+		65B0A6281CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B0A6261CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.m */; };
+		65B0A6291CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B0A6271CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.xib */; };
 		65B419441C756B7700FA817B /* PBIndustryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B419421C756B7700FA817B /* PBIndustryViewController.m */; };
 		65B419641C75C25200FA817B /* PBCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B419621C75C25200FA817B /* PBCollectionCell.m */; };
 		65B419651C75C25200FA817B /* PBCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B419631C75C25200FA817B /* PBCollectionCell.xib */; };
@@ -677,6 +680,11 @@
 		65B0A61D1CA4EDD700CC3AED /* ZZMyOderDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZMyOderDetailTableViewCell.h; sourceTree = "<group>"; };
 		65B0A61E1CA4EDD700CC3AED /* ZZMyOderDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZMyOderDetailTableViewCell.m; sourceTree = "<group>"; };
 		65B0A61F1CA4EDD700CC3AED /* ZZMyOderDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZMyOderDetailTableViewCell.xib; sourceTree = "<group>"; };
+		65B0A6221CA52C9900CC3AED /* MeetingOrderDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingOrderDetailViewController.h; sourceTree = "<group>"; };
+		65B0A6231CA52C9900CC3AED /* MeetingOrderDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingOrderDetailViewController.m; sourceTree = "<group>"; };
+		65B0A6251CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingRoomOrderTableViewCell.h; sourceTree = "<group>"; };
+		65B0A6261CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingRoomOrderTableViewCell.m; sourceTree = "<group>"; };
+		65B0A6271CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeetingRoomOrderTableViewCell.xib; sourceTree = "<group>"; };
 		65B419411C756B7700FA817B /* PBIndustryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBIndustryViewController.h; sourceTree = "<group>"; };
 		65B419421C756B7700FA817B /* PBIndustryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBIndustryViewController.m; sourceTree = "<group>"; };
 		65B419611C75C25200FA817B /* PBCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCollectionCell.h; sourceTree = "<group>"; };
@@ -1493,6 +1501,11 @@
 				65B0A61D1CA4EDD700CC3AED /* ZZMyOderDetailTableViewCell.h */,
 				65B0A61E1CA4EDD700CC3AED /* ZZMyOderDetailTableViewCell.m */,
 				65B0A61F1CA4EDD700CC3AED /* ZZMyOderDetailTableViewCell.xib */,
+				65B0A6221CA52C9900CC3AED /* MeetingOrderDetailViewController.h */,
+				65B0A6231CA52C9900CC3AED /* MeetingOrderDetailViewController.m */,
+				65B0A6251CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.h */,
+				65B0A6261CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.m */,
+				65B0A6271CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.xib */,
 			);
 			path = OrderDetail;
 			sourceTree = "<group>";
@@ -2208,6 +2221,7 @@
 				CD29E9271C7B00E600871F69 /* 韵达快递@2x.png in Resources */,
 				CD29E8A31C7AFE3500871F69 /* button_reservation_unpressed@3x.png in Resources */,
 				6559153A1C853FDC002FC3FD /* PBTableSpaceTypeCell.xib in Resources */,
+				65B0A6291CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.xib in Resources */,
 				6562F6791C7EEB2B005F5B68 /* arrow@3x.png in Resources */,
 				CD29E8871C7AFE3500871F69 /* mine_coffice@3x.png in Resources */,
 				65B0A6211CA4EDD700CC3AED /* ZZMyOderDetailTableViewCell.xib in Resources */,
@@ -2537,6 +2551,7 @@
 				6562F5E41C7EE628005F5B68 /* PBActiveSpaceBookingViewController.m in Sources */,
 				CD65AB3B1C71C37D00AED0F8 /* MinePageViewController.m in Sources */,
 				6562F5E21C7EE628005F5B68 /* PBBookingTableViewSugestionCell.m in Sources */,
+				65B0A6241CA52C9900CC3AED /* MeetingOrderDetailViewController.m in Sources */,
 				655915391C853FDC002FC3FD /* PBTableSpaceTypeCell.m in Sources */,
 				65B4196B1C75D06B00FA817B /* JCYGlobalData.m in Sources */,
 				656A166F1C8D6CFF00E29F8F /* MyCommentTableViewCell.m in Sources */,
@@ -2548,6 +2563,7 @@
 				6572BE741C86B5E300F495D1 /* JCYBookingSpaceViewController.m in Sources */,
 				65B4196F1C75D18600FA817B /* PBCompanyListViewController.m in Sources */,
 				CD6945031C75C89600E04081 /* PBMineTableViewSingleLineCell.m in Sources */,
+				65B0A6281CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.m in Sources */,
 				CD0F15A81C7D7FF500AE74FB /* PBCheckExpressViewController.m in Sources */,
 				CD6944EC1C75BDE500E04081 /* PBButtonChooseCell.m in Sources */,
 				65B419641C75C25200FA817B /* PBCollectionCell.m in Sources */,

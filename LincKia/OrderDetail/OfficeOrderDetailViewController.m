@@ -141,9 +141,7 @@ static NSString *orderDetailTableViewCellIdentifier=@"zZMyOderDetailTableViewCel
     self.locationLabel.text = [NSString stringWithFormat:@"社区地址：%@",orderInfo[@"Space"][@"Location"]];
     _locationLabel.font = [UIFont systemFontOfSize:13];
     _locationLabel.textColor = CommonColor_Black;
-//    _locationLabel.width = self.view.frame.size.width - 30;
-//    _locationLabel.x = _orderTimeLabel.x;
-//    _locationLabel.y = _orderTimeLabel.y+_orderTimeLabel.height+5;
+
     
     _locationLabel.frame=CGRectMake(_orderTimeLabel.frame.origin.x, _orderTimeLabel.frame.origin.y+_orderTimeLabel.frame.size.height+5, self.view.frame.size.width-30, _locationLabel.frame.size.height);
     
