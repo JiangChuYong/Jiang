@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SwitchChoiseViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qe-7X-PLx">
+                        <rect key="frame" x="250" y="11" width="55" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="55" id="Ppi-6g-1Ea"/>
+                            <constraint firstAttribute="height" constant="26" id="s3m-q7-26N"/>
+                        </constraints>
+                        <state key="normal" image="button_off@3x.png"/>
+                        <state key="selected" image="button_on@3x.png"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发票" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldo-x9-2Vj">
+                        <rect key="frame" x="15" y="15" width="28" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <color key="textColor" red="0.0039215686269999999" green="0.047058823530000002" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="（请到预定门店领取发票）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pu1-BV-TqN">
+                        <rect key="frame" x="45" y="17" width="132" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.47843137250000001" green="0.4823529412" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="Pu1-BV-TqN" firstAttribute="leading" secondItem="ldo-x9-2Vj" secondAttribute="trailing" constant="2" id="2AF-U0-uJ0"/>
+                    <constraint firstAttribute="centerY" secondItem="0Qe-7X-PLx" secondAttribute="centerY" id="5EK-NG-Rrq"/>
+                    <constraint firstItem="ldo-x9-2Vj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="GkK-ck-i6v"/>
+                    <constraint firstAttribute="centerY" secondItem="Pu1-BV-TqN" secondAttribute="centerY" id="H2C-Op-P2r"/>
+                    <constraint firstAttribute="centerY" secondItem="ldo-x9-2Vj" secondAttribute="centerY" id="bMH-52-wKa"/>
+                    <constraint firstAttribute="centerY" secondItem="ldo-x9-2Vj" secondAttribute="centerY" id="eyP-GH-1ka"/>
+                    <constraint firstAttribute="trailing" secondItem="0Qe-7X-PLx" secondAttribute="trailing" constant="15" id="v8b-sR-k14"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="btnSwitch" destination="0Qe-7X-PLx" id="EUb-O1-7O1"/>
+                <outlet property="labelSelectName" destination="ldo-x9-2Vj" id="mE5-lX-dIc"/>
+                <outlet property="lableDescribe" destination="Pu1-BV-TqN" id="78r-Sx-E0E"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="button_off@3x.png" width="198" height="102"/>
+        <image name="button_on@3x.png" width="200" height="100"/>
+    </resources>
+</document>

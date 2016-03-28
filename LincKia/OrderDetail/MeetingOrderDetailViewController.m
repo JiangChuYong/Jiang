@@ -8,7 +8,7 @@
 
 #import "MeetingOrderDetailViewController.h"
 #import "MeetingRoomOrderTableViewCell.h"
-@interface MeetingOrderDetailViewController ()
+@interface MeetingOrderDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property (weak, nonatomic) IBOutlet UILabel *sumPrince;
 @property (weak, nonatomic) IBOutlet UILabel *paidPrice;
@@ -135,9 +135,6 @@ static NSString * cellIdKey = @"MeetingRoomOrderTableViewCell";
     _spaceAddress.text = [NSString stringWithFormat:@"社区地址：%@",spaceInfo[@"Space"][@"Location"]];
     _spaceAddress.font = [UIFont systemFontOfSize:13];
     _spaceAddress.textColor = CommonColor_Black;
-//    _spaceAddress.width = self.view.width - 30;
-//    _spaceAddress.x = 15;
-//    _spaceAddress.y = _orderTime.y+_orderTime.height+5;
     
     _spaceAddress.frame=CGRectMake(15, _orderTime.frame.origin.y+_orderTime.frame.size.height+5, self.view.frame.size.width-30, _spaceAddress.frame.size.height);
     

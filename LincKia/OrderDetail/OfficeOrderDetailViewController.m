@@ -9,7 +9,7 @@
 #import "OfficeOrderDetailViewController.h"
 #import "ZZMyOderDetailTableViewCell.h"
 
-@interface OfficeOrderDetailViewController ()
+@interface OfficeOrderDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 @property (weak, nonatomic) IBOutlet UILabel *amountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *paymentStatusLabel;

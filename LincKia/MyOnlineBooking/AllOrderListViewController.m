@@ -143,17 +143,6 @@ static NSString *orderListCell=@"orderListCell";
 }
 -(void)goMeetingRoomOrderDetailView:(int)index
 {
-//    OrderListInfo *orderInfo=[self.orderListInfoModel.OrderListArray objectAtIndex:index];
-//    if (orderInfo.Status==0||orderInfo.Status == 4) {
-//        [self goImmediatelyPayWithIndex:index];
-//    }else{
-//        [ZZGlobalModel sharedInstance].orderID = orderInfo.OrderId;
-//        PBMeetingRoomOrderDetailViewController * VC = [[PBMeetingRoomOrderDetailViewController alloc]init];
-//        [self.navigationController pushViewController:VC animated:YES];
-//    }
-    
-    
-    
     NSDictionary *orderInfoDic=[_dataArr objectAtIndex:index];
     
     if ([orderInfoDic[@"Status"] integerValue]==0||[orderInfoDic[@"Status"] integerValue]==4) {
@@ -167,14 +156,6 @@ static NSString *orderListCell=@"orderListCell";
 }
 -(void)goOfficeOrderDetailView:(int)index
 {
-//    OrderListInfo *orderInfo=[self.orderListInfoModel.OrderListArray objectAtIndex:index];
-//    if (orderInfo.Status==0||orderInfo.Status == 4) {
-//        [self goImmediatelyPayWithIndex:index];
-//    }else{
-//        [self goImmediatelyOrderDetailPageWith:orderInfo.OrderId];
-//    }
-    
-    
     NSDictionary *orderInfoDic=[_dataArr objectAtIndex:index];
     
     if ([orderInfoDic[@"Status"] integerValue]==0||[orderInfoDic[@"Status"] integerValue]==4) {
@@ -190,10 +171,7 @@ static NSString *orderListCell=@"orderListCell";
 }
 //点击跳转至办公预订订单详情页面
 -(void)goImmediatelyOrderDetailPageWith:(NSString *)orderID{
-//    [ZZGlobalModel sharedInstance].orderID = [NSString stringWithString:orderID];
-//    ZZMyOrderDetailViewController * orderdetailVC= [[ZZMyOrderDetailViewController alloc]initWithNibName:@"ZZMyOrderDetailViewController" bundle:nil];
-//    [self.navigationController pushViewController:orderdetailVC animated:YES];
-    
+
     [JCYGlobalData sharedInstance].orderId=orderID;
     [self performSegueWithIdentifier:@"OnlineBookingToOfficeOrderDetail" sender:self];
     
@@ -203,10 +181,12 @@ static NSString *orderListCell=@"orderListCell";
 //立即支付,跳转到提交订单页
 -(void)goImmediatelyPayWithIndex:(int)index{
     NSLog(@"立即支付");
-//    OrderListInfo *orderInfo=[self.orderListInfoModel.OrderListArray objectAtIndex:index];
-//    //数据源处理
-//    [ZZGlobalModel sharedInstance].orderSubmitFlag = OrderSubmitFlag_FromMyOrder;
-//    [ZZGlobalModel sharedInstance].orderID=orderInfo.OrderId;
+    NSDictionary *orderInfo=[_dataArr objectAtIndex:index];
+    //数据源处理
+    [JCYGlobalData sharedInstance].orderSubmitFlag = OrderSubmitFlag_FromMyOrder;
+    [JCYGlobalData sharedInstance].orderId=orderInfo[@"OrderId"];
+    [self performSegueWithIdentifier:@"OnlineBookingToPay" sender:self];
+
 //    UserLoginViewModel *user=[ZZGlobalModel sharedInstance].userInfoViewModel;
 //    //判断是公司还是个人
 //    if (user.IsGroup) {//公司

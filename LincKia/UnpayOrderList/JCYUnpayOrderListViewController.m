@@ -80,12 +80,7 @@ static NSString *orderListCell=@"orderListCell";
 #pragma mark --初始化
 
 -(void)isShowEmptyTable{
-//    if (self.orderListInfoModel.OrderListArray.count) {
-//        self.emptyView.hidden = YES;
-//    }else{
-//        self.emptyView.hidden = NO;
-//    }
-    
+
     
     if (_officeBtn.selected==YES&&_meetingRoomBtn.selected==NO) {
         
@@ -139,10 +134,7 @@ static NSString *orderListCell=@"orderListCell";
 {
     
     AllOrderListViewCell *cell=[tableView dequeueReusableCellWithIdentifier:orderListCell];
-//    OrderListInfo *orderInfo=[self.orderListInfoModel.OrderListArray objectAtIndex:indexPath.row];
-//    [cell initCellDataSourceWithOrder:orderInfo];//对cell中的元素赋值
-    
-    
+
     if (_officeBtn.selected==YES&&_meetingRoomBtn.selected==NO) {
 
         [cell initCellDataSourceWithOrder:_orderListArr[indexPath.row]];
@@ -169,7 +161,7 @@ static NSString *orderListCell=@"orderListCell";
 #pragma mark --私有方法
 //付款，跳转到提交订单
 -(void)goPayWithIndex:(int)index{
-//    
+//
 //    OrderListInfo *orderInfo=[self.orderListInfoModel.OrderListArray objectAtIndex:index];
 //    [ZZGlobalModel sharedInstance].orderID=orderInfo.OrderId;
 //    
@@ -192,19 +184,23 @@ static NSString *orderListCell=@"orderListCell";
 //
     
     if (_officeBtn.selected==YES&&_meetingRoomBtn.selected==NO) {
-        
+            NSDictionary *orderInfo=[_orderListArr objectAtIndex:index];
+            [JCYGlobalData sharedInstance].orderId=orderInfo[@"OrderId"];
         NSLog(@"办公室");
     }else{
+        NSDictionary *orderInfo=[_meetingListArr objectAtIndex:index];
+        [JCYGlobalData sharedInstance].orderId=orderInfo[@"OrderId"];
         NSLog(@"会议室");
     }
+    
+    [JCYGlobalData sharedInstance].orderSubmitFlag = FromUnpayPage;
+    [self performSegueWithIdentifier:@"UnpayToPay" sender:self];
 
 }
 
 #pragma mark -- 请求服务端数据
 //从服务器请求数据 空间搜索列表
 -(void)requestDataFromServer{
-    
-//    [[ZZAllService sharedInstance] serviceQueryByObj:@{@"Status":@0,@"Page":[NSNumber numberWithInt:self.pageCount],@"Rows":@10,@"SortProperty":@"Name",@"SortDirection":@"asc"}  delegate:self httpTag:HTTPHelperTag_Orders_GetList];
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(orderListDataReceived:) name:[NSString stringWithFormat:@"%i",GetUnpayOrderList] object:nil];
     NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];

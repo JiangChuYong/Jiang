@@ -170,6 +170,9 @@
 		658376171C96598B00DFE386 /* JCYChangedPhoneNumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658376161C96598B00DFE386 /* JCYChangedPhoneNumViewController.m */; };
 		6583761A1C968A8700DFE386 /* JCYSetNewPhoneNumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658376191C968A8700DFE386 /* JCYSetNewPhoneNumViewController.m */; };
 		658AA7F51C801A5A00ACB94B /* PBLincKiaSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */; };
+		65929E091CA8DD5B000A8D76 /* PayOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 65929E081CA8DD5B000A8D76 /* PayOrderModel.m */; };
+		65929E0C1CA900A3000A8D76 /* button_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65929E0A1CA900A3000A8D76 /* button_off@3x.png */; };
+		65929E0D1CA900A3000A8D76 /* button_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65929E0B1CA900A3000A8D76 /* button_on@3x.png */; };
 		6596F1871C8EC11B00B12479 /* AllOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6596F1861C8EC11B00B12479 /* AllOrderListViewController.m */; };
 		6596F1901C8EDEC800B12479 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6596F18F1C8EDEC800B12479 /* SettingViewController.m */; };
 		6596F1931C8EE4B000B12479 /* JCYOpinionFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6596F1921C8EE4B000B12479 /* JCYOpinionFeedbackViewController.m */; };
@@ -187,6 +190,17 @@
 		65B0A6241CA52C9900CC3AED /* MeetingOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B0A6231CA52C9900CC3AED /* MeetingOrderDetailViewController.m */; };
 		65B0A6281CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B0A6261CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.m */; };
 		65B0A6291CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B0A6271CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.xib */; };
+		65B0A62D1CA5373F00CC3AED /* CommitOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B0A62C1CA5373F00CC3AED /* CommitOrderViewController.m */; };
+		65B0A6311CA539D500CC3AED /* OrderInformationViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B0A62F1CA539D500CC3AED /* OrderInformationViewCell.m */; };
+		65B0A6321CA539D500CC3AED /* OrderInformationViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B0A6301CA539D500CC3AED /* OrderInformationViewCell.xib */; };
+		65B0A63B1CA53BA300CC3AED /* SwitchChoiseViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B0A6391CA53BA300CC3AED /* SwitchChoiseViewCell.m */; };
+		65B0A63C1CA53BA300CC3AED /* SwitchChoiseViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B0A63A1CA53BA300CC3AED /* SwitchChoiseViewCell.xib */; };
+		65B0A6401CA53BCD00CC3AED /* CouponCodeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B0A63E1CA53BCD00CC3AED /* CouponCodeViewCell.m */; };
+		65B0A6411CA53BCD00CC3AED /* CouponCodeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B0A63F1CA53BCD00CC3AED /* CouponCodeViewCell.xib */; };
+		65B0A6451CA53BFC00CC3AED /* TotalPriceAndPayButtonViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B0A6431CA53BFC00CC3AED /* TotalPriceAndPayButtonViewCell.m */; };
+		65B0A6461CA53BFC00CC3AED /* TotalPriceAndPayButtonViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B0A6441CA53BFC00CC3AED /* TotalPriceAndPayButtonViewCell.xib */; };
+		65B0A64A1CA53C9000CC3AED /* AcceptContractViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B0A6481CA53C9000CC3AED /* AcceptContractViewCell.m */; };
+		65B0A64B1CA53C9000CC3AED /* AcceptContractViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B0A6491CA53C9000CC3AED /* AcceptContractViewCell.xib */; };
 		65B419441C756B7700FA817B /* PBIndustryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B419421C756B7700FA817B /* PBIndustryViewController.m */; };
 		65B419641C75C25200FA817B /* PBCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B419621C75C25200FA817B /* PBCollectionCell.m */; };
 		65B419651C75C25200FA817B /* PBCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B419631C75C25200FA817B /* PBCollectionCell.xib */; };
@@ -655,6 +669,10 @@
 		658376191C968A8700DFE386 /* JCYSetNewPhoneNumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYSetNewPhoneNumViewController.m; sourceTree = "<group>"; };
 		658AA7F21C801A5A00ACB94B /* PBLincKiaSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBLincKiaSpaceViewController.h; sourceTree = "<group>"; };
 		658AA7F31C801A5A00ACB94B /* PBLincKiaSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBLincKiaSpaceViewController.m; sourceTree = "<group>"; };
+		65929E071CA8DD5B000A8D76 /* PayOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayOrderModel.h; sourceTree = "<group>"; };
+		65929E081CA8DD5B000A8D76 /* PayOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayOrderModel.m; sourceTree = "<group>"; };
+		65929E0A1CA900A3000A8D76 /* button_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_off@3x.png"; sourceTree = "<group>"; };
+		65929E0B1CA900A3000A8D76 /* button_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_on@3x.png"; sourceTree = "<group>"; };
 		6596F1851C8EC11B00B12479 /* AllOrderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrderListViewController.h; sourceTree = "<group>"; };
 		6596F1861C8EC11B00B12479 /* AllOrderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrderListViewController.m; sourceTree = "<group>"; };
 		6596F18E1C8EDEC800B12479 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
@@ -685,6 +703,23 @@
 		65B0A6251CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeetingRoomOrderTableViewCell.h; sourceTree = "<group>"; };
 		65B0A6261CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeetingRoomOrderTableViewCell.m; sourceTree = "<group>"; };
 		65B0A6271CA52D9400CC3AED /* MeetingRoomOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeetingRoomOrderTableViewCell.xib; sourceTree = "<group>"; };
+		65B0A62B1CA5373F00CC3AED /* CommitOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitOrderViewController.h; sourceTree = "<group>"; };
+		65B0A62C1CA5373F00CC3AED /* CommitOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitOrderViewController.m; sourceTree = "<group>"; };
+		65B0A62E1CA539D500CC3AED /* OrderInformationViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderInformationViewCell.h; sourceTree = "<group>"; };
+		65B0A62F1CA539D500CC3AED /* OrderInformationViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderInformationViewCell.m; sourceTree = "<group>"; };
+		65B0A6301CA539D500CC3AED /* OrderInformationViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderInformationViewCell.xib; sourceTree = "<group>"; };
+		65B0A6381CA53BA300CC3AED /* SwitchChoiseViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchChoiseViewCell.h; sourceTree = "<group>"; };
+		65B0A6391CA53BA300CC3AED /* SwitchChoiseViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchChoiseViewCell.m; sourceTree = "<group>"; };
+		65B0A63A1CA53BA300CC3AED /* SwitchChoiseViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchChoiseViewCell.xib; sourceTree = "<group>"; };
+		65B0A63D1CA53BCD00CC3AED /* CouponCodeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouponCodeViewCell.h; sourceTree = "<group>"; };
+		65B0A63E1CA53BCD00CC3AED /* CouponCodeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouponCodeViewCell.m; sourceTree = "<group>"; };
+		65B0A63F1CA53BCD00CC3AED /* CouponCodeViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponCodeViewCell.xib; sourceTree = "<group>"; };
+		65B0A6421CA53BFC00CC3AED /* TotalPriceAndPayButtonViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalPriceAndPayButtonViewCell.h; sourceTree = "<group>"; };
+		65B0A6431CA53BFC00CC3AED /* TotalPriceAndPayButtonViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalPriceAndPayButtonViewCell.m; sourceTree = "<group>"; };
+		65B0A6441CA53BFC00CC3AED /* TotalPriceAndPayButtonViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalPriceAndPayButtonViewCell.xib; sourceTree = "<group>"; };
+		65B0A6471CA53C9000CC3AED /* AcceptContractViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptContractViewCell.h; sourceTree = "<group>"; };
+		65B0A6481CA53C9000CC3AED /* AcceptContractViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcceptContractViewCell.m; sourceTree = "<group>"; };
+		65B0A6491CA53C9000CC3AED /* AcceptContractViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AcceptContractViewCell.xib; sourceTree = "<group>"; };
 		65B419411C756B7700FA817B /* PBIndustryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBIndustryViewController.h; sourceTree = "<group>"; };
 		65B419421C756B7700FA817B /* PBIndustryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBIndustryViewController.m; sourceTree = "<group>"; };
 		65B419611C75C25200FA817B /* PBCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBCollectionCell.h; sourceTree = "<group>"; };
@@ -1510,6 +1545,32 @@
 			path = OrderDetail;
 			sourceTree = "<group>";
 		};
+		65B0A62A1CA5372900CC3AED /* CommitOrder */ = {
+			isa = PBXGroup;
+			children = (
+				65929E071CA8DD5B000A8D76 /* PayOrderModel.h */,
+				65929E081CA8DD5B000A8D76 /* PayOrderModel.m */,
+				65B0A62B1CA5373F00CC3AED /* CommitOrderViewController.h */,
+				65B0A62C1CA5373F00CC3AED /* CommitOrderViewController.m */,
+				65B0A62E1CA539D500CC3AED /* OrderInformationViewCell.h */,
+				65B0A62F1CA539D500CC3AED /* OrderInformationViewCell.m */,
+				65B0A6301CA539D500CC3AED /* OrderInformationViewCell.xib */,
+				65B0A6381CA53BA300CC3AED /* SwitchChoiseViewCell.h */,
+				65B0A6391CA53BA300CC3AED /* SwitchChoiseViewCell.m */,
+				65B0A63A1CA53BA300CC3AED /* SwitchChoiseViewCell.xib */,
+				65B0A63D1CA53BCD00CC3AED /* CouponCodeViewCell.h */,
+				65B0A63E1CA53BCD00CC3AED /* CouponCodeViewCell.m */,
+				65B0A63F1CA53BCD00CC3AED /* CouponCodeViewCell.xib */,
+				65B0A6421CA53BFC00CC3AED /* TotalPriceAndPayButtonViewCell.h */,
+				65B0A6431CA53BFC00CC3AED /* TotalPriceAndPayButtonViewCell.m */,
+				65B0A6441CA53BFC00CC3AED /* TotalPriceAndPayButtonViewCell.xib */,
+				65B0A6471CA53C9000CC3AED /* AcceptContractViewCell.h */,
+				65B0A6481CA53C9000CC3AED /* AcceptContractViewCell.m */,
+				65B0A6491CA53C9000CC3AED /* AcceptContractViewCell.xib */,
+			);
+			path = CommitOrder;
+			sourceTree = "<group>";
+		};
 		65B419401C756B7700FA817B /* IndustryList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1654,6 +1715,7 @@
 				6563AE7B1C8FBF860024CC90 /* StarfishCoin */,
 				656A167D1C8D8DEF00E29F8F /* Common */,
 				65DB75641C92610C000B12D1 /* Regist */,
+				65B0A62A1CA5372900CC3AED /* CommitOrder */,
 				655D0FDC1C9185D5008CED32 /* TimerView */,
 				6596F1841C8EC0F300B12479 /* MyOnlineBooking */,
 				65B0A6191CA4ECD200CC3AED /* OrderDetail */,
@@ -1874,6 +1936,8 @@
 		CD29E8E11C7AFFD300871F69 /* 通用 */ = {
 			isa = PBXGroup;
 			children = (
+				65929E0A1CA900A3000A8D76 /* button_off@3x.png */,
+				65929E0B1CA900A3000A8D76 /* button_on@3x.png */,
 				655D0FD61C91807A008CED32 /* title_cancel_unpressed@3x.png */,
 				6563AEBF1C902E190024CC90 /* search_bg@2x.png */,
 				6563AEC01C902E190024CC90 /* search_bg@3x.png */,
@@ -2263,6 +2327,7 @@
 				CD29E8FB1C7AFFD400871F69 /* community_introduce_but_phone@3x.png in Resources */,
 				CD29E8FC1C7AFFD400871F69 /* headphoto_defaluted@2x.png in Resources */,
 				CD29E8F81C7AFFD400871F69 /* bottom_line@2x.png in Resources */,
+				65B0A6321CA539D500CC3AED /* OrderInformationViewCell.xib in Resources */,
 				CD6945041C75C89600E04081 /* PBMineTableViewSingleLineCell.xib in Resources */,
 				CD29E88A1C7AFE3500871F69 /* mine_headphoto_example.png in Resources */,
 				6562F6931C7EEB2B005F5B68 /* industry@2x.png in Resources */,
@@ -2302,6 +2367,7 @@
 				CDA991971C842608000C2AB2 /* multichoicebox_unchecked@2x.png in Resources */,
 				CD29E8901C7AFE3500871F69 /* mine_pay@3x.png in Resources */,
 				CD29E93A1C7B087500871F69 /* environment_update@2x.png in Resources */,
+				65929E0D1CA900A3000A8D76 /* button_on@3x.png in Resources */,
 				65B419651C75C25200FA817B /* PBCollectionCell.xib in Resources */,
 				6563AEA11C8FFAEE0024CC90 /* alipay@3x.png in Resources */,
 				6562F6641C7EEB2B005F5B68 /* date_horizonal_line@2x.png in Resources */,
@@ -2309,6 +2375,7 @@
 				CD1D572F1C71BDB700BB30AC /* Main.storyboard in Resources */,
 				CD29E8A81C7AFE3500871F69 /* community_introduce_comment@2x.png in Resources */,
 				CD29E85A1C7AFE3500871F69 /* service_mine_wage@2x.png in Resources */,
+				65B0A6411CA53BCD00CC3AED /* CouponCodeViewCell.xib in Resources */,
 				CDF7545F1C80361D0038622E /* PBMeetingRoomTableTopViewCell.xib in Resources */,
 				65DB757B1C92BDEA000B12D1 /* my_camer@2x.png in Resources */,
 				CDA9919A1C8426C6000C2AB2 /* single_line_bottom@2x.png in Resources */,
@@ -2319,6 +2386,7 @@
 				6562F6A01C7EEB2B005F5B68 /* time@2x.png in Resources */,
 				CD29E8CB1C7AFE3500871F69 /* member_unpressed@3x.png in Resources */,
 				CD29E9371C7B087500871F69 /* environment_circle@3x.png in Resources */,
+				65B0A63C1CA53BA300CC3AED /* SwitchChoiseViewCell.xib in Resources */,
 				6563AEBB1C902C2E0024CC90 /* title_search_unpressed@3x.png in Resources */,
 				CD29E8A61C7AFE3500871F69 /* community_introduce_camer@2x.png in Resources */,
 				6563AEC11C902E190024CC90 /* search_bg@2x.png in Resources */,
@@ -2328,12 +2396,14 @@
 				6562F6821C7EEB2B005F5B68 /* community_introduce_hardware_facility@2x.png in Resources */,
 				CD29E8A71C7AFE3500871F69 /* community_introduce_camer@3x.png in Resources */,
 				CD29E8C51C7AFE3500871F69 /* home_pressed@3x.png in Resources */,
+				65B0A6461CA53BFC00CC3AED /* TotalPriceAndPayButtonViewCell.xib in Resources */,
 				CD29E8891C7AFE3500871F69 /* mine_customer_service_center@3x.png in Resources */,
 				6562F6841C7EEB2B005F5B68 /* horizonal_line@3x.png in Resources */,
 				6562F67C1C7EEB2B005F5B68 /* community_introduce_but_phone@2x.png in Resources */,
 				6562F6881C7EEB2B005F5B68 /* open_desk@3x.png in Resources */,
 				CD29E8631C7AFE3500871F69 /* 快递查询@3x.png in Resources */,
 				656A16701C8D6CFF00E29F8F /* MyCommentTableViewCell.xib in Resources */,
+				65B0A64B1CA53C9000CC3AED /* AcceptContractViewCell.xib in Resources */,
 				6562F6891C7EEB2B005F5B68 /* personal_office@2x.png in Resources */,
 				CDA9919B1C8426C6000C2AB2 /* single_line_bottom@3x.png in Resources */,
 				CD29E8D01C7AFE3500871F69 /* office_community_pressed@2x.png in Resources */,
@@ -2392,6 +2462,7 @@
 				CD9C3A081C84186900071D60 /* multichoicebox_unchecked@3x.png in Resources */,
 				CD9C3A041C840D7700071D60 /* ZZSpaceOnlineReserveSeartTableViewCell.xib in Resources */,
 				6563AEC21C902E190024CC90 /* search_bg@3x.png in Resources */,
+				65929E0C1CA900A3000A8D76 /* button_off@3x.png in Resources */,
 				6563AEB51C9003590024CC90 /* pop-up@2x.png in Resources */,
 				CD29E8B11C7AFE3500871F69 /* personal_office@2x.png in Resources */,
 				CD29E85D1C7AFE3500871F69 /* 会议室@3x.png in Resources */,
@@ -2556,9 +2627,11 @@
 				65B4196B1C75D06B00FA817B /* JCYGlobalData.m in Sources */,
 				656A166F1C8D6CFF00E29F8F /* MyCommentTableViewCell.m in Sources */,
 				CD1D572C1C71BDB700BB30AC /* MemberPageViewController.m in Sources */,
+				65B0A6451CA53BFC00CC3AED /* TotalPriceAndPayButtonViewCell.m in Sources */,
 				65B419741C75D1BF00FA817B /* PBCompanyListTableViewCell.m in Sources */,
 				6572BE791C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m in Sources */,
 				6563AEAE1C8FFEF40024CC90 /* PBAlertViewController.m in Sources */,
+				65B0A64A1CA53C9000CC3AED /* AcceptContractViewCell.m in Sources */,
 				658376141C96552500DFE386 /* JCYModifiedPhoneNumberViewController.m in Sources */,
 				6572BE741C86B5E300F495D1 /* JCYBookingSpaceViewController.m in Sources */,
 				65B4196F1C75D18600FA817B /* PBCompanyListViewController.m in Sources */,
@@ -2596,10 +2669,12 @@
 				6563AE821C8FC2210024CC90 /* JCYStarfishCoinRechargeCell.m in Sources */,
 				656A16641C8D596F00E29F8F /* JCYUnpayOrderListViewController.m in Sources */,
 				CD6945011C75C89600E04081 /* PBMineTableViewSecondCell.m in Sources */,
+				65B0A6311CA539D500CC3AED /* OrderInformationViewCell.m in Sources */,
 				6563AE871C8FC5F90024CC90 /* JCYCollectionCell.m in Sources */,
 				656B75C51C9F89D100AA00D6 /* JCYChangePhoneNumForLoginViewController.m in Sources */,
 				6597AB281C83E1F000E2705F /* LinckiaSpace.m in Sources */,
 				CDF754531C8028660038622E /* UITabBar+badge.m in Sources */,
+				65B0A6401CA53BCD00CC3AED /* CouponCodeViewCell.m in Sources */,
 				CD4F06C11C7ADA6B00F6478A /* ExpressTableViewCell.m in Sources */,
 				CDF7545E1C80361D0038622E /* PBMeetingRoomTableTopViewCell.m in Sources */,
 				65D8EA8A1C9A8E38002564BB /* JCYSetNewPasswordViewController.m in Sources */,
@@ -2616,6 +2691,7 @@
 				6563AE8B1C8FF6930024CC90 /* JCYStarfishCoinRechargeViewController.m in Sources */,
 				6562F6091C7EE7A0005F5B68 /* ZLCalendarDataSource.m in Sources */,
 				6563AE7E1C8FBF9B0024CC90 /* JCYStarfishCoinViewController.m in Sources */,
+				65929E091CA8DD5B000A8D76 /* PayOrderModel.m in Sources */,
 				CD0178BC1C7C5A2F00B9DEC9 /* JSDropDownMenu.m in Sources */,
 				CD69448D1C75AD9D00E04081 /* LoginViewController.m in Sources */,
 				655915371C853FDC002FC3FD /* PBSpaceTableAdressCell.m in Sources */,
@@ -2638,6 +2714,7 @@
 				659EAC861C7ADFC500208837 /* PBActivtySpaceDetailViewController.m in Sources */,
 				6562F6101C7EE7A0005F5B68 /* ZLCalendarUtil.m in Sources */,
 				65651EC61C894A86004E38B0 /* MyAccountViewController.m in Sources */,
+				65B0A62D1CA5373F00CC3AED /* CommitOrderViewController.m in Sources */,
 				CDC954B81C7C684800D2D7D1 /* PBDiDiViewController.m in Sources */,
 				658376171C96598B00DFE386 /* JCYChangedPhoneNumViewController.m in Sources */,
 				659EAC6B1C7ACC1700208837 /* JCYActivitySpaceInfoCellTableViewCell.m in Sources */,
@@ -2650,6 +2727,7 @@
 				65651ECA1C895470004E38B0 /* PBChangeHeadPicTableViewCell.m in Sources */,
 				656A167B1C8D801500E29F8F /* PBMyBookingListTableViewCell.m in Sources */,
 				65651ED31C8989EB004E38B0 /* LGTMBase64.m in Sources */,
+				65B0A63B1CA53BA300CC3AED /* SwitchChoiseViewCell.m in Sources */,
 				CD5CD00C1C71E10F00B6A34B /* AFRquest.m in Sources */,
 				655D0FD11C9170A1008CED32 /* JCYEvaluateViewController.m in Sources */,
 				65DB756C1C92A39E000B12D1 /* RegisterInfoViewController.m in Sources */,
