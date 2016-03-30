@@ -40,6 +40,8 @@
 @property (strong, nonatomic) AFRquest *OrdersGetOne;
 @property (strong, nonatomic) AFRquest *AddMeetingOrder;
 @property (strong, nonatomic) AFRquest *AddOrders;
+@property (strong, nonatomic) AFRquest *CheckDiscount;
+@property (strong, nonatomic) AFRquest *GetProtocol;
 
 
 
@@ -77,25 +79,17 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if ([JCYGlobalData sharedInstance].hasNavi) {
-        UINavigationController *navi=(UINavigationController *)self.parentViewController;
+     UINavigationController *navi=(UINavigationController *)self.parentViewController;
+    //导航隐藏的页面跳转至导航显示的页面
+    if (navi.navigationBar.hidden) {
+       
         [navi.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:17],NSForegroundColorAttributeName:[UIColor whiteColor]}];
         navi.navigationBar.hidden = NO;
 
     }
 
 }
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-    if ([JCYGlobalData sharedInstance].hasNavi){
-        UINavigationController *navi=(UINavigationController *)self.parentViewController;
-        navi.navigationBar.hidden = YES;
-        [JCYGlobalData sharedInstance].hasNavi=NO;
-    }
-   
-    
-}
+
 -(void)tableViewregisterNib
 {
     [_orderTableView registerNib:[UINib nibWithNibName:@"MessageClassifyViewCell" bundle:nil] forCellReuseIdentifier:messageClassifyCellIdentify];
@@ -117,7 +111,6 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
     self.userInfo=[JCYGlobalData sharedInstance].userInfo;//用户信息
     //存放支付方式（支付宝，微信，银联）的照片名
     self.paymentImageNameArray=@[@"alipay@3x.png",@"wechat@3x.png",@"unionpay@3x.png"];
-    
     
     //给PayOrderModel赋初值
     self.payOrderInfo=[[PayOrderModel alloc] init];
@@ -152,6 +145,34 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
         [self.orderTableView setContentOffset:CGPointMake(0,self.couponCodecell.frame.origin.y-118) animated:YES];
     }
 }
+//点击return 按钮隐藏键盘
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    //优惠券textfield
+    if ((textField.tag-3000)==2) {
+        //[self couponCodeSure:nil];
+        self.payOrderInfo.DiscountCode = self.couponCodecell.textFieldCouponCode.text;
+    }
+    return YES;
+}
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    
+    switch (textField.tag-3000) {
+        case 2:
+            self.payOrderInfo.DiscountCode=textField.text;
+            if (textField.text.length==0) {
+                self.btnConfirmAndGoPay.enabled=YES;
+            }else{
+                self.btnConfirmAndGoPay.enabled=NO;
+            }
+            
+            break;
+        default:
+            break;
+    }
+}
+
 
 //优惠券输入边框变换
 -(void)couponTextBorderChange:(UITextField *)textField isFocused:(BOOL)isFocuse{
@@ -353,34 +374,35 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
 //        
 //        [self.navigationController pushViewController:contractInfoViewController animated:YES];
 //    }
+    
+    [JCYGlobalData sharedInstance].protocolDic=@{@"protocolType":@2};
+    [self performSegueWithIdentifier:@"CommitOrderToProrocol" sender:self];
+    
+    
     NSLog(@"－－－－查看租赁合同");
 
 }
 
 //优惠券编码确定
 -(void)couponCodeSure:(id)sender{
-//    [self.couponCodecell.textFieldCouponCode resignFirstResponder];
-//    if (self.couponCodecell.textFieldCouponCode.text.length>1)
-//    {
-//        CheckDiscountModel * checkDiscountModel = [[CheckDiscountModel alloc]init];
-//        checkDiscountModel.DiscountCode = self.couponCodecell.textFieldCouponCode.text;
-//        checkDiscountModel.OrderId = self.orderInfo.OrderId;
-//        
-//        NSLog(@"%@",[checkDiscountModel jsonString]);
-//        [self requestFromServerCheckDiscount:checkDiscountModel];//检查优惠券
-//    }else{
-//        
-//        NSString *amount=[NSString stringWithFormat:@"%.0f",self.orderInfo.Amount];//订单总额
-//        self.labelTotalPrice.text = amount;//订单总额
-//        //显示应付金额
-//        self.labelAccountPayable.text = amount;
-//        [[AlertUtils sharedInstance] showWithText:@"请输入优惠券编码" inView:self.view lastTime:2.0];
-//    }
-    
-    NSLog(@"－－－－优惠卷");
-
+    [self.couponCodecell.textFieldCouponCode resignFirstResponder];
+    if (self.couponCodecell.textFieldCouponCode.text.length>1)
+    {
+        
+        [self requestFromServerCheckDiscount];//检查优惠券
+    }else{
+        
+        NSString *amount=[NSString stringWithFormat:@"%.0f",[self.orderInfo[@"Amount"] floatValue]];//订单总额
+        self.labelTotalPrice.text = amount;//订单总额
+        //显示应付金额
+        self.labelAccountPayable.text = amount;
+        [[PBAlert sharedInstance] showText:@"请输入优惠券编码" inView:self.view withTime:2.0];
+    }
     
 }
+
+
+
 - (IBAction)goBack:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -427,14 +449,13 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
         {
             NSLog(@"点击立即预定进入");
             
-          //  [[ZZAllService sharedInstance] serviceQueryByObj:[ZZGlobalModel sharedInstance].cartModel  delegate:self httpTag:HTTPHelperTag_Orders_Add];//申请预定订单
             [self requestFromServerForLinckiaSpace];
         }
             break;
             
         case OrderSubmitFlag_OrdersAddMeetingRoom:
         {
-            //[[ZZAllService sharedInstance]serviceQueryByObj:[ZZGlobalModel sharedInstance].meetingCarModel delegate:self httpTag:HTTPHelperTag_Orders_AddMeeting];
+            
             [self requestFromServerForMeeting];
         }
             
@@ -466,9 +487,7 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
 
 -(void)dataReceived:(NSNotification *)notif{
     int result = [_OrdersGetOne.resultDict[@"Code"] intValue];
-    if (result == SUCCESS) {
-        NSLog(@"办公室");
-        
+    if (result == SUCCESS) {        
         [self dealResposeResult_OrderDtail:_OrdersGetOne.resultDict[@"Data"]];
     }else{
         [[PBAlert sharedInstance] showText:_OrdersGetOne.resultDict[@"Description"] inView:self.view withTime:2.0];
@@ -549,6 +568,52 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
     
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",AddOrders] object:nil];
 }
+//检查优惠券
+-(void)requestFromServerCheckDiscount
+{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(checkDiscountDataReceived:) name:[NSString stringWithFormat:@"%i",CheckDiscount] object:nil];
+    
+    NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+    NSString * userToken = [userInfo valueForKey:USERTOKEN];
+    
+    _CheckDiscount = [[AFRquest alloc]init];
+    
+    _CheckDiscount.subURLString =[NSString stringWithFormat:@"api/Orders/CheckDiscount?userToken=%@&deviceType=ios",userToken];
+    
+    _CheckDiscount.parameters = @{@"DiscountCode":self.couponCodecell.textFieldCouponCode.text,@"OrderId":self.orderInfo[@"OrderId"]};
+    
+    _CheckDiscount.style = POST;
+    
+    [_CheckDiscount requestDataFromWithFlag:CheckDiscount];
+}
+
+-(void)checkDiscountDataReceived:(NSNotification *)notif
+{
+    int result = [_CheckDiscount.resultDict[@"Code"] intValue];
+    if (result == SUCCESS) {
+        
+        [self dealResposeResult_CheckDiscount:_CheckDiscount.resultDict];
+    }else{
+        [[PBAlert sharedInstance] showText:_CheckDiscount.resultDict[@"Description"] inView:self.view withTime:2.0];
+        self.btnConfirmAndGoPay.enabled = YES;
+        self.labelAccountPayable.text = self.labelTotalPrice.text;
+        self.payOrderInfo.DiscountCode = @"";
+        [self.orderTableView reloadData];
+        
+    }
+    
+    NSLog(@"%@",_CheckDiscount.resultDict);
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",CheckDiscount] object:nil];
+}
+
+
+//从服务器请求数据协议   支付协议
+-(void)requestDataFromServer_Protocol{
+    //协议类型（注册协议：1，支付协议：2，服务条款：3，私人订制：4，商户合作:5）
+    //[[ZZAllService sharedInstance] serviceQueryByObj:@{@"protocolType":@2} delegate:self httpTag:HTTPHelperTag_System_GetProtocol];
+    
+}
 
 
 //处理空间单元返回后的结果
@@ -566,6 +631,21 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
     self.labelAccountPayable.text=[needPay stringByAppendingString:payAmount];//应付金额
 
 }
+
+
+//处理检查优惠券结果
+-(void)dealResposeResult_CheckDiscount:(NSDictionary *)response{
+    self.btnConfirmAndGoPay.enabled=YES;
+    self.payOrderInfo.DiscountAmount=[response[@"Data"] floatValue];
+    NSString *amount=[NSString stringWithFormat:@"%.0f",[self.orderInfo[@"Amount"] floatValue]];//订单总额
+    NSMutableString * totalPrice = [NSMutableString stringWithFormat:@"￥"];
+    self.labelTotalPrice.text=[totalPrice stringByAppendingString:amount];//订单总额
+    //显示应付金额
+    NSString *payAmount=[NSString stringWithFormat:@"%.0f",[self.orderInfo[@"Amount"] floatValue]-self.payOrderInfo.DiscountAmount];
+    NSMutableString * needPay = [NSMutableString stringWithFormat:@"￥"];
+    self.labelAccountPayable.text=[needPay stringByAppendingString:payAmount];//应付金额
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

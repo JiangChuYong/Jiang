@@ -55,7 +55,8 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
 -(void)viewWillAppear:(BOOL)animated
 {
     
-    self.navigationController.tabBarController.tabBar.hidden = YES;
+ UINavigationController *navi=(UINavigationController *)self.parentViewController;
+    navi.navigationBar.hidden=YES;
 }
 
 - (void)viewDidLoad {
@@ -200,7 +201,6 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
     if (selectedRooms.count) {
          [JCYGlobalData sharedInstance].orderSubmitFlag = OrderSubmitFlag_OrdersAdd;
         [JCYGlobalData sharedInstance].meetingCarArr=selectedRooms;
-        [JCYGlobalData sharedInstance].hasNavi=YES;
 
         [self performSegueWithIdentifier:@"LinckiaSpaceOlineBookingToPayOrder" sender:self];
     }else{

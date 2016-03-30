@@ -67,8 +67,7 @@ typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
 //会议室数组
 @property (strong, nonatomic) NSMutableArray *meetingCarArr;
 
-//导航隐藏的页面跳转到导航显示的页面
-@property (assign, nonatomic) BOOL hasNavi;
+
 
 
 //时间大小遍历

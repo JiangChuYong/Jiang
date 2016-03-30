@@ -97,6 +97,8 @@ typedef enum{
     AddMeetingOrder,
     //申请预定订单
     AddOrders,
+    //检查优惠券
+    CheckDiscount,
     
     
     

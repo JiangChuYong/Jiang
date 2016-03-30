@@ -326,6 +326,7 @@
 //协议action
 - (IBAction)registProtocol:(id)sender {
     
+   [JCYGlobalData sharedInstance].protocolDic=@{@"protocolType":@1};
     [self performSegueWithIdentifier:@"RegistToProtocol" sender:self];
 }
 //勾选协议

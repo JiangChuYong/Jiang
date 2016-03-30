@@ -2397,6 +2397,8 @@
                             <constraint firstItem="9xA-D9-vHM" firstAttribute="leading" secondItem="RhT-tS-KUp" secondAttribute="leading" id="pJr-7m-hBi"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ttc-tl-WWa"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="btnPhone" destination="JZm-bx-gOH" id="AJJ-cW-oZv"/>
                         <outlet property="textProtocol" destination="KgJ-rR-oJj" id="Ikb-AP-zvz"/>
@@ -2404,7 +2406,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4eq-IM-Bqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2769" y="-7388"/>
+            <point key="canvasLocation" x="4430" y="-7352"/>
         </scene>
         <!--用户注册-->
         <scene sceneID="eKt-gg-xlw">
@@ -3646,7 +3648,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vm7-XU-82E">
+                            <tableView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vm7-XU-82E">
                                 <rect key="frame" x="0.0" y="64" width="320" height="374"/>
                                 <color key="backgroundColor" red="0.83921568629999999" green="0.83921568629999999" blue="0.83921568629999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -3747,6 +3749,7 @@
                         <outlet property="labelAccountPayable" destination="1tj-dR-KEp" id="xda-fv-vJM"/>
                         <outlet property="labelTotalPrice" destination="L26-Xa-knN" id="lCM-Sl-8K7"/>
                         <outlet property="orderTableView" destination="Vm7-XU-82E" id="dc8-jK-K2p"/>
+                        <segue destination="oY4-Oj-rck" kind="push" identifier="CommitOrderToProrocol" id="ZIW-PW-2Y5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNQ-c4-34X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -5530,7 +5533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ssi-dO-RaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="876" y="5388"/>
+            <point key="canvasLocation" x="948" y="5532"/>
         </scene>
         <!--修改手机号码-->
         <scene sceneID="t2r-9L-YCB">
@@ -6318,7 +6321,8 @@
         <segue reference="Qfv-Fx-Zmo"/>
         <segue reference="IAq-8G-SD6"/>
         <segue reference="XPk-hP-8rb"/>
-        <segue reference="dNk-Lo-eZV"/>
+        <segue reference="jyX-rV-DV2"/>
+        <segue reference="ZIW-PW-2Y5"/>
         <segue reference="TUF-bB-2dv"/>
     </inferredMetricsTieBreakers>
 </document>

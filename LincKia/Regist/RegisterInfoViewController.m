@@ -29,6 +29,16 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+    if ([self.parentViewController isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *navi=(UINavigationController *)self.parentViewController;
+        navi.navigationBar.hidden=YES;
+
+    }
+}
+
 #pragma mark -- 私有方法
 
 /**
@@ -36,7 +46,15 @@
  */
 
 - (IBAction)goback:(id)sender {
-[self dismissViewControllerAnimated:YES completion:nil];
+    
+    
+    if ([self.parentViewController isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *navi=(UINavigationController *)self.parentViewController;
+        [navi popViewControllerAnimated:YES];
+    }else{
+        [self dismissViewControllerAnimated:YES completion:nil];
+
+    }
     
 }
 
@@ -69,7 +87,7 @@
     
     _GetProtocol.subURLString =@"api/Sys/GetProtocol?deviceType=ios";
     
-    _GetProtocol.parameters = @{@"protocolType":@1};
+    _GetProtocol.parameters = [JCYGlobalData sharedInstance].protocolDic;
     
     _GetProtocol.style = GET;
     
