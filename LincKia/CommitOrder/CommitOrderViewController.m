@@ -38,6 +38,8 @@
 @property(nonatomic,strong)CouponCodeViewCell* couponCodecell;
 
 @property (strong, nonatomic) AFRquest *OrdersGetOne;
+@property (strong, nonatomic) AFRquest *AddMeetingOrder;
+
 
 
 
@@ -385,26 +387,6 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
 }
 
 
-//从服务器请求数据 空间搜索列表
--(void)requestFromServer
-{
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",OrdersGetOne] object:nil];
-    
-    NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
-    NSString * userToken = [userInfo valueForKey:USERTOKEN];
-    
-    _OrdersGetOne = [[AFRquest alloc]init];
-    
-    _OrdersGetOne.subURLString =[NSString stringWithFormat:@"api/Orders/GetOne?userToken=%@&deviceType=ios",userToken];
-    
-    _OrdersGetOne.parameters = @{@"orderID":[JCYGlobalData sharedInstance].orderId};
-    
-    _OrdersGetOne.style = GET;
-    
-    [_OrdersGetOne requestDataFromWithFlag:OrdersGetOne];
-    
-}
-
 
 
 //申请预定订单
@@ -430,6 +412,7 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
         case OrderSubmitFlag_OrdersAddMeetingRoom:
         {
             //[[ZZAllService sharedInstance]serviceQueryByObj:[ZZGlobalModel sharedInstance].meetingCarModel delegate:self httpTag:HTTPHelperTag_Orders_AddMeeting];
+            [self requestFromServerForMeeting];
         }
             
         default:
@@ -437,6 +420,26 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
     }
 }
 
+
+//从服务器请求数据 空间搜索列表
+-(void)requestFromServer
+{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",OrdersGetOne] object:nil];
+    
+    NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+    NSString * userToken = [userInfo valueForKey:USERTOKEN];
+    
+    _OrdersGetOne = [[AFRquest alloc]init];
+    
+    _OrdersGetOne.subURLString =[NSString stringWithFormat:@"api/Orders/GetOne?userToken=%@&deviceType=ios",userToken];
+    
+    _OrdersGetOne.parameters = @{@"orderID":[JCYGlobalData sharedInstance].orderId};
+    
+    _OrdersGetOne.style = GET;
+    
+    [_OrdersGetOne requestDataFromWithFlag:OrdersGetOne];
+    
+}
 
 
 -(void)dataReceived:(NSNotification *)notif{
@@ -453,6 +456,42 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
     
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",OrdersGetOne] object:nil];
 }
+
+-(void)requestFromServerForMeeting
+{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(meetingDataReceived:) name:[NSString stringWithFormat:@"%i",AddMeetingOrder] object:nil];
+    
+    NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+    NSString * userToken = [userInfo valueForKey:USERTOKEN];
+    
+    _AddMeetingOrder = [[AFRquest alloc]init];
+    
+    _AddMeetingOrder.subURLString =[NSString stringWithFormat:@"api/Orders/AddMeeting?userToken=%@&deviceType=ios",userToken];
+    
+    _AddMeetingOrder.parameters = @{@"cart":[JCYGlobalData sharedInstance].meetingCarArr};
+
+    _AddMeetingOrder.style = POST;
+    
+    [_AddMeetingOrder requestDataFromWithFlag:AddMeetingOrder];
+}
+
+
+-(void)meetingDataReceived:(NSNotification *)notif{
+    int result = [_AddMeetingOrder.resultDict[@"Code"] intValue];
+    if (result == SUCCESS) {
+        NSLog(@"MeetingRoom");
+        
+        [self dealResposeResult_OrderDtail:_AddMeetingOrder.resultDict[@"Data"]];
+    }else{
+        [[PBAlert sharedInstance] showText:_AddMeetingOrder.resultDict[@"Description"] inView:self.view withTime:2.0];
+        
+    }
+    
+    NSLog(@"%@",_AddMeetingOrder.resultDict);
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",AddMeetingOrder] object:nil];
+}
+
 
 
 //处理空间单元返回后的结果

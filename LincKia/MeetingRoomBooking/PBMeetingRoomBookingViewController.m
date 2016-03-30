@@ -110,7 +110,75 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
 #pragma -- mark ACTION PART
 
 - (IBAction)bookingBtnPressed:(UIButton *)sender {
+    
+    if (!_spaceSelected) {
+        [[PBAlert sharedInstance]showText:@"请选择办公位置" inView:self.view withTime:2.0];
+        return;
+    }
+    if (!_dateSelected){
+        
+        [[PBAlert sharedInstance]showText:@"请选择租用日期" inView:self.view withTime:2.0];
+        return;
+    }
+    if (!_startTimeSelected){
+       
+        [[PBAlert sharedInstance]showText:@"请选择开始租用时间" inView:self.view withTime:2.0];
+        return;
+    }
+    if (!_endTimeSelected){
+      
+         [[PBAlert sharedInstance]showText:@"请选择结束租用时间" inView:self.view withTime:2.0];
+        return;
+    }
+    [self spaceCellWasSeleted];
+
 }
+
+-(void)spaceCellWasSeleted
+{
+    //orderSubmitFlag 从点击立即预定按钮进入
+    [JCYGlobalData sharedInstance].orderSubmitFlag = OrderSubmitFlag_OrdersAddMeetingRoom;
+    
+    NSMutableArray * selectedMeetingRooms = [NSMutableArray array];
+    for (NSDictionary * space in _meetingRooms) {
+        if ([space[@"isSelected"] boolValue]) {
+            NSMutableDictionary * addToMeetingCartDic = [[NSMutableDictionary alloc]init];
+            [addToMeetingCartDic setObject:space[@"SpaceCellId"] forKey:@"SpaceCellId"];
+            [addToMeetingCartDic setObject:[NSString stringWithFormat:@"%@ %@:00",_placeholders[1],_placeholders[2]] forKey:@"RentStartTime"];
+           
+            [addToMeetingCartDic setObject:[NSString stringWithFormat:@"%@ %@:00",_placeholders[1],_placeholders[3]] forKey:@"RentEndTime"];
+            
+            [selectedMeetingRooms addObject:addToMeetingCartDic];
+            
+            NSLog(@"space=%@",space);
+        }
+    }
+    
+   // NSLog(@"-----%@",_meetingRooms);
+
+    if (selectedMeetingRooms.count) {
+        
+//        MeetingCarModel * meetingCarModel = [[MeetingCarModel alloc]init];
+//        meetingCarModel.cart = selectedMeetingRooms;
+//        [ZZGlobalModel sharedInstance].meetingCarModel = meetingCarModel;
+//        if ([ZZGlobalModel sharedInstance].meetingCarModel) {
+//            if(![ZZGlobalModel sharedInstance].userInfoViewModel.IsGroup){
+//                SubmitOrderPersonalViewController *submitOrderPersonalViewController=[[SubmitOrderPersonalViewController alloc] initWithNibName:@"SubmitOrderPersonalViewController" bundle:nil];
+//                [self.navigationController pushViewController:submitOrderPersonalViewController animated:YES];
+//            }else{
+//                SubmitOrderCompanyViewController *submitOrderCompanyViewController=[[SubmitOrderCompanyViewController alloc] initWithNibName:@"SubmitOrderCompanyViewController" bundle:nil];
+//                [self.navigationController pushViewController:submitOrderCompanyViewController animated:YES];
+//            }
+//        }
+        [JCYGlobalData sharedInstance].meetingCarArr=selectedMeetingRooms;
+        [self performSegueWithIdentifier:@"MeetingRoomToOrderPay" sender:self];
+    }else{
+        [[PBAlert sharedInstance] showText:@"请选择要预定的会议室" inView:self.view withTime:2.0];
+    }
+    
+}
+
+
 - (IBAction)back:(UIBarButtonItem *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -294,6 +362,10 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
 //        @property (weak, nonatomic) IBOutlet UILabel *unitLabel;
      //   bottomCell.btnCheckBox.selected = ((SpaceCellModel *)_validMeetingRooms[i]).isSelected ;
        // bottomCell.unitLabel.text = @"/小时";
+        int i = (int)indexPath.row;
+        bottomCell.btnCheckBox.selected = [((NSDictionary *)_meetingRooms[i])[@"isSelected"] boolValue] ;
+        NSLog(@"%i     %i",bottomCell.btnCheckBox.selected,[((NSDictionary *)_meetingRooms[i])[@"isSelected"] boolValue]);
+        bottomCell.unitLabel.text = @"/小时";
         return bottomCell;
     }
     
@@ -315,11 +387,38 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
     }else return _meetingRooms.count;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 
+    if ([tableView isEqual:_bottomTable]) {
+        UIButton * selectedBtn = [[UIButton alloc]init];
+        selectedBtn.tag = (int)indexPath.row;
+        [self selectedButtonPressed:selectedBtn];
+    }
    
+
 }
 
+-(void)selectedButtonPressed:(UIButton *)sender
+{
+    int i = (int)sender.tag;
+//    ((SpaceCellModel *)_validMeetingRooms[i]).isSelected = !((SpaceCellModel *)_validMeetingRooms[i]).isSelected;
+    NSMutableDictionary *dict=[NSMutableDictionary dictionaryWithDictionary:_meetingRooms[i]];
+    if ([dict[@"isSelected"] boolValue]) {
+        
+        [dict removeObjectForKey:@"isSelected"];
+        [dict setObject:[NSNumber numberWithBool:NO] forKey:@"isSelected"];
+    }else{
+        [dict removeObjectForKey:@"isSelected"];
+        [dict setObject:[NSNumber numberWithBool:YES] forKey:@"isSelected"];
+    }
+    
+    [_meetingRooms removeObjectAtIndex:i];
+    [_meetingRooms insertObject:dict atIndex:i];
+    NSLog(@"%@   %i",_meetingRooms,i);
+    NSLog(@"2222");
+}
 
 #pragma -- mark GetSpaceNameList Request
 
@@ -393,6 +492,14 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
     }
     //加载拿到的数据
     [_meetingRooms addObjectsFromArray:rooms];
+    NSMutableArray *tempArr=[NSMutableArray array];
+    for (NSDictionary *temp in _meetingRooms) {
+        NSMutableDictionary *dict=[NSMutableDictionary dictionaryWithDictionary:temp];
+        [dict setObject:[NSNumber numberWithBool:NO] forKey:@"isSelected"];
+        [tempArr addObject:dict];
+    }
+    _meetingRooms=tempArr;
+    NSLog(@"%@",_meetingRooms);
     [_bottomTable reloadData];
     
     //如果拿到的数据等于10提示加载更多数据

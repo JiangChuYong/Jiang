@@ -72,6 +72,8 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
 
 //退出登录时回到首页的动画
 -(void)reciveExitInfo:(NSNotification *)notif{
+    UINavigationController * navi = (UINavigationController *)self.parentViewController;
+    [navi.tabBarController.tabBar hideBadgeOnItemIndex:2];
     CATransition *transition = [CATransition animation];
     [transition setDuration:0.3];
     [transition setType:@"reveal"];

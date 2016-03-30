@@ -93,6 +93,8 @@ typedef enum{
     ChangePassword,
     //获取办公预订订单详情
     OrdersGetOne,
+    //申请独立会议室
+    AddMeetingOrder,
     
     
     

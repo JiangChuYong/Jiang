@@ -64,6 +64,9 @@ typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
 //订单编号
 @property (strong, nonatomic) NSString *orderId;
 
+//会议室数组
+@property (strong, nonatomic) NSMutableArray *meetingCarArr;
+
 
 //时间大小遍历
 +(NSMutableArray *)filterTimeArray:(NSMutableArray *)timeArray;
