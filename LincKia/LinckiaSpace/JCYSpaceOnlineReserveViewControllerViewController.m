@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *bottomTable;
 @property (weak, nonatomic) IBOutlet UIButton *bookingBtn;
 @property (weak, nonatomic) IBOutlet UIImageView *cuttingLine;
+//选择菜单背景
 @property (strong, nonatomic) UIView * backgroundMaskView;
 @property(nonatomic,strong)NIDropDown *dropDown;
 @property (assign, nonatomic) int currentPage;
@@ -28,7 +29,6 @@
 //存放月份的数组
 @property(nonatomic,strong)NSMutableArray *monthArray;
 
-@property (strong, nonatomic) NSMutableArray * spaces;
 @property (strong, nonatomic) NSMutableArray * spaceList;
 @property (strong, nonatomic) NSMutableArray *cellsArr;
 @property (strong, nonatomic) AFRquest * GetSpaceCell;
@@ -37,14 +37,12 @@
 @property (assign,nonatomic) BOOL dateSelected;
 @property (assign,nonatomic) BOOL monthSelected;
 
-@property (assign,nonatomic) NSNumber * spaceID;
 
 @property (strong,nonatomic) NSString *endStr;
 @property (strong,nonatomic) NSString *numOfMonth;
 
 @property (strong,nonatomic) NSMutableArray * spaceRooms;
 @property (assign,nonatomic) int flag;
-@property (strong,nonatomic) NSMutableArray * dataTypeArray;
 @property (strong,nonatomic) NSString *officeName;
 
 @end
@@ -159,7 +157,59 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
 #pragma -- mark ACTION PART
 
 - (IBAction)bookingBtnPressed:(UIButton *)sender {
+    
+   
+
+    if (!_dateSelected){
+        
+        [[PBAlert sharedInstance]showText:@"请选择开始租用日期" inView:self.view withTime:2.0];
+        return;
+    }
+    if (!_monthSelected){
+        
+        [[PBAlert sharedInstance]showText:@"请选择租用时间" inView:self.view withTime:2.0];
+        return;
+    }
+    
+    [self spaceCellWasSeleted];
+    
 }
+
+-(void)spaceCellWasSeleted
+{
+    NSMutableArray * selectedRooms = [NSMutableArray array];
+    for (NSDictionary * space in _spaceRooms) {
+        if ([space[@"isSelected"] boolValue]) {
+            
+            NSMutableDictionary * addToCartDic = [[NSMutableDictionary alloc]init];
+            [addToCartDic setObject:space[@"SpaceCellId"] forKey:@"SpaceCellId"];
+            
+            [addToCartDic setObject:_placeholders[1] forKey:@"RentStartTime"];
+            
+            [addToCartDic setObject:_endStr forKey:@"RentEndTime"];
+            [addToCartDic setObject:@"月" forKey:@"PriceUnit"];
+            
+            NSString *monthNumStr = [self getOnlyNum:_placeholders[2]];
+            [addToCartDic setObject:[NSNumber numberWithInt:[monthNumStr intValue]] forKey:@"MonthNum"];
+            
+            [selectedRooms addObject:addToCartDic];
+
+        }
+    }
+    
+    if (selectedRooms.count) {
+         [JCYGlobalData sharedInstance].orderSubmitFlag = OrderSubmitFlag_OrdersAdd;
+        [JCYGlobalData sharedInstance].meetingCarArr=selectedRooms;
+        [JCYGlobalData sharedInstance].hasNavi=YES;
+
+        [self performSegueWithIdentifier:@"LinckiaSpaceOlineBookingToPayOrder" sender:self];
+    }else{
+        [[PBAlert sharedInstance] showText:@"请选择要预定的社区" inView:self.view withTime:2.0];
+    }
+    
+}
+
+
 - (IBAction)back:(UIButton *)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -193,14 +243,12 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
             }
         };
         
-        //开始时间
+        //租用时间
     }else if (row == 2){
         [self alertDropDownView:_monthArray tag:sender];
         
-        //结束时间
     }else{
-        NSLog(@"空间位置图");
-        
+        //推向空间位置图
         [self performSegueWithIdentifier:@"LinckiaSpaceOnlineBookingToSpacePosition" sender:self];
     }
 }
@@ -227,9 +275,6 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
         [self.dropDown hideDropDown];
         [self rel];
     }
-    
-    
-    
     
 }
 
@@ -322,7 +367,6 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
         if (_monthSelected && indexPath.row == 2) {
             topcell.rightLab.textColor = CommonColor_Blue;
         }
-       
         
         return topcell;
         
@@ -330,8 +374,11 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
         
         ZZSpaceOnlineReserveSeartTableViewCell * bottomCell = [_bottomTable dequeueReusableCellWithIdentifier:bottomCellIDKey];
         [bottomCell initCellProperty:_spaceRooms index:indexPath.row name:nil];
-        
-        bottomCell.selectionStyle=UITableViewCellSelectionStyleNone;
+        bottomCell.btnCheckBox.tag=indexPath.row;
+        [bottomCell.btnCheckBox addTarget:self action:@selector(selectedButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        int i = (int)indexPath.row;
+        bottomCell.btnCheckBox.selected = [((NSDictionary *)_spaceRooms[i])[@"isSelected"] boolValue] ;
+       // bottomCell.selectionStyle=UITableViewCellSelectionStyleNone;
         
         return bottomCell;
     }
@@ -356,17 +403,39 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    if ([tableView isEqual:_bottomTable]) {
+        UIButton * selectedBtn = [[UIButton alloc]init];
+        selectedBtn.tag = (int)indexPath.row;
+        [self selectedButtonPressed:selectedBtn];
+    }
+
 }
 
 
-
+-(void)selectedButtonPressed:(UIButton *)sender
+{
+    int i = (int)sender.tag;
+    //    ((SpaceCellModel *)_validMeetingRooms[i]).isSelected = !((SpaceCellModel *)_validMeetingRooms[i]).isSelected;
+    NSMutableDictionary *dict=[NSMutableDictionary dictionaryWithDictionary:_spaceRooms[i]];
+    if ([dict[@"isSelected"] boolValue]) {
+        
+        [dict removeObjectForKey:@"isSelected"];
+        [dict setObject:[NSNumber numberWithBool:NO] forKey:@"isSelected"];
+    }else{
+        [dict removeObjectForKey:@"isSelected"];
+        [dict setObject:[NSNumber numberWithBool:YES] forKey:@"isSelected"];
+    }
+    
+    [_spaceRooms removeObjectAtIndex:i];
+    [_spaceRooms insertObject:dict atIndex:i];
+    NSLog(@"%@   %i",_spaceRooms,i);
+    NSLog(@"2222");
+}
 
 #pragma -- mark GetMeetingSpaceCell REQUEST PART
 -(void)getLinckiaSpaceCellDataFromServer
 {
-    
-    
     BOOL selectedStarTime = NO,selectedEndTime = NO;
     
     if (![_placeholders[1] isEqualToString: @"请选择开始租用日期"]) {
@@ -421,9 +490,15 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
     if (_currentPage == 1) {
         _spaceRooms = [NSMutableArray array];
     }
-    [_spaceRooms addObjectsFromArray:rooms];
-    
-        [_bottomTable reloadData];
+    NSMutableArray *tempArr=[NSMutableArray array];
+    for (NSDictionary *temp in rooms) {
+        NSMutableDictionary *dict=[NSMutableDictionary dictionaryWithDictionary:temp];
+        [dict setObject:[NSNumber numberWithBool:NO] forKey:@"isSelected"];
+        [tempArr addObject:dict];
+    }
+    [_spaceRooms addObjectsFromArray:tempArr];
+
+    [_bottomTable reloadData];
     _currentPage++;//拿到数据后页面数自加
     [_bottomTable.mj_footer endRefreshing];
     

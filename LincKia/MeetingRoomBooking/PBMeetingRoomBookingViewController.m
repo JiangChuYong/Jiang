@@ -348,23 +348,11 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
         
         ZZSpaceOnlineReserveSeartTableViewCell * bottomCell = [_bottomTable dequeueReusableCellWithIdentifier:bottomCellIDKey];
         [bottomCell initCellProperty:_meetingRooms index:indexPath.row name:nil];
-//        //选择框
-//        @property (weak, nonatomic) IBOutlet UIButton *btnCheckBox;
-//        //房间号
-//        @property (weak, nonatomic) IBOutlet UILabel *labelRoomNum;
-//        //价格
-//        @property (weak, nonatomic) IBOutlet UILabel *labelPriceNum;
-//        //房间人数
-//        @property (weak, nonatomic) IBOutlet UILabel *labelPeopleNum;
-//        @property (weak, nonatomic) IBOutlet UILabel *officeTypeLabel;
-//        @property (weak, nonatomic) IBOutlet UILabel *officePersonNum;
-//        @property (weak, nonatomic) IBOutlet UIImageView *separateLine;
-//        @property (weak, nonatomic) IBOutlet UILabel *unitLabel;
-     //   bottomCell.btnCheckBox.selected = ((SpaceCellModel *)_validMeetingRooms[i]).isSelected ;
-       // bottomCell.unitLabel.text = @"/小时";
+        bottomCell.btnCheckBox.tag=indexPath.row;
+        [bottomCell.btnCheckBox addTarget:self action:@selector(selectedButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
         int i = (int)indexPath.row;
         bottomCell.btnCheckBox.selected = [((NSDictionary *)_meetingRooms[i])[@"isSelected"] boolValue] ;
-        NSLog(@"%i     %i",bottomCell.btnCheckBox.selected,[((NSDictionary *)_meetingRooms[i])[@"isSelected"] boolValue]);
+       
         bottomCell.unitLabel.text = @"/小时";
         return bottomCell;
     }
@@ -390,7 +378,6 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-
     if ([tableView isEqual:_bottomTable]) {
         UIButton * selectedBtn = [[UIButton alloc]init];
         selectedBtn.tag = (int)indexPath.row;
@@ -491,14 +478,13 @@ static NSString * bottomCellIDKey = @"ZZSpaceOnlineReserveSeartTableViewCell";
         [_meetingRooms removeAllObjects];
     }
     //加载拿到的数据
-    [_meetingRooms addObjectsFromArray:rooms];
     NSMutableArray *tempArr=[NSMutableArray array];
-    for (NSDictionary *temp in _meetingRooms) {
+    for (NSDictionary *temp in rooms) {
         NSMutableDictionary *dict=[NSMutableDictionary dictionaryWithDictionary:temp];
         [dict setObject:[NSNumber numberWithBool:NO] forKey:@"isSelected"];
         [tempArr addObject:dict];
     }
-    _meetingRooms=tempArr;
+    [_meetingRooms addObjectsFromArray:tempArr];
     NSLog(@"%@",_meetingRooms);
     [_bottomTable reloadData];
     

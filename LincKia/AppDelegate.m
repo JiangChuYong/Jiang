@@ -20,7 +20,8 @@
     // Override point for customization after application launch.
     self.manager = [AFHTTPRequestOperationManager manager];
     self.manager.responseSerializer = [[AFHTTPResponseSerializer alloc]init];
-    
+    self.manager.requestSerializer= [AFJSONRequestSerializer serializer];////申明请求的数据是json类型
+
     
     
    // self.window.rootViewController = [[HomePageViewController alloc]init];

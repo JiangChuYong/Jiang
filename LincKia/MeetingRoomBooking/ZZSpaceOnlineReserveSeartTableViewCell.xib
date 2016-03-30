@@ -37,7 +37,7 @@
                         </state>
                         <state key="selected" image="multichoicebox_checked@3x.png"/>
                         <connections>
-                            <action selector="clickCheckBox:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6GR-F9-lPY"/>
+                            <action selector="clickCheckBox:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hYu-c3-dmf"/>
                         </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aj3-Gu-TfB">

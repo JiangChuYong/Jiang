@@ -22,7 +22,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1LM-ab-1W9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-714" y="156"/>
+            <point key="canvasLocation" x="-954" y="-1676"/>
         </scene>
         <!--首页-->
         <scene sceneID="9RM-Jd-9rL">
@@ -76,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BHQ-IY-rL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-96" y="144"/>
+            <point key="canvasLocation" x="-1322" y="-4760"/>
         </scene>
         <!--活动介绍-->
         <scene sceneID="a5m-ta-K9v">
@@ -181,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wez-tF-tMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1553" y="1191"/>
+            <point key="canvasLocation" x="-306" y="-1681"/>
         </scene>
         <!--社区简介-->
         <scene sceneID="SbD-7m-QqT">
@@ -926,7 +926,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ce7-Vy-g3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3892" y="1638"/>
+            <point key="canvasLocation" x="4212" y="1734"/>
         </scene>
         <!--办公社区-->
         <scene sceneID="LWU-zO-G95">
@@ -1051,7 +1051,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fim-WL-df0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49" y="-3073"/>
+            <point key="canvasLocation" x="-153" y="-4329"/>
         </scene>
         <!--社区介绍-->
         <scene sceneID="faE-7x-oBe">
@@ -1204,7 +1204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bou-TT-LFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="-3134"/>
+            <point key="canvasLocation" x="638" y="-4930"/>
         </scene>
         <!--在线预订-->
         <scene sceneID="Peq-Ml-ZPS">
@@ -1336,11 +1336,12 @@
                         <outlet property="cuttingLine" destination="FYi-Vm-m29" id="yiv-Fd-U5t"/>
                         <outlet property="topTable" destination="S5d-kg-gs8" id="db0-Jr-tyl"/>
                         <segue destination="N4m-eX-4B3" kind="push" identifier="LinckiaSpaceOnlineBookingToSpacePosition" id="2TW-9W-6LO"/>
+                        <segue destination="HaW-S3-Dza" kind="push" identifier="LinckiaSpaceOlineBookingToPayOrder" id="jyX-rV-DV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Szw-Pu-vf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2652" y="-3983"/>
+            <point key="canvasLocation" x="2328" y="-5302"/>
         </scene>
         <!--空间位置图-->
         <scene sceneID="JTT-bP-VJS">
@@ -1426,7 +1427,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhf-i0-zck" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3088" y="-3977"/>
+            <point key="canvasLocation" x="2776" y="-5311"/>
         </scene>
         <!--社区预约参观-->
         <scene sceneID="eTV-T0-IUS">
@@ -1617,7 +1618,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBV-uV-Cj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2652" y="-3302"/>
+            <point key="canvasLocation" x="2776" y="-4590"/>
         </scene>
         <!--评价-->
         <scene sceneID="I9W-Yb-OXK">
@@ -1715,7 +1716,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3p4-qW-FeT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2161" y="-2776"/>
+            <point key="canvasLocation" x="2328" y="-5968"/>
         </scene>
         <!--企业服务-->
         <scene sceneID="ffO-HD-tnt">
@@ -1794,7 +1795,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooB-E4-74e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="729" y="179"/>
+            <point key="canvasLocation" x="161" y="-1653"/>
         </scene>
         <!--公司列表-->
         <scene sceneID="mpo-XF-l3j">
@@ -2273,7 +2274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Yh-rr-tUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1672" y="-5316"/>
+            <point key="canvasLocation" x="2320" y="-6652"/>
         </scene>
         <!--注册协议-->
         <scene sceneID="ZO9-W9-qnf">
@@ -2403,7 +2404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4eq-IM-Bqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2145" y="-6052"/>
+            <point key="canvasLocation" x="2769" y="-7388"/>
         </scene>
         <!--用户注册-->
         <scene sceneID="eKt-gg-xlw">
@@ -2719,7 +2720,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFT-Eg-VB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1664" y="-6052"/>
+            <point key="canvasLocation" x="2304" y="-7388"/>
         </scene>
         <!--登录-->
         <scene sceneID="zcW-5q-CEW">
@@ -2911,7 +2912,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m54-Lb-PlR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="-5741"/>
+            <point key="canvasLocation" x="1160" y="-6866"/>
         </scene>
         <!--环境监测-->
         <scene sceneID="tJd-DH-z9t">
@@ -3194,7 +3195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0v-oC-Rgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2048" y="2782"/>
+            <point key="canvasLocation" x="824" y="2734"/>
         </scene>
         <!--滴滴出行-->
         <scene sceneID="pLX-Rz-RNE">
@@ -3240,7 +3241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RH3-4B-xLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="864" y="2791"/>
+            <point key="canvasLocation" x="408" y="2734"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -3284,7 +3285,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhY-Wq-ATY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-530" y="1868"/>
+            <point key="canvasLocation" x="-346" y="684"/>
         </scene>
         <!--会员-->
         <scene sceneID="LX4-8s-kAn">
@@ -3371,7 +3372,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F8d-1m-6XU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="168" y="1868"/>
+            <point key="canvasLocation" x="-360" y="1676"/>
         </scene>
         <!--发快递-->
         <scene sceneID="rw6-fg-XmE">
@@ -3482,7 +3483,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gwx-fg-bCU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2680" y="2782"/>
+            <point key="canvasLocation" x="1240" y="2747"/>
         </scene>
         <!--我的-->
         <scene sceneID="3eN-tq-d2e">
@@ -3504,7 +3505,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XbN-wG-ukE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1282" y="1528"/>
+            <point key="canvasLocation" x="-1386" y="1160"/>
         </scene>
         <!--我的在线预订-->
         <scene sceneID="dn7-kI-JE2">
@@ -3750,7 +3751,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LNQ-c4-34X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1504" y="6040"/>
+            <point key="canvasLocation" x="-1490" y="6053"/>
         </scene>
         <!--我的-->
         <scene sceneID="HPF-MK-wjw">
@@ -3797,7 +3798,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgo-Zy-dIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1272" y="2496"/>
+            <point key="canvasLocation" x="-1386" y="2232"/>
         </scene>
         <!--待点评-->
         <scene sceneID="s18-Yw-yfR">
@@ -4086,7 +4087,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5M-BN-WlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1244" y="4332"/>
+            <point key="canvasLocation" x="-1364" y="4339"/>
         </scene>
         <!--订单详情-->
         <scene sceneID="pcf-KU-33R">
@@ -4726,7 +4727,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OoY-ot-wLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-752" y="4332"/>
+            <point key="canvasLocation" x="-656" y="4356"/>
         </scene>
         <!--修改密码-->
         <scene sceneID="JQr-Ka-3f0">
@@ -6221,7 +6222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xla-bY-EBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-136" y="2791"/>
+            <point key="canvasLocation" x="-724" y="2739"/>
         </scene>
         <!--快递查询-->
         <scene sceneID="uXj-wq-HeJ">
@@ -6267,7 +6268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aws-gE-n0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="362" y="2791"/>
+            <point key="canvasLocation" x="-38" y="2747"/>
         </scene>
     </scenes>
     <resources>
@@ -6311,13 +6312,13 @@
         <image name="users_textfield_unclicked.png" width="292" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Vkc-3n-j3I"/>
-        <segue reference="aB6-nA-ZwF"/>
-        <segue reference="0Jz-QI-DBn"/>
-        <segue reference="XDv-3a-DOa"/>
-        <segue reference="iDW-7z-fF2"/>
         <segue reference="G8J-kw-eU8"/>
+        <segue reference="iDW-7z-fF2"/>
+        <segue reference="0wp-aC-Pfr"/>
+        <segue reference="Qfv-Fx-Zmo"/>
         <segue reference="IAq-8G-SD6"/>
+        <segue reference="XPk-hP-8rb"/>
+        <segue reference="dNk-Lo-eZV"/>
         <segue reference="TUF-bB-2dv"/>
     </inferredMetricsTieBreakers>
 </document>

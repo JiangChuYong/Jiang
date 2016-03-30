@@ -39,6 +39,7 @@
 
 @property (strong, nonatomic) AFRquest *OrdersGetOne;
 @property (strong, nonatomic) AFRquest *AddMeetingOrder;
+@property (strong, nonatomic) AFRquest *AddOrders;
 
 
 
@@ -73,7 +74,28 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
     [self.orderTableView addGestureRecognizer:tapGestureRecognizer];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if ([JCYGlobalData sharedInstance].hasNavi) {
+        UINavigationController *navi=(UINavigationController *)self.parentViewController;
+        [navi.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:17],NSForegroundColorAttributeName:[UIColor whiteColor]}];
+        navi.navigationBar.hidden = NO;
 
+    }
+
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    if ([JCYGlobalData sharedInstance].hasNavi){
+        UINavigationController *navi=(UINavigationController *)self.parentViewController;
+        navi.navigationBar.hidden = YES;
+        [JCYGlobalData sharedInstance].hasNavi=NO;
+    }
+   
+    
+}
 -(void)tableViewregisterNib
 {
     [_orderTableView registerNib:[UINib nibWithNibName:@"MessageClassifyViewCell" bundle:nil] forCellReuseIdentifier:messageClassifyCellIdentify];
@@ -406,6 +428,7 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
             NSLog(@"点击立即预定进入");
             
           //  [[ZZAllService sharedInstance] serviceQueryByObj:[ZZGlobalModel sharedInstance].cartModel  delegate:self httpTag:HTTPHelperTag_Orders_Add];//申请预定订单
+            [self requestFromServerForLinckiaSpace];
         }
             break;
             
@@ -421,7 +444,7 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
 }
 
 
-//从服务器请求数据 空间搜索列表
+//从服务器请求数据 获取订单列表
 -(void)requestFromServer
 {
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dataReceived:) name:[NSString stringWithFormat:@"%i",OrdersGetOne] object:nil];
@@ -441,7 +464,6 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
     
 }
 
-
 -(void)dataReceived:(NSNotification *)notif{
     int result = [_OrdersGetOne.resultDict[@"Code"] intValue];
     if (result == SUCCESS) {
@@ -457,6 +479,7 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",OrdersGetOne] object:nil];
 }
 
+//增加会议室订单
 -(void)requestFromServerForMeeting
 {
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(meetingDataReceived:) name:[NSString stringWithFormat:@"%i",AddMeetingOrder] object:nil];
@@ -492,6 +515,40 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",AddMeetingOrder] object:nil];
 }
 
+//增加Linckiaspace订单
+-(void)requestFromServerForLinckiaSpace
+{
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(spaceDataReceived:) name:[NSString stringWithFormat:@"%i",AddOrders] object:nil];
+    
+    NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+    NSString * userToken = [userInfo valueForKey:USERTOKEN];
+    
+    _AddOrders = [[AFRquest alloc]init];
+    
+    _AddOrders.subURLString =[NSString stringWithFormat:@"api/Orders/Add?userToken=%@&deviceType=ios",userToken];
+    
+    _AddOrders.parameters = @{@"cart":[JCYGlobalData sharedInstance].meetingCarArr};
+    
+    _AddOrders.style = POST;
+    
+    [_AddOrders requestDataFromWithFlag:AddOrders];
+}
+
+
+-(void)spaceDataReceived:(NSNotification *)notif{
+    int result = [_AddOrders.resultDict[@"Code"] intValue];
+    if (result == SUCCESS) {
+        
+        [self dealResposeResult_OrderDtail:_AddOrders.resultDict[@"Data"]];
+    }else{
+        [[PBAlert sharedInstance] showText:_AddOrders.resultDict[@"Description"] inView:self.view withTime:2.0];
+        
+    }
+    
+    NSLog(@"%@",_AddOrders.resultDict);
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",AddOrders] object:nil];
+}
 
 
 //处理空间单元返回后的结果

@@ -36,7 +36,6 @@ SingletonM(AFRquest);
     if (!_parameters) {
         _parameters = nil;
     }
-    _appDelegate.manager.requestSerializer= [AFJSONRequestSerializer serializer];////申明请求的数据是json类型
     [_appDelegate.manager POST:_IPADRESS parameters:_parameters success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         NSData * response = [NSData dataWithData:responseObject];
         _resultDict = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingAllowFragments error:nil];

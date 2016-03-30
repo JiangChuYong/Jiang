@@ -95,7 +95,8 @@ typedef enum{
     OrdersGetOne,
     //申请独立会议室
     AddMeetingOrder,
-    
+    //申请预定订单
+    AddOrders,
     
     
     

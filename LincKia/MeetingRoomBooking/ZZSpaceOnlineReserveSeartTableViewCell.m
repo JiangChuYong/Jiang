@@ -6,10 +6,6 @@
 #import "ZZSpaceOnlineReserveSeartTableViewCell.h"
 
 @implementation ZZSpaceOnlineReserveSeartTableViewCell
-- (void)awakeFromNib {
-    // Initialization code
-    [self setSelectionStyle:UITableViewCellSelectionStyleNone];
-}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

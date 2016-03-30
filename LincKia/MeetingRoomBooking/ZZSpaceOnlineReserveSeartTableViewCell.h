@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *unitLabel;
 
 //分割线是否隐藏
-- (void)separateLineHidden:(BOOL)hidden;
+//- (void)separateLineHidden:(BOOL)hidden;
 //初始化属性
 - (void)initCellProperty:(NSMutableArray *)cellModels index:(NSInteger)index name:(NSString *)name;
 
