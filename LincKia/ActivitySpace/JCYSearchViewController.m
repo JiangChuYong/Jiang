@@ -132,21 +132,23 @@ static NSString *spaceListTableViewCell=@"spaceRecommendCellTableViewCell";
     [spacesListTableViewCell.UITouchBtn addTarget:self action:@selector(selectRecommond:) forControlEvents:UIControlEventTouchUpInside];
 }
 //选中空间
--(void)selectRecommond:(UIImageView *)sender
+-(void)selectRecommond:(UIButton *)sender
 {
-//    if ([ZZGlobalModel sharedInstance].orderSubmitFlag == FromOfficeListPage) {
-//        SpaceSummaryInfo *spaceSummaryInfo= _currentDataArray[sender.tag-5000]
-//        ;
-//        [ZZGlobalModel sharedInstance].SpaceId=spaceSummaryInfo.SpaceId;
-//        PBSpaceViewController * spaceVC = [[PBSpaceViewController alloc]init];
-//        [self.navigationController pushViewController:spaceVC animated:YES];
-//    }
-//    if ([ZZGlobalModel sharedInstance].orderSubmitFlag == FromActivitySpaceListPage) {
-//        ActiveSpaceInfoModel *spaceInfo = _currentDataArray[sender.tag-5000];
-//        [ZZGlobalModel sharedInstance].ActivitySpaceId = spaceInfo.ActiveSpaceId;
-//        PBActivtySpaceDetailViewController * spaceVC = [[PBActivtySpaceDetailViewController alloc] init];
-//        [self.navigationController pushViewController:spaceVC animated:YES];
-//    }
+    if ([JCYGlobalData sharedInstance].orderSubmitFlag == FromOfficeListPage) {
+
+        NSDictionary *spaceSummaryDic=_currentDataArray[sender.tag-5000];
+        [JCYGlobalData sharedInstance].SpaceId=spaceSummaryDic[@"SpaceId"];
+        
+        [self performSegueWithIdentifier:@"SearchToLinckiaSpaceInfo" sender:self];
+    }
+    if ([JCYGlobalData sharedInstance].orderSubmitFlag == FromActivitySpaceListPage) {
+
+        NSDictionary *activeSpaceInfo=_currentDataArray[sender.tag-5000];
+        [JCYGlobalData sharedInstance].ActivitySpaceId=activeSpaceInfo[@"ActiveSpaceId"];
+        
+        [self performSegueWithIdentifier:@"SearchToActiveSpaceInfo" sender:self];
+        
+    }
     
     
     NSLog(@"Info");

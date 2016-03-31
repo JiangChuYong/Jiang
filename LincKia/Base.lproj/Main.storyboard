@@ -181,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wez-tF-tMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-306" y="-1681"/>
+            <point key="canvasLocation" x="-410" y="-1676"/>
         </scene>
         <!--社区简介-->
         <scene sceneID="SbD-7m-QqT">
@@ -295,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSv-cJ-Wn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2427" y="1599"/>
+            <point key="canvasLocation" x="1939" y="1191"/>
         </scene>
         <!--空间搜索-->
         <scene sceneID="79k-ev-RHh">
@@ -420,11 +420,13 @@
                         <outlet property="searchBtn" destination="h6G-IH-8hG" id="i5c-HF-Iny"/>
                         <outlet property="searchTextField" destination="Z0Y-je-yFt" id="Fyo-Sh-qLz"/>
                         <outlet property="tableView" destination="fof-Lm-moQ" id="BW6-ig-yzp"/>
+                        <segue destination="TMG-BN-yqv" kind="push" identifier="SearchToActiveSpaceInfo" id="G1G-jf-FL5"/>
+                        <segue destination="QCJ-we-gAA" kind="push" identifier="SearchToLinckiaSpaceInfo" id="rah-oc-nBH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sqe-80-SHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2184" y="450"/>
+            <point key="canvasLocation" x="245" y="-1652"/>
         </scene>
         <!--社区介绍-->
         <scene sceneID="Szr-cX-X16">
@@ -1795,7 +1797,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooB-E4-74e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="161" y="-1653"/>
+            <point key="canvasLocation" x="-276" y="-3005"/>
         </scene>
         <!--公司列表-->
         <scene sceneID="mpo-XF-l3j">
@@ -2274,7 +2276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Yh-rr-tUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2320" y="-6652"/>
+            <point key="canvasLocation" x="2992" y="-6700"/>
         </scene>
         <!--注册协议-->
         <scene sceneID="ZO9-W9-qnf">
@@ -2722,7 +2724,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFT-Eg-VB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2304" y="-7388"/>
+            <point key="canvasLocation" x="2992" y="-7892"/>
         </scene>
         <!--登录-->
         <scene sceneID="zcW-5q-CEW">
@@ -2914,7 +2916,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m54-Lb-PlR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1160" y="-6866"/>
+            <point key="canvasLocation" x="1864" y="-7530"/>
         </scene>
         <!--环境监测-->
         <scene sceneID="tJd-DH-z9t">
@@ -6408,13 +6410,14 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="IAq-8G-SD6"/>
-        <segue reference="G8J-kw-eU8"/>
+        <segue reference="rah-oc-nBH"/>
+        <segue reference="Jsh-Od-wNg"/>
         <segue reference="TUF-bB-2dv"/>
         <segue reference="dNk-Lo-eZV"/>
-        <segue reference="ZIW-PW-2Y5"/>
-        <segue reference="iDW-7z-fF2"/>
+        <segue reference="G1G-jf-FL5"/>
         <segue reference="0wp-aC-Pfr"/>
         <segue reference="Qfv-Fx-Zmo"/>
         <segue reference="XPk-hP-8rb"/>
+        <segue reference="GDY-Ow-HLh"/>
     </inferredMetricsTieBreakers>
 </document>
