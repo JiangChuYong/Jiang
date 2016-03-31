@@ -42,6 +42,7 @@
 @property (strong, nonatomic) AFRquest *AddOrders;
 @property (strong, nonatomic) AFRquest *CheckDiscount;
 @property (strong, nonatomic) AFRquest *GetProtocol;
+@property (strong, nonatomic) AFRquest *OrderPay;
 
 
 
@@ -363,17 +364,6 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
 
 //点击查看租赁合同
 -(void)showTheContract:(id)sender{
-//    if(!self.protocolViewModel)
-//    {
-//        [self requestDataFromServer_Protocol];
-//    }
-//    else
-//    {
-//        ContractInfoViewController * contractInfoViewController = [[ContractInfoViewController alloc]initWithNibName:@"ContractInfoViewController" bundle:nil];
-//        contractInfoViewController.protocolViewModel = self.protocolViewModel;
-//        
-//        [self.navigationController pushViewController:contractInfoViewController animated:YES];
-//    }
     
     [JCYGlobalData sharedInstance].protocolDic=@{@"protocolType":@2};
     [self performSegueWithIdentifier:@"CommitOrderToProrocol" sender:self];
@@ -401,6 +391,31 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
     
 }
 
+//确认信息，去支付
+-(IBAction)btnConfirmAndGoPay:(UIButton *)sender
+{
+    //加block,判定重复支付
+//    [WXPayClient shareInstance].wXPayClientBlock =  ^(NSString* desc){
+//        [[LAlertUtils sharedInstance] showWithText:desc inView:self.view lastTime:2.0f];
+//    };
+    if(!self.isAcceptTheContract){
+        [[PBAlert sharedInstance] showText:@"请选择同意租赁合同" inView:self.view withTime:2.0];
+        
+    }else if (self.payAccountIDStyle == 0 && self.payOrderInfo.IsPayOffline == NO) {
+        [[PBAlert sharedInstance] showText:@"请选择一种支付方式！" inView:self.view withTime:2.0];
+    }else{
+        self.payOrderInfo.OrderId=self.orderInfo[@"OrderId"];
+        self.payOrderInfo.Amount=[self.orderInfo[@"Amount"] floatValue];
+        if (self.payOrderInfo.DiscountCode.length<2) {
+            self.payOrderInfo.DiscountCode=@"";
+        }
+        self.payOrderInfo.PayAccountId=[[CommonUtil sharedInstance] payCountingIDUrlForPayAccountIDStyle:self.payAccountIDStyle];
+        
+        //向后台发送确认支付请求
+        [self requestFromServerOrdersPay:self.payOrderInfo];
+        
+    }
+}
 
 
 - (IBAction)goBack:(id)sender {
@@ -607,12 +622,57 @@ static NSString *acceptContractViewCellIdentify=@"AcceptContractViewCell";
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",CheckDiscount] object:nil];
 }
 
-
-//从服务器请求数据协议   支付协议
--(void)requestDataFromServer_Protocol{
-    //协议类型（注册协议：1，支付协议：2，服务条款：3，私人订制：4，商户合作:5）
-    //[[ZZAllService sharedInstance] serviceQueryByObj:@{@"protocolType":@2} delegate:self httpTag:HTTPHelperTag_System_GetProtocol];
+//订单确认
+-(void)requestFromServerOrdersPay:(PayOrderModel *)payOrderModel
+{
     
+   // [[ZZAllService sharedInstance] serviceQueryByObj:payOrderModel delegate:self httpTag:HTTPHelperTag_Orders_Pay];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(orderPayDataReceived:) name:[NSString stringWithFormat:@"%i",OrderPay] object:nil];
+    
+    NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+    NSString * userToken = [userInfo valueForKey:USERTOKEN];
+    
+    _OrderPay = [[AFRquest alloc]init];
+    
+    _OrderPay.subURLString =[NSString stringWithFormat:@"api/Orders/Pay?userToken=%@&deviceType=ios",userToken];
+    
+    _OrderPay.parameters = @{@"OrderId":payOrderModel.OrderId,@"Amount":[NSNumber numberWithFloat:payOrderModel.Amount],@"DiscountCode":payOrderModel.DiscountCode,@"DiscountAmount":[NSNumber numberWithFloat:payOrderModel.DiscountAmount],@"BeedInvoice":[NSNumber numberWithInt:payOrderModel.BeedInvoice],@"PayAccountId":payOrderModel.PayAccountId,@"IsPayOffline":[NSNumber numberWithInt:payOrderModel.IsPayOffline]};
+    
+    _OrderPay.style = POST;
+    
+    [_OrderPay requestDataFromWithFlag:OrderPay];
+}
+
+-(void)orderPayDataReceived:(NSNotification *)notif
+{
+    int result = [_OrderPay.resultDict[@"Code"] intValue];
+    if (result == SUCCESS) {
+        
+       // [self dealResposeResult_CheckDiscount:_CheckDiscount.resultDict];
+        
+        /**
+         订单生成成功后向订单详情页面传递订单编号以便获取订单详情
+         */
+        [JCYGlobalData sharedInstance].orderId = self.payOrderInfo.OrderId;
+        if(self.payOrderInfo.IsPayOffline==YES){
+            //订单流程结束
+           // [self zzFinishOrder];
+            NSLog(@"门店支付");
+            [self performSegueWithIdentifier:@"PayOrderToFinish" sender:self];
+        }else{
+            //进入最后支付阶段
+            //[self payNow:self.payAccountIDStyle tradeNo:response.Data];
+            NSLog(@"立即支付");
+        }
+        
+    }else{
+        [[PBAlert sharedInstance] showText:_OrderPay.resultDict[@"Description"] inView:self.view withTime:2.0];
+    }
+    
+    NSLog(@"%@",_OrderPay.resultDict);
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",OrderPay] object:nil];
 }
 
 

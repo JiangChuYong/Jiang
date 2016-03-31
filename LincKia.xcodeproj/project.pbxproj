@@ -162,6 +162,7 @@
 		656A168D1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 656A168B1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.m */; };
 		656A168E1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656A168C1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.xib */; };
 		656B75C51C9F89D100AA00D6 /* JCYChangePhoneNumForLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656B75C41C9F89D100AA00D6 /* JCYChangePhoneNumForLoginViewController.m */; };
+		656BD3171CACCF9800524AF3 /* JCYStorePaymentOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656BD3161CACCF9800524AF3 /* JCYStorePaymentOrderViewController.m */; };
 		6572BE741C86B5E300F495D1 /* JCYBookingSpaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572BE731C86B5E300F495D1 /* JCYBookingSpaceViewController.m */; };
 		6572BE761C86B7AF00F495D1 /* single2_bottom_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */; };
 		6572BE791C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6572BE781C86E39200F495D1 /* JCYSpaceOnlineReserveViewControllerViewController.m */; };
@@ -655,6 +656,8 @@
 		656A168C1C8D960100E29F8F /* JCYCustomerServiceCenterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCYCustomerServiceCenterTableViewCell.xib; sourceTree = "<group>"; };
 		656B75C31C9F89D100AA00D6 /* JCYChangePhoneNumForLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYChangePhoneNumForLoginViewController.h; sourceTree = "<group>"; };
 		656B75C41C9F89D100AA00D6 /* JCYChangePhoneNumForLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYChangePhoneNumForLoginViewController.m; sourceTree = "<group>"; };
+		656BD3151CACCF9800524AF3 /* JCYStorePaymentOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYStorePaymentOrderViewController.h; sourceTree = "<group>"; };
+		656BD3161CACCF9800524AF3 /* JCYStorePaymentOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYStorePaymentOrderViewController.m; sourceTree = "<group>"; };
 		6572BE721C86B5E300F495D1 /* JCYBookingSpaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCYBookingSpaceViewController.h; sourceTree = "<group>"; };
 		6572BE731C86B5E300F495D1 /* JCYBookingSpaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCYBookingSpaceViewController.m; sourceTree = "<group>"; };
 		6572BE751C86B7AF00F495D1 /* single2_bottom_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "single2_bottom_line@2x.png"; sourceTree = "<group>"; };
@@ -1567,6 +1570,8 @@
 				65B0A6471CA53C9000CC3AED /* AcceptContractViewCell.h */,
 				65B0A6481CA53C9000CC3AED /* AcceptContractViewCell.m */,
 				65B0A6491CA53C9000CC3AED /* AcceptContractViewCell.xib */,
+				656BD3151CACCF9800524AF3 /* JCYStorePaymentOrderViewController.h */,
+				656BD3161CACCF9800524AF3 /* JCYStorePaymentOrderViewController.m */,
 			);
 			path = CommitOrder;
 			sourceTree = "<group>";
@@ -2662,6 +2667,7 @@
 				6562F5E01C7EE628005F5B68 /* PBActiveSpaceBookingTableViewCell.m in Sources */,
 				CD6944EA1C75BDE500E04081 /* PBADBannerCellTableViewCell.m in Sources */,
 				658AA7F51C801A5A00ACB94B /* PBLincKiaSpaceViewController.m in Sources */,
+				656BD3171CACCF9800524AF3 /* JCYStorePaymentOrderViewController.m in Sources */,
 				654B70591C8566B2004B64B0 /* JCYSpaceEvaluateListViewController.m in Sources */,
 				65B0A6201CA4EDD700CC3AED /* ZZMyOderDetailTableViewCell.m in Sources */,
 				6562F6161C7EE7A0005F5B68 /* ZLDayLayoutView.m in Sources */,

@@ -182,10 +182,27 @@ static NSString *otherTableViewCell = @"otherTableViewCell";
     [JCYGlobalData sharedInstance].LoginStatus=NO;
     
     UINavigationController *navi=(UINavigationController *)self.parentViewController;
-    [navi popToRootViewControllerAnimated:YES];
-    navi.tabBarController.selectedIndex=0;
+    [navi popToRootViewControllerAnimated:NO];
+    
      [[NSNotificationCenter defaultCenter] postNotificationName:@"Exit" object:nil];
     
+    if (navi.tabBarController.selectedIndex!=0) {
+        navi.tabBarController.selectedIndex=0;
+        
+        //回到首页动画
+        CATransition *animation =[CATransition animation];
+        [animation setDuration:0.3f];
+        [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
+        [animation setType:kCATransitionPush];
+        [animation setSubtype:kCATransitionFromLeft];
+        [navi.tabBarController.view.layer addAnimation:animation forKey:@"reveal"];
+    }
+    
+//    CATransition *transition = [CATransition animation];
+//    [transition setDuration:0.3];
+//    [transition setType:@"reveal"];
+//    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
+
     
 }
 

@@ -99,6 +99,8 @@ typedef enum{
     AddOrders,
     //检查优惠券
     CheckDiscount,
+    //订单确认
+    OrderPay,
     
     
     
