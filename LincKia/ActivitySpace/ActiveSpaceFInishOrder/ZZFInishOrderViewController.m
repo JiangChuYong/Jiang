@@ -19,6 +19,15 @@
     [self setUI];//设置文字的字号及颜色
 
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    UINavigationController *navi=(UINavigationController *)self.parentViewController;
+    //导航隐藏的页面跳转至导航显示的页面
+    if (!navi.navigationBar.hidden) {
+        navi.navigationBar.hidden = YES;
+        
+    }
+}
 //返回首页
 - (IBAction)backToHome:(id)sender {
 
@@ -68,12 +77,13 @@
 //        [self.navigationController pushViewController:VC animated:YES];
 //        return;
 //    }
-//    
-//    if ([ZZGlobalModel sharedInstance].sucessFromPage==MyOnlineBooking||[ZZGlobalModel sharedInstance].sucessFromPage==ActiveSpaceOrderDetail){
-//        //推向订单详情页面
-//        PBMyBookingListViewController * VC = [[PBMyBookingListViewController alloc]init];
-//        [self.navigationController pushViewController:VC animated:YES];
-//    }else if ([ZZGlobalModel sharedInstance].sucessFromPage==MyOrderDetail){
+//
+    
+     //推向订单详情页面
+    if ([JCYGlobalData sharedInstance].sucessFromPage==MyOnlineBooking||[JCYGlobalData sharedInstance].sucessFromPage==ActiveSpaceOrderDetail){
+        [self performSegueWithIdentifier:@"FinishToOrderDetail" sender:self];
+        
+    }//else if ([ZZGlobalModel sharedInstance].sucessFromPage==MyOrderDetail){
 //        ZZMyOrderDetailViewController *myOrderDetailVc=[[ZZMyOrderDetailViewController alloc]init];
 //        [self.navigationController pushViewController:myOrderDetailVc animated:YES];
 //    }

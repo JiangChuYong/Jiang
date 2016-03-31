@@ -66,7 +66,16 @@ static NSString * identifier = @"PBMyBookingListTableViewCell";
     [self bookingButtonPress:_workBookingButton];
     UINavigationController *navi=(UINavigationController *)self.parentViewController;
     navi.tabBarController.tabBar.hidden=YES;
+    //导航隐藏的页面跳转至导航显示的页面
+    if (navi.navigationBar.hidden) {
+        
+        [navi.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:17],NSForegroundColorAttributeName:[UIColor whiteColor]}];
+        navi.navigationBar.hidden = NO;
+        
+    }
 }
+
+
 
 -(void)resetSelectedButtonUI:(UIButton *)sender
 {

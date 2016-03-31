@@ -68,6 +68,9 @@ static NSString * lastCellIdKey = @"PBBookingTableViewSugestionCell";
     UIGestureRecognizer * singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(headViewTouchedDown:)];
     [_headview addGestureRecognizer:singleTap];
 }
+
+
+
 -(void)headViewTouchedDown:(id)sender
 {
     [[self getFirstResponderSoon]resignFirstResponder];
@@ -258,8 +261,10 @@ static NSString * lastCellIdKey = @"PBBookingTableViewSugestionCell";
     
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",GetActiveSpaceList] object:nil];
     if ([_responseDataOfIndexDict[@"Code"] isEqualToNumber:[NSNumber numberWithInt:0]]) {
+        
         [JCYGlobalData sharedInstance].isActiveSpace=YES;
         [JCYGlobalData sharedInstance].sucessFromPage=ActiveSpaceOrderDetail;
+        
         [self performSegueWithIdentifier:@"BookingToOrder" sender:self];
     }else{
         [[PBAlert sharedInstance]showText:_responseDataOfIndexDict[@"Message"] inView:self.view withTime:2.0];

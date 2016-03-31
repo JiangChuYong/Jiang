@@ -43,6 +43,7 @@ static NSString * suggestCellIDKey = @"PBBookingTableViewSugestionCell";
     [self registerCellForTable];
 }
 
+
 -(void)registerCellForTable
 {
     [_table registerNib:[UINib nibWithNibName:@"PBActiveSpaceBookingTableViewCell" bundle:nil] forCellReuseIdentifier:otherCellIDKey];
