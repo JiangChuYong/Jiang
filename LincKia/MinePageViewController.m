@@ -106,8 +106,7 @@ static NSString * singleLineCellIDKey = @"PBMineTableViewSingleLineCell";
         
         _headPicView=headCell.headPic;
         [headCell.headPic sd_setImageWithURL:[NSURL URLWithString:_userInfoDic[@"AvatarUrl"]] placeholderImage:[UIImage imageNamed:Space_DetailFacilities_Default_Image]];
-        
-        headCell.phoneNumLab.text = _userInfoDic[@"Mobile"];
+        headCell.phoneNumLab.text = [_userInfoDic[@"Mobile"] stringByReplacingCharactersInRange:NSMakeRange(3, 4) withString:@"****"];
         NSNumber * starFish = _userInfoDic[@"Starfish"];
         headCell.LincKiaCoinNum.text = [NSString stringWithFormat:@"%@",starFish];
         
