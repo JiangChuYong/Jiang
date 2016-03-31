@@ -28,6 +28,12 @@
 
 @property (strong,nonatomic) AFRquest * CheckUnpaidOrder;
 
+@property (strong,nonatomic) AFRquest * GetMember;
+
+@property (strong,nonatomic) NSString * errorDescription;
+
+@property (assign,nonatomic) int isMember;
+
 @end
 
 @implementation HomePageViewController
@@ -41,7 +47,8 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
     [super viewWillAppear:animated];
     
     [self checkUnpayOrderFromServer];
-    
+    //判断会员资格
+    [self requestGetMemberFromServer];
     UINavigationController * navi = (UINavigationController *)self.parentViewController;
     navi.tabBarController.tabBar.hidden = NO;
     navi.navigationBar.hidden = YES;
@@ -94,18 +101,32 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
 
 #pragma -- mark TABBARCONTROLLER DELEGEATE
 
-
+//不想让用户进入此tab页面的话,可以用
 - (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController{
     
     if ([JCYGlobalData sharedInstance].LoginStatus) {
-        return YES;
-    }else{
-        
-        [self performSegueWithIdentifier:@"ShowLoginView" sender:self];
+        if (viewController == [tabBarController.viewControllers objectAtIndex:1]){
+            if (_isMember) {
+                NSLog(@"%i",_isMember);
+                return YES;
+            }else{
+                [[PBAlert sharedInstance] showText:_errorDescription inView:self.view withTime:2.0];
+                return NO;
+            }
+            
+        }else{
+            return YES;
+
+        }
+    }else {
+        if (viewController == [tabBarController.viewControllers objectAtIndex:1]||viewController == [tabBarController.viewControllers objectAtIndex:2]){
+            [self performSegueWithIdentifier:@"ShowLoginView" sender:self];
+        }
         return NO;
     }
     
     //检查订单的有效期 判断是否有会员资格
+    
     
 #pragma -- mark TODO
     
@@ -289,6 +310,41 @@ static NSString *ChooseCellIDKey = @"PBButtonChooseCell";
             [navi.tabBarController.tabBar showBadgeOnItemIndex:2];
         }
     }
+    [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",CheckUnpaidOrder] object:nil];
+}
+
+-(void)requestGetMemberFromServer{
+    
+     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(getmenberDataReceived:) name:[NSString stringWithFormat:@"%i",GetMember] object:nil];
+    
+        NSUserDefaults * userInfo = [NSUserDefaults standardUserDefaults];
+    
+        NSString * userToken = [userInfo valueForKey:USERTOKEN];
+    
+        _GetMember = [[AFRquest alloc]init];
+    
+        _GetMember.subURLString =[NSString stringWithFormat:@"api/Users/JudgeIsRentUser?userToken=%@&deviceType=ios",userToken];
+    
+        _GetMember.style = GET;
+        
+    
+        [_GetMember requestDataFromWithFlag:GetMember];
+    
+}
+-(void)getmenberDataReceived:(NSNotification *)notif{
+    
+    int result = [_GetMember.resultDict[@"Code"] intValue];;
+    if (result == SUCCESS) {
+        
+        _isMember=[_GetMember.resultDict[@"Data"] intValue];
+        
+    }else{
+        _errorDescription=_GetMember.resultDict[@"Description"];
+        
+    }
+    
+    NSLog(@"%@",_GetMember.resultDict);
+
     [[NSNotificationCenter defaultCenter]removeObserver:self name:[NSString stringWithFormat:@"%i",CheckUnpaidOrder] object:nil];
 }
 

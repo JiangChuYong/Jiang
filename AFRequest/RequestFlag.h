@@ -101,6 +101,8 @@ typedef enum{
     CheckDiscount,
     //订单确认
     OrderPay,
+    //获取会员值，判断是否有会员资格
+    GetMember,
     
     
     
