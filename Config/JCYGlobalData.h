@@ -82,4 +82,6 @@ typedef NS_ENUM(NSInteger,OrderDetailStyle ) {
 //将日期转换成字符串"YYYYMMdd"
 +(NSString *)jcyDateConversionStr:(NSDate *)date;
 
+//监测网络状态
++ (NSString *)networkingStatesFromStatebar;
 @end

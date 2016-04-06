@@ -31,6 +31,7 @@ SingletonM(AFRquest);
     }
     
 }
+
 -(void)ConnectServerViaPostStyleWith:(NSString *)flag{
     
     if (!_parameters) {
@@ -42,7 +43,14 @@ SingletonM(AFRquest);
         [[NSNotificationCenter defaultCenter]postNotificationName:flag object:nil];
     }failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         NSLog(@"POST服务器未响应");
-        _resultDict = @{@"Code":@1};
+        NSString *str=[JCYGlobalData networkingStatesFromStatebar];
+        NSString *description;
+        if ([str isEqualToString:@"no net"]) {
+            description=@"网络异常，请重试";
+        }else{
+            description=@"";
+        }
+        _resultDict = @{@"Code":@1,@"Description":description};
         [[NSNotificationCenter defaultCenter]postNotificationName:flag object:nil];
     }];
 }
@@ -55,7 +63,14 @@ SingletonM(AFRquest);
         [[NSNotificationCenter defaultCenter]postNotificationName:flag object:nil];
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         NSLog(@"GET服务器未响应");
-        _resultDict = @{@"Code":@1};
+        NSString *str=[JCYGlobalData networkingStatesFromStatebar];
+        NSString *description;
+        if ([str isEqualToString:@"no net"]) {
+            description=@"网络异常，请重试";
+        }else{
+            description=@"";
+        }
+        _resultDict = @{@"Code":@1,@"Description":description};
         [[NSNotificationCenter defaultCenter]postNotificationName:flag object:nil];
     }];
 }
